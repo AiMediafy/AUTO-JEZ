@@ -1,5 +1,12 @@
 [
   {
+    "slug": "openai-testuje-granice-zaawansowanego-rozumowania-matematycznego",
+    "title": "OpenAI testuje granice zaawansowanego rozumowania matematycznego",
+    "company": "OpenAI",
+    "summary": "OpenAI zademonstrowało próby rozwiązywania matematycznych problemów eksperckiego poziomu dzięki zaawansowanym modelom AI. Co mówi nam o stanie badań nad rozumowaniem?",
+    "image": "posts/openai-testuje-granice-zaawansowanego-rozumowania-matematycznego.jpg"
+  },
+  {
     "slug": "google-ai-impact-summit-2026",
     "title": "AI Impact Summit 2026: Google znów w akcji – globalne partnerstwa na rzecz AI dla każdego",
     "date": "2026-02-18",

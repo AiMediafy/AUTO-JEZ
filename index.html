@@ -927,6 +927,33 @@
     .badge-meta      { background: rgba(8,102,255,0.12);  color: #6098ff; }
     .badge-default   { background: rgba(255,255,255,0.06); color: #8080a0; }
 
+    /* ── ARTICLE ENGAGEMENT ───────────────────── */
+    .article-engagement {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+    .eng-views { font-size:0.82rem; color:var(--text3); }
+    .eng-sep { color:var(--border2); }
+    .eng-like {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: transparent;
+      border: 1px solid var(--border2);
+      border-radius: 100px;
+      padding: 5px 14px;
+      color: var(--text2);
+      font-size: 0.82rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .eng-like:hover { border-color:#f43f5e; color:#f43f5e; }
+    .eng-like.liked { border-color:#f43f5e; color:#f43f5e; background:rgba(244,63,94,0.08); }
+
     /* ── HERO STATS ───────────────────────────── */
     .hero-stats { display:flex; gap:32px; margin-top:28px; flex-wrap:wrap; }
     .hero-stat { display:flex; flex-direction:column; gap:2px; }
@@ -1131,6 +1158,14 @@
       <div class="article-header">
         <div class="article-meta" id="article-meta"></div>
         <h1 class="article-title" id="article-title"></h1>
+        <div class="article-engagement" id="article-engagement" style="display:none">
+          <span class="eng-views" id="eng-views">👁 ładowanie...</span>
+          <span class="eng-sep">·</span>
+          <button class="eng-like" id="eng-like" onclick="toggleLike()">
+            <span id="like-icon">🤍</span>
+            <span id="like-count">0</span>
+          </button>
+        </div>
       </div>
       <div class="article-content" id="article-content"></div>
     </div>
@@ -1435,6 +1470,7 @@
 
         document.getElementById('article-title').textContent = meta.title || slug;
         document.getElementById('article-content').innerHTML = marked.parse(content);
+        trackView(slug);
 
         // Share buttons
         document.getElementById('share-x').onclick = () =>
@@ -1491,7 +1527,52 @@
       handleSearch(e.target.value);
     });
 
-    // ── RANDOM ARTICLE ────────────────────────────
+    // ── VIEWS + LIKES ─────────────────────────────
+    function getLikes() {
+      try { return JSON.parse(localStorage.getItem('tvai_likes') || '{}'); } catch(e) { return {}; }
+    }
+    function getLikeCounts() {
+      try { return JSON.parse(localStorage.getItem('tvai_like_counts') || '{}'); } catch(e) { return {}; }
+    }
+
+    function toggleLike() {
+      const slug = currentSlug;
+      const likes = getLikes();
+      const counts = getLikeCounts();
+      const isLiked = !!likes[slug];
+      likes[slug] = !isLiked;
+      counts[slug] = Math.max(0, (counts[slug] || 0) + (isLiked ? -1 : 1));
+      localStorage.setItem('tvai_likes', JSON.stringify(likes));
+      localStorage.setItem('tvai_like_counts', JSON.stringify(counts));
+      updateLikeUI(slug);
+    }
+
+    function updateLikeUI(slug) {
+      const likes = getLikes();
+      const counts = getLikeCounts();
+      const btn = document.getElementById('eng-like');
+      const icon = document.getElementById('like-icon');
+      const count = document.getElementById('like-count');
+      if (!btn) return;
+      const isLiked = !!likes[slug];
+      btn.classList.toggle('liked', isLiked);
+      icon.textContent = isLiked ? '❤️' : '🤍';
+      count.textContent = counts[slug] || 0;
+    }
+
+    async function trackView(slug) {
+      const eng = document.getElementById('article-engagement');
+      const viewsEl = document.getElementById('eng-views');
+      eng.style.display = 'flex';
+      updateLikeUI(slug);
+      try {
+        const res = await fetch(`https://api.countapi.xyz/hit/tvai-mediafy/${slug}`);
+        const data = await res.json();
+        viewsEl.textContent = `👁 ${data.value} wyświetleń`;
+      } catch(e) {
+        viewsEl.textContent = `👁 — wyświetleń`;
+      }
+    }
     function openRandomArticle() {
       if (!allPosts.length) return;
       const random = allPosts[Math.floor(Math.random() * allPosts.length)];

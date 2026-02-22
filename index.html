@@ -753,26 +753,26 @@
     #li-tab {
       position: fixed;
       bottom: 32px;
-      right: -160px;
+      right: 0;
       width: 200px;
       background: #0a0a12;
       border: 1px solid rgba(37,99,235,0.3);
       border-right: none;
       border-radius: 100px 0 0 100px;
       box-shadow: -4px 4px 20px rgba(37,99,235,0.2);
-      display: none;
+      display: flex;
       align-items: center;
       gap: 10px;
       padding: 8px 16px 8px 8px;
       cursor: pointer;
       z-index: 998;
-      transition: right 0.4s cubic-bezier(.22,.68,0,1.2);
+      transform: translateX(170px);
+      transition: transform 0.4s cubic-bezier(.22,.68,0,1.2);
     }
     #li-tab.visible {
-      right: 0;
-      display: flex;
+      transform: translateX(0);
     }
-    #li-tab:hover { right: 4px; }
+    #li-tab:hover { transform: translateX(-4px); }
     #li-tab-avatar {
       width: 36px; height: 36px;
       border-radius: 50%;
@@ -1321,10 +1321,22 @@
     // ── INIT ─────────────────────────────────────
     async function init() {
       try {
-        const res = await fetch('posts.json');
+        const controller = new AbortController();
+        const timeout = setTimeout(() => controller.abort(), 8000);
+        const res = await fetch('posts.json', { signal: controller.signal });
+        clearTimeout(timeout);
+        if (!res.ok) throw new Error('HTTP ' + res.status);
         allPosts = await res.json();
         allPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
-      } catch(e) { allPosts = []; }
+      } catch(e) {
+        allPosts = [];
+        document.getElementById('posts-grid').innerHTML = `
+          <div class="empty-state">
+            <p style="font-size:2rem">📡</p>
+            <p>Nie można załadować wpisów.<br><span style="font-size:0.8rem;color:var(--text3)">Upewnij się że jesteś na GitHub Pages, nie lokalnie.</span></p>
+          </div>`;
+        return;
+      }
 
       buildTicker(allPosts);
       updateCounts(allPosts);
@@ -1343,24 +1355,17 @@
       function hideCard() {
         card.classList.remove('visible');
         card.classList.add('hiding');
-        // show tab after card slides out
-        setTimeout(() => {
-          tab.style.display = 'flex';
-          setTimeout(() => tab.classList.add('visible'), 50);
-        }, 400);
+        setTimeout(() => tab.classList.add('visible'), 400);
       }
 
       function showCard() {
         tab.classList.remove('visible');
-        setTimeout(() => { tab.style.display = 'none'; }, 400);
         card.classList.remove('hiding');
         card.classList.add('visible');
       }
 
-      // Show after 3 seconds
       setTimeout(() => {
         card.classList.add('visible');
-        // Auto-hide after 6 seconds
         setTimeout(hideCard, 6000);
       }, 3000);
 

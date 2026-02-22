@@ -1326,14 +1326,16 @@
         const res = await fetch('posts.json', { signal: controller.signal });
         clearTimeout(timeout);
         if (!res.ok) throw new Error('HTTP ' + res.status);
-        allPosts = await res.json();
+        const text = await res.text();
+        allPosts = JSON.parse(text);
+        if (!Array.isArray(allPosts)) allPosts = [];
         allPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
       } catch(e) {
         allPosts = [];
         document.getElementById('posts-grid').innerHTML = `
           <div class="empty-state">
             <p style="font-size:2rem">📡</p>
-            <p>Nie można załadować wpisów.<br><span style="font-size:0.8rem;color:var(--text3)">Upewnij się że jesteś na GitHub Pages, nie lokalnie.</span></p>
+            <p>Błąd ładowania: ${e.message}</p>
           </div>`;
         return;
       }

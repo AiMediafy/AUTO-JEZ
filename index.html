@@ -749,6 +749,42 @@
       .header-cta { padding: 6px 12px; font-size: 0.75rem; }
     }
 
+    /* ── LINKEDIN TAB ─────────────────────────── */
+    #li-tab {
+      position: fixed;
+      bottom: 32px;
+      right: -160px;
+      width: 200px;
+      background: #fff;
+      border-radius: 100px 0 0 100px;
+      box-shadow: -4px 4px 20px rgba(0,0,0,0.25);
+      display: none;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 16px 8px 8px;
+      cursor: pointer;
+      z-index: 998;
+      transition: right 0.4s cubic-bezier(.22,.68,0,1.2);
+    }
+    #li-tab.visible {
+      right: 0;
+      display: flex;
+    }
+    #li-tab:hover { right: 4px; }
+    #li-tab-avatar {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+      border: 2px solid #0a66c2;
+    }
+    #li-tab span {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #1a1a1a;
+      white-space: nowrap;
+    }
+
     /* ── LINKEDIN CARD ────────────────────────── */
     #li-card {
       position: fixed;
@@ -983,6 +1019,12 @@
       </div>
       <a class="li-btn" href="https://www.linkedin.com/in/jerzy-mediafy/" target="_blank">Obserwuj na LinkedIn</a>
     </div>
+  </div>
+
+  <!-- LINKEDIN TAB (visible when card is hidden) -->
+  <div id="li-tab">
+    <img id="li-tab-avatar" src="https://media.licdn.com/dms/image/v2/D4D03AQGqYFGXWkpvMQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1718184695381?e=1747872000&v=beta&t=placeholder" alt="J" onerror="this.src='https://ui-avatars.com/api/?name=Jerzy&background=2563eb&color=fff&size=40'"/>
+    <span>Jerzy · LinkedIn</span>
   </div>
 
   <script>
@@ -1285,21 +1327,35 @@
     // ── LINKEDIN CARD ─────────────────────────────
     (function() {
       const card = document.getElementById('li-card');
+      const tab  = document.getElementById('li-tab');
       const closeBtn = document.getElementById('li-close');
 
       function hideCard() {
         card.classList.remove('visible');
         card.classList.add('hiding');
+        // show tab after card slides out
+        setTimeout(() => {
+          tab.style.display = 'flex';
+          setTimeout(() => tab.classList.add('visible'), 50);
+        }, 400);
+      }
+
+      function showCard() {
+        tab.classList.remove('visible');
+        setTimeout(() => { tab.style.display = 'none'; }, 400);
+        card.classList.remove('hiding');
+        card.classList.add('visible');
       }
 
       // Show after 3 seconds
       setTimeout(() => {
         card.classList.add('visible');
-        // Auto-hide after 6 seconds (3s show + 6s visible = gone after 9s)
+        // Auto-hide after 6 seconds
         setTimeout(hideCard, 6000);
       }, 3000);
 
       closeBtn.addEventListener('click', hideCard);
+      tab.addEventListener('click', showCard);
     })();
   </script>
 </body>

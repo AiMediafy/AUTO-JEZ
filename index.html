@@ -3,8 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blog AI – Mediafy</title>
-  <meta name="description" content="Najnowsze newsy ze świata AI – OpenAI, Google, Anthropic, xAI i inne. Pisane po ludzku." />
+
+  <!-- ── OG / SEO (aktualizowane przez JS dla artykułów) ── -->
+  <title id="page-title">Blog AI – Mediafy</title>
+  <meta name="description" id="meta-desc" content="Najnowsze newsy ze świata AI – OpenAI, Google, Anthropic, xAI i inne. Pisane po ludzku." />
+
+  <meta property="og:type"        content="website" />
+  <meta property="og:site_name"   content="Mediafy Blog AI" />
+  <meta property="og:title"       id="og-title"  content="Blog AI – Mediafy" />
+  <meta property="og:description" id="og-desc"   content="Najnowsze newsy ze świata AI – OpenAI, Google, Anthropic, xAI i inne. Pisane po ludzku." />
+  <meta property="og:image"       id="og-image"  content="https://aimediafy.github.io/AUTO-JEZ/og-default.jpg" />
+  <meta property="og:url"         id="og-url"    content="https://aimediafy.github.io/AUTO-JEZ" />
+
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       id="tw-title" content="Blog AI – Mediafy" />
+  <meta name="twitter:description" id="tw-desc"  content="Najnowsze newsy ze świata AI – OpenAI, Google, Anthropic, xAI i inne. Pisane po ludzku." />
+  <meta name="twitter:image"       id="tw-image" content="https://aimediafy.github.io/AUTO-JEZ/og-default.jpg" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
@@ -31,7 +46,6 @@
     }
 
     html { scroll-behavior: smooth; }
-
     body {
       background: var(--bg);
       color: var(--text);
@@ -41,14 +55,13 @@
       min-height: 100vh;
       -webkit-font-smoothing: antialiased;
     }
-
     a { color: inherit; text-decoration: none; }
 
     /* ── GLOW ─────────────────────────────────── */
     .glow-bg {
       position: fixed;
       width: 800px; height: 500px;
-      background: radial-gradient(ellipse, rgba(37,99,235,0.1) 0%, transparent 70%);
+      background: radial-gradient(ellipse, rgba(37,99,235,0.09) 0%, transparent 70%);
       top: -100px; left: 50%;
       transform: translateX(-50%);
       pointer-events: none;
@@ -66,7 +79,6 @@
       position: relative;
       z-index: 99;
     }
-
     .ticker-label {
       flex-shrink: 0;
       background: var(--blue);
@@ -79,16 +91,13 @@
       height: 100%;
       display: flex;
       align-items: center;
-      z-index: 2;
     }
-
     .ticker-track-wrap {
       overflow: hidden;
       flex: 1;
       height: 100%;
       position: relative;
     }
-
     .ticker-track-wrap::before,
     .ticker-track-wrap::after {
       content: '';
@@ -100,18 +109,14 @@
     }
     .ticker-track-wrap::before { left: 0; background: linear-gradient(to right, var(--bg2), transparent); }
     .ticker-track-wrap::after  { right: 0; background: linear-gradient(to left, var(--bg2), transparent); }
-
     .ticker-track {
       display: flex;
       align-items: center;
-      gap: 0;
       width: max-content;
       animation: ticker 40s linear infinite;
       height: 100%;
     }
-
     .ticker-track:hover { animation-play-state: paused; }
-
     .ticker-item {
       display: flex;
       align-items: center;
@@ -124,13 +129,7 @@
       transition: color 0.2s;
     }
     .ticker-item:hover { color: var(--text); }
-
-    .ticker-dot {
-      width: 4px; height: 4px;
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
-
+    .ticker-dot { width: 4px; height: 4px; border-radius: 50%; flex-shrink: 0; }
     @keyframes ticker {
       from { transform: translateX(0); }
       to   { transform: translateX(-50%); }
@@ -141,11 +140,10 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(0,0,0,0.8);
+      background: rgba(0,0,0,0.85);
       backdrop-filter: blur(20px);
       border-bottom: 1px solid var(--border);
     }
-
     .header-inner {
       max-width: var(--max-w);
       margin: 0 auto;
@@ -154,9 +152,8 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 24px;
+      gap: 16px;
     }
-
     .logo {
       display: flex;
       align-items: center;
@@ -164,7 +161,6 @@
       cursor: pointer;
       flex-shrink: 0;
     }
-
     .logo-icon {
       width: 32px; height: 32px;
       background: var(--blue);
@@ -172,11 +168,7 @@
       display: flex; align-items: center; justify-content: center;
       font-weight: 700; font-size: 0.85rem; color: #fff;
     }
-
-    .logo-text {
-      font-size: 0.92rem;
-      font-weight: 600;
-    }
+    .logo-text { font-size: 0.92rem; font-weight: 600; }
 
     .nav-pill {
       display: flex;
@@ -187,11 +179,10 @@
       border-radius: 100px;
       padding: 4px;
     }
-
     .filter-btn {
-      font-size: 0.76rem;
+      font-size: 0.75rem;
       font-weight: 500;
-      padding: 5px 14px;
+      padding: 5px 13px;
       border-radius: 100px;
       border: none;
       background: transparent;
@@ -202,6 +193,39 @@
     }
     .filter-btn:hover { color: var(--text); }
     .filter-btn.active { background: var(--blue); color: #fff; }
+
+    /* ── SEARCH BOX ───────────────────────────── */
+    .search-wrap {
+      position: relative;
+      flex-shrink: 0;
+    }
+    .search-input {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      padding: 7px 36px 7px 14px;
+      width: 200px;
+      transition: border-color 0.2s, width 0.3s, background 0.2s;
+      outline: none;
+    }
+    .search-input::placeholder { color: var(--text3); }
+    .search-input:focus {
+      border-color: var(--blue);
+      background: rgba(37,99,235,0.06);
+      width: 260px;
+    }
+    .search-icon {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text3);
+      font-size: 0.85rem;
+      pointer-events: none;
+    }
 
     .header-cta {
       font-size: 0.82rem;
@@ -226,7 +250,6 @@
       position: relative;
       z-index: 1;
     }
-
     .hero-badge {
       display: inline-flex;
       align-items: center;
@@ -240,19 +263,16 @@
       color: var(--blue-light);
       margin-bottom: 20px;
     }
-
     .hero-badge-dot {
       width: 6px; height: 6px;
       border-radius: 50%;
       background: var(--blue-light);
       animation: pulse 2s ease infinite;
     }
-
     @keyframes pulse {
       0%, 100% { opacity: 1; }
       50% { opacity: 0.3; }
     }
-
     .hero h1 {
       font-family: 'Syne', sans-serif;
       font-size: clamp(2rem, 4vw, 3.4rem);
@@ -261,9 +281,7 @@
       letter-spacing: -0.02em;
       margin-bottom: 14px;
     }
-
-    .hero h1 .dim { color: var(--text2); font-weight: 700; }
-
+    .hero h1 .dim { color: var(--text2); }
     .hero p {
       font-size: 0.98rem;
       color: var(--text2);
@@ -281,8 +299,8 @@
       flex-wrap: wrap;
       position: relative;
       z-index: 1;
+      align-items: center;
     }
-
     .tag-btn {
       font-size: 0.76rem;
       font-weight: 500;
@@ -303,16 +321,23 @@
       background: var(--blue-soft);
       color: var(--blue-light);
     }
-
     .tag-count {
       font-size: 0.65rem;
       font-weight: 600;
-      background: rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.07);
       padding: 1px 6px;
       border-radius: 100px;
       color: var(--text3);
     }
     .tag-btn.active .tag-count { background: rgba(37,99,235,0.2); color: var(--blue-light); }
+
+    /* search results info */
+    .search-info {
+      font-size: 0.82rem;
+      color: var(--text3);
+      margin-left: auto;
+    }
+    .search-info span { color: var(--text2); font-weight: 500; }
 
     /* ── GRID ─────────────────────────────────── */
     main {
@@ -322,7 +347,6 @@
       position: relative;
       z-index: 1;
     }
-
     .posts-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
@@ -344,17 +368,16 @@
       transform: translateY(-3px);
       box-shadow: 0 12px 40px rgba(0,0,0,0.4), 0 0 0 1px rgba(37,99,235,0.08);
     }
-
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(16px); }
       to   { opacity: 1; transform: translateY(0); }
     }
-    .post-card:nth-child(1) { animation-delay: 0.05s; }
-    .post-card:nth-child(2) { animation-delay: 0.10s; }
-    .post-card:nth-child(3) { animation-delay: 0.15s; }
-    .post-card:nth-child(4) { animation-delay: 0.20s; }
-    .post-card:nth-child(5) { animation-delay: 0.25s; }
-    .post-card:nth-child(6) { animation-delay: 0.30s; }
+    .post-card:nth-child(1) { animation-delay: 0.04s; }
+    .post-card:nth-child(2) { animation-delay: 0.08s; }
+    .post-card:nth-child(3) { animation-delay: 0.12s; }
+    .post-card:nth-child(4) { animation-delay: 0.16s; }
+    .post-card:nth-child(5) { animation-delay: 0.20s; }
+    .post-card:nth-child(6) { animation-delay: 0.24s; }
 
     .card-image-wrap {
       width: 100%;
@@ -362,7 +385,6 @@
       overflow: hidden;
       background: var(--bg3);
     }
-
     .card-image-wrap img {
       width: 100%; height: 100%;
       object-fit: cover;
@@ -380,7 +402,7 @@
     .card-placeholder::before {
       content: '';
       position: absolute; inset: 0;
-      background: radial-gradient(ellipse at 50% 50%, rgba(37,99,235,0.08), transparent 70%);
+      background: radial-gradient(ellipse at 50% 50%, rgba(37,99,235,0.07), transparent 70%);
     }
     .card-placeholder-label {
       font-family: 'Syne', sans-serif;
@@ -393,14 +415,12 @@
     }
 
     .card-body { padding: 18px 20px 20px; }
-
     .card-top {
       display: flex;
       align-items: center;
       justify-content: space-between;
       margin-bottom: 12px;
     }
-
     .company-badge {
       font-size: 0.67rem;
       font-weight: 700;
@@ -409,12 +429,7 @@
       padding: 3px 10px;
       border-radius: 100px;
     }
-
-    .card-date {
-      font-size: 0.72rem;
-      color: var(--text3);
-    }
-
+    .card-date { font-size: 0.72rem; color: var(--text3); }
     .card-title {
       font-size: 0.95rem;
       font-weight: 600;
@@ -423,7 +438,6 @@
       margin-bottom: 8px;
       letter-spacing: -0.01em;
     }
-
     .card-summary {
       font-size: 0.82rem;
       color: var(--text2);
@@ -433,7 +447,6 @@
       -webkit-box-orient: vertical;
       overflow: hidden;
     }
-
     .card-footer {
       display: flex;
       align-items: center;
@@ -442,7 +455,6 @@
       padding-top: 14px;
       border-top: 1px solid var(--border);
     }
-
     .read-more {
       font-size: 0.76rem;
       font-weight: 600;
@@ -453,10 +465,42 @@
       transition: gap 0.2s;
     }
     .post-card:hover .read-more { gap: 8px; }
+    .read-time { font-size: 0.72rem; color: var(--text3); }
 
-    .read-time {
-      font-size: 0.72rem;
-      color: var(--text3);
+    /* ── PAGINATION ───────────────────────────── */
+    .pagination {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 48px;
+    }
+    .page-btn {
+      font-size: 0.82rem;
+      font-weight: 500;
+      padding: 8px 16px;
+      border-radius: 100px;
+      border: 1px solid var(--border2);
+      background: transparent;
+      color: var(--text2);
+      cursor: pointer;
+      transition: all 0.2s;
+      min-width: 40px;
+      text-align: center;
+    }
+    .page-btn:hover { border-color: var(--blue); color: var(--blue-light); }
+    .page-btn.active {
+      background: var(--blue);
+      border-color: var(--blue);
+      color: #fff;
+    }
+    .page-btn:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+    .page-btn:disabled:hover {
+      border-color: var(--border2);
+      color: var(--text2);
     }
 
     /* ── LOADING / EMPTY ──────────────────────── */
@@ -469,7 +513,6 @@
       font-size: 0.85rem;
       padding: 60px 0;
     }
-
     .dot {
       width: 6px; height: 6px;
       border-radius: 50%;
@@ -482,7 +525,6 @@
       0%,80%,100% { opacity: 0.2; transform: scale(0.7); }
       40% { opacity: 1; transform: scale(1); }
     }
-
     .empty-state {
       grid-column: 1/-1;
       text-align: center;
@@ -494,6 +536,15 @@
     /* ── ARTICLE VIEW ─────────────────────────── */
     #article-view { display: none; }
 
+    .article-top-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
     .article-back {
       display: inline-flex;
       align-items: center;
@@ -501,7 +552,6 @@
       font-size: 0.8rem;
       font-weight: 500;
       color: var(--text2);
-      margin-bottom: 40px;
       cursor: pointer;
       transition: color 0.2s, border-color 0.2s;
       border: 1px solid var(--border);
@@ -509,6 +559,29 @@
       border-radius: 100px;
     }
     .article-back:hover { color: var(--text); border-color: var(--border2); }
+
+    .article-share {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 7px 14px;
+      border-radius: 100px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text2);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .share-btn:hover { border-color: var(--border2); color: var(--text); }
+    .share-btn.copied { border-color: #10a37f; color: #10a37f; }
 
     .article-hero {
       width: 100%;
@@ -519,7 +592,6 @@
       border: 1px solid var(--border);
       display: block;
     }
-
     .article-hero-ph {
       width: 100%; height: 260px;
       background: linear-gradient(135deg, var(--bg3) 0%, #080818 100%);
@@ -535,7 +607,6 @@
     }
 
     .article-header { max-width: 760px; margin-bottom: 48px; }
-
     .article-meta {
       display: flex;
       align-items: center;
@@ -543,7 +614,6 @@
       margin-bottom: 18px;
       flex-wrap: wrap;
     }
-
     .article-title {
       font-family: 'Syne', sans-serif;
       font-size: clamp(1.8rem, 4vw, 3rem);
@@ -552,15 +622,26 @@
       letter-spacing: -0.02em;
     }
 
-    .article-content { max-width: 720px; }
+    /* auto-generated badge */
+    .auto-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.68rem;
+      font-weight: 600;
+      color: var(--text3);
+      border: 1px solid var(--border);
+      padding: 3px 10px;
+      border-radius: 100px;
+    }
 
+    .article-content { max-width: 720px; }
     .article-content p {
       font-size: 1rem;
       line-height: 1.85;
       color: #a8a8bc;
       margin-bottom: 1.4em;
     }
-
     .article-content h2 {
       font-family: 'Syne', sans-serif;
       font-size: 1.5rem;
@@ -571,32 +652,19 @@
       padding-bottom: 10px;
       border-bottom: 1px solid var(--border);
     }
-
     .article-content h3 {
       font-size: 1.05rem;
       font-weight: 600;
       color: var(--blue-light);
       margin: 2em 0 0.6em;
     }
-
     .article-content ul, .article-content ol {
       padding-left: 1.5em;
       margin-bottom: 1.4em;
     }
-    .article-content li {
-      color: #a8a8bc;
-      margin-bottom: 0.5em;
-      line-height: 1.7;
-    }
-
+    .article-content li { color: #a8a8bc; margin-bottom: 0.5em; line-height: 1.7; }
     .article-content strong { color: var(--text); font-weight: 600; }
-
-    .article-content hr {
-      border: none;
-      border-top: 1px solid var(--border);
-      margin: 2.5em 0;
-    }
-
+    .article-content hr { border: none; border-top: 1px solid var(--border); margin: 2.5em 0; }
     .article-content blockquote {
       border-left: 2px solid var(--blue);
       padding: 10px 20px;
@@ -605,14 +673,12 @@
       border-radius: 0 8px 8px 0;
       color: var(--text2);
     }
-
     .article-content a { color: var(--blue-light); text-decoration: underline; text-underline-offset: 3px; }
 
     /* ── BACK TO TOP ──────────────────────────── */
     #back-to-top {
       position: fixed;
-      bottom: 32px;
-      right: 32px;
+      bottom: 32px; right: 32px;
       width: 44px; height: 44px;
       background: var(--blue);
       color: #fff;
@@ -637,21 +703,18 @@
       text-align: center;
       color: var(--text3);
       font-size: 0.78rem;
-      position: relative;
-      z-index: 1;
+      position: relative; z-index: 1;
     }
 
     /* ── RESPONSIVE ───────────────────────────── */
-    @media (max-width: 900px) {
-      .featured-card { grid-template-columns: 1fr; }
-      .featured-image-wrap { min-height: 200px; }
-    }
     @media (max-width: 768px) {
       .nav-pill { display: none; }
+      .search-input { width: 160px; }
+      .search-input:focus { width: 200px; }
       .posts-grid { grid-template-columns: 1fr; }
       .hero h1 { font-size: 2rem; }
-      .hero, .filter-bar, main, .featured-wrap { padding-left: 20px; padding-right: 20px; }
-      .header-inner { padding: 0 20px; }
+      .hero, .filter-bar, main { padding-left: 20px; padding-right: 20px; }
+      .header-inner { padding: 0 20px; gap: 10px; }
       #back-to-top { bottom: 20px; right: 20px; }
     }
 
@@ -693,6 +756,10 @@
         <button class="filter-btn" data-filter="Microsoft">Microsoft</button>
         <button class="filter-btn" data-filter="Meta">Meta</button>
       </div>
+      <div class="search-wrap">
+        <input type="text" class="search-input" id="search-input" placeholder="Szukaj newsów..." />
+        <span class="search-icon">🔍</span>
+      </div>
       <button class="header-cta" onclick="window.open('https://mediafy.pl/kontakt','_blank')">Porozmawiajmy</button>
     </div>
   </header>
@@ -716,6 +783,7 @@
     <button class="tag-btn" data-filter="xAI">xAI <span class="tag-count" id="count-xAI">0</span></button>
     <button class="tag-btn" data-filter="Microsoft">Microsoft <span class="tag-count" id="count-Microsoft">0</span></button>
     <button class="tag-btn" data-filter="Meta">Meta <span class="tag-count" id="count-Meta">0</span></button>
+    <span class="search-info" id="search-info" style="display:none">Wyniki dla: <span id="search-query"></span></span>
   </div>
 
   <!-- MAIN -->
@@ -727,10 +795,18 @@
           <span>Ładowanie wpisów...</span>
         </div>
       </div>
+      <div class="pagination" id="pagination"></div>
     </div>
 
     <div id="article-view">
-      <div class="article-back" id="back-btn">← Wróć do newsów</div>
+      <div class="article-top-bar">
+        <div class="article-back" id="back-btn">← Wróć do newsów</div>
+        <div class="article-share">
+          <button class="share-btn" id="share-x">𝕏 Udostępnij</button>
+          <button class="share-btn" id="share-li">in LinkedIn</button>
+          <button class="share-btn" id="copy-link">🔗 Kopiuj link</button>
+        </div>
+      </div>
       <div id="article-image-wrap"></div>
       <div class="article-header">
         <div class="article-meta" id="article-meta"></div>
@@ -744,133 +820,173 @@
     © 2026 <strong style="color:var(--text2)">Mediafy</strong> · Blog AI · Automatycznie generowany przez n8n
   </footer>
 
-  <!-- BACK TO TOP -->
   <button id="back-to-top" title="Wróć na górę">↑</button>
 
   <script>
     // ── CONFIG ──────────────────────────────────
-    const GITHUB_USER = 'AiMediafy';
-    const GITHUB_REPO = 'AUTO-JEZ';
-
-    // ── BADGE CLASS ─────────────────────────────
-    function getBadgeClass(company) {
-      const map = {
-        'OpenAI':'badge-openai','Google':'badge-google',
-        'Anthropic':'badge-anthropic','xAI':'badge-xai',
-        'Microsoft':'badge-microsoft','Meta':'badge-meta'
-      };
-      return map[company] || 'badge-default';
-    }
-
-    // ── COMPANY COLOR ───────────────────────────
-    function getCompanyColor(company) {
-      const map = {
-        'OpenAI':'#10a37f','Google':'#4285f4',
-        'Anthropic':'#f59e0b','xAI':'#a78bfa',
-        'Microsoft':'#00a4ef','Meta':'#6098ff'
-      };
-      return map[company] || '#8080a0';
-    }
+    const GITHUB_USER  = 'AiMediafy';
+    const GITHUB_REPO  = 'AUTO-JEZ';
+    const BASE_URL     = `https://${GITHUB_USER}.github.io/${GITHUB_REPO}`;
+    const POSTS_PER_PAGE = 9;
 
     // ── STATE ────────────────────────────────────
-    let allPosts = [];
+    let allPosts     = [];
     let activeFilter = 'all';
+    let searchQuery  = '';
+    let currentPage  = 1;
+    let currentSlug  = '';
 
-    // ── PARSE FRONTMATTER ────────────────────────
-    function parseFrontmatter(md) {
-      const match = md.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
-      if (!match) return { meta: {}, content: md };
-      const meta = {};
-      match[1].split('\n').forEach(line => {
-        const [k, ...v] = line.split(':');
-        if (k) meta[k.trim()] = v.join(':').trim().replace(/^["']|["']$/g, '');
-      });
-      return { meta, content: match[2] };
+    // ── HELPERS ──────────────────────────────────
+    function getBadgeClass(c) {
+      return {OpenAI:'badge-openai',Google:'badge-google',Anthropic:'badge-anthropic',xAI:'badge-xai',Microsoft:'badge-microsoft',Meta:'badge-meta'}[c] || 'badge-default';
     }
-
+    function getCompanyColor(c) {
+      return {OpenAI:'#10a37f',Google:'#4285f4',Anthropic:'#f59e0b',xAI:'#a78bfa',Microsoft:'#00a4ef',Meta:'#6098ff'}[c] || '#8080a0';
+    }
     function formatDate(str) {
       if (!str) return '';
-      return new Date(str).toLocaleDateString('pl-PL', { day: 'numeric', month: 'long', year: 'numeric' });
+      return new Date(str).toLocaleDateString('pl-PL', { day:'numeric', month:'long', year:'numeric' });
+    }
+    function readTime(text) {
+      return Math.max(1, Math.round((text||'').split(/\s+/).length / 200)) + ' min';
+    }
+    function parseFrontmatter(md) {
+      const m = md.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
+      if (!m) return { meta:{}, content:md };
+      const meta = {};
+      m[1].split('\n').forEach(line => {
+        const [k,...v] = line.split(':');
+        if (k) meta[k.trim()] = v.join(':').trim().replace(/^["']|["']$/g,'');
+      });
+      return { meta, content:m[2] };
     }
 
-    function readTime(text) {
-      const words = (text || '').split(/\s+/).length;
-      return Math.max(1, Math.round(words / 200)) + ' min czytania';
+    // ── OG TAGS UPDATE ───────────────────────────
+    function updateOG({ title, desc, image, url }) {
+      document.getElementById('page-title').textContent = title;
+      document.getElementById('meta-desc').setAttribute('content', desc);
+      document.getElementById('og-title').setAttribute('content', title);
+      document.getElementById('og-desc').setAttribute('content', desc);
+      document.getElementById('og-url').setAttribute('content', url);
+      document.getElementById('tw-title').setAttribute('content', title);
+      document.getElementById('tw-desc').setAttribute('content', desc);
+      if (image) {
+        document.getElementById('og-image').setAttribute('content', image);
+        document.getElementById('tw-image').setAttribute('content', image);
+      }
     }
 
     // ── TICKER ───────────────────────────────────
     function buildTicker(posts) {
       const track = document.getElementById('ticker-track');
-      if (!posts.length) {
-        document.getElementById('ticker-wrap').style.display = 'none';
-        return;
-      }
-      const items = posts.map(p => {
-        const color = getCompanyColor(p.company);
-        return `<span class="ticker-item" onclick="openArticle('${p.slug}')">
-          <span class="ticker-dot" style="background:${color}"></span>
-          <strong style="color:${color};font-size:0.7rem;text-transform:uppercase;letter-spacing:0.06em">${p.company}</strong>
+      if (!posts.length) { document.getElementById('ticker-wrap').style.display='none'; return; }
+      const items = posts.map(p =>
+        `<span class="ticker-item" onclick="openArticle('${p.slug}')">
+          <span class="ticker-dot" style="background:${getCompanyColor(p.company)}"></span>
+          <strong style="color:${getCompanyColor(p.company)};font-size:0.7rem;text-transform:uppercase;letter-spacing:0.06em">${p.company}</strong>
           ${p.title}
-        </span>`;
-      });
-      const html = [...items, ...items].join('');
-      track.innerHTML = html;
+        </span>`);
+      track.innerHTML = [...items,...items].join('');
     }
 
     // ── COUNTS ───────────────────────────────────
     function updateCounts(posts) {
       document.getElementById('count-all').textContent = posts.length;
       ['OpenAI','Google','Anthropic','xAI','Microsoft','Meta'].forEach(c => {
-        const el = document.getElementById('count-' + c);
-        if (el) el.textContent = posts.filter(p => p.company === c).length;
+        const el = document.getElementById('count-'+c);
+        if (el) el.textContent = posts.filter(p=>p.company===c).length;
       });
     }
 
-    // ── RENDER CARD ──────────────────────────────
-    function renderCard(post) {
-      const badgeClass = getBadgeClass(post.company);
-      const imageHtml = post.image
-        ? `<div class="card-image-wrap"><img src="${post.image}" alt="${post.title}" loading="lazy" onerror="this.parentNode.innerHTML='<div class=\\'card-placeholder\\'><span class=\\'card-placeholder-label\\'>${post.company||'AI'}</span></div>'"/></div>`
-        : `<div class="card-image-wrap"><div class="card-placeholder"><span class="card-placeholder-label">${post.company||'AI'}</span></div></div>`;
-
-      return `
-        <div class="post-card" onclick="openArticle('${post.slug}')">
-          ${imageHtml}
-          <div class="card-body">
-            <div class="card-top">
-              <span class="company-badge ${badgeClass}">${post.company||'AI'}</span>
-              <span class="card-date">${formatDate(post.date)}</span>
-            </div>
-            <div class="card-title">${post.title}</div>
-            <div class="card-summary">${post.summary||''}</div>
-            <div class="card-footer">
-              <span class="read-more">Czytaj artykuł →</span>
-              <span class="read-time">${readTime(post.summary)}</span>
-            </div>
-          </div>
-        </div>`;
+    // ── FILTERED POSTS ───────────────────────────
+    function getFiltered() {
+      let posts = activeFilter === 'all' ? allPosts : allPosts.filter(p => p.company === activeFilter);
+      if (searchQuery) {
+        const q = searchQuery.toLowerCase();
+        posts = posts.filter(p =>
+          (p.title||'').toLowerCase().includes(q) ||
+          (p.summary||'').toLowerCase().includes(q) ||
+          (p.company||'').toLowerCase().includes(q)
+        );
+      }
+      return posts;
     }
 
     // ── RENDER LIST ──────────────────────────────
-    function renderList(posts) {
+    function renderList() {
       const grid = document.getElementById('posts-grid');
-      const filtered = activeFilter === 'all' ? posts : posts.filter(p => p.company === activeFilter);
-      if (!filtered.length) {
-        grid.innerHTML = `<div class="empty-state"><p style="font-size:2rem">🤷</p><p>Brak wpisów dla wybranego filtra.</p></div>`;
+      const filtered = getFiltered();
+      const totalPages = Math.ceil(filtered.length / POSTS_PER_PAGE);
+      if (currentPage > totalPages) currentPage = 1;
+
+      const start = (currentPage - 1) * POSTS_PER_PAGE;
+      const pagePosts = filtered.slice(start, start + POSTS_PER_PAGE);
+
+      if (!pagePosts.length) {
+        grid.innerHTML = `<div class="empty-state"><p style="font-size:2rem">${searchQuery ? '🔍' : '🤷'}</p><p>${searchQuery ? `Brak wyników dla "${searchQuery}"` : 'Brak wpisów dla wybranego filtra.'}</p></div>`;
+        renderPagination(0, 0);
         return;
       }
-      grid.innerHTML = filtered.map(renderCard).join('');
+
+      grid.innerHTML = pagePosts.map((post, i) => {
+        const badgeClass = getBadgeClass(post.company);
+        const imageHtml = post.image
+          ? `<div class="card-image-wrap"><img src="${post.image}" alt="${post.title}" loading="lazy" onerror="this.parentNode.innerHTML='<div class=\\'card-placeholder\\'><span class=\\'card-placeholder-label\\'>${post.company||'AI'}</span></div>'"/></div>`
+          : `<div class="card-image-wrap"><div class="card-placeholder"><span class="card-placeholder-label">${post.company||'AI'}</span></div></div>`;
+        return `
+          <div class="post-card" onclick="openArticle('${post.slug}')" style="animation-delay:${i*0.04}s">
+            ${imageHtml}
+            <div class="card-body">
+              <div class="card-top">
+                <span class="company-badge ${badgeClass}">${post.company||'AI'}</span>
+                <span class="card-date">${formatDate(post.date)}</span>
+              </div>
+              <div class="card-title">${post.title}</div>
+              <div class="card-summary">${post.summary||''}</div>
+              <div class="card-footer">
+                <span class="read-more">Czytaj artykuł →</span>
+                <span class="read-time">${readTime(post.summary)}</span>
+              </div>
+            </div>
+          </div>`;
+      }).join('');
+
+      renderPagination(totalPages, filtered.length);
+    }
+
+    // ── PAGINATION ───────────────────────────────
+    function renderPagination(totalPages, total) {
+      const el = document.getElementById('pagination');
+      if (totalPages <= 1) { el.innerHTML = ''; return; }
+
+      let html = `<button class="page-btn" onclick="goPage(${currentPage-1})" ${currentPage===1?'disabled':''}>← Poprzednia</button>`;
+      for (let i = 1; i <= totalPages; i++) {
+        if (i === 1 || i === totalPages || Math.abs(i - currentPage) <= 1) {
+          html += `<button class="page-btn ${i===currentPage?'active':''}" onclick="goPage(${i})">${i}</button>`;
+        } else if (Math.abs(i - currentPage) === 2) {
+          html += `<span style="color:var(--text3);padding:0 4px">…</span>`;
+        }
+      }
+      html += `<button class="page-btn" onclick="goPage(${currentPage+1})" ${currentPage===totalPages?'disabled':''}>Następna →</button>`;
+      el.innerHTML = html;
+    }
+
+    function goPage(page) {
+      currentPage = page;
+      renderList();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     // ── OPEN ARTICLE ─────────────────────────────
     async function openArticle(slug) {
+      currentSlug = slug;
       document.getElementById('list-view').style.display = 'none';
       document.getElementById('hero-section').style.display = 'none';
       document.getElementById('filter-bar').style.display = 'none';
       document.getElementById('article-view').style.display = 'block';
       document.getElementById('article-content').innerHTML = `<div class="loading"><div class="dot"></div><div class="dot"></div><div class="dot"></div><span>Ładowanie...</span></div>`;
       window.scrollTo({ top: 0, behavior: 'smooth' });
-      window.location.hash = slug;
+      history.pushState({ slug }, '', `#${slug}`);
 
       try {
         const res = await fetch(`posts/${slug}.md`);
@@ -878,7 +994,18 @@
         const raw = await res.text();
         const { meta, content } = parseFrontmatter(raw);
         const badgeClass = getBadgeClass(meta.company);
+        const articleUrl = `${BASE_URL}#${slug}`;
+        const imageUrl = meta.image ? `${BASE_URL}/${meta.image}` : null;
 
+        // Update OG tags
+        updateOG({
+          title: `${meta.title} – Mediafy Blog AI`,
+          desc: meta.summary || '',
+          image: imageUrl,
+          url: articleUrl
+        });
+
+        // Image
         const imgWrap = document.getElementById('article-image-wrap');
         imgWrap.innerHTML = meta.image
           ? `<img class="article-hero" src="${meta.image}" alt="${meta.title}" onerror="this.style.display='none'"/>`
@@ -887,10 +1014,24 @@
         document.getElementById('article-meta').innerHTML = `
           <span class="company-badge ${badgeClass}" style="font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;padding:4px 12px;border-radius:100px;">${meta.company||'AI'}</span>
           <span style="font-size:0.8rem;color:var(--text3)">${formatDate(meta.date)}</span>
-          <span style="font-size:0.8rem;color:var(--text3)">${readTime(content)}</span>`;
+          <span style="font-size:0.8rem;color:var(--text3)">${readTime(content)}</span>
+          <span class="auto-badge">🤖 Wygenerowano przez AI</span>`;
 
         document.getElementById('article-title').textContent = meta.title || slug;
         document.getElementById('article-content').innerHTML = marked.parse(content);
+
+        // Share buttons
+        document.getElementById('share-x').onclick = () =>
+          window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(meta.title)}&url=${encodeURIComponent(articleUrl)}`, '_blank');
+        document.getElementById('share-li').onclick = () =>
+          window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(articleUrl)}`, '_blank');
+        document.getElementById('copy-link').onclick = () => {
+          navigator.clipboard.writeText(articleUrl);
+          const btn = document.getElementById('copy-link');
+          btn.textContent = '✓ Skopiowano!';
+          btn.classList.add('copied');
+          setTimeout(() => { btn.textContent = '🔗 Kopiuj link'; btn.classList.remove('copied'); }, 2000);
+        };
 
       } catch(e) {
         document.getElementById('article-content').innerHTML = `<p style="color:#ef4444">Nie udało się załadować artykułu.</p>`;
@@ -903,9 +1044,28 @@
       document.getElementById('hero-section').style.display = 'block';
       document.getElementById('filter-bar').style.display = 'flex';
       document.getElementById('article-view').style.display = 'none';
-      window.location.hash = '';
+      history.pushState({}, '', window.location.pathname);
+      updateOG({
+        title: 'Blog AI – Mediafy',
+        desc: 'Najnowsze newsy ze świata AI – OpenAI, Google, Anthropic, xAI i inne. Pisane po ludzku.',
+        url: BASE_URL
+      });
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
+
+    // ── SEARCH ───────────────────────────────────
+    document.getElementById('search-input').addEventListener('input', e => {
+      searchQuery = e.target.value.trim();
+      currentPage = 1;
+      const info = document.getElementById('search-info');
+      if (searchQuery) {
+        info.style.display = 'inline-flex';
+        document.getElementById('search-query').textContent = `"${searchQuery}"`;
+      } else {
+        info.style.display = 'none';
+      }
+      renderList();
+    });
 
     // ── FILTERS ──────────────────────────────────
     ['nav-pill','filter-bar'].forEach(id => {
@@ -917,7 +1077,8 @@
           b.classList.toggle('active', b.dataset.filter === filter);
         });
         activeFilter = filter;
-        renderList(allPosts);
+        currentPage = 1;
+        renderList();
       });
     });
 
@@ -926,10 +1087,15 @@
 
     // ── BACK TO TOP ───────────────────────────────
     const btt = document.getElementById('back-to-top');
-    window.addEventListener('scroll', () => {
-      btt.classList.toggle('visible', window.scrollY > 400);
-    });
+    window.addEventListener('scroll', () => btt.classList.toggle('visible', window.scrollY > 400));
     btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // ── POPSTATE (back button) ────────────────────
+    window.addEventListener('popstate', () => {
+      const hash = window.location.hash.replace('#', '');
+      if (hash) openArticle(hash);
+      else showList();
+    });
 
     // ── INIT ─────────────────────────────────────
     async function init() {
@@ -943,8 +1109,8 @@
       updateCounts(allPosts);
 
       const hash = window.location.hash.replace('#', '');
-      if (hash) { renderList(allPosts); openArticle(hash); }
-      else { renderList(allPosts); }
+      if (hash) { renderList(); openArticle(hash); }
+      else renderList();
     }
 
     init();

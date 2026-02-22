@@ -749,7 +749,116 @@
       .header-cta { padding: 6px 12px; font-size: 0.75rem; }
     }
 
-    /* ── BADGE COLORS ─────────────────────────── */
+    /* ── LINKEDIN CARD ────────────────────────── */
+    #li-card {
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      width: 300px;
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.35), 0 4px 20px rgba(0,0,0,0.2);
+      z-index: 999;
+      overflow: hidden;
+      transform: translateY(120px);
+      opacity: 0;
+      transition: transform 0.5s cubic-bezier(.22,.68,0,1.2), opacity 0.4s ease;
+    }
+    #li-card.visible {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    #li-card.hiding {
+      transform: translateY(120px);
+      opacity: 0;
+    }
+    #li-close {
+      position: absolute;
+      top: 10px; right: 10px;
+      width: 24px; height: 24px;
+      background: rgba(0,0,0,0.15);
+      border: none;
+      border-radius: 50%;
+      color: #fff;
+      font-size: 0.7rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+      transition: background 0.2s;
+    }
+    #li-close:hover { background: rgba(0,0,0,0.3); }
+    .li-banner {
+      height: 72px;
+      background: linear-gradient(135deg, #0a66c2 0%, #004182 100%);
+      position: relative;
+    }
+    .li-banner::after {
+      content: 'in';
+      position: absolute;
+      right: 14px; bottom: 8px;
+      font-size: 1.4rem;
+      font-weight: 900;
+      color: rgba(255,255,255,0.25);
+      font-family: 'Syne', sans-serif;
+    }
+    .li-body {
+      padding: 0 16px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .li-avatar-wrap {
+      margin-top: -28px;
+    }
+    .li-avatar {
+      width: 56px; height: 56px;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      object-fit: cover;
+      display: block;
+      background: #e0e0e0;
+    }
+    .li-name {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      line-height: 1.2;
+    }
+    .li-title {
+      font-size: 0.78rem;
+      color: #333;
+      font-weight: 500;
+      margin-top: -6px;
+    }
+    .li-sub {
+      font-size: 0.72rem;
+      color: #666;
+      line-height: 1.5;
+    }
+    .li-location {
+      font-size: 0.7rem;
+      color: #999;
+    }
+    .li-btn {
+      display: block;
+      text-align: center;
+      background: #0a66c2;
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 8px 16px;
+      border-radius: 100px;
+      text-decoration: none;
+      transition: background 0.2s;
+      margin-top: 4px;
+    }
+    .li-btn:hover { background: #004182; }
+
+    @media (max-width: 400px) {
+      #li-card { right: 12px; bottom: 12px; width: 260px; }
+    }
     .badge-openai    { background: rgba(16,163,127,0.12); color: #10a37f; }
     .badge-google    { background: rgba(66,133,244,0.12); color: #4285f4; }
     .badge-anthropic { background: rgba(217,119,6,0.12);  color: #f59e0b; }
@@ -857,6 +966,24 @@
   </footer>
 
   <button id="back-to-top" title="Wróć na górę">↑</button>
+
+  <!-- LINKEDIN CARD -->
+  <div id="li-card">
+    <button id="li-close">✕</button>
+    <div class="li-banner"></div>
+    <div class="li-body">
+      <div class="li-avatar-wrap">
+        <img class="li-avatar" src="https://media.licdn.com/dms/image/v2/D4D03AQGqYFGXWkpvMQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1718184695381?e=1747872000&v=beta&t=placeholder" alt="Jerzy Niewiadowski" onerror="this.src='https://ui-avatars.com/api/?name=Jerzy+Niewiadowski&background=2563eb&color=fff&size=80'"/>
+      </div>
+      <div class="li-info">
+        <div class="li-name">Jerzy Niewiadowski</div>
+        <div class="li-title">Co-Founder Mediafy</div>
+        <div class="li-sub">Wdrażamy Automatyzacje i Szkolenia AI dla Liderów Rynku</div>
+        <div class="li-location">📍 Swarzędz, Polska</div>
+      </div>
+      <a class="li-btn" href="https://www.linkedin.com/in/jerzy-mediafy/" target="_blank">Obserwuj na LinkedIn</a>
+    </div>
+  </div>
 
   <script>
     // ── CONFIG ──────────────────────────────────
@@ -1155,7 +1282,25 @@
       else renderList();
     }
 
-    init();
+    // ── LINKEDIN CARD ─────────────────────────────
+    (function() {
+      const card = document.getElementById('li-card');
+      const closeBtn = document.getElementById('li-close');
+
+      function hideCard() {
+        card.classList.remove('visible');
+        card.classList.add('hiding');
+      }
+
+      // Show after 3 seconds
+      setTimeout(() => {
+        card.classList.add('visible');
+        // Auto-hide after 6 seconds (3s show + 6s visible = gone after 9s)
+        setTimeout(hideCard, 6000);
+      }, 3000);
+
+      closeBtn.addEventListener('click', hideCard);
+    })();
   </script>
 </body>
 </html>

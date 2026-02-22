@@ -927,7 +927,27 @@
     .badge-meta      { background: rgba(8,102,255,0.12);  color: #6098ff; }
     .badge-default   { background: rgba(255,255,255,0.06); color: #8080a0; }
 
-    /* ── READING PROGRESS ─────────────────────── */
+    /* ── MOBILE READING PROGRESS ─────────────── */
+    #read-progress-mobile {
+      position: fixed;
+      right: 0;
+      top: 0;
+      width: 3px;
+      height: 100vh;
+      background: var(--border);
+      z-index: 50;
+      display: none;
+    }
+    #read-progress-mobile-fill {
+      width: 100%;
+      height: 0%;
+      background: var(--blue);
+      box-shadow: 0 0 6px rgba(37,99,235,0.6);
+      transition: height 0.1s linear;
+    }
+    @media (max-width: 900px) {
+      #read-progress-mobile { display: block; }
+    }
     #read-progress {
       position: fixed;
       right: calc((100vw - 720px) / 2 - 20px);
@@ -1313,6 +1333,7 @@
 
   <button id="back-to-top" title="Wróć na górę">↑</button>
   <div id="read-progress"><div id="read-progress-fill"></div></div>
+  <div id="read-progress-mobile"><div id="read-progress-mobile-fill"></div></div>
 
   <!-- LINKEDIN CARD -->
   <div id="li-card">
@@ -1557,7 +1578,9 @@
         trackView(slug);
         renderRelated(slug, meta.company);
         progressBar.style.display = 'block';
+        progressMobile.style.display = 'block';
         progressFill.style.height = '0%';
+        progressMobileFill.style.height = '0%';
 
         // Share buttons
         document.getElementById('share-x').onclick = () =>
@@ -1586,6 +1609,7 @@
       document.getElementById('article-view').style.display = 'none';
       document.getElementById('about-view').style.display = 'none';
       progressBar.style.display = 'none';
+      progressMobile.style.display = 'none';
       history.pushState({}, '', window.location.pathname);
       updateOG({
         title: 'TVAI – Wiadomości AI',
@@ -1674,18 +1698,27 @@
     // ── READING PROGRESS ──────────────────────────
     const progressBar = document.getElementById('read-progress');
     const progressFill = document.getElementById('read-progress-fill');
+    const progressMobile = document.getElementById('read-progress-mobile');
+    const progressMobileFill = document.getElementById('read-progress-mobile-fill');
+
     window.addEventListener('scroll', () => {
       if (document.getElementById('article-view').style.display === 'none') return;
       const start = document.getElementById('article-meta');
       const end = document.getElementById('article-content');
       if (!start || !end) return;
+
+      // Desktop: starts when meta hits top
       const startY = start.getBoundingClientRect().top + window.scrollY;
       const endY = end.getBoundingClientRect().bottom + window.scrollY;
-      // 0% = meta at top of viewport, 100% = content bottom at bottom of viewport
       const scrollable = (endY - window.innerHeight) - startY;
       const scrolled = window.scrollY - startY;
       const pct = Math.min(100, Math.max(0, (scrolled / scrollable) * 100));
       progressFill.style.height = pct + '%';
+
+      // Mobile: full page scroll progress
+      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const mobilePct = totalHeight > 0 ? Math.min(100, (window.scrollY / totalHeight) * 100) : 0;
+      progressMobileFill.style.height = mobilePct + '%';
     });
 
     // ── RELATED ARTICLES ──────────────────────────

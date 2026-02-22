@@ -1528,47 +1528,57 @@
     });
 
     // ── VIEWS + LIKES ─────────────────────────────
-    function getLikes() {
-      try { return JSON.parse(localStorage.getItem('tvai_likes') || '{}'); } catch(e) { return {}; }
+    function hasLiked(slug) {
+      try { return JSON.parse(localStorage.getItem('tvai_likes') || '{}')[slug] || false; } catch(e) { return false; }
     }
-    function getLikeCounts() {
-      try { return JSON.parse(localStorage.getItem('tvai_like_counts') || '{}'); } catch(e) { return {}; }
+    function setLiked(slug) {
+      try {
+        const likes = JSON.parse(localStorage.getItem('tvai_likes') || '{}');
+        likes[slug] = true;
+        localStorage.setItem('tvai_likes', JSON.stringify(likes));
+      } catch(e) {}
     }
 
-    function toggleLike() {
+    async function toggleLike() {
       const slug = currentSlug;
-      const likes = getLikes();
-      const counts = getLikeCounts();
-      const isLiked = !!likes[slug];
-      likes[slug] = !isLiked;
-      counts[slug] = Math.max(0, (counts[slug] || 0) + (isLiked ? -1 : 1));
-      localStorage.setItem('tvai_likes', JSON.stringify(likes));
-      localStorage.setItem('tvai_like_counts', JSON.stringify(counts));
-      updateLikeUI(slug);
-    }
-
-    function updateLikeUI(slug) {
-      const likes = getLikes();
-      const counts = getLikeCounts();
+      if (hasLiked(slug)) return; // już polubione — nie licz drugi raz
+      setLiked(slug);
       const btn = document.getElementById('eng-like');
       const icon = document.getElementById('like-icon');
-      const count = document.getElementById('like-count');
-      if (!btn) return;
-      const isLiked = !!likes[slug];
-      btn.classList.toggle('liked', isLiked);
-      icon.textContent = isLiked ? '❤️' : '🤍';
-      count.textContent = counts[slug] || 0;
+      btn.classList.add('liked');
+      icon.textContent = '❤️';
+      btn.disabled = true;
+      try {
+        const res = await fetch(`https://api.countapi.xyz/hit/tvai-likes/${slug}`);
+        const data = await res.json();
+        document.getElementById('like-count').textContent = data.value;
+      } catch(e) {}
     }
 
     async function trackView(slug) {
       const eng = document.getElementById('article-engagement');
       const viewsEl = document.getElementById('eng-views');
+      const likeBtn = document.getElementById('eng-like');
+      const icon = document.getElementById('like-icon');
       eng.style.display = 'flex';
-      updateLikeUI(slug);
+
+      // Ustaw stan lajka z localStorage
+      if (hasLiked(slug)) {
+        likeBtn.classList.add('liked');
+        icon.textContent = '❤️';
+        likeBtn.disabled = true;
+      }
+
+      // Widoki i lajki równolegle
       try {
-        const res = await fetch(`https://api.countapi.xyz/hit/tvai-mediafy/${slug}`);
-        const data = await res.json();
-        viewsEl.textContent = `👁 ${data.value} wyświetleń`;
+        const [viewRes, likeRes] = await Promise.all([
+          fetch(`https://api.countapi.xyz/hit/tvai-views/${slug}`),
+          fetch(`https://api.countapi.xyz/get/tvai-likes/${slug}`)
+        ]);
+        const viewData = await viewRes.json();
+        const likeData = await likeRes.json();
+        viewsEl.textContent = `👁 ${viewData.value} wyświetleń`;
+        document.getElementById('like-count').textContent = likeData.value || 0;
       } catch(e) {
         viewsEl.textContent = `👁 — wyświetleń`;
       }

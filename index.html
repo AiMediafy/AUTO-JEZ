@@ -271,127 +271,6 @@
       line-height: 1.7;
     }
 
-    /* ── FEATURED POST ────────────────────────── */
-    .featured-wrap {
-      max-width: var(--max-w);
-      margin: 0 auto;
-      padding: 0 32px 32px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .featured-label {
-      font-size: 0.7rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--text3);
-      margin-bottom: 14px;
-    }
-
-    .featured-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      cursor: pointer;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      min-height: 280px;
-      transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s cubic-bezier(.22,.68,0,1.2);
-      animation: fadeUp 0.3s ease both;
-    }
-    .featured-card:hover {
-      border-color: rgba(37,99,235,0.35);
-      transform: translateY(-2px);
-      box-shadow: 0 16px 48px rgba(0,0,0,0.5), 0 0 0 1px rgba(37,99,235,0.08);
-    }
-
-    .featured-image-wrap {
-      overflow: hidden;
-      position: relative;
-      background: var(--bg3);
-    }
-
-    .featured-image-wrap img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.5s ease;
-    }
-    .featured-card:hover .featured-image-wrap img { transform: scale(1.04); }
-
-    .featured-placeholder {
-      width: 100%; height: 100%;
-      display: flex; align-items: center; justify-content: center;
-      background: linear-gradient(135deg, var(--bg3) 0%, #080818 100%);
-      position: relative;
-      overflow: hidden;
-    }
-    .featured-placeholder::before {
-      content: '';
-      position: absolute; inset: 0;
-      background: radial-gradient(ellipse at 30% 60%, rgba(37,99,235,0.15), transparent 65%);
-    }
-    .featured-placeholder-text {
-      font-family: 'Syne', sans-serif;
-      font-size: 4rem;
-      font-weight: 800;
-      color: rgba(255,255,255,0.04);
-      position: relative; z-index: 1;
-    }
-
-    .featured-body {
-      padding: 32px 36px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 12px;
-    }
-
-    .featured-meta {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .featured-title {
-      font-family: 'Syne', sans-serif;
-      font-size: 1.4rem;
-      font-weight: 800;
-      line-height: 1.25;
-      letter-spacing: -0.015em;
-      color: var(--text);
-    }
-
-    .featured-summary {
-      font-size: 0.88rem;
-      color: var(--text2);
-      line-height: 1.7;
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-
-    .featured-footer {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      margin-top: 4px;
-    }
-
-    .read-more-featured {
-      font-size: 0.82rem;
-      font-weight: 600;
-      color: var(--blue-light);
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      transition: gap 0.2s;
-    }
-    .featured-card:hover .read-more-featured { gap: 10px; }
-
     /* ── FILTER BAR ───────────────────────────── */
     .filter-bar {
       max-width: var(--max-w);
@@ -828,12 +707,6 @@
     <p>Bądź na bieżąco z najważniejszymi wiadomościami ze świata AI – OpenAI, Google, Anthropic, xAI i innych. Bez bullshitu.</p>
   </section>
 
-  <!-- FEATURED -->
-  <div class="featured-wrap" id="featured-wrap">
-    <div class="featured-label">Najnowszy wpis</div>
-    <div class="featured-card" id="featured-card"></div>
-  </div>
-
   <!-- FILTER BAR -->
   <div class="filter-bar" id="filter-bar">
     <button class="tag-btn active" data-filter="all">Wszystkie <span class="tag-count" id="count-all">0</span></button>
@@ -953,33 +826,6 @@
       });
     }
 
-    // ── FEATURED CARD ────────────────────────────
-    function renderFeatured(post) {
-      const wrap = document.getElementById('featured-wrap');
-      const card = document.getElementById('featured-card');
-      if (!post) { wrap.style.display = 'none'; return; }
-
-      const badgeClass = getBadgeClass(post.company);
-      const imageHtml = post.image
-        ? `<img src="${post.image}" alt="${post.title}" onerror="this.style.display='none'"/>`
-        : `<div class="featured-placeholder"><span class="featured-placeholder-text">${post.company || 'AI'}</span></div>`;
-
-      card.innerHTML = `
-        <div class="featured-image-wrap">${imageHtml}</div>
-        <div class="featured-body">
-          <div class="featured-meta">
-            <span class="company-badge ${badgeClass}">${post.company || 'AI'}</span>
-            <span style="font-size:0.75rem;color:var(--text3)">${formatDate(post.date)}</span>
-          </div>
-          <div class="featured-title">${post.title}</div>
-          <div class="featured-summary">${post.summary || ''}</div>
-          <div class="featured-footer">
-            <span class="read-more-featured">Czytaj artykuł →</span>
-          </div>
-        </div>`;
-      card.onclick = () => openArticle(post.slug);
-    }
-
     // ── RENDER CARD ──────────────────────────────
     function renderCard(post) {
       const badgeClass = getBadgeClass(post.company);
@@ -1009,21 +855,17 @@
     function renderList(posts) {
       const grid = document.getElementById('posts-grid');
       const filtered = activeFilter === 'all' ? posts : posts.filter(p => p.company === activeFilter);
-      // skip first post (featured) when showing all
-      const toShow = (activeFilter === 'all' && posts.length > 1) ? filtered.slice(1) : filtered;
-
-      if (!toShow.length) {
+      if (!filtered.length) {
         grid.innerHTML = `<div class="empty-state"><p style="font-size:2rem">🤷</p><p>Brak wpisów dla wybranego filtra.</p></div>`;
         return;
       }
-      grid.innerHTML = toShow.map(renderCard).join('');
+      grid.innerHTML = filtered.map(renderCard).join('');
     }
 
     // ── OPEN ARTICLE ─────────────────────────────
     async function openArticle(slug) {
       document.getElementById('list-view').style.display = 'none';
       document.getElementById('hero-section').style.display = 'none';
-      document.getElementById('featured-wrap').style.display = 'none';
       document.getElementById('filter-bar').style.display = 'none';
       document.getElementById('article-view').style.display = 'block';
       document.getElementById('article-content').innerHTML = `<div class="loading"><div class="dot"></div><div class="dot"></div><div class="dot"></div><span>Ładowanie...</span></div>`;
@@ -1059,7 +901,6 @@
     function showList() {
       document.getElementById('list-view').style.display = 'block';
       document.getElementById('hero-section').style.display = 'block';
-      document.getElementById('featured-wrap').style.display = 'block';
       document.getElementById('filter-bar').style.display = 'flex';
       document.getElementById('article-view').style.display = 'none';
       window.location.hash = '';
@@ -1076,9 +917,6 @@
           b.classList.toggle('active', b.dataset.filter === filter);
         });
         activeFilter = filter;
-        // show/hide featured only for "all"
-        document.getElementById('featured-wrap').style.display =
-          (filter === 'all' && allPosts.length > 0) ? 'block' : 'none';
         renderList(allPosts);
       });
     });
@@ -1103,7 +941,6 @@
 
       buildTicker(allPosts);
       updateCounts(allPosts);
-      renderFeatured(allPosts[0]);
 
       const hash = window.location.hash.replace('#', '');
       if (hash) { renderList(allPosts); openArticle(hash); }

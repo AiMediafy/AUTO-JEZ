@@ -5,18 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- ── OG / SEO (aktualizowane przez JS dla artykułów) ── -->
-  <title id="page-title">Blog AI – Mediafy</title>
+  <title id="page-title">TVAI – Wiadomości AI</title>
   <meta name="description" id="meta-desc" content="Najnowsze newsy ze świata AI – OpenAI, Google, Anthropic, xAI i inne. Pisane po ludzku." />
 
   <meta property="og:type"        content="website" />
-  <meta property="og:site_name"   content="Mediafy Blog AI" />
-  <meta property="og:title"       id="og-title"  content="Blog AI – Mediafy" />
+  <meta property="og:site_name"   content="TVAI" />
+  <meta property="og:title"       id="og-title"  content="TVAI – Wiadomości AI" />
   <meta property="og:description" id="og-desc"   content="Najnowsze newsy ze świata AI – OpenAI, Google, Anthropic, xAI i inne. Pisane po ludzku." />
   <meta property="og:image"       id="og-image"  content="https://aimediafy.github.io/AUTO-JEZ/og-default.jpg" />
   <meta property="og:url"         id="og-url"    content="https://aimediafy.github.io/AUTO-JEZ" />
 
   <meta name="twitter:card"        content="summary_large_image" />
-  <meta name="twitter:title"       id="tw-title" content="Blog AI – Mediafy" />
+  <meta name="twitter:title"       id="tw-title" content="TVAI – Wiadomości AI" />
   <meta name="twitter:description" id="tw-desc"  content="Najnowsze newsy ze świata AI – OpenAI, Google, Anthropic, xAI i inne. Pisane po ludzku." />
   <meta name="twitter:image"       id="tw-image" content="https://aimediafy.github.io/AUTO-JEZ/og-default.jpg" />
 
@@ -760,8 +760,8 @@
   <header>
     <div class="header-inner">
       <div class="logo" id="logo-btn">
-        <div class="logo-icon">M</div>
-        <span class="logo-text">Mediafy · Blog AI</span>
+        <div class="logo-icon">TV</div>
+        <span class="logo-text">TVAI</span>
       </div>
       <div class="nav-pill" id="nav-pill">
         <button class="filter-btn active" data-filter="all">Wszystkie</button>
@@ -786,8 +786,8 @@
       <div class="hero-badge-dot"></div>
       Posty na blogu
     </div>
-    <h1>Najnowsze newsy AI<br><span class="dim">z perspektywy biznesu</span></h1>
-    <p>Bądź na bieżąco z najważniejszymi wiadomościami ze świata AI – OpenAI, Google, Anthropic, xAI i innych. Bez bullshitu.</p>
+    <h1>Najnowsze newsy AI<br><span class="dim">na żywo, bez filtrów</span></h1>
+    <p>Bądź na bieżąco z najważniejszymi wiadomościami ze świata AI – OpenAI, Google, Anthropic, xAI i innych. Bez bullshitu.<br><span style="font-size:0.82rem;color:var(--text3);margin-top:8px;display:block">📡 Wiadomości generowane automatycznie przez Auto-Jeża</span></p>
   </section>
 
   <!-- FILTER BAR -->
@@ -833,7 +833,7 @@
   </main>
 
   <footer>
-    © 2026 <strong style="color:var(--text2)">Mediafy</strong> · Blog AI · Automatycznie generowany przez n8n
+    © 2026 <strong style="color:var(--text2)">TVAI</strong> · Wiadomości AI · Automatycznie generowane przez Auto-Jeża · <a href="https://www.mediafy.com.pl/" target="_blank" style="color:var(--text3);text-decoration:underline;text-underline-offset:3px;transition:color 0.2s" onmouseover="this.style.color='var(--text2)'" onmouseout="this.style.color='var(--text3)'">Produkt Mediafy</a>
   </footer>
 
   <button id="back-to-top" title="Wróć na górę">↑</button>
@@ -1015,7 +1015,7 @@
 
         // Update OG tags
         updateOG({
-          title: `${meta.title} – Mediafy Blog AI`,
+          title: `${meta.title} – TVAI`,
           desc: meta.summary || '',
           image: imageUrl,
           url: articleUrl
@@ -1062,7 +1062,7 @@
       document.getElementById('article-view').style.display = 'none';
       history.pushState({}, '', window.location.pathname);
       updateOG({
-        title: 'Blog AI – Mediafy',
+        title: 'TVAI – Wiadomości AI',
         desc: 'Najnowsze newsy ze świata AI – OpenAI, Google, Anthropic, xAI i inne. Pisane po ludzku.',
         url: BASE_URL
       });

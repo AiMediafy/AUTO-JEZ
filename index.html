@@ -711,12 +711,28 @@
       position: relative; z-index: 1;
     }
 
+    /* ── MOBILE SEARCH BAR ────────────────────── */
+    .mobile-search {
+      display: none;
+      padding: 10px 16px;
+      background: var(--bg2);
+      border-bottom: 1px solid var(--border);
+    }
+    .mobile-search .search-input {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .mobile-search .search-input:focus {
+      width: 100%;
+    }
+    @media (max-width: 768px) {
+      .mobile-search { display: block; }
+    }
+
     /* ── RESPONSIVE ───────────────────────────── */
     @media (max-width: 768px) {
       .nav-pill { display: none; }
-      .search-input { width: 130px; font-size: 0.75rem; }
-      .search-input:focus { width: 160px; }
-      .header-cta { padding: 7px 14px; font-size: 0.78rem; }
+      .search-wrap { display: none; }
       .posts-grid { grid-template-columns: 1fr; }
       .hero { padding: 40px 20px 32px; }
       .hero h1 { font-size: 1.9rem; }
@@ -730,8 +746,7 @@
     }
 
     @media (max-width: 400px) {
-      .search-wrap { display: none; }
-      .header-cta { display: none; }
+      .header-cta { padding: 6px 12px; font-size: 0.75rem; }
     }
 
     /* ── BADGE COLORS ─────────────────────────── */
@@ -756,6 +771,11 @@
     </div>
   </div>
 
+  <!-- MOBILE SEARCH -->
+  <div class="mobile-search">
+    <input type="text" class="search-input" id="search-input-mobile" placeholder="🔍 Szukaj newsów..." />
+  </div>
+
   <!-- HEADER -->
   <header>
     <div class="header-inner">
@@ -776,7 +796,7 @@
         <input type="text" class="search-input" id="search-input" placeholder="Szukaj newsów..." />
         <span class="search-icon">🔍</span>
       </div>
-      <button class="header-cta" onclick="window.open('https://www.mediafy.com.pl/o-nas','_blank')">Porozmawiajmy</button>
+      <button class="header-cta" onclick="window.open('https://www.mediafy.com.pl/o-nas','_blank')">Napisz do nas</button>
     </div>
   </header>
 
@@ -1070,8 +1090,8 @@
     }
 
     // ── SEARCH ───────────────────────────────────
-    document.getElementById('search-input').addEventListener('input', e => {
-      searchQuery = e.target.value.trim();
+    function handleSearch(val) {
+      searchQuery = val.trim();
       currentPage = 1;
       const info = document.getElementById('search-info');
       if (searchQuery) {
@@ -1081,6 +1101,12 @@
         info.style.display = 'none';
       }
       renderList();
+    }
+
+    document.getElementById('search-input').addEventListener('input', e => handleSearch(e.target.value));
+    document.getElementById('search-input-mobile').addEventListener('input', e => {
+      document.getElementById('search-input').value = e.target.value;
+      handleSearch(e.target.value);
     });
 
     // ── FILTERS ──────────────────────────────────

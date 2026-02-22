@@ -684,7 +684,8 @@
     /* ── BACK TO TOP ──────────────────────────── */
     #back-to-top {
       position: fixed;
-      bottom: 32px; right: 32px;
+      bottom: 32px;
+      right: 88px;
       width: 44px; height: 44px;
       background: var(--blue);
       color: #fff;
@@ -695,12 +696,19 @@
       display: none;
       align-items: center;
       justify-content: center;
-      z-index: 200;
+      z-index: 1000;
       transition: opacity 0.2s, transform 0.2s;
       box-shadow: 0 4px 20px rgba(37,99,235,0.4);
     }
     #back-to-top:hover { opacity: 0.85; transform: translateY(-2px); }
     #back-to-top.visible { display: flex; }
+
+    @media (max-width: 768px) {
+      #back-to-top { bottom: 20px; right: 64px; }
+      #li-tab span { display: none; }
+      #li-tab { width: 52px; padding: 8px; justify-content: center; border-radius: 50% 0 0 50%; }
+      #li-tab:hover { transform: translateX(-4px); }
+    }
 
     /* ── FOOTER ───────────────────────────────── */
     footer {

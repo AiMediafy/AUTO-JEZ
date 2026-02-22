@@ -1675,10 +1675,15 @@
     const progressBar = document.getElementById('read-progress');
     const progressFill = document.getElementById('read-progress-fill');
     window.addEventListener('scroll', () => {
-      const content = document.getElementById('article-content');
-      if (!content || document.getElementById('article-view').style.display === 'none') return;
-      const rect = content.getBoundingClientRect();
-      const pct = Math.min(100, Math.max(0, (-rect.top / content.offsetHeight) * 100));
+      if (document.getElementById('article-view').style.display === 'none') return;
+      const start = document.getElementById('article-meta');
+      const end = document.getElementById('article-content');
+      if (!start || !end) return;
+      const startY = start.getBoundingClientRect().top + window.scrollY;
+      const endY = end.getBoundingClientRect().bottom + window.scrollY;
+      const total = endY - startY;
+      const scrolled = window.scrollY + window.innerHeight - startY;
+      const pct = Math.min(100, Math.max(0, (scrolled / total) * 100));
       progressFill.style.height = pct + '%';
     });
 

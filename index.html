@@ -926,7 +926,104 @@
     .badge-microsoft { background: rgba(0,164,239,0.12);  color: #00a4ef; }
     .badge-meta      { background: rgba(8,102,255,0.12);  color: #6098ff; }
     .badge-default   { background: rgba(255,255,255,0.06); color: #8080a0; }
-  </style>
+
+    /* ── HERO STATS ───────────────────────────── */
+    .hero-stats { display:flex; gap:32px; margin-top:28px; flex-wrap:wrap; }
+    .hero-stat { display:flex; flex-direction:column; gap:2px; }
+    .hero-stat-num { font-family:'Syne',sans-serif; font-size:1.8rem; font-weight:800; color:var(--text); line-height:1; }
+    .hero-stat-num span { color:var(--blue-light); }
+    .hero-stat-label { font-size:0.72rem; color:var(--text3); text-transform:uppercase; letter-spacing:0.08em; }
+
+    /* ── TODAY BADGE ──────────────────────────── */
+    .today-badge {
+      display:inline-flex; align-items:center; gap:5px;
+      font-size:0.63rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em;
+      color:#fff; background:#ef4444; padding:2px 8px; border-radius:100px;
+      animation: todayPulse 2s ease infinite;
+    }
+    .today-dot { width:5px; height:5px; border-radius:50%; background:#fff; animation:pulse 1.5s ease infinite; }
+    @keyframes todayPulse {
+      0%,100% { box-shadow:0 0 0 0 rgba(239,68,68,0.4); }
+      50% { box-shadow:0 0 0 4px rgba(239,68,68,0); }
+    }
+    .post-card.today { border-color:rgba(239,68,68,0.2); }
+
+    /* ── RANDOM BTN ───────────────────────────── */
+    .random-btn {
+      font-size:0.76rem; font-weight:500; padding:6px 14px; border-radius:100px;
+      border:1px solid var(--border2); background:transparent; color:var(--text2);
+      cursor:pointer; transition:all 0.2s; display:flex; align-items:center; gap:6px;
+    }
+    .random-btn:hover { border-color:var(--blue); color:var(--blue-light); }
+
+    /* ── TICKER TIME ──────────────────────────── */
+    .ticker-time {
+      flex-shrink:0; font-size:0.68rem; color:var(--text3);
+      padding:0 16px; border-left:1px solid var(--border); white-space:nowrap;
+    }
+    .ticker-time span { color:var(--blue-light); font-weight:500; }
+
+    /* ── NEWSLETTER ───────────────────────────── */
+    .newsletter-section { max-width:var(--max-w); margin:0 auto; padding:0 32px 64px; position:relative; z-index:1; }
+    .newsletter-box {
+      background:var(--card); border:1px solid var(--border); border-radius:var(--radius-lg);
+      padding:40px 48px; display:flex; align-items:center; justify-content:space-between;
+      gap:32px; position:relative; overflow:hidden;
+    }
+    .newsletter-box::before {
+      content:''; position:absolute; right:-60px; top:-60px; width:300px; height:300px;
+      background:radial-gradient(circle, rgba(37,99,235,0.1) 0%, transparent 70%); pointer-events:none;
+    }
+    .newsletter-left { flex:1; }
+    .newsletter-label { font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--blue-light); margin-bottom:8px; }
+    .newsletter-title { font-family:'Syne',sans-serif; font-size:1.4rem; font-weight:800; color:var(--text); line-height:1.2; margin-bottom:8px; }
+    .newsletter-sub { font-size:0.85rem; color:var(--text2); line-height:1.6; }
+    .newsletter-form { display:flex; gap:8px; flex-shrink:0; }
+    .newsletter-input {
+      background:rgba(255,255,255,0.06); border:1px solid var(--border2); border-radius:100px;
+      color:var(--text); font-family:'Inter',sans-serif; font-size:0.85rem;
+      padding:10px 20px; width:240px; outline:none; transition:border-color 0.2s, background 0.2s;
+    }
+    .newsletter-input::placeholder { color:var(--text3); }
+    .newsletter-input:focus { border-color:var(--blue); background:rgba(37,99,235,0.06); }
+    .newsletter-submit {
+      background:var(--blue); color:#fff; border:none; border-radius:100px;
+      font-family:'Inter',sans-serif; font-size:0.82rem; font-weight:700;
+      padding:10px 22px; cursor:pointer; transition:opacity 0.2s; white-space:nowrap;
+      box-shadow:0 4px 16px rgba(37,99,235,0.3);
+    }
+    .newsletter-submit:hover { opacity:0.9; }
+    .newsletter-success { display:none; align-items:center; gap:8px; font-size:0.85rem; color:#10a37f; font-weight:500; }
+
+    /* ── ABOUT PAGE ───────────────────────────── */
+    #about-view { display:none; }
+    .about-section { max-width:760px; }
+    .about-section h2 { font-family:'Syne',sans-serif; font-size:1.8rem; font-weight:800; margin:48px 0 16px; letter-spacing:-0.02em; color:var(--text); }
+    .about-section h2:first-child { margin-top:0; }
+    .about-section p { font-size:1rem; color:#a8a8bc; line-height:1.85; margin-bottom:1.2em; }
+    .about-section strong { color:var(--text); }
+    .about-timeline { border-left:2px solid var(--border); padding-left:24px; margin:24px 0; display:flex; flex-direction:column; gap:24px; }
+    .timeline-item { position:relative; }
+    .timeline-item::before { content:''; position:absolute; left:-29px; top:6px; width:10px; height:10px; border-radius:50%; background:var(--blue); border:2px solid var(--bg); }
+    .timeline-step { font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:var(--blue-light); margin-bottom:4px; }
+    .timeline-text { font-size:0.9rem; color:var(--text2); line-height:1.6; }
+    .about-links { display:flex; gap:12px; margin-top:16px; flex-wrap:wrap; }
+    .about-link-btn {
+      display:inline-flex; align-items:center; gap:6px; font-size:0.8rem; font-weight:600;
+      padding:8px 18px; border-radius:100px; border:1px solid var(--border);
+      background:transparent; color:var(--text2); cursor:pointer; transition:all 0.2s; text-decoration:none;
+    }
+    .about-link-btn:hover { border-color:var(--blue); color:var(--blue-light); }
+    .about-link-btn.primary { background:var(--blue); border-color:var(--blue); color:#fff; }
+    .about-link-btn.primary:hover { opacity:0.9; }
+
+    @media (max-width:768px) {
+      .newsletter-box { flex-direction:column; padding:28px 24px; }
+      .newsletter-form { flex-direction:column; width:100%; }
+      .newsletter-input { width:100%; }
+      .newsletter-section { padding:0 20px 48px; }
+      .hero-stats { gap:20px; }
+    }
 </head>
 <body>
 
@@ -938,6 +1035,7 @@
     <div class="ticker-track-wrap">
       <div class="ticker-track" id="ticker-track"></div>
     </div>
+    <div class="ticker-time" id="ticker-time"></div>
   </div>
 
   <!-- MOBILE SEARCH -->
@@ -966,6 +1064,7 @@
         <span class="search-icon">🔍</span>
       </div>
       <button class="header-cta" onclick="window.open('https://www.mediafy.com.pl/o-nas','_blank')">Napisz do nas</button>
+      <button class="header-cta" style="background:transparent;border:1px solid var(--border);color:var(--text2);margin-left:-8px" onclick="showAbout()">O projekcie</button>
     </div>
   </header>
 
@@ -977,6 +1076,20 @@
     </div>
     <h1>Najnowsze newsy AI<br><span class="dim">na żywo, bez filtrów</span></h1>
     <p>Bądź na bieżąco z najważniejszymi wiadomościami ze świata AI – OpenAI, Google, Anthropic, xAI i innych. Bez bullshitu.<br><span style="font-size:0.82rem;color:var(--text3);margin-top:8px;display:block">📡 Wiadomości generowane automatycznie przez Auto-Jeża</span></p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-num" id="stat-total">0<span>+</span></div>
+        <div class="hero-stat-label">Artykułów</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num" id="stat-companies">0</div>
+        <div class="hero-stat-label">Firm AI</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num" id="stat-today">0</div>
+        <div class="hero-stat-label">Dziś dodano</div>
+      </div>
+    </div>
   </section>
 
   <!-- FILTER BAR -->
@@ -989,6 +1102,7 @@
     <button class="tag-btn" data-filter="Microsoft">Microsoft <span class="tag-count" id="count-Microsoft">0</span></button>
     <button class="tag-btn" data-filter="Meta">Meta <span class="tag-count" id="count-Meta">0</span></button>
     <span class="search-info" id="search-info" style="display:none">Wyniki dla: <span id="search-query"></span></span>
+    <button class="random-btn" onclick="openRandomArticle()" title="Losowy artykuł">🎲 Losuj</button>
   </div>
 
   <!-- MAIN -->
@@ -1020,6 +1134,70 @@
       <div class="article-content" id="article-content"></div>
     </div>
   </main>
+
+  <!-- NEWSLETTER -->
+  <div class="newsletter-section" id="newsletter-section">
+    <div class="newsletter-box">
+      <div class="newsletter-left">
+        <div class="newsletter-label">📬 Newsletter</div>
+        <div class="newsletter-title">AI news prosto na maila</div>
+        <div class="newsletter-sub">Żadnego spamu. Tylko najważniejsze newsy ze świata AI, automatycznie gdy się pojawią.</div>
+      </div>
+      <div>
+        <div class="newsletter-form" id="newsletter-form">
+          <input type="email" class="newsletter-input" id="newsletter-email" placeholder="twoj@email.pl" />
+          <button class="newsletter-submit" onclick="submitNewsletter()">Zapisz się →</button>
+        </div>
+        <div class="newsletter-success" id="newsletter-success">✓ Zapisano! Sprawdź skrzynkę.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT VIEW -->
+  <div id="about-view">
+    <main>
+      <div class="article-top-bar">
+        <div class="article-back" onclick="showList()">← Wróć do newsów</div>
+      </div>
+      <div class="about-section">
+        <h2>Czym jest TVAI?</h2>
+        <p>TVAI to <strong>w 100% automatyczny blog o AI</strong> — każdy artykuł jest znajdowany, napisany, zilustowany i opublikowany przez agenta AI bez udziału człowieka. To projekt stworzony przez Mediafy, żeby pokazać jak daleko można zajść z automatyzacją contentu.</p>
+        <p>Artykuły pojawiają się automatycznie kiedy dzieje się coś ważnego w świecie AI — OpenAI, Google, Anthropic, xAI, Meta i innych firm technologicznych.</p>
+
+        <h2>Skąd pomysł?</h2>
+        <p>Mediafy od początku zajmuje się <strong>wdrażaniem automatyzacji i AI dla biznesów</strong>. TVAI powstał jako wewnętrzny projekt — chcieliśmy pokazać klientom co jest możliwe, zamiast tylko o tym mówić.</p>
+        <p>Zamiast tłumaczyć "można zautomatyzować tworzenie contentu" — uruchomiliśmy stronę która robi to na żywo, 24/7.</p>
+
+        <h2>Jak to działa?</h2>
+        <div class="about-timeline">
+          <div class="timeline-item">
+            <div class="timeline-step">Krok 1 — Monitoring</div>
+            <div class="timeline-text">Agent AI śledzi kanały RSS, Twittera i blogi największych firm AI. Gdy pojawi się ważna informacja — uruchamia proces.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-step">Krok 2 — Pisanie</div>
+            <div class="timeline-text">Claude (Anthropic) pisze artykuł po polsku — zrozumiały dla biznesu, bez technicznego żargonu. Skrót, kontekst, co to znaczy dla firm.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-step">Krok 3 — Grafika</div>
+            <div class="timeline-text">DALL·E generuje unikalną grafikę dopasowaną do treści artykułu. Każdy wpis ma własny, oryginalny obrazek.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-step">Krok 4 — Publikacja</div>
+            <div class="timeline-text">n8n wysyła artykuł i grafikę na GitHub Pages przez API. Strona aktualizuje się automatycznie w ciągu sekund.</div>
+          </div>
+        </div>
+
+        <h2>Chcesz coś takiego dla swojej firmy?</h2>
+        <p>Budujemy podobne systemy dla klientów — automatyczne blogi, newslettery, raporty, monitoring konkurencji. Jeśli chcesz zobaczyć co możemy zautomatyzować u Ciebie — napisz.</p>
+        <div class="about-links">
+          <a class="about-link-btn primary" href="https://www.mediafy.com.pl/o-nas" target="_blank">Porozmawiajmy →</a>
+          <a class="about-link-btn" href="https://www.mediafy.com.pl/" target="_blank">mediafy.com.pl</a>
+          <a class="about-link-btn" href="https://www.linkedin.com/in/jerzy-mediafy/" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+    </main>
+  </div>
 
   <footer>
     © 2026 <strong style="color:var(--text2)">TVAI</strong> · Wiadomości AI · Automatycznie generowane przez Auto-Jeża · <a href="https://www.mediafy.com.pl/" target="_blank" style="color:var(--text3);text-decoration:underline;text-underline-offset:3px;transition:color 0.2s" onmouseover="this.style.color='var(--text2)'" onmouseout="this.style.color='var(--text3)'">Produkt Mediafy</a>
@@ -1116,15 +1294,30 @@
           ${p.title}
         </span>`);
       track.innerHTML = [...items,...items].join('');
+
+      // Last published time
+      const latest = posts[0];
+      if (latest && latest.date) {
+        const diff = Math.floor((Date.now() - new Date(latest.date)) / 3600000);
+        const timeStr = diff < 1 ? 'przed chwilą' : diff < 24 ? `${diff}h temu` : `${Math.floor(diff/24)}d temu`;
+        document.getElementById('ticker-time').innerHTML = `Ostatni wpis: <span>${timeStr}</span>`;
+      }
     }
 
-    // ── COUNTS ───────────────────────────────────
+    // ── COUNTS + STATS ────────────────────────────
     function updateCounts(posts) {
       document.getElementById('count-all').textContent = posts.length;
       ['OpenAI','Google','Anthropic','xAI','Microsoft','Meta'].forEach(c => {
         const el = document.getElementById('count-'+c);
         if (el) el.textContent = posts.filter(p=>p.company===c).length;
       });
+      // Hero stats
+      document.getElementById('stat-total').innerHTML = posts.length + '<span>+</span>';
+      const companies = new Set(posts.map(p=>p.company).filter(Boolean)).size;
+      document.getElementById('stat-companies').textContent = companies;
+      const today = new Date().toISOString().split('T')[0];
+      const todayCount = posts.filter(p => p.date === today).length;
+      document.getElementById('stat-today').textContent = todayCount;
     }
 
     // ── FILTERED POSTS ───────────────────────────
@@ -1159,16 +1352,18 @@
 
       grid.innerHTML = pagePosts.map((post, i) => {
         const badgeClass = getBadgeClass(post.company);
+        const today = new Date().toISOString().split('T')[0];
+        const isToday = post.date === today;
         const imageHtml = post.image
           ? `<div class="card-image-wrap"><img src="${post.image}" alt="${post.title}" loading="lazy" onerror="this.parentNode.innerHTML='<div class=\\'card-placeholder\\'><span class=\\'card-placeholder-label\\'>${post.company||'AI'}</span></div>'"/></div>`
           : `<div class="card-image-wrap"><div class="card-placeholder"><span class="card-placeholder-label">${post.company||'AI'}</span></div></div>`;
         return `
-          <div class="post-card" onclick="openArticle('${post.slug}')" style="animation-delay:${i*0.04}s">
+          <div class="post-card${isToday?' today':''}" onclick="openArticle('${post.slug}')" style="animation-delay:${i*0.04}s">
             ${imageHtml}
             <div class="card-body">
               <div class="card-top">
                 <span class="company-badge ${badgeClass}">${post.company||'AI'}</span>
-                <span class="card-date">${formatDate(post.date)}</span>
+                <span class="card-date">${isToday ? '<span class="today-badge"><span class="today-dot"></span>Dziś</span>' : formatDate(post.date)}</span>
               </div>
               <div class="card-title">${post.title}</div>
               <div class="card-summary">${post.summary||''}</div>
@@ -1212,6 +1407,8 @@
       document.getElementById('list-view').style.display = 'none';
       document.getElementById('hero-section').style.display = 'none';
       document.getElementById('filter-bar').style.display = 'none';
+      document.getElementById('newsletter-section').style.display = 'none';
+      document.getElementById('about-view').style.display = 'none';
       document.getElementById('article-view').style.display = 'block';
       document.getElementById('article-content').innerHTML = `<div class="loading"><div class="dot"></div><div class="dot"></div><div class="dot"></div><span>Ładowanie...</span></div>`;
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -1272,7 +1469,9 @@
       document.getElementById('list-view').style.display = 'block';
       document.getElementById('hero-section').style.display = 'block';
       document.getElementById('filter-bar').style.display = 'flex';
+      document.getElementById('newsletter-section').style.display = 'block';
       document.getElementById('article-view').style.display = 'none';
+      document.getElementById('about-view').style.display = 'none';
       history.pushState({}, '', window.location.pathname);
       updateOG({
         title: 'TVAI – Wiadomości AI',
@@ -1302,7 +1501,35 @@
       handleSearch(e.target.value);
     });
 
-    // ── FILTERS ──────────────────────────────────
+    // ── RANDOM ARTICLE ────────────────────────────
+    function openRandomArticle() {
+      if (!allPosts.length) return;
+      const random = allPosts[Math.floor(Math.random() * allPosts.length)];
+      openArticle(random.slug);
+    }
+
+    // ── NEWSLETTER ────────────────────────────────
+    function submitNewsletter() {
+      const email = document.getElementById('newsletter-email').value.trim();
+      if (!email || !email.includes('@')) {
+        document.getElementById('newsletter-email').style.borderColor = '#ef4444';
+        return;
+      }
+      // Tu w przyszłości: webhook n8n
+      document.getElementById('newsletter-form').style.display = 'none';
+      document.getElementById('newsletter-success').style.display = 'flex';
+    }
+
+    // ── ABOUT PAGE ────────────────────────────────
+    function showAbout() {
+      document.getElementById('list-view').style.display = 'none';
+      document.getElementById('hero-section').style.display = 'none';
+      document.getElementById('filter-bar').style.display = 'none';
+      document.getElementById('newsletter-section').style.display = 'none';
+      document.getElementById('article-view').style.display = 'none';
+      document.getElementById('about-view').style.display = 'block';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
     ['nav-pill','filter-bar'].forEach(id => {
       document.getElementById(id).addEventListener('click', e => {
         const btn = e.target.closest('button[data-filter]');

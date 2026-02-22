@@ -927,7 +927,86 @@
     .badge-meta      { background: rgba(8,102,255,0.12);  color: #6098ff; }
     .badge-default   { background: rgba(255,255,255,0.06); color: #8080a0; }
 
-    /* ── ARTICLE ENGAGEMENT ───────────────────── */
+    /* ── READING PROGRESS ─────────────────────── */
+    #read-progress {
+      position: fixed;
+      right: calc((100vw - 720px) / 2 - 20px);
+      top: 50%;
+      transform: translateY(-50%);
+      width: 3px;
+      height: 200px;
+      background: var(--border);
+      border-radius: 10px;
+      z-index: 50;
+      display: none;
+    }
+    #read-progress-fill {
+      width: 100%;
+      height: 0%;
+      background: var(--blue);
+      border-radius: 10px;
+      transition: height 0.1s linear;
+      box-shadow: 0 0 8px rgba(37,99,235,0.5);
+    }
+    @media (max-width: 900px) {
+      #read-progress { display: none !important; }
+    }
+
+    /* ── RELATED ARTICLES ─────────────────────── */
+    .related-section {
+      max-width: 720px;
+      margin-top: 64px;
+      padding-top: 40px;
+      border-top: 1px solid var(--border);
+    }
+    .related-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text3);
+      margin-bottom: 20px;
+    }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 14px;
+    }
+    .related-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .related-card:hover {
+      border-color: rgba(37,99,235,0.35);
+      transform: translateY(-2px);
+    }
+    .related-img {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      display: block;
+      background: var(--bg3);
+    }
+    .related-body { padding: 12px 14px; }
+    .related-title {
+      font-size: 0.82rem;
+      font-weight: 600;
+      line-height: 1.4;
+      color: var(--text);
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .related-meta {
+      font-size: 0.7rem;
+      color: var(--text3);
+      margin-top: 6px;
+    }
     .article-engagement {
       display: flex;
       align-items: center;
@@ -1168,6 +1247,10 @@
         </div>
       </div>
       <div class="article-content" id="article-content"></div>
+      <div class="related-section" id="related-section" style="display:none">
+        <div class="related-label">Więcej z tej samej firmy</div>
+        <div class="related-grid" id="related-grid"></div>
+      </div>
     </div>
   </main>
 
@@ -1229,6 +1312,7 @@
   </footer>
 
   <button id="back-to-top" title="Wróć na górę">↑</button>
+  <div id="read-progress"><div id="read-progress-fill"></div></div>
 
   <!-- LINKEDIN CARD -->
   <div id="li-card">
@@ -1471,6 +1555,9 @@
         document.getElementById('article-title').textContent = meta.title || slug;
         document.getElementById('article-content').innerHTML = marked.parse(content);
         trackView(slug);
+        renderRelated(slug, meta.company);
+        progressBar.style.display = 'block';
+        progressFill.style.height = '0%';
 
         // Share buttons
         document.getElementById('share-x').onclick = () =>
@@ -1498,6 +1585,7 @@
       document.getElementById('newsletter-section').style.display = 'block';
       document.getElementById('article-view').style.display = 'none';
       document.getElementById('about-view').style.display = 'none';
+      progressBar.style.display = 'none';
       history.pushState({}, '', window.location.pathname);
       updateOG({
         title: 'TVAI – Wiadomości AI',
@@ -1583,6 +1671,37 @@
         viewsEl.textContent = `👁 — wyświetleń`;
       }
     }
+    // ── READING PROGRESS ──────────────────────────
+    const progressBar = document.getElementById('read-progress');
+    const progressFill = document.getElementById('read-progress-fill');
+    window.addEventListener('scroll', () => {
+      const content = document.getElementById('article-content');
+      if (!content || document.getElementById('article-view').style.display === 'none') return;
+      const rect = content.getBoundingClientRect();
+      const pct = Math.min(100, Math.max(0, (-rect.top / content.offsetHeight) * 100));
+      progressFill.style.height = pct + '%';
+    });
+
+    // ── RELATED ARTICLES ──────────────────────────
+    function renderRelated(currentSlug, company) {
+      const related = allPosts.filter(p => p.company === company && p.slug !== currentSlug).slice(0, 3);
+      const section = document.getElementById('related-section');
+      const grid = document.getElementById('related-grid');
+      if (!related.length) { section.style.display = 'none'; return; }
+      section.style.display = 'block';
+      grid.innerHTML = related.map(p => `
+        <div class="related-card" onclick="openArticle('${p.slug}')">
+          ${p.image
+            ? `<img class="related-img" src="${p.image}" alt="${p.title}" loading="lazy" onerror="this.style.display='none'"/>`
+            : `<div class="related-img" style="display:flex;align-items:center;justify-content:center;background:var(--bg3)"><span style="font-size:0.65rem;color:var(--text3);text-transform:uppercase;letter-spacing:0.1em">${p.company}</span></div>`
+          }
+          <div class="related-body">
+            <div class="related-title">${p.title}</div>
+            <div class="related-meta">${formatDate(p.date)}</div>
+          </div>
+        </div>`).join('');
+    }
+
     function openRandomArticle() {
       if (!allPosts.length) return;
       const random = allPosts[Math.floor(Math.random() * allPosts.length)];

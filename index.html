@@ -1349,7 +1349,7 @@
     }
 
     // ── LINKEDIN CARD ─────────────────────────────
-    (function() {
+    try {
       const card = document.getElementById('li-card');
       const tab  = document.getElementById('li-tab');
       const closeBtn = document.getElementById('li-close');
@@ -1373,7 +1373,12 @@
 
       closeBtn.addEventListener('click', hideCard);
       tab.addEventListener('click', showCard);
-    })();
+    } catch(e) {
+      console.warn('LinkedIn card error:', e);
+    }
+
+    // ── START ─────────────────────────────────────
+    init();
   </script>
 </body>
 </html>

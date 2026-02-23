@@ -1501,13 +1501,30 @@
               <div class="card-summary">${post.summary||''}</div>
               <div class="card-footer">
                 <span class="read-more">Czytaj artykuł →</span>
-                <span class="read-time">${readTime(post.summary)}</span>
+                <span class="read-time views-count" id="views-${post.slug}">👁 ...</span>
               </div>
             </div>
           </div>`;
       }).join('');
 
       renderPagination(totalPages, filtered.length);
+
+      // Pobierz liczniki wyświetleń dla widocznych kart
+      fetchCardViews(pagePosts);
+    }
+
+    async function fetchCardViews(posts) {
+      for (const post of posts) {
+        const el = document.getElementById('views-' + post.slug);
+        if (!el) continue;
+        try {
+          const res = await fetch('https://api.countapi.xyz/get/tvai-views/' + post.slug);
+          const data = await res.json();
+          el.textContent = data.value ? '👁 ' + data.value : '👁 0';
+        } catch(e) {
+          el.textContent = '';
+        }
+      }
     }
 
     // ── PAGINATION ───────────────────────────────

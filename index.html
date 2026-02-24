@@ -1443,7 +1443,8 @@
     }
     function formatDate(str) {
       if (!str) return '';
-      return new Date(str).toLocaleDateString('pl-PL', { day:'numeric', month:'long', year:'numeric' });
+      const locales = { pl:'pl-PL', en:'en-GB', de:'de-DE', fr:'fr-FR', es:'es-ES' };
+      return new Date(str).toLocaleDateString(locales[currentLang] || 'pl-PL', { day:'numeric', month:'long', year:'numeric' });
     }
     function readTime(text) {
       return Math.max(1, Math.round((text||'').split(/\s+/).length / 200)) + ' min';
@@ -1552,12 +1553,12 @@
             <div class="card-body">
               <div class="card-top">
                 <span class="company-badge ${badgeClass}">${post.company||'AI'}</span>
-                <span class="card-date">${isToday ? '<span class="today-badge"><span class="today-dot"></span>Dziś</span>' : formatDate(post.date)}</span>
+                <span class="card-date">${isToday ? '<span class="today-badge"><span class="today-dot"></span>${T[currentLang].today}</span>' : formatDate(post.date)}</span>
               </div>
               <div class="card-title">${post.title}</div>
               <div class="card-summary">${post.summary||''}</div>
               <div class="card-footer">
-                <span class="read-more">Czytaj artykuł →</span>
+                <span class="read-more">${T[currentLang].readMore}</span>
                 <span class="read-time views-count" id="views-${post.slug}">👁 ...</span>
               </div>
             </div>
@@ -2197,6 +2198,9 @@ function applyLang() {
   // Back btn
 // Back btn
   document.getElementById('back-btn').textContent = t.back;
+  document.getElementById('share-x').textContent = t.shareX;
+  document.getElementById('share-li').textContent = t.shareLi;
+  document.getElementById('copy-link').textContent = t.copyLink;
   // About page
   const aboutSec = document.querySelector('#about-view .about-section');
   if (aboutSec) aboutSec.innerHTML = t.aboutHTML;

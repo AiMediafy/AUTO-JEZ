@@ -1556,7 +1556,7 @@
             <div class="card-body">
               <div class="card-top">
                 <span class="company-badge ${badgeClass}">${post.company||'AI'}</span>
-                <span class="card-date">${isToday ? '<span class="today-badge"><span class="today-dot"></span>${T[currentLang].today}</span>' : formatDate(post.date)}</span>
+                <span class="card-date">${isToday ? `<span class="today-badge"><span class="today-dot"></span>${T[currentLang].today}</span>` : formatDate(post.date)}</span>
               </div>
               <div class="card-title">${post.title}</div>
               <div class="card-summary">${post.summary||''}</div>

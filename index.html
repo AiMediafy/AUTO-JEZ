@@ -919,12 +919,22 @@
     @media (max-width: 400px) {
       #li-card { right: 12px; bottom: 12px; width: 260px; }
     }
+
+    /* ── COMPANY BADGES ───────────────────────── */
     .badge-openai    { background: rgba(16,163,127,0.12);  color: #10a37f; }
     .badge-google    { background: rgba(234,67,53,0.12);   color: #EA4335; }
     .badge-anthropic { background: rgba(204,120,92,0.12);  color: #CC785C; }
     .badge-xai       { background: rgba(147,51,234,0.12);  color: #9333ea; }
     .badge-microsoft { background: rgba(255,185,0,0.12);   color: #FFB900; }
     .badge-meta      { background: rgba(0,130,251,0.12);   color: #0082FB; }
+    .badge-qwen      { background: rgba(255,106,0,0.12);   color: #FF6A00; }
+    /* Bielik: polska flaga — biała góra, czerwony dół */
+    .badge-bielik {
+      background: linear-gradient(to bottom, #ffffff 50%, #DC143C 50%);
+      color: #1a1a1a;
+      border: 1px solid rgba(220,20,60,0.25);
+      text-shadow: none;
+    }
     .badge-default   { background: rgba(255,255,255,0.06); color: #8080a0; }
 
     /* ── MOBILE READING PROGRESS ─────────────── */
@@ -1187,6 +1197,8 @@
         <button class="filter-btn" data-filter="xAI">xAI</button>
         <button class="filter-btn" data-filter="Microsoft">Microsoft</button>
         <button class="filter-btn" data-filter="Meta">Meta</button>
+        <button class="filter-btn" data-filter="Qwen">Qwen</button>
+        <button class="filter-btn" data-filter="Bielik">Bielik</button>
       </div>
       <div class="search-wrap">
         <input type="text" class="search-input" id="search-input" placeholder="Szukaj newsów..." />
@@ -1230,6 +1242,8 @@
     <button class="tag-btn" data-filter="xAI">xAI <span class="tag-count" id="count-xAI">0</span></button>
     <button class="tag-btn" data-filter="Microsoft">Microsoft <span class="tag-count" id="count-Microsoft">0</span></button>
     <button class="tag-btn" data-filter="Meta">Meta <span class="tag-count" id="count-Meta">0</span></button>
+    <button class="tag-btn" data-filter="Qwen">Qwen <span class="tag-count" id="count-Qwen">0</span></button>
+    <button class="tag-btn" data-filter="Bielik">🇵🇱 Bielik <span class="tag-count" id="count-Bielik">0</span></button>
     <span class="search-info" id="search-info" style="display:none">Wyniki dla: <span id="search-query"></span></span>
     <button class="random-btn" onclick="openRandomArticle()" title="Losowy artykuł">🎲 Losuj</button>
   </div>
@@ -1377,10 +1391,28 @@
 
     // ── HELPERS ──────────────────────────────────
     function getBadgeClass(c) {
-      return {OpenAI:'badge-openai',Google:'badge-google',Anthropic:'badge-anthropic',xAI:'badge-xai',Microsoft:'badge-microsoft',Meta:'badge-meta'}[c] || 'badge-default';
+      return {
+        OpenAI:    'badge-openai',
+        Google:    'badge-google',
+        Anthropic: 'badge-anthropic',
+        xAI:       'badge-xai',
+        Microsoft: 'badge-microsoft',
+        Meta:      'badge-meta',
+        Qwen:      'badge-qwen',
+        Bielik:    'badge-bielik'
+      }[c] || 'badge-default';
     }
     function getCompanyColor(c) {
-      return {OpenAI:'#10a37f',Google:'#4285f4',Anthropic:'#f59e0b',xAI:'#a78bfa',Microsoft:'#00a4ef',Meta:'#6098ff'}[c] || '#8080a0';
+      return {
+        OpenAI:    '#10a37f',
+        Google:    '#EA4335',
+        Anthropic: '#CC785C',
+        xAI:       '#9333ea',
+        Microsoft: '#FFB900',
+        Meta:      '#0082FB',
+        Qwen:      '#FF6A00',
+        Bielik:    '#DC143C'
+      }[c] || '#8080a0';
     }
     function formatDate(str) {
       if (!str) return '';
@@ -1427,7 +1459,6 @@
         </span>`);
       track.innerHTML = [...items,...items].join('');
 
-      // Last published time
       const latest = posts[0];
       if (latest && latest.date) {
         const diff = Math.floor((Date.now() - new Date(latest.date)) / 3600000);
@@ -1439,11 +1470,10 @@
     // ── COUNTS + STATS ────────────────────────────
     function updateCounts(posts) {
       document.getElementById('count-all').textContent = posts.length;
-      ['OpenAI','Google','Anthropic','xAI','Microsoft','Meta'].forEach(c => {
+      ['OpenAI','Google','Anthropic','xAI','Microsoft','Meta','Qwen','Bielik'].forEach(c => {
         const el = document.getElementById('count-'+c);
         if (el) el.textContent = posts.filter(p=>p.company===c).length;
       });
-      // Hero stats
       document.getElementById('stat-total').innerHTML = posts.length + '<span>+</span>';
       const companies = new Set(posts.map(p=>p.company).filter(Boolean)).size;
       document.getElementById('stat-companies').textContent = companies;
@@ -1508,8 +1538,6 @@
       }).join('');
 
       renderPagination(totalPages, filtered.length);
-
-      // Pobierz liczniki wyświetleń dla widocznych kart
       fetchCardViews(pagePosts);
     }
 
@@ -1572,7 +1600,6 @@
         const articleUrl = `${BASE_URL}#${slug}`;
         const imageUrl = meta.image ? `${BASE_URL}/${meta.image}` : null;
 
-        // Update OG tags
         updateOG({
           title: `${meta.title} – TVAI`,
           desc: meta.summary || '',
@@ -1580,7 +1607,6 @@
           url: articleUrl
         });
 
-        // Image
         const imgWrap = document.getElementById('article-image-wrap');
         imgWrap.innerHTML = meta.image
           ? `<img class="article-hero" src="${meta.image}" alt="${meta.title}" onerror="this.style.display='none'"/>`
@@ -1601,7 +1627,6 @@
         progressFill.style.height = '0%';
         progressMobileFill.style.height = '0%';
 
-        // Share buttons
         document.getElementById('share-x').onclick = () =>
           window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(meta.title)}&url=${encodeURIComponent(articleUrl)}`, '_blank');
         document.getElementById('share-li').onclick = () =>
@@ -1672,7 +1697,7 @@
 
     async function toggleLike() {
       const slug = currentSlug;
-      if (hasLiked(slug)) return; // już polubione — nie licz drugi raz
+      if (hasLiked(slug)) return;
       setLiked(slug);
       const btn = document.getElementById('eng-like');
       const icon = document.getElementById('like-icon');
@@ -1693,14 +1718,12 @@
       const icon = document.getElementById('like-icon');
       eng.style.display = 'flex';
 
-      // Ustaw stan lajka z localStorage
       if (hasLiked(slug)) {
         likeBtn.classList.add('liked');
         icon.textContent = '❤️';
         likeBtn.disabled = true;
       }
 
-      // Widoki i lajki równolegle
       try {
         const [viewRes, likeRes] = await Promise.all([
           fetch(`https://api.countapi.xyz/hit/tvai-views/${slug}`),
@@ -1714,6 +1737,7 @@
         viewsEl.textContent = `👁 — wyświetleń`;
       }
     }
+
     // ── READING PROGRESS ──────────────────────────
     const progressBar = document.getElementById('read-progress');
     const progressFill = document.getElementById('read-progress-fill');
@@ -1726,7 +1750,6 @@
       const end = document.getElementById('article-content');
       if (!start || !end) return;
 
-      // Desktop: starts when meta hits top
       const startY = start.getBoundingClientRect().top + window.scrollY;
       const endY = end.getBoundingClientRect().bottom + window.scrollY;
       const scrollable = (endY - window.innerHeight) - startY;
@@ -1734,7 +1757,6 @@
       const pct = Math.min(100, Math.max(0, (scrolled / scrollable) * 100));
       progressFill.style.height = pct + '%';
 
-      // Mobile: full page scroll progress
       const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
       const mobilePct = totalHeight > 0 ? Math.min(100, (window.scrollY / totalHeight) * 100) : 0;
       progressMobileFill.style.height = mobilePct + '%';
@@ -1773,7 +1795,6 @@
         document.getElementById('newsletter-email').style.borderColor = '#ef4444';
         return;
       }
-      // Tu w przyszłości: webhook n8n
       document.getElementById('newsletter-form').style.display = 'none';
       document.getElementById('newsletter-success').style.display = 'flex';
     }
@@ -1788,6 +1809,7 @@
       document.getElementById('about-view').style.display = 'block';
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
+
     ['nav-pill','filter-bar'].forEach(id => {
       document.getElementById(id).addEventListener('click', e => {
         const btn = e.target.closest('button[data-filter]');

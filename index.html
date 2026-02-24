@@ -935,6 +935,22 @@
     @media (max-width: 400px) {
       #li-card { right: 12px; bottom: 12px; width: 260px; }
     }
+    /* ── ARTICLE LANG SWITCH */
+    .lang-switch-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 7px 14px;
+      border-radius: 100px;
+      border: 1px solid var(--blue);
+      background: var(--blue-soft);
+      color: var(--blue-light);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+.lang-switch-btn:hover { background: var(--blue); color: #fff; }
 
     /* ── COMPANY BADGES ───────────────────────── */
     .badge-openai    { background: rgba(16,163,127,0.12);  color: #10a37f; }
@@ -1291,6 +1307,7 @@
       <div class="article-top-bar">
         <div class="article-back" id="back-btn">← Wróć do newsów</div>
         <div class="article-share">
+          <button class="lang-switch-btn" id="lang-switch-btn" style="display:none" onclick="switchArticleLang()"></button>
           <button class="share-btn" id="share-x">𝕏 Udostępnij</button>
           <button class="share-btn" id="share-li">in LinkedIn</button>
           <button class="share-btn" id="copy-link">🔗 Kopiuj link</button>
@@ -1656,6 +1673,7 @@
         document.getElementById('article-title').textContent = meta.title || slug;
         document.getElementById('article-content').innerHTML = marked.parse(content);
         trackView(slug);
+        updateLangSwitchBtn(slug);
         renderRelated(slug, meta.company);
         progressBar.style.display = 'block';
         progressMobile.style.display = 'block';
@@ -1902,6 +1920,30 @@
       const hash = window.location.hash.replace('#', '');
       if (hash) { renderList(); openArticle(hash); }
       else renderList();
+    }
+    // ── ARTICLE LANG SWITCH ──────────────────────
+    function switchArticleLang() {
+      const isEN = currentSlug.endsWith('-en');
+      openArticle(isEN ? currentSlug.replace(/-en$/, '') : currentSlug + '-en');
+    }
+    
+    function updateLangSwitchBtn(slug) {
+      const btn = document.getElementById('lang-switch-btn');
+      const isEN = slug.endsWith('-en');
+      const baseSlug = isEN ? slug.replace(/-en$/, '') : slug;
+      const enSlug = baseSlug + '-en';
+      const hasEN = allPosts.some(p => p.slug === enSlug);
+      const hasPL = allPosts.some(p => p.slug === baseSlug);
+      
+      if (isEN && hasPL) {
+        btn.style.display = 'inline-flex';
+        btn.textContent = '🇵🇱 Czytaj po polsku';
+      } else if (!isEN && hasEN) {
+        btn.style.display = 'inline-flex';
+        btn.textContent = '🇬🇧 Read in English';
+      } else {
+        btn.style.display = 'none';
+      }
     }
 
     // ── LINKEDIN CARD ─────────────────────────────

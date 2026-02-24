@@ -1231,8 +1231,8 @@
           <div class="lang-opt" onclick="setLang('es')">🇪🇸 Español</div>
         </div>
       </div>
-      <button class="header-cta" onclick="window.open('https://www.mediafy.com.pl/o-nas','_blank')">Napisz do nas</button>
-      <button class="header-cta" style="background:transparent;border:1px solid var(--border);color:var(--text2);margin-left:-8px" onclick="showAbout()">O projekcie</button>
+      <button class="header-cta" id="btn-contact" onclick="window.open('https://www.mediafy.com.pl/o-nas','_blank')">Napisz do nas</button>
+      <button class="header-cta" id="btn-about" style="background:transparent;border:1px solid var(--border);color:var(--text2);margin-left:-8px" onclick="showAbout()">O projekcie</button>
     </div>
   </header>
 
@@ -2088,8 +2088,8 @@ function applyLang() {
   // Search
   document.querySelectorAll('.search-input').forEach(el => el.placeholder = t.searchPh);
   // Buttons
-  document.querySelector('.header-cta').textContent = t.contact;
-  document.querySelectorAll('.header-cta')[1].textContent = t.about;
+  document.getElementById('btn-contact').textContent = t.contact;
+  document.getElementById('btn-about').textContent = t.about;
   // Newsletter
   document.querySelector('.newsletter-label').textContent = t.newsLabel;
   document.querySelector('.newsletter-title').textContent = t.newsTitle;
@@ -2099,11 +2099,8 @@ function applyLang() {
   document.getElementById('back-btn').textContent = t.back;
 }
     init();
-    // ── START ─────────────────────────────────────
-    init();
     document.getElementById('lang-label').textContent = currentLang.toUpperCase();
     applyLang();
-  </script>
   </script>
 </body>
 </html>

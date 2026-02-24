@@ -1,5 +1,14 @@
 [
   {
+    "slug": "rcclx-od-meta-nowe-podejscie-do-komunikacji-gpu-na-platformach-amd-1771968745579",
+    "title": "RCCLX od Meta: Nowe podejście do komunikacji GPU na platformach AMD",
+    "date": "2026-02-24",
+    "datetime": "2026-02-24T21:32:25",
+    "company": "Meta",
+    "summary": "Meta ogłosiła open sourcing RCCLX – usprawnioną wersję RCCL, która ma przyspieszyć komunikację GPU dla rozwijających się modeli AI.",
+    "image": "posts/rcclx-od-meta-nowe-podejscie-do-komunikacji-gpu-na-platformach-amd-1771968745579.jpg"
+  },
+  {
     "slug": "nowy-wymiar-testowania-jittesting-od-meta-jako-odpowiedz-na-rewolucje-w-kodowaniu-1771962543039-en",
     "title": "A new dimension of testing: JiTTesting by Meta as a response to the coding revolution",
     "date": "2026-02-24",

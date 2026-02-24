@@ -1490,11 +1490,15 @@
       const latest = posts[0];
       if (latest && latest.date) {
         const t = T[currentLang];
-        const today = new Date().toISOString().split('T')[0];
-        const isToday = latest.date === today;
-        const diff = Math.floor((Date.now() - new Date(latest.date)) / 3600000);
-        const timeStr = isToday ? t.today : diff < 48 ? `${Math.floor(diff/24)}d temu` : `${Math.floor(diff/24)}d temu`;
-        document.getElementById('ticker-time').innerHTML = `${t.tickerLabel} <span>${timeStr}</span>`;
+        const postTime = new Date(latest.datetime || latest.date + 'T12:00:00');
+        const diffMs = Date.now() - postTime;
+        const diffMin = Math.floor(diffMs / 60000);
+        const diffH = Math.floor(diffMs / 3600000);
+        const diffD = Math.floor(diffMs / 86400000);
+        const timeStr = diffMin < 1 ? 'przed chwilą' 
+          : diffMin < 60 ? `${diffMin} min temu`
+          : diffH < 24 ? `${diffH}h temu`
+          : `${diffD}d temu`;
       }
     }
 

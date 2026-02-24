@@ -1,5 +1,14 @@
 [
   {
+    "slug": "rcclx-od-meta-nowe-podejscie-do-komunikacji-gpu-na-platformach-amd-1771968745579-en",
+    "title": "RCCLX by Meta: A New Approach to GPU Communication on AMD Platforms",
+    "date": "2026-02-24",
+    "datetime": "2026-02-24T21:32:25",
+    "company": "Meta",
+    "summary": "Meta announced the open sourcing of RCCLX – an improved version of RCCL, designed to accelerate GPU communication for evolving AI models.",
+    "image": "posts/rcclx-od-meta-nowe-podejscie-do-komunikacji-gpu-na-platformach-amd-1771968745579.jpg"
+  },
+  {
     "slug": "rcclx-od-meta-nowe-podejscie-do-komunikacji-gpu-na-platformach-amd-1771968745579",
     "title": "RCCLX od Meta: Nowe podejście do komunikacji GPU na platformach AMD",
     "date": "2026-02-24",

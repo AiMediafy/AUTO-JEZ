@@ -1521,7 +1521,7 @@
 
     // ── COUNTS + STATS ────────────────────────────
     function updateCounts(posts) {
-      posts = posts.filter(p => !p.slug.endsWith('-en'));
+      posts = posts.filter(p => p.slug && !p.slug.endsWith('-en'));
       document.getElementById('count-all').textContent = posts.length;
       ['OpenAI','Google','Anthropic','xAI','Microsoft','Meta','Qwen','Bielik'].forEach(c => {
         const el = document.getElementById('count-'+c);
@@ -1538,7 +1538,7 @@
     // ── FILTERED POSTS ───────────────────────────
     function getFiltered() {
       let posts = (activeFilter === 'all' ? allPosts : allPosts.filter(p => p.company === activeFilter))
-        .filter(p => !p.slug.endsWith('-en'));
+        .filter(p => p.slug && !p.slug.endsWith('-en'));
       if (searchQuery) {
         const q = searchQuery.toLowerCase();
         posts = posts.filter(p =>

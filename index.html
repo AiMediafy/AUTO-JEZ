@@ -1307,7 +1307,6 @@
       <div class="article-top-bar">
         <div class="article-back" id="back-btn">← Wróć do newsów</div>
         <div class="article-share">
-          <button class="lang-switch-btn" id="lang-switch-btn" style="display:none" onclick="switchArticleLang()"></button>
           <button class="share-btn" id="share-x">𝕏 Udostępnij</button>
           <button class="share-btn" id="share-li">in LinkedIn</button>
           <button class="share-btn" id="copy-link">🔗 Kopiuj link</button>
@@ -1666,11 +1665,18 @@
           ? `<img class="article-hero" src="${meta.image}" alt="${meta.title}" onerror="this.style.display='none'"/>`
           : `<div class="article-hero-ph"></div>`;
 
-        document.getElementById('article-meta').innerHTML = `
-          <span class="company-badge ${badgeClass}" style="font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;padding:4px 12px;border-radius:100px;">${meta.company||'AI'}</span>
-          <span style="font-size:0.8rem;color:var(--text3)">${formatDate(meta.date)}</span>
-          <span style="font-size:0.8rem;color:var(--text3)">${readTime(content)}</span>
-          <span class="auto-badge">🤖 Wygenerowano przez AI</span>`;
+     document.getElementById('article-meta').innerHTML = `
+        <span class="company-badge ${badgeClass}" ...>${meta.company||'AI'}</span>
+        <span style="font-size:0.8rem;color:var(--text3)">${formatDate(meta.date)}</span>
+        <span style="font-size:0.8rem;color:var(--text3)">${readTime(content)}</span>
+        <span class="auto-badge">🤖 Wygenerowano przez AI</span>`;
+        
+    const langBtn = document.createElement('button');
+        langBtn.className = 'lang-switch-btn';
+        langBtn.id = 'lang-switch-btn';
+        langBtn.style.display = 'none';
+        langBtn.onclick = switchArticleLang;
+        document.getElementById('article-meta').appendChild(langBtn);
 
         document.getElementById('article-title').textContent = meta.title || slug;
         document.getElementById('article-content').innerHTML = marked.parse(content);
@@ -1939,10 +1945,10 @@
       
       if (isEN && hasPL) {
         btn.style.display = 'inline-flex';
-        btn.textContent = '🇵🇱 Czytaj po polsku';
+        btn.textContent = 'Czytaj po polsku';
       } else if (!isEN && hasEN) {
         btn.style.display = 'inline-flex';
-        btn.textContent = '🇬🇧 Read in English';
+        btn.textContent = 'Read in English';
       } else {
         btn.style.display = 'none';
       }

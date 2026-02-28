@@ -2533,7 +2533,6 @@ document.addEventListener('click', e => {
     document.getElementById('lang-menu').style.display = 'none';
   }
 });
-
 function setLang(lang) {
   currentLang = lang;
   localStorage.setItem('tvai_lang', lang);
@@ -2543,74 +2542,65 @@ function setLang(lang) {
   renderList();
   buildTicker(allPosts);
 }
-
 function applyLang() {
   const t = T[currentLang];
-  // Hero
   document.querySelector('.hero-badge').innerHTML = `<div class="hero-badge-dot"></div>${t.allPosts}`;
   document.querySelector('.hero h1').innerHTML = `${t.h1a}<br><span class="dim">${t.h1b}</span>`;
   document.querySelector('.hero p').innerHTML = `${t.heroP}<br><span style="font-size:0.82rem;color:var(--text3);margin-top:8px;display:block">${t.heroSub}</span>`;
   document.querySelector('.hero-stat:nth-child(1) .hero-stat-label').textContent = t.statArt;
   document.querySelector('.hero-stat:nth-child(2) .hero-stat-label').textContent = t.statFirms;
   document.querySelector('.hero-stat:nth-child(3) .hero-stat-label').textContent = t.statToday;
-  // Filter bar
   document.querySelector('[data-filter="all"].tag-btn').childNodes[0].textContent = t.filterAll + ' ';
   document.querySelector('.random-btn').textContent = t.random;
-  // Nav pill
   document.querySelector('[data-filter="all"].filter-btn').textContent = t.filterAll;
-  // Search
   document.querySelectorAll('.search-input').forEach(el => el.placeholder = t.searchPh);
-  // Buttons
   document.getElementById('btn-contact').textContent = t.contact;
   document.getElementById('btn-about').textContent = t.about;
-  // Newsletter
   document.querySelector('.newsletter-label').textContent = t.newsLabel;
   document.querySelector('.newsletter-title').textContent = t.newsTitle;
   document.querySelector('.newsletter-sub').textContent = t.newsSub;
   document.querySelector('.newsletter-submit').textContent = t.newsBtn;
-  // Back btn
-// Back btn
   document.getElementById('back-btn').textContent = t.back;
   document.getElementById('share-x').textContent = t.shareX;
   document.getElementById('share-li').textContent = t.shareLi;
   document.getElementById('copy-link').textContent = t.copyLink;
-  // About page
   const aboutSec = document.querySelector('#about-view .about-section');
   if (aboutSec) aboutSec.innerHTML = t.aboutHTML;
-  // Footer
   document.getElementById('footer-text').textContent = t.footer;
 }
     init();
     document.getElementById('lang-label').textContent = currentLang.toUpperCase();
     applyLang();
+
   </script>
+
   <!-- NEWSLETTER MODAL -->
-<!-- NEWSLETTER MODAL -->
-<div id="nl-modal-overlay">
-  <div id="nl-modal">
-    <button id="nl-modal-close">✕</button>
-    <div class="nl-modal-title">Dostosuj swój newsletter 🎯</div>
-    <div class="nl-modal-sub">Wybierz co chcesz dostawać — tylko to co Cię interesuje, żadnego spamu.</div>
-    <div class="nl-section-label">Alerty o firmach</div>
-    <div class="nl-chips" id="nl-firms">
-      <div class="nl-chip selected" data-value="OpenAI">OpenAI</div>
-      <div class="nl-chip selected" data-value="Google">Google</div>
-      <div class="nl-chip selected" data-value="Anthropic">Anthropic</div>
-      <div class="nl-chip" data-value="xAI">xAI</div>
-      <div class="nl-chip" data-value="Microsoft">Microsoft</div>
-      <div class="nl-chip" data-value="Meta">Meta</div>
-      <div class="nl-chip" data-value="Qwen">Qwen</div>
-      <div class="nl-chip" data-value="Bielik">🇵🇱 Bielik</div>
+  <div id="nl-modal-overlay">
+    <div id="nl-modal">
+      <button id="nl-modal-close">✕</button>
+      <div class="nl-modal-title">Dostosuj swój newsletter 🎯</div>
+      <div class="nl-modal-sub">Wybierz co chcesz dostawać — tylko to co Cię interesuje, żadnego spamu.</div>
+      <div class="nl-section-label">Alerty o firmach</div>
+      <div class="nl-chips" id="nl-firms">
+        <div class="nl-chip selected" data-value="OpenAI">OpenAI</div>
+        <div class="nl-chip selected" data-value="Google">Google</div>
+        <div class="nl-chip selected" data-value="Anthropic">Anthropic</div>
+        <div class="nl-chip" data-value="xAI">xAI</div>
+        <div class="nl-chip" data-value="Microsoft">Microsoft</div>
+        <div class="nl-chip" data-value="Meta">Meta</div>
+        <div class="nl-chip" data-value="Qwen">Qwen</div>
+        <div class="nl-chip" data-value="Bielik">🇵🇱 Bielik</div>
+      </div>
+      <hr class="nl-divider">
+      <div class="nl-section-label">Dodatki</div>
+      <div class="nl-chips" id="nl-extras">
+        <div class="nl-chip selected" data-value="top5">📊 Top 5 tygodnia</div>
+        <div class="nl-chip" data-value="raport">📋 Raport miesięczny</div>
+      </div>
+      <button class="nl-confirm-btn" onclick="confirmNewsletter()">Zapisz preferencje →</button>
+      <button class="nl-skip-btn" onclick="closeNlModal()">Pomiń — zapisz mnie na wszystko</button>
     </div>
-    <hr class="nl-divider">
-    <div class="nl-section-label">Dodatki</div>
-    <div class="nl-chips" id="nl-extras">
-      <div class="nl-chip selected" data-value="top5">📊 Top 5 tygodnia</div>
-      <div class="nl-chip" data-value="raport">📋 Raport miesięczny</div>
-    </div>
-    <button class="nl-confirm-btn" onclick="confirmNewsletter()">Zapisz preferencje →</button>
-    <button class="nl-skip-btn" onclick="closeNlModal()">Pomiń — zapisz mnie na wszystko</button>
   </div>
-</div>
+
 </body>
 </html>

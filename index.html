@@ -700,7 +700,7 @@
     /* ── BACK TO TOP ──────────────────────────── */
     #back-to-top {
       position: fixed;
-      bottom: 90px;
+      bottom: 145px;
       right: 16px;
       width: 44px; height: 44px;
       background: var(--blue);
@@ -2109,9 +2109,13 @@
       function hideMaciej() {
         macCard.classList.remove('visible');
         macCard.classList.add('hiding');
+        bttBtn.style.opacity = '1';
+        bttBtn.style.pointerEvents = 'all';
       }
       function showMaciej() {
         hideJerzy();
+        bttBtn.style.opacity = '0';
+        bttBtn.style.pointerEvents = 'none';
         macCard.classList.remove('hiding');
         macCard.classList.add('visible');
       }

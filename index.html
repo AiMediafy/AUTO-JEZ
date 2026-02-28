@@ -1277,6 +1277,119 @@
       .newsletter-section { padding:0 20px 48px; }
       .hero-stats { gap:20px; }
     }
+    /* ── NEWSLETTER MODAL ─────────────────────── */
+#nl-modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  backdrop-filter: blur(6px);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+}
+#nl-modal-overlay.visible { display: flex; }
+#nl-modal {
+  background: #0a0a12;
+  border: 1px solid rgba(37,99,235,0.3);
+  border-radius: 20px;
+  padding: 36px;
+  width: 90%;
+  max-width: 480px;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.7), 0 0 40px rgba(37,99,235,0.15);
+  position: relative;
+}
+.nl-modal-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+.nl-modal-sub {
+  font-size: 0.82rem;
+  color: var(--text2);
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+.nl-section-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text3);
+  margin-bottom: 10px;
+}
+.nl-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.nl-chip {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 100px;
+  border: 1px solid var(--border2);
+  background: transparent;
+  color: var(--text2);
+  cursor: pointer;
+  transition: all 0.18s;
+  user-select: none;
+}
+.nl-chip:hover { border-color: var(--blue); color: var(--blue-light); }
+.nl-chip.selected {
+  border-color: var(--blue);
+  background: var(--blue-soft);
+  color: var(--blue-light);
+}
+.nl-chip.selected::before { content: '✓ '; }
+.nl-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 20px 0;
+}
+.nl-confirm-btn {
+  width: 100%;
+  background: var(--blue);
+  color: #fff;
+  border: none;
+  border-radius: 100px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 13px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  box-shadow: 0 4px 20px rgba(37,99,235,0.35);
+  margin-top: 8px;
+}
+.nl-confirm-btn:hover { opacity: 0.9; }
+#nl-modal-close {
+  position: absolute;
+  top: 14px; right: 14px;
+  width: 28px; height: 28px;
+  background: rgba(255,255,255,0.08);
+  border: none;
+  border-radius: 50%;
+  color: var(--text2);
+  font-size: 0.75rem;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s;
+}
+#nl-modal-close:hover { background: rgba(255,255,255,0.15); }
+.nl-skip {
+  display: block;
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--text3);
+  margin-top: 12px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.nl-skip:hover { color: var(--text2); }
   </style>
 </head>
 <body>
@@ -1965,9 +2078,44 @@
         document.getElementById('newsletter-email').style.borderColor = '#ef4444';
         return;
       }
+      // otwieramy modal preferencji
+      document.getElementById('nl-modal-overlay').classList.add('visible');
+    }
+
+    function closeNlModal() {
+      const email = document.getElementById('newsletter-email').value.trim();
+      sendToWebhook(email, ['OpenAI','Google','Anthropic','xAI','Microsoft','Meta','Qwen','Bielik'], ['top5','raport']);
+    }
+
+    function confirmNewsletter() {
+      const email = document.getElementById('newsletter-email').value.trim();
+      const firms = [...document.querySelectorAll('#nl-firms .nl-chip.selected')].map(c => c.dataset.value);
+      const extras = [...document.querySelectorAll('#nl-extras .nl-chip.selected')].map(c => c.dataset.value);
+      sendToWebhook(email, firms, extras);
+    }
+
+    function sendToWebhook(email, firms, extras) {
+      document.getElementById('nl-modal-overlay').classList.remove('visible');
       document.getElementById('newsletter-form').style.display = 'none';
       document.getElementById('newsletter-success').style.display = 'flex';
+      // TODO: zamień URL na swój webhook n8n
+      fetch('https://TWOJ-N8N-WEBHOOK-URL', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, firms, extras })
+      }).catch(() => {});
     }
+
+    // chip toggle
+    document.addEventListener('click', e => {
+      const chip = e.target.closest('.nl-chip');
+      if (!chip) return;
+      chip.classList.toggle('selected');
+    });
+
+    document.getElementById('nl-modal-close').addEventListener('click', () => {
+      document.getElementById('nl-modal-overlay').classList.remove('visible');
+    });
 
     // ── ABOUT PAGE ────────────────────────────────
     function showAbout() {
@@ -2421,5 +2569,36 @@ function applyLang() {
     document.getElementById('lang-label').textContent = currentLang.toUpperCase();
     applyLang();
   </script>
+  <!-- NEWSLETTER MODAL -->
+<div id="nl-modal-overlay">
+  <div id="nl-modal">
+    <button id="nl-modal-close">✕</button>
+    <div class="nl-modal-title">Dostosuj swój newsletter 🎯</div>
+    <div class="nl-modal-sub">Wybierz co chcesz dostawać — tylko to co Cię interesuje, żadnego spamu.</div>
+
+    <div class="nl-section-label">Alerty o firmach</div>
+    <div class="nl-chips" id="nl-firms">
+      <div class="nl-chip selected" data-value="OpenAI">OpenAI</div>
+      <div class="nl-chip selected" data-value="Google">Google</div>
+      <div class="nl-chip selected" data-value="Anthropic">Anthropic</div>
+      <div class="nl-chip" data-value="xAI">xAI</div>
+      <div class="nl-chip" data-value="Microsoft">Microsoft</div>
+      <div class="nl-chip" data-value="Meta">Meta</div>
+      <div class="nl-chip" data-value="Qwen">Qwen</div>
+      <div class="nl-chip" data-value="Bielik">🇵🇱 Bielik</div>
+    </div>
+
+    <hr class="nl-divider">
+
+    <div class="nl-section-label">Dodatki</div>
+    <div class="nl-chips" id="nl-extras">
+      <div class="nl-chip selected" data-value="top5">📊 Top 5 tygodnia</div>
+      <div class="nl-chip" data-value="raport">📋 Raport miesięczny</div>
+    </div>
+
+    <button class="nl-confirm-btn" onclick="confirmNewsletter()">Zapisz preferencje →</button>
+    <span class="nl-skip" onclick="closeNlModal()">Pomiń — zapisz mnie na wszystko</span>
+  </div>
+</div>
 </body>
 </html>

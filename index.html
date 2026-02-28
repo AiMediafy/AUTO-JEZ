@@ -2153,10 +2153,10 @@
         ]);
         const viewData = await viewRes.json();
         const likeData = await likeRes.json();
-        viewsEl.textContent = `👁 ${viewData.value} wyświetleń`;
+        viewsEl.textContent = `👁 ${viewData.value} ${T[currentLang].views}`;
         document.getElementById('like-count').textContent = likeData.value || 0;
       } catch(e) {
-        viewsEl.textContent = `👁 — wyświetleń`;
+        viewsEl.textContent = `👁 — ${T[currentLang].views}`;
       }
     }
 
@@ -2236,7 +2236,9 @@
     function sendToWebhook(email, firms, extras) {
       document.getElementById('nl-modal-overlay').classList.remove('visible');
       document.getElementById('newsletter-form').style.display = 'none';
-      document.getElementById('newsletter-success').style.display = 'flex';
+      const successEl = document.getElementById('newsletter-success');
+      successEl.textContent = T[currentLang].newsSuccess;
+      successEl.style.display = 'flex';
       // TODO: zamień URL na swój webhook n8n
       fetch('https://TWOJ-N8N-WEBHOOK-URL', {
         method: 'POST',

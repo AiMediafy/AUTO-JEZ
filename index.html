@@ -1973,10 +1973,10 @@
       const el = document.getElementById('pagination');
       if (totalPages <= 1) { el.innerHTML = ''; return; }
 
-      let html = `<button class="page-btn" onclick="goPage(${currentPage-1})" ${currentPage===1?'disabled':''}>← Poprzednia</button>`;
+      let html = `<button class="page-btn" onclick="goPage(${currentPage-1})" ${currentPage===1?'disabled':''}>${T[currentLang].prevPage}</button>`;
       for (let i = 1; i <= totalPages; i++) {
         if (i === 1 || i === totalPages || Math.abs(i - currentPage) <= 1) {
-          html += `<button class="page-btn ${i===currentPage?'active':''}" onclick="goPage(${i})">${i}</button>`;
+          html += `<button class="page-btn" onclick="goPage(${currentPage+1})" ${currentPage===totalPages?'disabled':''}>${T[currentLang].nextPage}</button>`;
         } else if (Math.abs(i - currentPage) === 2) {
           html += `<span style="color:var(--text3);padding:0 4px">…</span>`;
         }
@@ -2029,7 +2029,7 @@
         <span class="company-badge ${badgeClass}" ...>${meta.company||'AI'}</span>
         <span style="font-size:0.8rem;color:var(--text3)">${formatDate(meta.date)}</span>
         <span style="font-size:0.8rem;color:var(--text3)">${readTime(content)}</span>
-        <span class="auto-badge">🤖 Wygenerowano przez AI</span>`;
+        <span class="auto-badge">${T[currentLang].autoAI}</span>`;
         
     const langBtn = document.createElement('button');
         langBtn.className = 'lang-switch-btn';
@@ -2418,6 +2418,7 @@
     const T = {
   pl: {
     allPosts: 'Posty na blogu',
+    prevPage: '← Poprzednia', nextPage: 'Następna →',
     autoBadge: '100% automat — żaden człowiek tego nie publikuje',
     sgTitle: 'Hej, widzę że tu bywasz 👀',
     sgSub: 'Przeczytałeś już kilka artykułów — jeśli TVAI Ci się podoba, zapisz się na newsletter żeby nic nie pominąć. To w 100% automat — żaden człowiek tego nie wysyła.',
@@ -2485,6 +2486,7 @@
 
   en: {
     allPosts: 'Blog Posts',
+    prevPage: '← Previous', nextPage: 'Next →',
     autoBadge: '100% automated — no human publishes this',
     sgTitle: 'Hey, I see you around here 👀',
     sgSub: "You've read a few articles — if you enjoy TVAI, subscribe to the newsletter so you don't miss anything. It's 100% automated — no human sends this.",
@@ -2552,6 +2554,7 @@
 
   de: {
     allPosts: 'Blogbeiträge',
+    prevPage: '← Vorherige', nextPage: 'Nächste →',
     autoBadge: '100% automatisch — kein Mensch veröffentlicht das hier',
     sgTitle: 'Hey, ich sehe dich hier 👀',
     sgSub: 'Du hast bereits einige Artikel gelesen — wenn dir TVAI gefällt, abonniere den Newsletter damit du nichts verpasst. 100% automatisch.',
@@ -2617,6 +2620,7 @@
 
   fr: {
     allPosts: 'Articles de blog',
+    prevPage: '← Précédent', nextPage: 'Suivant →',
     autoBadge: '100% automatique — aucun humain ne publie ceci',
     sgTitle: 'Hey, je te vois par ici 👀',
     sgSub: "Tu as déjà lu quelques articles — si TVAI te plaît, abonne-toi à la newsletter pour ne rien manquer. 100% automatique.",
@@ -2682,6 +2686,7 @@
 
   es: {
     allPosts: 'Entradas del blog',
+    prevPage: '← Anterior', nextPage: 'Siguiente →',
     autoBadge: '100% automático — ningún humano publica esto',
     sgTitle: 'Oye, te veo por aquí 👀',
     sgSub: 'Ya has leído varios artículos — si te gusta TVAI, suscríbete al newsletter para no perderte nada. 100% automático.',

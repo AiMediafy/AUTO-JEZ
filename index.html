@@ -1390,6 +1390,21 @@
   transition: color 0.2s;
 }
 .nl-skip:hover { color: var(--text2); }
+    .nl-skip-btn {
+  width: 100%;
+  background: transparent;
+  border: 1px solid var(--border2);
+  border-radius: 100px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text2);
+  padding: 11px;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: all 0.2s;
+}
+.nl-skip-btn:hover { border-color: var(--border); color: var(--text); }
   </style>
 </head>
 <body>
@@ -2570,12 +2585,12 @@ function applyLang() {
     applyLang();
   </script>
   <!-- NEWSLETTER MODAL -->
+<!-- NEWSLETTER MODAL -->
 <div id="nl-modal-overlay">
   <div id="nl-modal">
     <button id="nl-modal-close">✕</button>
     <div class="nl-modal-title">Dostosuj swój newsletter 🎯</div>
     <div class="nl-modal-sub">Wybierz co chcesz dostawać — tylko to co Cię interesuje, żadnego spamu.</div>
-
     <div class="nl-section-label">Alerty o firmach</div>
     <div class="nl-chips" id="nl-firms">
       <div class="nl-chip selected" data-value="OpenAI">OpenAI</div>
@@ -2587,17 +2602,14 @@ function applyLang() {
       <div class="nl-chip" data-value="Qwen">Qwen</div>
       <div class="nl-chip" data-value="Bielik">🇵🇱 Bielik</div>
     </div>
-
     <hr class="nl-divider">
-
     <div class="nl-section-label">Dodatki</div>
     <div class="nl-chips" id="nl-extras">
       <div class="nl-chip selected" data-value="top5">📊 Top 5 tygodnia</div>
       <div class="nl-chip" data-value="raport">📋 Raport miesięczny</div>
     </div>
-
     <button class="nl-confirm-btn" onclick="confirmNewsletter()">Zapisz preferencje →</button>
-    <span class="nl-skip" onclick="closeNlModal()">Pomiń — zapisz mnie na wszystko</span>
+    <button class="nl-skip-btn" onclick="closeNlModal()">Pomiń — zapisz mnie na wszystko</button>
   </div>
 </div>
 </body>

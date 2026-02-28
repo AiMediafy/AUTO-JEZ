@@ -2891,6 +2891,15 @@ function closeSoftGate(subscribe) {
   } catch(e) {}
   document.getElementById('sg-modal-overlay').classList.remove('visible');
 }
+    function closeUnsubModal() {
+  document.getElementById('unsub-overlay').style.display = 'none';
+  history.replaceState({}, '', window.location.pathname);
+}
+
+if (window.location.hash === '#wypisano') {
+  document.getElementById('unsub-overlay').style.display = 'flex';
+  history.replaceState({}, '', window.location.pathname);
+}
     init();
     document.getElementById('lang-label').textContent = currentLang.toUpperCase();
     applyLang();
@@ -2924,7 +2933,17 @@ function closeSoftGate(subscribe) {
       <button class="nl-skip-btn" onclick="closeNlModal()">Pomiń — zapisz mnie na wszystko</button>
     </div>
   </div>
-
+<!-- UNSUBSCRIBE MODAL -->
+<div id="unsub-overlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.75);backdrop-filter:blur(6px);z-index:3000;align-items:center;justify-content:center">
+  <div style="background:#0a0a12;border:1px solid rgba(239,68,68,0.3);border-radius:20px;padding:36px;width:90%;max-width:440px;text-align:center;position:relative">
+    <p style="font-size:2.5rem;margin-bottom:12px">😢</p>
+    <h2 style="font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:800;color:#fff;margin-bottom:8px">Szkoda że odchodzisz</h2>
+    <p style="color:#9090a8;font-size:0.85rem;line-height:1.6;margin-bottom:24px">Wypisałeś się z newslettera TVAI.<br>Nie będziesz już dostawać emaili.<br><br>Jeśli to pomyłka — możesz zapisać się ponownie poniżej.</p>
+    <button onclick="closeUnsubModal()" style="display:inline-block;background:#2563eb;color:#fff;padding:12px 24px;border-radius:100px;text-decoration:none;font-weight:700;font-size:14px;margin-bottom:12px;border:none;cursor:pointer">Zostań i czytaj newsy →</button>
+    <br>
+    <span onclick="closeUnsubModal()" style="color:#505060;font-size:0.75rem;cursor:pointer">Zamknij</span>
+  </div>
+</div>
   <!-- SOFT GATE MODAL -->
 <div id="sg-modal-overlay">
   <div id="sg-modal">

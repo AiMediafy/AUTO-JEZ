@@ -2128,9 +2128,7 @@
       chip.classList.toggle('selected');
     });
 
-    document.getElementById('nl-modal-close').addEventListener('click', () => {
-      document.getElementById('nl-modal-overlay').classList.remove('visible');
-    });
+    
 
     // ── ABOUT PAGE ────────────────────────────────
     function showAbout() {
@@ -2575,7 +2573,7 @@ function applyLang() {
   <!-- NEWSLETTER MODAL -->
   <div id="nl-modal-overlay">
     <div id="nl-modal">
-      <button id="nl-modal-close">✕</button>
+      <button id="nl-modal-close" onclick="document.getElementById('nl-modal-overlay').classList.remove('visible')">✕</button>
       <div class="nl-modal-title">Dostosuj swój newsletter 🎯</div>
       <div class="nl-modal-sub">Wybierz co chcesz dostawać — tylko to co Cię interesuje, żadnego spamu.</div>
       <div class="nl-section-label">Alerty o firmach</div>

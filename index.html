@@ -700,7 +700,7 @@
     /* ── BACK TO TOP ──────────────────────────── */
     #back-to-top {
       position: fixed;
-      bottom: 240px;
+      bottom: 90px;
       right: 16px;
       width: 44px; height: 44px;
       background: var(--blue);
@@ -791,7 +791,7 @@
       padding: 8px 16px 8px 8px;
       cursor: pointer;
       z-index: 1001;
-      transform: translateX(170px);
+      transform: translateX(0);
       transition: transform 0.4s cubic-bezier(.22,.68,0,1.2);
     }
     #li-tab.visible { transform: translateX(0); }
@@ -2066,16 +2066,22 @@
       const tab  = document.getElementById('li-tab');
       const closeBtn = document.getElementById('li-close');
 
+      const bttBtn = document.getElementById('back-to-top');
+
       function hideJerzy() {
         card.classList.remove('visible');
         card.classList.add('hiding');
         macTab.style.opacity = '1';
         macTab.style.pointerEvents = 'all';
+        bttBtn.style.opacity = '1';
+        bttBtn.style.pointerEvents = 'all';
       }
       function showJerzy() {
         hideMaciej();
         macTab.style.opacity = '0';
         macTab.style.pointerEvents = 'none';
+        bttBtn.style.opacity = '0';
+        bttBtn.style.pointerEvents = 'none';
         card.classList.remove('hiding');
         card.classList.add('visible');
       }

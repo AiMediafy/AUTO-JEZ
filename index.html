@@ -2325,6 +2325,20 @@
       const hash = window.location.hash.replace('#', '');
       if (hash) { renderList(); openArticle(hash); }
       else renderList();
+      // Unsubscribe detection
+  const _urlParams = new URLSearchParams(window.location.search);
+  const _unsubEmail = _urlParams.get('unsub');
+  if (_unsubEmail) {
+    const emailEl = document.getElementById('unsub-email');
+    if (emailEl) emailEl.value = _unsubEmail;
+    document.getElementById('unsub-overlay').style.display = 'flex';
+    history.replaceState({}, '', window.location.pathname);
+    fetch('https://mediafy-sparta.app.n8n.cloud/webhook/newsletter-unsubscribe?email=' + encodeURIComponent(_unsubEmail)).catch(()=>{});
+  }
+  if (window.location.hash === '#wypisano') {
+    document.getElementById('unsub-overlay').style.display = 'flex';
+    history.replaceState({}, '', window.location.pathname);
+  }
     }
     // ── ARTICLE LANG SWITCH ──────────────────────
     function switchArticleLang() {
@@ -2915,15 +2929,7 @@ function resubscribeFromUnsub() {
   document.getElementById('unsub-step2').style.display = 'block';
 }
 // Unsubscribe via URL param ?unsub=email
-const _urlParams = new URLSearchParams(window.location.search);
-const _unsubEmail = _urlParams.get('unsub');
-if (_unsubEmail) {
-  document.getElementById('unsub-email').value = _unsubEmail;
-  document.getElementById('unsub-overlay').style.display = 'flex';
-  history.replaceState({}, '', window.location.pathname);
-  // wywołaj n8n w tle żeby oznaczyć jako wypisany
-  fetch('https://mediafy-sparta.app.n8n.cloud/webhook/newsletter-unsubscribe?email=' + encodeURIComponent(_unsubEmail)).catch(()=>{});
-}
+
 // fallback dla starego hash
 if (window.location.hash === '#wypisano') {
   document.getElementById('unsub-overlay').style.display = 'flex';

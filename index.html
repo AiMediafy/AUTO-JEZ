@@ -2323,7 +2323,7 @@
       updateCounts(allPosts);
 
       const hash = window.location.hash.replace('#', '');
-      if (hash) { renderList(); openArticle(hash); }
+      if (hash && hash !== 'wypisano') { renderList(); openArticle(hash); }
       else renderList();
       // Unsubscribe detection
   const _urlParams = new URLSearchParams(window.location.search);
@@ -2927,13 +2927,6 @@ function resubscribeFromUnsub() {
   }).catch(() => {});
   document.getElementById('unsub-step1').style.display = 'none';
   document.getElementById('unsub-step2').style.display = 'block';
-}
-// Unsubscribe via URL param ?unsub=email
-
-// fallback dla starego hash
-if (window.location.hash === '#wypisano') {
-  document.getElementById('unsub-overlay').style.display = 'flex';
-  history.replaceState({}, '', window.location.pathname);
 }
     init();
     document.getElementById('lang-label').textContent = currentLang.toUpperCase();

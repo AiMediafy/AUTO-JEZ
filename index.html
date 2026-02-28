@@ -2001,7 +2001,7 @@
       document.getElementById('newsletter-section').style.display = 'none';
       document.getElementById('about-view').style.display = 'none';
       document.getElementById('article-view').style.display = 'block';
-      document.getElementById('article-content').innerHTML = `<div class="loading"><div class="dot"></div><div class="dot"></div><div class="dot"></div><span>Ładowanie...</span></div>`;
+      document.getElementById('article-content').innerHTML = `<div class="loading"><div class="dot"></div><div class="dot"></div><div class="dot"></div><span>${T[currentLang].loadingArt}</span></div>`;
       window.scrollTo({ top: 0, behavior: 'smooth' });
       history.pushState({ slug }, '', `#${slug}`);
 

@@ -712,7 +712,7 @@
       display: none;
       align-items: center;
       justify-content: center;
-      z-index: 1000;
+      z-index: 1002;
       transition: opacity 0.2s, transform 0.2s;
       box-shadow: 0 4px 20px rgba(37,99,235,0.4);
     }
@@ -777,7 +777,7 @@
     /* ── LINKEDIN TAB ─────────────────────────── */
     #li-tab {
       position: fixed;
-      bottom: 32px;
+      bottom: 90px;
       right: 0;
       width: 200px;
       background: #0a0a12;
@@ -938,7 +938,7 @@
     /* ── MACIEJ TAB & CARD ────────────────────── */
 #mac-tab {
   position: fixed;
-  bottom: 90px;
+  bottom: 32px;
   right: 0;
   width: 200px;
   background: #0a0a12;
@@ -2078,6 +2078,11 @@
 
       closeBtn.addEventListener('click', hideJerzy);
       tab.addEventListener('click', showJerzy);
+
+      setTimeout(() => {
+        showJerzy();
+        setTimeout(hideJerzy, 6000);
+      }, 3000);
 
       // MACIEJ
       const macCard = document.getElementById('mac-card');

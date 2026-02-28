@@ -2416,270 +2416,336 @@
     // ── START ─────────────────────────────────────
     // ── TRANSLATIONS ─────────────────────────────
     const T = {
-      pl: {
-        allPosts: 'Posty na blogu',
-        sgTitle: 'Hej, widzę że tu bywasz 👀',
-        sgSub: 'Przeczytałeś już kilka artykułów — jeśli TVAI Ci się podoba, zapisz się na newsletter żeby nic nie pominąć. To w 100% automat — żaden człowiek tego nie wysyła.',
-        sgFeedbackLabel: 'Masz feedback?',
-        sgFeedbackSub: 'To żywy projekt — rozwijam go sam i jestem wdzięczny za każdy pomysł. Co mogłoby być lepiej? Jaką nową funkcję chciałbyś zobaczyć?',
-        sgFeedbackLink: '✉️ Napisz do mnie',
-        sgEmailPh: 'twoj@email.pl',
-        sgBtn: 'Zapisz się →',
-        sgSkip: 'Może później (zamknij na 24h)',
-        h1a: 'Najnowsze newsy AI',
-        h1b: 'na żywo, bez filtrów',
-        heroP: 'Bądź na bieżąco z najważniejszymi wiadomościami ze świata AI – OpenAI, Google, Anthropic, xAI i innych. Bez bullshitu.',
-        heroSub: '📡 Wiadomości generowane automatycznie przez Auto-Jeża',
-        statArt: 'Artykułów', statFirms: 'Firm AI', statToday: 'Dziś dodano',
-        filterAll: 'Wszystkie', searchPh: 'Szukaj newsów...',
-        readMore: 'Czytaj artykuł →', today: 'Dziś',
-        back: '← Wróć do newsów', shareX: '𝕏 Udostępnij', shareLi: 'in LinkedIn',
-        copyLink: '🔗 Kopiuj link', copied: '✓ Skopiowano!',
-        autoAI: '🤖 Wygenerowano przez AI',
-        related: 'Więcej z tej samej firmy',
-        random: '🎲 Losuj',
-        loading: 'Ładowanie wpisów...', loadingArt: 'Ładowanie...',
-        newsLabel: 'Newsletter', newsTitle: 'AI news prosto na maila',
-        newsSub: 'Żadnego spamu. Tylko najważniejsze newsy ze świata AI, automatycznie gdy się pojawią.',
-        newsBtn: 'Zapisz się →', newsSuccess: '✓ Zapisano! Sprawdź skrzynkę.',
-        contact: 'Napisz do nas', about: 'O projekcie',
-        searchResults: 'Wyniki dla:',
-        noResults: 'Brak wyników dla',
-        noFilter: 'Brak wpisów dla wybranego filtra.',
-        views: 'wyświetleń',
-        footer: 'Wiadomości AI · Automatycznie generowane przez Auto-Jeża',
-        tickerLabel: 'Ostatni wpis:',
-        aboutHTML: `
-  <h2>Skąd pomysł na TVAI?</h2>
-  <p>Zaczęło się od frustracji. Lubię śledzić co dzieje się w świecie AI — ale sprawdzanie po kolei blogów OpenAI, Google, Anthropic i reszty zajmuje wieczność. Wpisy są długie, po angielsku i zamiast konkretów mają kilka akapitów wstępu zanim dojdziesz do sedna.</p>
-  <p>Zacząłem więc dzwonić do agencji social media z pytaniem czy mogą to ogarniać za mnie — <strong>monitorować newsy z kilku firm AI i wstawiać je tego samego dnia, napisane po polsku, z infografiką.</strong> Odpowiedź była zawsze ta sama: możliwe, ale drogo i z kilkudniowym opóźnieniem. News z dziś o 13:00 wyląduje u Ciebie za 3 dni. Bez sensu.</p>
-  <p>Wtedy zobaczyłem gdzie jest luka.</p>
-  <h2>Biuletyn na LinkedIn — i dlaczego to nie wypalało</h2>
-  <p>Najpierw stworzyłem biuletyn na LinkedIn — tylko o newsach OpenAI. Działało, ale pojawił się problem: każdy wpis w biuletynie to też post na profilu. Przy 2–3 newsach dziennie tylko z jednej firmy <strong>mój profil zamieniał się w śmietnik</strong> — grafiki AI i newsy przykrywały wszystko inne.</p>
-  <p>Przeniosłem biuletyn na konto firmowe Mediafy — ale LinkedIn wymaga 150 obserwujących żeby prowadzić biuletyn firmowy. Ślepy zaułek.</p>
-  <p>Stworzyłem też postać <strong>Auto-Jeża</strong> — ale tu też zgrzyt. Mediafy to firma którą nie prowadzę sam, więc wrzucanie na profil firmowy samych newsów AI średnio pasowało.</p>
-  <h2>Rozwiązanie: własna strona</h2>
-  <p>Zamiast walczyć z ograniczeniami platform — stworzyłem TVAI. Miejsce gdzie <strong>ktoś zainteresowany AI może wejść i przeczytać najnowszy news</strong> — po polsku, krótko i na temat.</p>
-  <p>Cały proces jest w 100% automatyczny. News pojawia się, agent go znajduje, pisze artykuł, generuje grafikę i publikuje — bez udziału człowieka.</p>
-  <h2>Chcesz coś takiego dla swojej firmy?</h2>
-  <p>TVAI to jeden z projektów które budujemy w <strong>Mediafy</strong> — żeby pokazać co jest możliwe z automatyzacją. Budujemy podobne systemy dla klientów: automatyczne blogi, newslettery, raporty, monitoring konkurencji.</p>
-  <p>Jeśli chcesz wiedzieć co możemy zautomatyzować u Ciebie — napisz.</p>
-  <div class="about-links">
-    <a class="about-link-btn primary" href="https://www.mediafy.com.pl/o-nas" target="_blank">Porozmawiajmy →</a>
-    <a class="about-link-btn" href="https://www.mediafy.com.pl/" target="_blank">mediafy.com.pl</a>
-    <a class="about-link-btn" href="https://www.linkedin.com/in/jerzy-mediafy/" target="_blank">LinkedIn Jerzy</a>
-  </div>`,
-      },
-      en: {
-        allPosts: 'Blog Posts',
-        sgTitle: 'Hey, I see you around here 👀',
-        sgSub: "You've read a few articles — if you enjoy TVAI, subscribe to the newsletter so you don't miss anything. It's 100% automated — no human sends this.",
-        sgFeedbackLabel: 'Got feedback?',
-        sgFeedbackSub: "This is a living project — I'm building it solo and I'm grateful for every idea. What could be better? What new feature would you like to see?",
-        sgFeedbackLink: '✉️ Write to me',
-        sgEmailPh: 'your@email.com',
-        sgBtn: 'Subscribe →',
-        sgSkip: 'Maybe later (close for 24h)',
-        h1a: 'Latest AI News',
-        h1b: 'live, unfiltered',
-        heroP: 'Stay up to date with the most important news from the AI world – OpenAI, Google, Anthropic, xAI and more. No fluff.',
-        heroSub: '📡 News automatically generated by Auto-Jeż',
-        statArt: 'Articles', statFirms: 'AI Companies', statToday: 'Added today',
-        filterAll: 'All', searchPh: 'Search news...',
-        readMore: 'Read article →', today: 'Today',
-        back: '← Back to news', shareX: '𝕏 Share', shareLi: 'in LinkedIn',
-        copyLink: '🔗 Copy link', copied: '✓ Copied!',
-        autoAI: '🤖 Generated by AI',
-        related: 'More from the same company',
-        random: '🎲 Random',
-        loading: 'Loading posts...', loadingArt: 'Loading...',
-        newsLabel: 'Newsletter', newsTitle: 'AI news straight to your inbox',
-        newsSub: 'No spam. Only the most important AI news, automatically when they appear.',
-        newsBtn: 'Subscribe →', newsSuccess: '✓ Subscribed! Check your inbox.',
-        contact: 'Contact us', about: 'About',
-        searchResults: 'Results for:',
-        noResults: 'No results for',
-        noFilter: 'No posts for selected filter.',
-        views: 'views',
-        footer: 'AI News · Automatically generated by Auto-Jeż',
-        tickerLabel: 'Latest post:',
-        aboutHTML: `
-  <h2>How did TVAI come about?</h2>
-  <p>It started with frustration. I like keeping up with the AI world — but checking OpenAI, Google, Anthropic and the rest one by one takes forever. Posts are long, in English, and instead of getting to the point they have three paragraphs of intro first.</p>
-  <p>I started calling social media agencies asking if they could handle it for me — <strong>monitor news from several AI companies and post it the same day, written in Polish, with an infographic.</strong> The answer was always the same: possible, but expensive and with a few days' delay. Today's news at 1pm lands with you in 3 days. Pointless.</p>
-  <p>That's when I saw the gap.</p>
-  <h2>LinkedIn newsletter — and why it didn't work</h2>
-  <p>I first created a LinkedIn newsletter — just about OpenAI news. It worked, but a problem appeared: every newsletter post is also a profile post. With 2–3 news items daily from just one company, <strong>my profile turned into a mess</strong> — AI graphics and news buried everything else.</p>
-  <p>I moved the newsletter to the Mediafy company account — but LinkedIn requires 150 followers to run a company newsletter. We didn't have that. Dead end.</p>
-  <p>I also created the <strong>Auto-Jeż</strong> character — but another snag. Mediafy is a company I don't run alone, so posting only AI news and auto-generated graphics on the company profile didn't really fit.</p>
-  <h2>The solution: our own website</h2>
-  <p>Instead of fighting platform limitations — I built TVAI. A separate site where <strong>anyone interested in AI can come and read the latest news from their chosen company</strong> — concise and to the point.</p>
-  <p>The whole process is 100% automatic. News appears, an agent finds it, writes an article, generates a graphic and publishes — without any human involvement.</p>
-  <h2>Want something like this for your company?</h2>
-  <p>TVAI is one of the projects we build at <strong>Mediafy</strong> — to show what's possible with automation instead of just talking about it. We build similar systems for clients: automated blogs, newsletters, reports, competitor monitoring.</p>
-  <p>If you want to know what we can automate for you — get in touch.</p>
-  <div class="about-links">
-    <a class="about-link-btn primary" href="https://www.mediafy.com.pl/o-nas" target="_blank">Let's talk →</a>
-    <a class="about-link-btn" href="https://www.mediafy.com.pl/" target="_blank">mediafy.com.pl</a>
-    <a class="about-link-btn" href="https://www.linkedin.com/in/jerzy-mediafy/" target="_blank">LinkedIn Jerzy</a>
-  </div>`,
-      },
-      de: {
-        allPosts: 'Blogbeiträge',
-        sgTitle: 'Hey, ich sehe dich hier 👀',
-        sgSub: 'Du hast bereits einige Artikel gelesen — wenn dir TVAI gefällt, abonniere den Newsletter damit du nichts verpasst. 100% automatisch.',
-        sgFeedbackLabel: 'Feedback?',
-        sgFeedbackSub: 'Das ist ein lebendiges Projekt — ich entwickle es allein und bin für jede Idee dankbar. Was könnte besser sein?',
-        sgFeedbackLink: '✉️ Schreib mir',
-        sgEmailPh: 'deine@email.de',
-        sgBtn: 'Abonnieren →',
-        sgSkip: 'Vielleicht später (24h schließen)',
-        h1a: 'Neueste KI-Nachrichten',
-        h1b: 'live, ungefiltert',
-        heroP: 'Bleib auf dem Laufenden mit den wichtigsten Nachrichten aus der KI-Welt – OpenAI, Google, Anthropic, xAI und mehr. Ohne Blabla.',
-        heroSub: '📡 Nachrichten automatisch generiert von Auto-Jeż',
-        statArt: 'Artikel', statFirms: 'KI-Firmen', statToday: 'Heute hinzugefügt',
-        filterAll: 'Alle', searchPh: 'Nachrichten suchen...',
-        readMore: 'Artikel lesen →', today: 'Heute',
-        back: '← Zurück zu den News', shareX: '𝕏 Teilen', shareLi: 'in LinkedIn',
-        copyLink: '🔗 Link kopieren', copied: '✓ Kopiert!',
-        autoAI: '🤖 Von KI generiert',
-        related: 'Mehr von derselben Firma',
-        random: '🎲 Zufällig',
-        loading: 'Beiträge werden geladen...', loadingArt: 'Laden...',
-        newsLabel: 'Newsletter', newsTitle: 'KI-News direkt in dein Postfach',
-        newsSub: 'Kein Spam. Nur die wichtigsten KI-Nachrichten, automatisch wenn sie erscheinen.',
-        newsBtn: 'Abonnieren →', newsSuccess: '✓ Abonniert! Prüfe dein Postfach.',
-        contact: 'Kontakt', about: 'Über das Projekt',
-        searchResults: 'Ergebnisse für:',
-        noResults: 'Keine Ergebnisse für',
-        noFilter: 'Keine Beiträge für den gewählten Filter.',
-        views: 'Aufrufe',
-        footer: 'KI-Nachrichten · Automatisch generiert von Auto-Jeż',
-        tickerLabel: 'Letzter Beitrag:',
-        aboutHTML: `
-  <h2>Wie entstand TVAI?</h2>
-  <p>Es begann mit Frustration. Ich verfolge gerne die KI-Welt — aber die Blogs von OpenAI, Google, Anthropic und Co. nacheinander zu checken dauert ewig. Die Beiträge sind lang, auf Englisch, und statt auf den Punkt zu kommen gibt es erstmal drei Absätze Einleitung.</p>
-  <p>Ich rief Social-Media-Agenturen an und fragte, ob sie das für mich übernehmen könnten — <strong>News von mehreren KI-Firmen beobachten und noch am selben Tag auf Polnisch mit Infografik posten.</strong> Die Antwort war immer dieselbe: möglich, aber teuer und mit mehreren Tagen Verzögerung. Ohne Sinn.</p>
-  <p>Da sah ich die Lücke.</p>
-  <h2>LinkedIn-Newsletter — und warum es nicht funktionierte</h2>
-  <p>Zuerst erstellte ich einen LinkedIn-Newsletter — nur über OpenAI-News. Es funktionierte, aber ein Problem tauchte auf: Jeder Newsletter-Beitrag ist auch ein Profilpost. Bei 2–3 News täglich von nur einer Firma <strong>wurde mein Profil zur Müllhalde</strong>.</p>
-  <p>Ich verschob den Newsletter auf das Mediafy-Firmenkonto — aber LinkedIn verlangt 150 Follower für einen Firmen-Newsletter. Eine Sackgasse.</p>
-  <h2>Die Lösung: eigene Website</h2>
-  <p>Statt gegen Plattformbeschränkungen zu kämpfen — baute ich TVAI. Ein Ort, wo <strong>jeder KI-Interessierte die neuesten News seiner Lieblingsfirma lesen kann</strong> — kurz und auf den Punkt.</p>
-  <p>Der gesamte Prozess ist zu 100% automatisch. Eine News erscheint, ein Agent findet sie, schreibt einen Artikel, generiert eine Grafik und veröffentlicht — ohne menschliches Zutun.</p>
-  <h2>Möchten Sie so etwas für Ihr Unternehmen?</h2>
-  <p>TVAI ist eines der Projekte, die wir bei <strong>Mediafy</strong> bauen — um zu zeigen, was mit Automatisierung möglich ist. Wir bauen ähnliche Systeme für Kunden: automatische Blogs, Newsletter, Berichte, Wettbewerber-Monitoring.</p>
-  <div class="about-links">
-    <a class="about-link-btn primary" href="https://www.mediafy.com.pl/o-nas" target="_blank">Lass uns reden →</a>
-    <a class="about-link-btn" href="https://www.mediafy.com.pl/" target="_blank">mediafy.com.pl</a>
-    <a class="about-link-btn" href="https://www.linkedin.com/in/jerzy-mediafy/" target="_blank">LinkedIn Jerzy</a>
-  </div>`,
-      },
-      fr: {
-        allPosts: 'Articles de blog',
-        sgTitle: 'Hey, je te vois par ici 👀',
-        sgSub: "Tu as déjà lu quelques articles — si TVAI te plaît, abonne-toi à la newsletter pour ne rien manquer. 100% automatique.",
-        sgFeedbackLabel: 'Un avis ?',
-        sgFeedbackSub: "C'est un projet vivant — je le développe seul et je suis reconnaissant pour chaque idée. Qu'est-ce qui pourrait être amélioré ?",
-        sgFeedbackLink: '✉️ Écris-moi',
-        sgEmailPh: 'ton@email.fr',
-        sgBtn: "S'abonner →",
-        sgSkip: 'Peut-être plus tard (fermer 24h)',
-        h1a: "Dernières nouvelles IA",
-        h1b: 'en direct, sans filtre',
-        heroP: "Restez informé des actualités les plus importantes du monde de l'IA – OpenAI, Google, Anthropic, xAI et plus. Sans bullshit.",
-        heroSub: "📡 Actualités générées automatiquement par Auto-Jeż",
-        statArt: 'Articles', statFirms: "Entreprises IA", statToday: "Ajoutés aujourd'hui",
-        filterAll: 'Tous', searchPh: 'Rechercher...',
-        readMore: "Lire l'article →", today: "Aujourd'hui",
-        back: '← Retour aux news', shareX: '𝕏 Partager', shareLi: 'in LinkedIn',
-        copyLink: '🔗 Copier le lien', copied: '✓ Copié!',
-        autoAI: '🤖 Généré par IA',
-        related: 'Plus de la même entreprise',
-        random: '🎲 Aléatoire',
-        loading: 'Chargement...', loadingArt: 'Chargement...',
-        newsLabel: 'Newsletter', newsTitle: "L'actu IA dans votre boîte mail",
-        newsSub: "Pas de spam. Uniquement les actualités IA les plus importantes, automatiquement dès leur parution.",
-        newsBtn: "S'abonner →", newsSuccess: '✓ Abonné! Vérifiez votre boîte.',
-        contact: 'Nous contacter', about: 'À propos',
-        searchResults: 'Résultats pour :',
-        noResults: 'Aucun résultat pour',noFilter: 'Aucun article pour le filtre sélectionné.',
-        views: 'vues',
-        footer: 'Actualités IA · Générées automatiquement par Auto-Jeż',
-        tickerLabel: 'Dernier article :',
-        aboutHTML: `
-  <h2>Comment TVAI est né ?</h2>
-  <p>Tout a commencé par une frustration. J'aime suivre l'actualité de l'IA — mais vérifier les blogs d'OpenAI, Google, Anthropic et les autres un par un prend une éternité. Les articles sont longs, en anglais, et au lieu d'aller droit au but, il y a trois paragraphes d'introduction.</p>
-  <p>J'ai commencé à appeler des agences de réseaux sociaux pour leur demander de s'en charger — <strong>surveiller les news de plusieurs entreprises IA et les publier le jour même, en polonais, avec une infographie.</strong> La réponse était toujours la même : possible, mais cher et avec plusieurs jours de délai. Sans intérêt.</p>
-  <p>C'est là que j'ai vu le manque.</p>
-  <h2>Newsletter LinkedIn — et pourquoi ça n'a pas fonctionné</h2>
-  <p>J'ai d'abord créé une newsletter LinkedIn — uniquement sur les news OpenAI. Ça fonctionnait, mais un problème est apparu : chaque article de newsletter est aussi un post de profil. Avec 2–3 news par jour d'une seule entreprise, <strong>mon profil devenait une poubelle</strong>.</p>
-  <p>Une impasse après l'autre. C'est alors que j'ai créé <strong>Auto-Jeż</strong> — mais là aussi des complications.</p>
-  <h2>La solution : notre propre site</h2>
-  <p>Au lieu de lutter contre les limitations des plateformes — j'ai créé TVAI. Un endroit où <strong>tout passionné d'IA peut lire les dernières news de l'entreprise de son choix</strong> — en bref et sans détour.</p>
-  <p>Tout le processus est automatique à 100%. Une news apparaît, un agent la trouve, rédige un article, génère un visuel et publie — sans intervention humaine.</p>
-  <h2>Vous voulez quelque chose de similaire ?</h2>
-  <p>TVAI est l'un des projets que nous construisons chez <strong>Mediafy</strong> — pour montrer ce qui est possible avec l'automatisation. Nous construisons des systèmes similaires pour nos clients : blogs automatiques, newsletters, rapports, veille concurrentielle.</p>
-  <div class="about-links">
-    <a class="about-link-btn primary" href="https://www.mediafy.com.pl/o-nas" target="_blank">Parlons-en →</a>
-    <a class="about-link-btn" href="https://www.mediafy.com.pl/" target="_blank">mediafy.com.pl</a>
-    <a class="about-link-btn" href="https://www.linkedin.com/in/jerzy-mediafy/" target="_blank">LinkedIn Jerzy</a>
-  </div>`,
-      },
-      es: {
-        allPosts: 'Entradas del blog',
-        sgTitle: 'Oye, te veo por aquí 👀',
-        sgSub: 'Ya has leído varios artículos — si te gusta TVAI, suscríbete al newsletter para no perderte nada. 100% automático.',
-        sgFeedbackLabel: '¿Tienes feedback?',
-        sgFeedbackSub: 'Es un proyecto vivo — lo desarrollo solo y agradezco cada idea. ¿Qué podría mejorar? ¿Qué función te gustaría ver?',
-        sgFeedbackLink: '✉️ Escríbeme',
-        sgEmailPh: 'tu@email.es',
-        sgBtn: 'Suscribirse →',
-        sgSkip: 'Quizás más tarde (cerrar 24h)',
-        h1a: 'Últimas noticias de IA',
-        h1b: 'en vivo, sin filtros',
-        heroP: 'Mantente al día con las noticias más importantes del mundo de la IA – OpenAI, Google, Anthropic, xAI y más. Sin rodeos.',
-        heroSub: '📡 Noticias generadas automáticamente por Auto-Jeż',
-        statArt: 'Artículos', statFirms: 'Empresas IA', statToday: 'Añadidos hoy',
-        filterAll: 'Todos', searchPh: 'Buscar noticias...',
-        readMore: 'Leer artículo →', today: 'Hoy',
-        back: '← Volver a noticias', shareX: '𝕏 Compartir', shareLi: 'in LinkedIn',
-        copyLink: '🔗 Copiar enlace', copied: '✓ ¡Copiado!',
-        autoAI: '🤖 Generado por IA',
-        related: 'Más de la misma empresa',
-        random: '🎲 Aleatorio',
-        loading: 'Cargando entradas...', loadingArt: 'Cargando...',
-        newsLabel: 'Newsletter', newsTitle: 'Noticias IA directo a tu correo',
-        newsSub: 'Sin spam. Solo las noticias IA más importantes, automáticamente cuando aparezcan.',
-        newsBtn: 'Suscribirse →', newsSuccess: '✓ ¡Suscrito! Revisa tu bandeja.',
-        contact: 'Contáctanos', about: 'Sobre el proyecto',
-        searchResults: 'Resultados para:',
-        noResults: 'Sin resultados para',
-        noFilter: 'No hay entradas para el filtro seleccionado.',
-        views: 'vistas',
-        footer: 'Noticias IA · Generadas automáticamente por Auto-Jeż',
-        tickerLabel: 'Última entrada:',
-        aboutHTML: `
-  <h2>¿Cómo surgió TVAI?</h2>
-  <p>Empezó con frustración. Me gusta seguir el mundo de la IA — pero revisar los blogs de OpenAI, Google, Anthropic y el resto uno por uno lleva una eternidad. Los artículos son largos, en inglés, y en lugar de ir al grano tienen tres párrafos de introducción.</p>
-  <p>Empecé a llamar a agencias de redes sociales preguntando si podían hacerlo por mí — <strong>monitorear noticias de varias empresas de IA y publicarlas el mismo día, en polaco, con una infografía.</strong> La respuesta siempre era la misma: posible, pero caro y con varios días de retraso. Sin sentido.</p>
-  <p>Fue entonces cuando vi el hueco.</p>
-  <h2>Newsletter de LinkedIn — y por qué no funcionó</h2>
-  <p>Primero creé un newsletter en LinkedIn — solo sobre noticias de OpenAI. Funcionaba, pero surgió un problema: cada entrada del newsletter es también un post en el perfil. Con 2–3 noticias diarias de solo una empresa, <strong>mi perfil se convirtió en un vertedero</strong>.</p>
-  <p>Un callejón sin salida tras otro. También creé el personaje <strong>Auto-Jeż</strong> — pero ahí también hubo complicaciones.</p>
-  <h2>La solución: nuestra propia web</h2>
-  <p>En lugar de luchar contra las limitaciones de las plataformas — creé TVAI. Un lugar donde <strong>cualquier interesado en IA puede entrar y leer las últimas noticias de su empresa favorita</strong> — en breve y al grano.</p>
-  <p>Todo el proceso es 100% automático. Aparece una noticia, un agente la encuentra, escribe un artículo, genera un gráfico y publica — sin intervención humana.</p>
-  <h2>¿Quieres algo así para tu empresa?</h2>
-  <p>TVAI es uno de los proyectos que construimos en <strong>Mediafy</strong> — para demostrar lo que es posible con la automatización. Construimos sistemas similares para clientes: blogs automáticos, newsletters, informes, monitoreo de competencia.</p>
-  <div class="about-links">
-    <a class="about-link-btn primary" href="https://www.mediafy.com.pl/o-nas" target="_blank">Hablemos →</a>
-    <a class="about-link-btn" href="https://www.mediafy.com.pl/" target="_blank">mediafy.com.pl</a>
-    <a class="about-link-btn" href="https://www.linkedin.com/in/jerzy-mediafy/" target="_blank">LinkedIn Jerzy</a>
-  </div>`,
-      }
-    };
+      const T = {
+  pl: {
+    allPosts: 'Posty na blogu',
+    autoBadge: '100% automat — żaden człowiek tego nie publikuje',
+    sgTitle: 'Hej, widzę że tu bywasz 👀',
+    sgSub: 'Przeczytałeś już kilka artykułów — jeśli TVAI Ci się podoba, zapisz się na newsletter żeby nic nie pominąć. To w 100% automat — żaden człowiek tego nie wysyła.',
+    sgFeedbackLabel: 'Masz feedback?',
+    sgFeedbackSub: 'To żywy projekt — rozwijam go sam i jestem wdzięczny za każdy pomysł. Co mogłoby być lepiej? Jaką nową funkcję chciałbyś zobaczyć?',
+    sgFeedbackLink: '✉️ Napisz do mnie',
+    sgFeedbackUrl: 'https://www.linkedin.com/in/jerzy-mediafy/',
+    sgEmailPh: 'twoj@email.pl',
+    sgBtn: 'Zapisz się →',
+    sgSkip: 'Może później (zamknij na 24h)',
+    h1a: 'Najnowsze newsy AI',
+    h1b: 'na żywo, bez filtrów',
+    heroP: 'Bądź na bieżąco z najważniejszymi wiadomościami ze świata AI – OpenAI, Google, Anthropic, xAI i innych. Bez bullshitu.',
+    heroSub: '📡 Wiadomości generowane automatycznie przez Auto-Jeża',
+    statArt: 'Artykułów', statFirms: 'Firm AI', statToday: 'Dziś dodano',
+    filterAll: 'Wszystkie', searchPh: 'Szukaj newsów...',
+    readMore: 'Czytaj artykuł →', today: 'Dziś',
+    back: '← Wróć do newsów', backAbout: '← Wróć do newsów',
+    shareX: '𝕏 Udostępnij', shareLi: 'in LinkedIn',
+    copyLink: '🔗 Kopiuj link', copied: '✓ Skopiowano!',
+    autoAI: '🤖 Wygenerowano przez AI',
+    related: 'Więcej z tej samej firmy',
+    random: '🎲 Losuj',
+    loading: 'Ładowanie wpisów...', loadingArt: 'Ładowanie...',
+    nlModalTitle: 'Dostosuj swój newsletter 🎯',
+    nlModalSub: 'Wybierz co chcesz dostawać — tylko to co Cię interesuje, żadnego spamu.',
+    nlSectionFirms: 'Alerty o firmach',
+    nlSectionExtras: 'Dodatki',
+    nlTop5: '📊 Top 5 tygodnia',
+    nlRaport: '📋 Raport miesięczny',
+    nlConfirm: 'Zapisz preferencje →',
+    nlSkipAll: 'Pomiń — zapisz mnie na wszystko',
+    newsLabel: 'Newsletter', newsTitle: 'AI news prosto na maila',
+    newsSub: 'Żadnego spamu. Tylko najważniejsze newsy ze świata AI, automatycznie gdy się pojawią.',
+    newsEmailPh: 'twoj@email.pl',
+    newsBtn: 'Zapisz się →', newsSuccess: '✓ Zapisano! Sprawdź skrzynkę.',
+    contact: 'Napisz do nas', about: 'O projekcie',
+    searchResults: 'Wyniki dla:',
+    noResults: 'Brak wyników dla',
+    noFilter: 'Brak wpisów dla wybranego filtra.',
+    views: 'wyświetleń',
+    footer: 'Wiadomości AI · Automatycznie generowane przez Auto-Jeża',
+    tickerLabel: 'Ostatni wpis:',
+    aboutHTML: `
+<h2>Skąd pomysł na TVAI?</h2>
+<p>Zaczęło się od frustracji. Lubię śledzić co dzieje się w świecie AI — ale sprawdzanie po kolei blogów OpenAI, Google, Anthropic i reszty zajmuje wieczność. Wpisy są długie, po angielsku i zamiast konkretów mają kilka akapitów wstępu zanim dojdziesz do sedna.</p>
+<p>Zacząłem więc dzwonić do agencji social media z pytaniem czy mogą to ogarniać za mnie — <strong>monitorować newsy z kilku firm AI i wstawiać je tego samego dnia, napisane po polsku, z infografiką.</strong> Odpowiedź była zawsze ta sama: możliwe, ale drogo i z kilkudniowym opóźnieniem. News z dziś o 13:00 wyląduje u Ciebie za 3 dni. Bez sensu.</p>
+<p>Wtedy zobaczyłem gdzie jest luka.</p>
+<h2>Biuletyn na LinkedIn — i dlaczego to nie wypalało</h2>
+<p>Najpierw stworzyłem biuletyn na LinkedIn — tylko o newsach OpenAI. Działało, ale pojawił się problem: każdy wpis w biuletynie to też post na profilu. Przy 2–3 newsach dziennie tylko z jednej firmy <strong>mój profil zamieniał się w śmietnik</strong> — grafiki AI i newsy przykrywały wszystko inne.</p>
+<p>Przeniosłem biuletyn na konto firmowe Mediafy — ale LinkedIn wymaga 150 obserwujących żeby prowadzić biuletyn firmowy. Ślepy zaułek.</p>
+<p>Stworzyłem też postać <strong>Auto-Jeża</strong> — ale tu też zgrzyt. Mediafy to firma którą nie prowadzę sam, więc wrzucanie na profil firmowy samych newsów AI średnio pasowało.</p>
+<h2>Rozwiązanie: własna strona</h2>
+<p>Zamiast walczyć z ograniczeniami platform — stworzyłem TVAI. Miejsce gdzie <strong>ktoś zainteresowany AI może wejść i przeczytać najnowszy news</strong> — po polsku, krótko i na temat.</p>
+<p>Cały proces jest w 100% automatyczny. News pojawia się, agent go znajduje, pisze artykuł, generuje grafikę i publikuje — bez udziału człowieka.</p>
+<h2>Chcesz coś takiego dla swojej firmy?</h2>
+<p>TVAI to jeden z projektów które budujemy w <strong>Mediafy</strong> — żeby pokazać co jest możliwe z automatyzacją. Budujemy podobne systemy dla klientów: automatyczne blogi, newslettery, raporty, monitoring konkurencji.</p>
+<p>Jeśli chcesz wiedzieć co możemy zautomatyzować u Ciebie — napisz.</p>
+<div class="about-links">
+  <a class="about-link-btn primary" href="https://www.mediafy.com.pl/o-nas" target="_blank">Porozmawiajmy →</a>
+  <a class="about-link-btn" href="https://www.mediafy.com.pl/" target="_blank">mediafy.com.pl</a>
+  <a class="about-link-btn" href="https://www.linkedin.com/in/jerzy-mediafy/" target="_blank">LinkedIn Jerzy</a>
+</div>`,
+  },
+
+  en: {
+    allPosts: 'Blog Posts',
+    autoBadge: '100% automated — no human publishes this',
+    sgTitle: 'Hey, I see you around here 👀',
+    sgSub: "You've read a few articles — if you enjoy TVAI, subscribe to the newsletter so you don't miss anything. It's 100% automated — no human sends this.",
+    sgFeedbackLabel: 'Got feedback?',
+    sgFeedbackSub: "This is a living project — I'm building it solo and I'm grateful for every idea. What could be better? What new feature would you like to see?",
+    sgFeedbackLink: '✉️ Write to me',
+    sgFeedbackUrl: 'https://www.linkedin.com/in/jerzy-mediafy/',
+    sgEmailPh: 'your@email.com',
+    sgBtn: 'Subscribe →',
+    sgSkip: 'Maybe later (close for 24h)',
+    h1a: 'Latest AI News',
+    h1b: 'live, unfiltered',
+    heroP: 'Stay up to date with the most important news from the AI world – OpenAI, Google, Anthropic, xAI and more. No fluff.',
+    heroSub: '📡 News automatically generated by Auto-Jeż',
+    statArt: 'Articles', statFirms: 'AI Companies', statToday: 'Added today',
+    filterAll: 'All', searchPh: 'Search news...',
+    readMore: 'Read article →', today: 'Today',
+    back: '← Back to news', backAbout: '← Back to news',
+    shareX: '𝕏 Share', shareLi: 'in LinkedIn',
+    copyLink: '🔗 Copy link', copied: '✓ Copied!',
+    autoAI: '🤖 Generated by AI',
+    related: 'More from the same company',
+    random: '🎲 Random',
+    loading: 'Loading posts...', loadingArt: 'Loading...',
+    nlModalTitle: 'Customize your newsletter 🎯',
+    nlModalSub: 'Choose what you want to receive — only what interests you, no spam.',
+    nlSectionFirms: 'Company alerts',
+    nlSectionExtras: 'Extras',
+    nlTop5: '📊 Top 5 of the week',
+    nlRaport: '📋 Monthly report',
+    nlConfirm: 'Save preferences →',
+    nlSkipAll: 'Skip — subscribe me to everything',
+    newsLabel: 'Newsletter', newsTitle: 'AI news straight to your inbox',
+    newsSub: 'No spam. Only the most important AI news, automatically when they appear.',
+    newsEmailPh: 'your@email.com',
+    newsBtn: 'Subscribe →', newsSuccess: '✓ Subscribed! Check your inbox.',
+    contact: 'Contact us', about: 'About',
+    searchResults: 'Results for:',
+    noResults: 'No results for',
+    noFilter: 'No posts for selected filter.',
+    views: 'views',
+    footer: 'AI News · Automatically generated by Auto-Jeż',
+    tickerLabel: 'Latest post:',
+    aboutHTML: `
+<h2>How did TVAI come about?</h2>
+<p>It started with frustration. I like keeping up with the AI world — but checking OpenAI, Google, Anthropic and the rest one by one takes forever. Posts are long, in English, and instead of getting to the point they have three paragraphs of intro first.</p>
+<p>I started calling social media agencies asking if they could handle it for me — <strong>monitor news from several AI companies and post it the same day, written in Polish, with an infographic.</strong> The answer was always the same: possible, but expensive and with a few days' delay. Today's news at 1pm lands with you in 3 days. Pointless.</p>
+<p>That's when I saw the gap.</p>
+<h2>LinkedIn newsletter — and why it didn't work</h2>
+<p>I first created a LinkedIn newsletter — just about OpenAI news. It worked, but a problem appeared: every newsletter post is also a profile post. With 2–3 news items daily from just one company, <strong>my profile turned into a mess</strong> — AI graphics and news buried everything else.</p>
+<p>I moved the newsletter to the Mediafy company account — but LinkedIn requires 150 followers to run a company newsletter. We didn't have that. Dead end.</p>
+<p>I also created the <strong>Auto-Jeż</strong> character — but another snag. Mediafy is a company I don't run alone, so posting only AI news and auto-generated graphics on the company profile didn't really fit.</p>
+<h2>The solution: our own website</h2>
+<p>Instead of fighting platform limitations — I built TVAI. A separate site where <strong>anyone interested in AI can come and read the latest news from their chosen company</strong> — concise and to the point.</p>
+<p>The whole process is 100% automatic. News appears, an agent finds it, writes an article, generates a graphic and publishes — without any human involvement.</p>
+<h2>Want something like this for your company?</h2>
+<p>TVAI is one of the projects we build at <strong>Mediafy</strong> — to show what's possible with automation instead of just talking about it. We build similar systems for clients: automated blogs, newsletters, reports, competitor monitoring.</p>
+<p>If you want to know what we can automate for you — get in touch.</p>
+<div class="about-links">
+  <a class="about-link-btn primary" href="https://www.mediafy.com.pl/o-nas" target="_blank">Let's talk →</a>
+  <a class="about-link-btn" href="https://www.mediafy.com.pl/" target="_blank">mediafy.com.pl</a>
+  <a class="about-link-btn" href="https://www.linkedin.com/in/jerzy-mediafy/" target="_blank">LinkedIn Jerzy</a>
+</div>`,
+  },
+
+  de: {
+    allPosts: 'Blogbeiträge',
+    autoBadge: '100% automatisch — kein Mensch veröffentlicht das hier',
+    sgTitle: 'Hey, ich sehe dich hier 👀',
+    sgSub: 'Du hast bereits einige Artikel gelesen — wenn dir TVAI gefällt, abonniere den Newsletter damit du nichts verpasst. 100% automatisch.',
+    sgFeedbackLabel: 'Feedback?',
+    sgFeedbackSub: 'Das ist ein lebendiges Projekt — ich entwickle es allein und bin für jede Idee dankbar. Was könnte besser sein?',
+    sgFeedbackLink: '✉️ Schreib mir',
+    sgFeedbackUrl: 'https://www.linkedin.com/in/jerzy-mediafy/',
+    sgEmailPh: 'deine@email.de',
+    sgBtn: 'Abonnieren →',
+    sgSkip: 'Vielleicht später (24h schließen)',
+    h1a: 'Neueste KI-Nachrichten',
+    h1b: 'live, ungefiltert',
+    heroP: 'Bleib auf dem Laufenden mit den wichtigsten Nachrichten aus der KI-Welt – OpenAI, Google, Anthropic, xAI und mehr. Ohne Blabla.',
+    heroSub: '📡 Nachrichten automatisch generiert von Auto-Jeż',
+    statArt: 'Artikel', statFirms: 'KI-Firmen', statToday: 'Heute hinzugefügt',
+    filterAll: 'Alle', searchPh: 'Nachrichten suchen...',
+    readMore: 'Artikel lesen →', today: 'Heute',
+    back: '← Zurück zu den News', backAbout: '← Zurück zu den News',
+    shareX: '𝕏 Teilen', shareLi: 'in LinkedIn',
+    copyLink: '🔗 Link kopieren', copied: '✓ Kopiert!',
+    autoAI: '🤖 Von KI generiert',
+    related: 'Mehr von derselben Firma',
+    random: '🎲 Zufällig',
+    loading: 'Beiträge werden geladen...', loadingArt: 'Laden...',
+    nlModalTitle: 'Newsletter anpassen 🎯',
+    nlModalSub: 'Wähle was du erhalten möchtest — nur was dich interessiert, kein Spam.',
+    nlSectionFirms: 'Unternehmens-Alerts',
+    nlSectionExtras: 'Extras',
+    nlTop5: '📊 Top 5 der Woche',
+    nlRaport: '📋 Monatsbericht',
+    nlConfirm: 'Einstellungen speichern →',
+    nlSkipAll: 'Überspringen — alles abonnieren',
+    newsLabel: 'Newsletter', newsTitle: 'KI-News direkt in dein Postfach',
+    newsSub: 'Kein Spam. Nur die wichtigsten KI-Nachrichten, automatisch wenn sie erscheinen.',
+    newsEmailPh: 'deine@email.de',
+    newsBtn: 'Abonnieren →', newsSuccess: '✓ Abonniert! Prüfe dein Postfach.',
+    contact: 'Kontakt', about: 'Über das Projekt',
+    searchResults: 'Ergebnisse für:',
+    noResults: 'Keine Ergebnisse für',
+    noFilter: 'Keine Beiträge für den gewählten Filter.',
+    views: 'Aufrufe',
+    footer: 'KI-Nachrichten · Automatisch generiert von Auto-Jeż',
+    tickerLabel: 'Letzter Beitrag:',
+    aboutHTML: `
+<h2>Wie entstand TVAI?</h2>
+<p>Es begann mit Frustration. Ich verfolge gerne die KI-Welt — aber die Blogs von OpenAI, Google, Anthropic und Co. nacheinander zu checken dauert ewig. Die Beiträge sind lang, auf Englisch, und statt auf den Punkt zu kommen gibt es erstmal drei Absätze Einleitung.</p>
+<p>Ich rief Social-Media-Agenturen an und fragte, ob sie das für mich übernehmen könnten — <strong>News von mehreren KI-Firmen beobachten und noch am selben Tag auf Polnisch mit Infografik posten.</strong> Die Antwort war immer dieselbe: möglich, aber teuer und mit mehreren Tagen Verzögerung. Ohne Sinn.</p>
+<p>Da sah ich die Lücke.</p>
+<h2>LinkedIn-Newsletter — und warum es nicht funktionierte</h2>
+<p>Zuerst erstellte ich einen LinkedIn-Newsletter — nur über OpenAI-News. Es funktionierte, aber ein Problem tauchte auf: Jeder Newsletter-Beitrag ist auch ein Profilpost. Bei 2–3 News täglich von nur einer Firma <strong>wurde mein Profil zur Müllhalde</strong>.</p>
+<p>Ich verschob den Newsletter auf das Mediafy-Firmenkonto — aber LinkedIn verlangt 150 Follower für einen Firmen-Newsletter. Eine Sackgasse.</p>
+<h2>Die Lösung: eigene Website</h2>
+<p>Statt gegen Plattformbeschränkungen zu kämpfen — baute ich TVAI. Ein Ort, wo <strong>jeder KI-Interessierte die neuesten News seiner Lieblingsfirma lesen kann</strong> — kurz und auf den Punkt.</p>
+<p>Der gesamte Prozess ist zu 100% automatisch. Eine News erscheint, ein Agent findet sie, schreibt einen Artikel, generiert eine Grafik und veröffentlicht — ohne menschliches Zutun.</p>
+<h2>Möchten Sie so etwas für Ihr Unternehmen?</h2>
+<p>TVAI ist eines der Projekte, die wir bei <strong>Mediafy</strong> bauen — um zu zeigen, was mit Automatisierung möglich ist. Wir bauen ähnliche Systeme für Kunden: automatische Blogs, Newsletter, Berichte, Wettbewerber-Monitoring.</p>
+<div class="about-links">
+  <a class="about-link-btn primary" href="https://www.mediafy.com.pl/o-nas" target="_blank">Lass uns reden →</a>
+  <a class="about-link-btn" href="https://www.mediafy.com.pl/" target="_blank">mediafy.com.pl</a>
+  <a class="about-link-btn" href="https://www.linkedin.com/in/jerzy-mediafy/" target="_blank">LinkedIn Jerzy</a>
+</div>`,
+  },
+
+  fr: {
+    allPosts: 'Articles de blog',
+    autoBadge: '100% automatique — aucun humain ne publie ceci',
+    sgTitle: 'Hey, je te vois par ici 👀',
+    sgSub: "Tu as déjà lu quelques articles — si TVAI te plaît, abonne-toi à la newsletter pour ne rien manquer. 100% automatique.",
+    sgFeedbackLabel: 'Un avis ?',
+    sgFeedbackSub: "C'est un projet vivant — je le développe seul et je suis reconnaissant pour chaque idée. Qu'est-ce qui pourrait être amélioré ?",
+    sgFeedbackLink: '✉️ Écris-moi',
+    sgFeedbackUrl: 'https://www.linkedin.com/in/jerzy-mediafy/',
+    sgEmailPh: 'ton@email.fr',
+    sgBtn: "S'abonner →",
+    sgSkip: 'Peut-être plus tard (fermer 24h)',
+    h1a: "Dernières nouvelles IA",
+    h1b: 'en direct, sans filtre',
+    heroP: "Restez informé des actualités les plus importantes du monde de l'IA – OpenAI, Google, Anthropic, xAI et plus. Sans bullshit.",
+    heroSub: "📡 Actualités générées automatiquement par Auto-Jeż",
+    statArt: 'Articles', statFirms: "Entreprises IA", statToday: "Ajoutés aujourd'hui",
+    filterAll: 'Tous', searchPh: 'Rechercher...',
+    readMore: "Lire l'article →", today: "Aujourd'hui",
+    back: '← Retour aux news', backAbout: '← Retour aux news',
+    shareX: '𝕏 Partager', shareLi: 'in LinkedIn',
+    copyLink: '🔗 Copier le lien', copied: '✓ Copié!',
+    autoAI: '🤖 Généré par IA',
+    related: 'Plus de la même entreprise',
+    random: '🎲 Aléatoire',
+    loading: 'Chargement...', loadingArt: 'Chargement...',
+    nlModalTitle: 'Personnaliser votre newsletter 🎯',
+    nlModalSub: 'Choisissez ce que vous voulez recevoir — uniquement ce qui vous intéresse, sans spam.',
+    nlSectionFirms: 'Alertes entreprises',
+    nlSectionExtras: 'Extras',
+    nlTop5: '📊 Top 5 de la semaine',
+    nlRaport: '📋 Rapport mensuel',
+    nlConfirm: 'Enregistrer les préférences →',
+    nlSkipAll: 'Ignorer — m\'abonner à tout',
+    newsLabel: 'Newsletter', newsTitle: "L'actu IA dans votre boîte mail",
+    newsSub: "Pas de spam. Uniquement les actualités IA les plus importantes, automatiquement dès leur parution.",
+    newsEmailPh: 'ton@email.fr',
+    newsBtn: "S'abonner →", newsSuccess: '✓ Abonné! Vérifiez votre boîte.',
+    contact: 'Nous contacter', about: 'À propos',
+    searchResults: 'Résultats pour :',
+    noResults: 'Aucun résultat pour',
+    noFilter: 'Aucun article pour le filtre sélectionné.',
+    views: 'vues',
+    footer: 'Actualités IA · Générées automatiquement par Auto-Jeż',
+    tickerLabel: 'Dernier article :',
+    aboutHTML: `
+<h2>Comment TVAI est né ?</h2>
+<p>Tout a commencé par une frustration. J'aime suivre l'actualité de l'IA — mais vérifier les blogs d'OpenAI, Google, Anthropic et les autres un par un prend une éternité. Les articles sont longs, en anglais, et au lieu d'aller droit au but, il y a trois paragraphes d'introduction.</p>
+<p>J'ai commencé à appeler des agences de réseaux sociaux pour leur demander de s'en charger — <strong>surveiller les news de plusieurs entreprises IA et les publier le jour même, en polonais, avec une infographie.</strong> La réponse était toujours la même : possible, mais cher et avec plusieurs jours de délai. Sans intérêt.</p>
+<p>C'est là que j'ai vu le manque.</p>
+<h2>Newsletter LinkedIn — et pourquoi ça n'a pas fonctionné</h2>
+<p>J'ai d'abord créé une newsletter LinkedIn — uniquement sur les news OpenAI. Ça fonctionnait, mais un problème est apparu : chaque article de newsletter est aussi un post de profil. Avec 2–3 news par jour d'une seule entreprise, <strong>mon profil devenait une poubelle</strong>.</p>
+<p>Une impasse après l'autre. C'est alors que j'ai créé <strong>Auto-Jeż</strong> — mais là aussi des complications.</p>
+<h2>La solution : notre propre site</h2>
+<p>Au lieu de lutter contre les limitations des plateformes — j'ai créé TVAI. Un endroit où <strong>tout passionné d'IA peut lire les dernières news de l'entreprise de son choix</strong> — en bref et sans détour.</p>
+<p>Tout le processus est automatique à 100%. Une news apparaît, un agent la trouve, rédige un article, génère un visuel et publie — sans intervention humaine.</p>
+<h2>Vous voulez quelque chose de similaire ?</h2>
+<p>TVAI est l'un des projets que nous construisons chez <strong>Mediafy</strong> — pour montrer ce qui est possible avec l'automatisation. Nous construisons des systèmes similaires pour nos clients : blogs automatiques, newsletters, rapports, veille concurrentielle.</p>
+<div class="about-links">
+  <a class="about-link-btn primary" href="https://www.mediafy.com.pl/o-nas" target="_blank">Parlons-en →</a>
+  <a class="about-link-btn" href="https://www.mediafy.com.pl/" target="_blank">mediafy.com.pl</a>
+  <a class="about-link-btn" href="https://www.linkedin.com/in/jerzy-mediafy/" target="_blank">LinkedIn Jerzy</a>
+</div>`,
+  },
+
+  es: {
+    allPosts: 'Entradas del blog',
+    autoBadge: '100% automático — ningún humano publica esto',
+    sgTitle: 'Oye, te veo por aquí 👀',
+    sgSub: 'Ya has leído varios artículos — si te gusta TVAI, suscríbete al newsletter para no perderte nada. 100% automático.',
+    sgFeedbackLabel: '¿Tienes feedback?',
+    sgFeedbackSub: 'Es un proyecto vivo — lo desarrollo solo y agradezco cada idea. ¿Qué podría mejorar? ¿Qué función te gustaría ver?',
+    sgFeedbackLink: '✉️ Escríbeme',
+    sgFeedbackUrl: 'https://www.linkedin.com/in/jerzy-mediafy/',
+    sgEmailPh: 'tu@email.es',
+    sgBtn: 'Suscribirse →',
+    sgSkip: 'Quizás más tarde (cerrar 24h)',
+    h1a: 'Últimas noticias de IA',
+    h1b: 'en vivo, sin filtros',
+    heroP: 'Mantente al día con las noticias más importantes del mundo de la IA – OpenAI, Google, Anthropic, xAI y más. Sin rodeos.',
+    heroSub: '📡 Noticias generadas automáticamente por Auto-Jeż',
+    statArt: 'Artículos', statFirms: 'Empresas IA', statToday: 'Añadidos hoy',
+    filterAll: 'Todos', searchPh: 'Buscar noticias...',
+    readMore: 'Leer artículo →', today: 'Hoy',
+    back: '← Volver a noticias', backAbout: '← Volver a noticias',
+    shareX: '𝕏 Compartir', shareLi: 'in LinkedIn',
+    copyLink: '🔗 Copiar enlace', copied: '✓ ¡Copiado!',
+    autoAI: '🤖 Generado por IA',
+    related: 'Más de la misma empresa',
+    random: '🎲 Aleatorio',
+    loading: 'Cargando entradas...', loadingArt: 'Cargando...',
+    nlModalTitle: 'Personaliza tu newsletter 🎯',
+    nlModalSub: 'Elige qué quieres recibir — solo lo que te interesa, sin spam.',
+    nlSectionFirms: 'Alertas de empresas',
+    nlSectionExtras: 'Extras',
+    nlTop5: '📊 Top 5 de la semana',
+    nlRaport: '📋 Informe mensual',
+    nlConfirm: 'Guardar preferencias →',
+    nlSkipAll: 'Omitir — suscribirme a todo',
+    newsLabel: 'Newsletter', newsTitle: 'Noticias IA directo a tu correo',
+    newsSub: 'Sin spam. Solo las noticias IA más importantes, automáticamente cuando aparezcan.',
+    newsEmailPh: 'tu@email.es',
+    newsBtn: 'Suscribirse →', newsSuccess: '✓ ¡Suscrito! Revisa tu bandeja.',
+    contact: 'Contáctanos', about: 'Sobre el proyecto',
+    searchResults: 'Resultados para:',
+    noResults: 'Sin resultados para',
+    noFilter: 'No hay entradas para el filtro seleccionado.',
+    views: 'vistas',
+    footer: 'Noticias IA · Generadas automáticamente por Auto-Jeż',
+    tickerLabel: 'Última entrada:',
+    aboutHTML: `
+<h2>¿Cómo surgió TVAI?</h2>
+<p>Empezó con frustración. Me gusta seguir el mundo de la IA — pero revisar los blogs de OpenAI, Google, Anthropic y el resto uno por uno lleva una eternidad. Los artículos son largos, en inglés, y en lugar de ir al grano tienen tres párrafos de introducción.</p>
+<p>Empecé a llamar a agencias de redes sociales preguntando si podían hacerlo por mí — <strong>monitorear noticias de varias empresas de IA y publicarlas el mismo día, en polaco, con una infografía.</strong> La respuesta siempre era la misma: posible, pero caro y con varios días de retraso. Sin sentido.</p>
+<p>Fue entonces cuando vi el hueco.</p>
+<h2>Newsletter de LinkedIn — y por qué no funcionó</h2>
+<p>Primero creé un newsletter en LinkedIn — solo sobre noticias de OpenAI. Funcionaba, pero surgió un problema: cada entrada del newsletter es también un post en el perfil. Con 2–3 noticias diarias de solo una empresa, <strong>mi perfil se convirtió en un vertedero</strong>.</p>
+<p>Un callejón sin salida tras otro. También creé el personaje <strong>Auto-Jeż</strong> — pero ahí también hubo complicaciones.</p>
+<h2>La solución: nuestra propia web</h2>
+<p>En lugar de luchar contra las limitaciones de las plataformas — creé TVAI. Un lugar donde <strong>cualquier interesado en IA puede entrar y leer las últimas noticias de su empresa favorita</strong> — en breve y al grano.</p>
+<p>Todo el proceso es 100% automático. Aparece una noticia, un agente la encuentra, escribe un artículo, genera un gráfico y publica — sin intervención humana.</p>
+<h2>¿Quieres algo así para tu empresa?</h2>
+<p>TVAI es uno de los proyectos que construimos en <strong>Mediafy</strong> — para demostrar lo que es posible con la automatización. Construimos sistemas similares para clientes: blogs automáticos, newsletters, informes, monitoreo de competencia.</p>
+<div class="about-links">
+  <a class="about-link-btn primary" href="https://www.mediafy.com.pl/o-nas" target="_blank">Hablemos →</a>
+  <a class="about-link-btn" href="https://www.mediafy.com.pl/" target="_blank">mediafy.com.pl</a>
+  <a class="about-link-btn" href="https://www.linkedin.com/in/jerzy-mediafy/" target="_blank">LinkedIn Jerzy</a>
+</div>`,
+  }
+};
 
 let currentLang = localStorage.getItem('tvai_lang') || 'pl';
 
@@ -2704,28 +2770,60 @@ function setLang(lang) {
 }
 function applyLang() {
   const t = T[currentLang];
-  document.querySelector('.hero-badge').innerHTML = `<div class="hero-badge-dot"></div>${t.allPosts}`;
+
+  // HERO
+  const badges = document.querySelectorAll('.hero-badge');
+  if (badges[0]) badges[0].innerHTML = `<div class="hero-badge-dot"></div>${t.allPosts}`;
+  if (badges[1]) badges[1].innerHTML = `<div class="hero-badge-dot" style="background:#10a37f"></div><span style="color:#10a37f">${t.autoBadge}</span>`;
   document.querySelector('.hero h1').innerHTML = `${t.h1a}<br><span class="dim">${t.h1b}</span>`;
   document.querySelector('.hero p').innerHTML = `${t.heroP}<br><span style="font-size:0.82rem;color:var(--text3);margin-top:8px;display:block">${t.heroSub}</span>`;
   document.querySelector('.hero-stat:nth-child(1) .hero-stat-label').textContent = t.statArt;
   document.querySelector('.hero-stat:nth-child(2) .hero-stat-label').textContent = t.statFirms;
   document.querySelector('.hero-stat:nth-child(3) .hero-stat-label').textContent = t.statToday;
+
+  // FILTER / NAV
   document.querySelector('[data-filter="all"].tag-btn').childNodes[0].textContent = t.filterAll + ' ';
-  document.querySelector('.random-btn').textContent = t.random;
   document.querySelector('[data-filter="all"].filter-btn').textContent = t.filterAll;
+  document.querySelector('.random-btn').textContent = t.random;
   document.querySelectorAll('.search-input').forEach(el => el.placeholder = t.searchPh);
+
+  // HEADER BUTTONS
   document.getElementById('btn-contact').textContent = t.contact;
   document.getElementById('btn-about').textContent = t.about;
+
+  // NEWSLETTER SECTION
   document.querySelector('.newsletter-label').textContent = t.newsLabel;
   document.querySelector('.newsletter-title').textContent = t.newsTitle;
   document.querySelector('.newsletter-sub').textContent = t.newsSub;
   document.querySelector('.newsletter-submit').textContent = t.newsBtn;
+  document.getElementById('newsletter-email').placeholder = t.newsEmailPh;
+
+  // NEWSLETTER MODAL
+  document.querySelector('.nl-modal-title').textContent = t.nlModalTitle;
+  document.querySelector('.nl-modal-sub').textContent = t.nlModalSub;
+  document.querySelectorAll('.nl-section-label')[0].textContent = t.nlSectionFirms;
+  document.querySelectorAll('.nl-section-label')[1].textContent = t.nlSectionExtras;
+  document.querySelector('[data-value="top5"]').innerHTML = (document.querySelector('[data-value="top5"]').classList.contains('selected') ? '✓ ' : '') + t.nlTop5;
+  document.querySelector('[data-value="raport"]').innerHTML = (document.querySelector('[data-value="raport"]').classList.contains('selected') ? '✓ ' : '') + t.nlRaport;
+  document.querySelector('.nl-confirm-btn').textContent = t.nlConfirm;
+  document.querySelector('.nl-skip-btn').textContent = t.nlSkipAll;
+
+  // ARTICLE VIEW
   document.getElementById('back-btn').textContent = t.back;
   document.getElementById('share-x').textContent = t.shareX;
   document.getElementById('share-li').textContent = t.shareLi;
   document.getElementById('copy-link').textContent = t.copyLink;
+
+  // SOFT GATE
+  if (document.getElementById('sg-title')) updateSgLang();
+
+  // ABOUT
   const aboutSec = document.querySelector('#about-view .about-section');
   if (aboutSec) aboutSec.innerHTML = t.aboutHTML;
+  const aboutBack = document.querySelector('#about-view .article-back');
+  if (aboutBack) aboutBack.textContent = t.backAbout;
+
+  // FOOTER
   document.getElementById('footer-text').textContent = t.footer;
 }
     // ── SOFT GATE ─────────────────────────────────
@@ -2753,6 +2851,7 @@ function updateSgLang() {
   document.getElementById('sg-feedback-label').textContent = t.sgFeedbackLabel;
   document.getElementById('sg-feedback-sub').textContent = t.sgFeedbackSub;
   document.getElementById('sg-feedback-link').textContent = t.sgFeedbackLink;
+  document.getElementById('sg-feedback-link').href = t.sgFeedbackUrl;
   document.getElementById('sg-nl-input').placeholder = t.sgEmailPh;
   document.getElementById('sg-nl-btn').textContent = t.sgBtn;
   document.getElementById('sg-skip').textContent = t.sgSkip;
@@ -2829,7 +2928,7 @@ function closeSoftGate(subscribe) {
     <hr class="sg-divider">
     <div class="sg-feedback-label" id="sg-feedback-label">Masz feedback?</div>
     <div class="sg-feedback-sub" id="sg-feedback-sub">To żywy projekt — rozwijam go sam i jestem wdzięczny za każdy pomysł.</div>
-    <a class="sg-feedback-link" id="sg-feedback-link" href="https://www.mediafy.com.pl/o-nas" target="_blank">✉️ Napisz do mnie</a>
+    <a class="sg-feedback-link" id="sg-feedback-link" href="https://www.linkedin.com/in/jerzy-mediafy/" target="_blank">✉️ Napisz do mnie</a>
   </div>
 </div>
   

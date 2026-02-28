@@ -1405,6 +1405,129 @@
   transition: all 0.2s;
 }
 .nl-skip-btn:hover { border-color: var(--border); color: var(--text); }
+    /* ── SOFT GATE MODAL ──────────────────────── */
+#sg-modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  backdrop-filter: blur(6px);
+  z-index: 3000;
+  align-items: center;
+  justify-content: center;
+}
+#sg-modal-overlay.visible { display: flex; }
+#sg-modal {
+  background: #0a0a12;
+  border: 1px solid rgba(37,99,235,0.3);
+  border-radius: 20px;
+  padding: 36px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.7), 0 0 40px rgba(37,99,235,0.15);
+  position: relative;
+}
+#sg-modal-close {
+  position: absolute;
+  top: 14px; right: 14px;
+  width: 28px; height: 28px;
+  background: rgba(255,255,255,0.08);
+  border: none;
+  border-radius: 50%;
+  color: var(--text2);
+  font-size: 0.75rem;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s;
+}
+#sg-modal-close:hover { background: rgba(255,255,255,0.15); }
+.sg-emoji { font-size: 2.2rem; margin-bottom: 12px; }
+.sg-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+.sg-sub {
+  font-size: 0.84rem;
+  color: var(--text2);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+.sg-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 20px 0;
+}
+.sg-feedback-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text3);
+  margin-bottom: 8px;
+}
+.sg-feedback-sub {
+  font-size: 0.8rem;
+  color: var(--text2);
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+.sg-feedback-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--blue-light);
+  border: 1px solid rgba(37,99,235,0.35);
+  padding: 8px 16px;
+  border-radius: 100px;
+  text-decoration: none;
+  transition: all 0.2s;
+  margin-bottom: 16px;
+}
+.sg-feedback-link:hover { background: var(--blue-soft); }
+.sg-nl-form { display: flex; gap: 8px; margin-top: 16px; }
+.sg-nl-input {
+  flex: 1;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid var(--border2);
+  border-radius: 100px;
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  padding: 10px 16px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.sg-nl-input::placeholder { color: var(--text3); }
+.sg-nl-input:focus { border-color: var(--blue); }
+.sg-nl-btn {
+  background: var(--blue);
+  color: #fff;
+  border: none;
+  border-radius: 100px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 10px 18px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: opacity 0.2s;
+}
+.sg-nl-btn:hover { opacity: 0.9; }
+.sg-skip {
+  display: block;
+  text-align: center;
+  font-size: 0.73rem;
+  color: var(--text3);
+  margin-top: 12px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.sg-skip:hover { color: var(--text2); }
   </style>
 </head>
 <body>
@@ -1918,6 +2041,7 @@
         document.getElementById('article-title').textContent = meta.title || slug;
         document.getElementById('article-content').innerHTML = marked.parse(content);
         trackView(slug);
+        trackArticleRead();
         updateLangSwitchBtn(slug);
         renderRelated(slug, meta.company);
         progressBar.style.display = 'block';
@@ -2294,6 +2418,14 @@
     const T = {
       pl: {
         allPosts: 'Posty na blogu',
+        sgTitle: 'Hej, widzę że tu bywasz 👀',
+        sgSub: 'Przeczytałeś już kilka artykułów — jeśli TVAI Ci się podoba, zapisz się na newsletter żeby nic nie pominąć. To w 100% automat — żaden człowiek tego nie wysyła.',
+        sgFeedbackLabel: 'Masz feedback?',
+        sgFeedbackSub: 'To żywy projekt — rozwijam go sam i jestem wdzięczny za każdy pomysł. Co mogłoby być lepiej? Jaką nową funkcję chciałbyś zobaczyć?',
+        sgFeedbackLink: '✉️ Napisz do mnie',
+        sgEmailPh: 'twoj@email.pl',
+        sgBtn: 'Zapisz się →',
+        sgSkip: 'Może później (zamknij na 24h)',
         h1a: 'Najnowsze newsy AI',
         h1b: 'na żywo, bez filtrów',
         heroP: 'Bądź na bieżąco z najważniejszymi wiadomościami ze świata AI – OpenAI, Google, Anthropic, xAI i innych. Bez bullshitu.',
@@ -2340,6 +2472,14 @@
       },
       en: {
         allPosts: 'Blog Posts',
+        sgTitle: 'Hey, I see you around here 👀',
+        sgSub: "You've read a few articles — if you enjoy TVAI, subscribe to the newsletter so you don't miss anything. It's 100% automated — no human sends this.",
+        sgFeedbackLabel: 'Got feedback?',
+        sgFeedbackSub: "This is a living project — I'm building it solo and I'm grateful for every idea. What could be better? What new feature would you like to see?",
+        sgFeedbackLink: '✉️ Write to me',
+        sgEmailPh: 'your@email.com',
+        sgBtn: 'Subscribe →',
+        sgSkip: 'Maybe later (close for 24h)',
         h1a: 'Latest AI News',
         h1b: 'live, unfiltered',
         heroP: 'Stay up to date with the most important news from the AI world – OpenAI, Google, Anthropic, xAI and more. No fluff.',
@@ -2386,6 +2526,14 @@
       },
       de: {
         allPosts: 'Blogbeiträge',
+        sgTitle: 'Hey, ich sehe dich hier 👀',
+        sgSub: 'Du hast bereits einige Artikel gelesen — wenn dir TVAI gefällt, abonniere den Newsletter damit du nichts verpasst. 100% automatisch.',
+        sgFeedbackLabel: 'Feedback?',
+        sgFeedbackSub: 'Das ist ein lebendiges Projekt — ich entwickle es allein und bin für jede Idee dankbar. Was könnte besser sein?',
+        sgFeedbackLink: '✉️ Schreib mir',
+        sgEmailPh: 'deine@email.de',
+        sgBtn: 'Abonnieren →',
+        sgSkip: 'Vielleicht später (24h schließen)',
         h1a: 'Neueste KI-Nachrichten',
         h1b: 'live, ungefiltert',
         heroP: 'Bleib auf dem Laufenden mit den wichtigsten Nachrichten aus der KI-Welt – OpenAI, Google, Anthropic, xAI und mehr. Ohne Blabla.',
@@ -2430,6 +2578,14 @@
       },
       fr: {
         allPosts: 'Articles de blog',
+        sgTitle: 'Hey, je te vois par ici 👀',
+        sgSub: "Tu as déjà lu quelques articles — si TVAI te plaît, abonne-toi à la newsletter pour ne rien manquer. 100% automatique.",
+        sgFeedbackLabel: 'Un avis ?',
+        sgFeedbackSub: "C'est un projet vivant — je le développe seul et je suis reconnaissant pour chaque idée. Qu'est-ce qui pourrait être amélioré ?",
+        sgFeedbackLink: '✉️ Écris-moi',
+        sgEmailPh: 'ton@email.fr',
+        sgBtn: "S'abonner →",
+        sgSkip: 'Peut-être plus tard (fermer 24h)',
         h1a: "Dernières nouvelles IA",
         h1b: 'en direct, sans filtre',
         heroP: "Restez informé des actualités les plus importantes du monde de l'IA – OpenAI, Google, Anthropic, xAI et plus. Sans bullshit.",
@@ -2473,6 +2629,14 @@
       },
       es: {
         allPosts: 'Entradas del blog',
+        sgTitle: 'Oye, te veo por aquí 👀',
+        sgSub: 'Ya has leído varios artículos — si te gusta TVAI, suscríbete al newsletter para no perderte nada. 100% automático.',
+        sgFeedbackLabel: '¿Tienes feedback?',
+        sgFeedbackSub: 'Es un proyecto vivo — lo desarrollo solo y agradezco cada idea. ¿Qué podría mejorar? ¿Qué función te gustaría ver?',
+        sgFeedbackLink: '✉️ Escríbeme',
+        sgEmailPh: 'tu@email.es',
+        sgBtn: 'Suscribirse →',
+        sgSkip: 'Quizás más tarde (cerrar 24h)',
         h1a: 'Últimas noticias de IA',
         h1b: 'en vivo, sin filtros',
         heroP: 'Mantente al día con las noticias más importantes del mundo de la IA – OpenAI, Google, Anthropic, xAI y más. Sin rodeos.',
@@ -2564,6 +2728,58 @@ function applyLang() {
   if (aboutSec) aboutSec.innerHTML = t.aboutHTML;
   document.getElementById('footer-text').textContent = t.footer;
 }
+    // ── SOFT GATE ─────────────────────────────────
+function trackArticleRead() {
+  try {
+    const sgData = JSON.parse(localStorage.getItem('tvai_sg') || '{}');
+    const now = Date.now();
+    if (sgData.closedUntil && now < sgData.closedUntil) return;
+    if (sgData.subscribed) return;
+    const count = (sgData.count || 0) + 1;
+    localStorage.setItem('tvai_sg', JSON.stringify({ ...sgData, count }));
+    if (count >= 5) showSoftGate();
+  } catch(e) {}
+}
+
+function showSoftGate() {
+  updateSgLang();
+  document.getElementById('sg-modal-overlay').classList.add('visible');
+}
+
+function updateSgLang() {
+  const t = T[currentLang];
+  document.getElementById('sg-title').textContent = t.sgTitle;
+  document.getElementById('sg-sub').textContent = t.sgSub;
+  document.getElementById('sg-feedback-label').textContent = t.sgFeedbackLabel;
+  document.getElementById('sg-feedback-sub').textContent = t.sgFeedbackSub;
+  document.getElementById('sg-feedback-link').textContent = t.sgFeedbackLink;
+  document.getElementById('sg-nl-input').placeholder = t.sgEmailPh;
+  document.getElementById('sg-nl-btn').textContent = t.sgBtn;
+  document.getElementById('sg-skip').textContent = t.sgSkip;
+}
+
+function closeSoftGate(subscribe) {
+  try {
+    const sgData = JSON.parse(localStorage.getItem('tvai_sg') || '{}');
+    if (subscribe) {
+      const email = document.getElementById('sg-nl-input').value.trim();
+      if (!email || !email.includes('@')) {
+        document.getElementById('sg-nl-input').style.borderColor = '#ef4444';
+        return;
+      }
+      sgData.subscribed = true;
+      fetch('https://TWOJ-N8N-WEBHOOK-URL', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, firms: ['OpenAI','Google','Anthropic','xAI','Microsoft','Meta','Qwen','Bielik'], extras: ['top5','raport'], source: 'softgate' })
+      }).catch(() => {});
+    } else {
+      sgData.closedUntil = Date.now() + 24 * 60 * 60 * 1000;
+    }
+    localStorage.setItem('tvai_sg', JSON.stringify(sgData));
+  } catch(e) {}
+  document.getElementById('sg-modal-overlay').classList.remove('visible');
+}
     init();
     document.getElementById('lang-label').textContent = currentLang.toUpperCase();
     applyLang();
@@ -2598,5 +2814,24 @@ function applyLang() {
     </div>
   </div>
 
+  <!-- SOFT GATE MODAL -->
+<div id="sg-modal-overlay">
+  <div id="sg-modal">
+    <button id="sg-modal-close" onclick="closeSoftGate(false)">✕</button>
+    <div class="sg-emoji">📬</div>
+    <div class="sg-title" id="sg-title">Hej, widzę że tu bywasz 👀</div>
+    <div class="sg-sub" id="sg-sub">Przeczytałeś już kilka artykułów — jeśli TVAI Ci się podoba, zapisz się na newsletter żeby nic nie pominąć.</div>
+    <div class="sg-nl-form">
+      <input type="email" class="sg-nl-input" id="sg-nl-input" placeholder="twoj@email.pl" />
+      <button class="sg-nl-btn" id="sg-nl-btn" onclick="closeSoftGate(true)">Zapisz się →</button>
+    </div>
+    <span class="sg-skip" id="sg-skip" onclick="closeSoftGate(false)">Może później (zamknij na 24h)</span>
+    <hr class="sg-divider">
+    <div class="sg-feedback-label" id="sg-feedback-label">Masz feedback?</div>
+    <div class="sg-feedback-sub" id="sg-feedback-sub">To żywy projekt — rozwijam go sam i jestem wdzięczny za każdy pomysł.</div>
+    <a class="sg-feedback-link" id="sg-feedback-link" href="https://www.mediafy.com.pl/o-nas" target="_blank">✉️ Napisz do mnie</a>
+  </div>
+</div>
+  
 </body>
 </html>

@@ -2241,7 +2241,7 @@
       successEl.textContent = T[currentLang].newsSuccess;
       successEl.style.display = 'flex';
       // TODO: zamień URL na swój webhook n8n
-      fetch('https://TWOJ-N8N-WEBHOOK-URL', {
+      fetch('https://mediafy-sparta.app.n8n.cloud/webhook/newsletter-signup', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, firms, extras })
@@ -2879,7 +2879,7 @@ function closeSoftGate(subscribe) {
         return;
       }
       sgData.subscribed = true;
-      fetch('https://TWOJ-N8N-WEBHOOK-URL', {
+      fetch('https://mediafy-sparta.app.n8n.cloud/webhook/newsletter-signup', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, firms: ['OpenAI','Google','Anthropic','xAI','Microsoft','Meta','Qwen','Bielik'], extras: ['top5','raport'], source: 'softgate' })

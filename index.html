@@ -2893,6 +2893,8 @@ function closeSoftGate(subscribe) {
 }
     function closeUnsubModal() {
   document.getElementById('unsub-overlay').style.display = 'none';
+  document.getElementById('unsub-step1').style.display = 'block';
+  document.getElementById('unsub-step2').style.display = 'none';
   history.replaceState({}, '', window.location.pathname);
 }
 
@@ -2909,13 +2911,20 @@ function resubscribeFromUnsub() {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ email, firms, extras, source: 'resubscribe' })
   }).catch(() => {});
-  closeUnsubModal();
-  document.getElementById('newsletter-form').style.display = 'none';
-  const s = document.getElementById('newsletter-success');
-  s.textContent = '✓ Zapisano ponownie! Sprawdź skrzynkę.';
-  s.style.display = 'flex';
+  document.getElementById('unsub-step1').style.display = 'none';
+  document.getElementById('unsub-step2').style.display = 'block';
 }
-
+// Unsubscribe via URL param ?unsub=email
+const _urlParams = new URLSearchParams(window.location.search);
+const _unsubEmail = _urlParams.get('unsub');
+if (_unsubEmail) {
+  document.getElementById('unsub-email').value = _unsubEmail;
+  document.getElementById('unsub-overlay').style.display = 'flex';
+  history.replaceState({}, '', window.location.pathname);
+  // wywołaj n8n w tle żeby oznaczyć jako wypisany
+  fetch('https://mediafy-sparta.app.n8n.cloud/webhook/newsletter-unsubscribe?email=' + encodeURIComponent(_unsubEmail)).catch(()=>{});
+}
+// fallback dla starego hash
 if (window.location.hash === '#wypisano') {
   document.getElementById('unsub-overlay').style.display = 'flex';
   history.replaceState({}, '', window.location.pathname);
@@ -2955,37 +2964,48 @@ if (window.location.hash === '#wypisano') {
   </div>
 <!-- UNSUBSCRIBE MODAL -->
 <div id="unsub-overlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.75);backdrop-filter:blur(6px);z-index:3000;align-items:center;justify-content:center">
-  <div style="background:#0a0a12;border:1px solid rgba(239,68,68,0.25);border-radius:20px;padding:36px;width:90%;max-width:480px;box-shadow:0 24px 80px rgba(0,0,0,0.7);position:relative">
+  <div id="unsub-modal" style="background:#0a0a12;border:1px solid rgba(239,68,68,0.25);border-radius:20px;padding:36px;width:90%;max-width:480px;box-shadow:0 24px 80px rgba(0,0,0,0.7);position:relative">
     <button onclick="closeUnsubModal()" style="position:absolute;top:14px;right:14px;width:28px;height:28px;background:rgba(255,255,255,0.08);border:none;border-radius:50%;color:#9090a8;font-size:0.75rem;cursor:pointer;display:flex;align-items:center;justify-content:center">✕</button>
     
-    <p style="font-size:2rem;margin-bottom:8px">😢</p>
-    <div style="font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:800;color:#fff;margin-bottom:6px">Wypisałeś się z newslettera</div>
-    <div style="font-size:0.82rem;color:#9090a8;margin-bottom:24px;line-height:1.5">Nie będziesz już dostawać wiadomości od TVAI.<br>Jeśli to pomyłka — możesz zapisać się ponownie poniżej.</div>
+    <!-- STAN 1: potwierdzenie wypisania -->
+    <div id="unsub-step1">
+      <p style="font-size:2rem;margin-bottom:8px">😢</p>
+      <div style="font-family:'Syne',sans-serif;font-size:1.35rem;font-weight:800;color:#fff;margin-bottom:6px">Wypisałeś się z newslettera</div>
+      <div style="font-size:0.82rem;color:#9090a8;margin-bottom:24px;line-height:1.6">Nie będziesz już dostawać wiadomości od TVAI.<br>Jeśli to pomyłka — możesz zapisać się ponownie poniżej.</div>
 
-    <div style="font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#505060;margin-bottom:10px">Chcę dostawać alerty o firmach</div>
-    <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px" id="unsub-firms">
-      <div class="nl-chip selected" data-value="OpenAI">OpenAI</div>
-      <div class="nl-chip selected" data-value="Google">Google</div>
-      <div class="nl-chip selected" data-value="Anthropic">Anthropic</div>
-      <div class="nl-chip" data-value="xAI">xAI</div>
-      <div class="nl-chip" data-value="Microsoft">Microsoft</div>
-      <div class="nl-chip" data-value="Meta">Meta</div>
-      <div class="nl-chip" data-value="Qwen">Qwen</div>
-      <div class="nl-chip" data-value="Bielik">🇵🇱 Bielik</div>
+      <div style="font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#505060;margin-bottom:10px">Chcę dostawać alerty o firmach</div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px" id="unsub-firms">
+        <div class="nl-chip selected" data-value="OpenAI">OpenAI</div>
+        <div class="nl-chip selected" data-value="Google">Google</div>
+        <div class="nl-chip selected" data-value="Anthropic">Anthropic</div>
+        <div class="nl-chip" data-value="xAI">xAI</div>
+        <div class="nl-chip" data-value="Microsoft">Microsoft</div>
+        <div class="nl-chip" data-value="Meta">Meta</div>
+        <div class="nl-chip" data-value="Qwen">Qwen</div>
+        <div class="nl-chip" data-value="Bielik">🇵🇱 Bielik</div>
+      </div>
+
+      <hr style="border:none;border-top:1px solid rgba(255,255,255,0.06);margin:16px 0">
+
+      <div style="font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#505060;margin-bottom:10px">Dodatki</div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px" id="unsub-extras">
+        <div class="nl-chip selected" data-value="top5">📊 Top 5 tygodnia</div>
+        <div class="nl-chip" data-value="raport">📋 Raport miesięczny</div>
+      </div>
+
+      <input type="email" id="unsub-email" placeholder="twoj@email.pl" style="width:100%;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.11);border-radius:100px;color:#fff;font-family:'Inter',sans-serif;font-size:0.85rem;padding:11px 20px;outline:none;margin-bottom:8px;box-sizing:border-box"/>
+
+      <button onclick="resubscribeFromUnsub()" style="width:100%;background:#2563eb;color:#fff;border:none;border-radius:100px;font-family:'Inter',sans-serif;font-size:0.88rem;font-weight:700;padding:13px;cursor:pointer;box-shadow:0 4px 20px rgba(37,99,235,0.35);margin-bottom:8px">Zapisz się ponownie →</button>
+      <button onclick="closeUnsubModal()" style="width:100%;background:transparent;border:1px solid rgba(255,255,255,0.08);border-radius:100px;font-family:'Inter',sans-serif;font-size:0.82rem;font-weight:500;color:#9090a8;padding:11px;cursor:pointer">Zamknij bez zapisywania</button>
     </div>
 
-    <hr style="border:none;border-top:1px solid rgba(255,255,255,0.06);margin:20px 0">
-
-    <div style="font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#505060;margin-bottom:10px">Dodatki</div>
-    <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px" id="unsub-extras">
-      <div class="nl-chip selected" data-value="top5">📊 Top 5 tygodnia</div>
-      <div class="nl-chip" data-value="raport">📋 Raport miesięczny</div>
+    <!-- STAN 2: sukces ponownego zapisu -->
+    <div id="unsub-step2" style="display:none;text-align:center;padding:20px 0">
+      <p style="font-size:2.5rem;margin-bottom:12px">✅</p>
+      <div style="font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:800;color:#fff;margin-bottom:8px">Zapisano ponownie!</div>
+      <div style="font-size:0.85rem;color:#9090a8;margin-bottom:24px;line-height:1.6">Sprawdź skrzynkę — już za chwilę dostaniesz maila powitalnego.</div>
+      <button onclick="closeUnsubModal()" style="background:#2563eb;color:#fff;border:none;border-radius:100px;font-family:'Inter',sans-serif;font-size:0.85rem;font-weight:700;padding:12px 28px;cursor:pointer">Czytaj newsy →</button>
     </div>
-
-    <input type="email" id="unsub-email" placeholder="twoj@email.pl" style="width:100%;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.11);border-radius:100px;color:#fff;font-family:'Inter',sans-serif;font-size:0.85rem;padding:11px 20px;outline:none;margin-bottom:8px;box-sizing:border-box"/>
-
-    <button onclick="resubscribeFromUnsub()" style="width:100%;background:#2563eb;color:#fff;border:none;border-radius:100px;font-family:'Inter',sans-serif;font-size:0.88rem;font-weight:700;padding:13px;cursor:pointer;box-shadow:0 4px 20px rgba(37,99,235,0.35);margin-bottom:8px">Zapisz się ponownie →</button>
-    <button onclick="closeUnsubModal()" style="width:100%;background:transparent;border:1px solid rgba(255,255,255,0.11);border-radius:100px;font-family:'Inter',sans-serif;font-size:0.82rem;font-weight:500;color:#9090a8;padding:11px;cursor:pointer">Zostań i czytaj newsy bez maili</button>
   </div>
 </div>
   <!-- SOFT GATE MODAL -->

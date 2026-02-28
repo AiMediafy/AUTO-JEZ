@@ -700,7 +700,7 @@
     /* ── BACK TO TOP ──────────────────────────── */
     #back-to-top {
       position: fixed;
-      bottom: 90px;
+      bottom: 240px;
       right: 16px;
       width: 44px; height: 44px;
       background: var(--blue);
@@ -820,7 +820,7 @@
     /* ── LINKEDIN CARD ────────────────────────── */
     #li-card {
       position: fixed;
-      bottom: 32px;
+      bottom: 90px;
       right: 32px;
       width: 300px;
       background: #0a0a12;
@@ -2069,19 +2069,30 @@
       function hideJerzy() {
         card.classList.remove('visible');
         card.classList.add('hiding');
+        macTab.style.opacity = '1';
+        macTab.style.pointerEvents = 'all';
       }
       function showJerzy() {
         hideMaciej();
+        macTab.style.opacity = '0';
+        macTab.style.pointerEvents = 'none';
         card.classList.remove('hiding');
         card.classList.add('visible');
       }
+
 
       closeBtn.addEventListener('click', hideJerzy);
       tab.addEventListener('click', showJerzy);
 
       setTimeout(() => {
+        macTab.style.opacity = '0';
+        macTab.style.pointerEvents = 'none';
         showJerzy();
-        setTimeout(hideJerzy, 6000);
+        setTimeout(() => {
+          hideJerzy();
+          macTab.style.opacity = '1';
+          macTab.style.pointerEvents = 'all';
+        }, 6000);
       }, 3000);
 
       // MACIEJ

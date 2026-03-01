@@ -18,24 +18,6 @@
     "image": "posts/openai-i-departament-wojny-ai-w-srodowiskach-klasyfikowanych-1772321968790.jpg"
   },
   {
-    "slug": "openai-i-departament-wojny-ai-w-srodowiskach-klasyfikowanych-1772321702182-en",
-    "title": "OpenAI and the Department of War – AI in classified environments",
-    "date": "2026-02-28",
-    "datetime": "2026-02-28T23:35:02",
-    "company": "OpenAI",
-    "summary": "OpenAI has signed an agreement with the Department of War, defining the rules for using their technology in environments with the highest level of security.",
-    "image": "posts/openai-i-departament-wojny-ai-w-srodowiskach-klasyfikowanych-1772321702182.jpg"
-  },
-  {
-    "slug": "openai-i-departament-wojny-ai-w-srodowiskach-klasyfikowanych-1772321702182",
-    "title": "OpenAI i Departament Wojny – AI w środowiskach klasyfikowanych",
-    "date": "2026-02-28",
-    "datetime": "2026-02-28T23:35:02",
-    "company": "OpenAI",
-    "summary": "OpenAI podpisało umowę z Departamentem Wojny, która definiuje zasady użycia ich technologii w środowiskach o najwyższym poziomie bezpieczeństwa.",
-    "image": "posts/openai-i-departament-wojny-ai-w-srodowiskach-klasyfikowanych-1772321702182.jpg"
-  },
-  {
     "slug": "openai-nawiazuje-wspolprace-z-departamentem-obrony-usa-kluczowe-fakty-1772310990081-en",
     "title": "OpenAI establishes partnership with the US Department of Defense – key facts",
     "date": "2026-02-28",
@@ -306,15 +288,6 @@
     "image": "posts/nowy-wymiar-testowania-jittesting-od-meta-jako-odpowiedz-na-rewolucje-w-kodowaniu-1771962543039.jpg"
   },
   {
-    "slug": "nowy-wymiar-testowania-jittesting-od-meta-jako-odpowiedz-na-rewolucje-w-kodowaniu-1771962388765",
-    "title": "Nowy wymiar testowania: JiTTesting od Meta jako odpowiedź na rewolucję w kodowaniu",
-    "date": "2026-02-24",
-    "datetime": "2026-02-24T19:46:28",
-    "company": "Meta",
-    "summary": "Meta prezentuje JiTTesting – nowoczesne podejście do testowania kodu w erze agentowego developmentu. Co oznacza ta zmiana dla branży IT?",
-    "image": "posts/nowy-wymiar-testowania-jittesting-od-meta-jako-odpowiedz-na-rewolucje-w-kodowaniu-1771962388765.jpg"
-  },
-  {
     "slug": "czy-tradycyjne-testowanie-kodu-faktycznie-odchodzi-do-lamusa-meta-proponuje-jittesting-1771962194280",
     "title": "Czy tradycyjne testowanie kodu faktycznie odchodzi do lamusa? Meta proponuje JiTTesting.",
     "date": "2026-02-24",
@@ -331,9 +304,6 @@
     "company": "Meta",
     "summary": "Meta prezentuje koncepcję JiTTesting: odpowiedź na gwałtowne zmiany w świecie szybkiego tworzenia oprogramowania. Co to oznacza w praktyce?",
     "image": "posts/agentic-development-wywraca-tradycyjne-testowanie-czy-jittesting-to-odpowiedz-1771961865169.jpg"
-  },
-  {
-    "image": "posts/undefined.jpg"
   },
   {
     "slug": "openai-rezygnuje-z-swe-bench-verified-co-to-oznacza-dla-oceny-postepow-w-ai-1771959699533",

@@ -13,7 +13,7 @@
       --bg: #000000; --bg2: #080810; --card: #0a0a12;
       --border: rgba(255,255,255,0.06); --border2: rgba(255,255,255,0.11);
       --text: #ffffff; --text2: #9090a8; --text3: #505060;
-      --blue: #2563eb; --blue-soft: rgba(37,99,235,0.1); --blue-light: #3b82f6;
+      --blue: #2563eb; --blue-light: #3b82f6;
       --max-w: 800px;
     }
     body {
@@ -22,13 +22,14 @@
       min-height: 100vh; -webkit-font-smoothing: antialiased;
     }
     a { color: var(--blue-light); text-decoration: underline; text-underline-offset: 3px; }
+    .eml { color: var(--blue-light); font-weight: 500; }
 
     /* HEADER */
     header {
       background: rgba(0,0,0,0.85); backdrop-filter: blur(20px);
       border-bottom: 1px solid var(--border);
       padding: 0 32px; height: 60px;
-      display: flex; align-items: center; justify-content: space-between;
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
     }
     .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
     .logo-icon {
@@ -37,6 +38,31 @@
       font-weight: 700; font-size: 0.85rem; color: #fff;
     }
     .logo-text { font-size: 0.92rem; font-weight: 600; color: var(--text); }
+    .header-right { display: flex; align-items: center; gap: 10px; }
+
+    /* LANG SWITCHER */
+    .lang-wrap { position: relative; }
+    .lang-btn {
+      font-size: 0.8rem; font-weight: 500; color: var(--text2);
+      border: 1px solid var(--border); padding: 7px 14px;
+      border-radius: 100px; background: transparent; cursor: pointer; transition: all 0.2s;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .lang-btn:hover { color: var(--text); border-color: var(--border2); }
+    .lang-menu {
+      display: none; position: absolute; top: 44px; right: 0;
+      background: #0d0d1a; border: 1px solid var(--border2);
+      border-radius: 12px; overflow: hidden; z-index: 200; min-width: 150px;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+    }
+    .lang-menu.open { display: block; }
+    .lang-opt {
+      padding: 11px 16px; font-size: 0.83rem; color: var(--text2);
+      cursor: pointer; transition: background 0.15s, color 0.15s; white-space: nowrap;
+    }
+    .lang-opt:hover { background: rgba(255,255,255,0.05); color: var(--text); }
+    .lang-opt.active { color: var(--blue-light); }
+
     .back-btn {
       font-size: 0.8rem; font-weight: 500; color: var(--text2);
       border: 1px solid var(--border); padding: 7px 16px;
@@ -45,10 +71,7 @@
     .back-btn:hover { color: var(--text); border-color: var(--border2); }
 
     /* CONTENT */
-    .container {
-      max-width: var(--max-w); margin: 0 auto;
-      padding: 64px 32px 80px;
-    }
+    .container { max-width: var(--max-w); margin: 0 auto; padding: 64px 32px 80px; }
     .page-label {
       font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
       letter-spacing: 0.12em; color: var(--blue-light); margin-bottom: 12px;
@@ -57,9 +80,7 @@
       font-family: 'Syne', sans-serif; font-size: 2.4rem; font-weight: 800;
       letter-spacing: -0.02em; line-height: 1.1; margin-bottom: 8px;
     }
-    .updated {
-      font-size: 0.8rem; color: var(--text3); margin-bottom: 48px;
-    }
+    .updated { font-size: 0.8rem; color: var(--text3); margin-bottom: 48px; }
     h2 {
       font-family: 'Syne', sans-serif; font-size: 1.2rem; font-weight: 800;
       color: var(--text); margin: 40px 0 12px; padding-bottom: 10px;
@@ -74,11 +95,14 @@
       border-radius: 12px; padding: 20px 24px; margin: 24px 0;
     }
     .highlight-box p { margin-bottom: 0; }
-
-    /* FOOTER */
     footer {
       border-top: 1px solid var(--border); padding: 28px 32px;
       text-align: center; color: var(--text3); font-size: 0.78rem;
+    }
+    @media (max-width: 600px) {
+      header { padding: 0 16px; }
+      .container { padding: 40px 20px 60px; }
+      h1 { font-size: 1.8rem; }
     }
   </style>
 </head>
@@ -89,66 +113,211 @@
     <div class="logo-icon">TV</div>
     <span class="logo-text">TVAI</span>
   </a>
-  <a class="back-btn" href="https://tvai.online">← Wróć do serwisu</a>
+  <div class="header-right">
+    <div class="lang-wrap">
+      <button class="lang-btn" onclick="toggleLangMenu()">🌐 <span id="lang-label">PL</span> ▾</button>
+      <div class="lang-menu" id="lang-menu">
+        <div class="lang-opt" onclick="setLang('pl')">🇵🇱 Polski</div>
+        <div class="lang-opt" onclick="setLang('en')">🇬🇧 English</div>
+        <div class="lang-opt" onclick="setLang('de')">🇩🇪 Deutsch</div>
+        <div class="lang-opt" onclick="setLang('fr')">🇫🇷 Français</div>
+        <div class="lang-opt" onclick="setLang('es')">🇪🇸 Español</div>
+      </div>
+    </div>
+    <a class="back-btn" href="https://tvai.online" id="back-link">← <span id="back-text">Wróć do serwisu</span></a>
+  </div>
 </header>
 
-<div class="container">
-  <div class="page-label">Dokumenty prawne</div>
-  <h1>Polityka Prywatności</h1>
-  <div class="updated">Ostatnia aktualizacja: 1 marca 2026</div>
+<div class="container" id="content"></div>
 
-  <div class="highlight-box">
-    <p>Krótko i na temat: zbieramy tylko Twój adres e-mail gdy zapisujesz się na newsletter. Nie sprzedajemy go nikomu. Możesz się wypisać w każdej chwili jednym kliknięciem.</p>
-  </div>
+<footer>
+  © 2026 <strong style="color:#9090a8">TVAI</strong> · 
+  <a href="https://www.mediafy.com.pl/" style="color:#9090a8;text-decoration:none" target="_blank">Mediafy</a> · 
+  <a href="https://tvai.online" style="color:#9090a8;text-decoration:none">tvai.online</a>
+</footer>
 
-  <h2>1. Administrator danych osobowych</h2>
-  <p>Administratorem Twoich danych osobowych jest:</p>
-  <p>
-    <strong>Jerzy Niewiadowski</strong><br>
-    E-mail kontaktowy: <a href="/cdn-cgi/l/email-protection#cebab8afa7e0a1a0a2a7a0abe0afbbbaa1e0a4abb48ea9a3afa7a2e0ada1a3"><span class="__cf_email__" data-cfemail="265250474f0849484a4f48430847535249084c435c66414b474f4a0845494b">[email&#160;protected]</span></a>
-  </p>
-  <p>W sprawach dotyczących ochrony danych osobowych możesz kontaktować się z nami pod powyższym adresem e-mail.</p>
+<script>
+// Email składany w JS żeby Cloudflare go nie zakodował
+const E = ['tvai.online.auto.jez', 'gmail.com'].join('@');
 
-  <h2>2. Jakie dane zbieramy</h2>
-  <p>Zbieramy wyłącznie <strong>adres e-mail</strong>, który podajesz dobrowolnie podczas zapisu na newsletter TVAI. Nie zbieramy imienia, nazwiska, numeru telefonu ani żadnych innych danych osobowych za pośrednictwem formularza zapisu.</p>
-  <p>Serwis może automatycznie rejestrować standardowe dane techniczne (np. adres IP, typ przeglądarki) — są to dane zbierane przez serwery GitHub Pages, na których działa strona, i nie są przez nas przetwarzane w sposób pozwalający na identyfikację użytkownika.</p>
+const LANGS = {
+  pl: {
+    label: 'PL', back: 'Wróć do serwisu', docLabel: 'Dokumenty prawne',
+    title: 'Polityka Prywatności', updated: 'Ostatnia aktualizacja: 1 marca 2026',
+    highlight: 'Krótko i na temat: zbieramy tylko Twój adres e-mail gdy zapisujesz się na newsletter. Nie sprzedajemy go nikomu. Możesz się wypisać w każdej chwili jednym kliknięciem.',
+    sections: [
+      { h: '1. Administrator danych osobowych', body: `
+        <p>Administratorem Twoich danych osobowych jest:</p>
+        <p><strong>Jerzy Niewiadowski</strong><br>E-mail kontaktowy: <span class="eml">{{E}}</span></p>
+        <p>W sprawach dotyczących ochrony danych osobowych możesz kontaktować się z nami pod powyższym adresem e-mail.</p>` },
+      { h: '2. Jakie dane zbieramy', body: `
+        <p>Zbieramy wyłącznie <strong>adres e-mail</strong>, który podajesz dobrowolnie podczas zapisu na newsletter TVAI. Nie zbieramy imienia, nazwiska, numeru telefonu ani żadnych innych danych osobowych za pośrednictwem formularza zapisu.</p>
+        <p>Serwis może automatycznie rejestrować standardowe dane techniczne (np. adres IP, typ przeglądarki) — są to dane zbierane przez serwery GitHub Pages, i nie są przez nas przetwarzane w sposób pozwalający na identyfikację użytkownika.</p>` },
+      { h: '3. W jakim celu przetwarzamy Twój e-mail', body: `
+        <p>Twój adres e-mail wykorzystujemy w następujących celach:</p>
+        <ul>
+          <li><strong>Wysyłka newslettera</strong> — automatyczne powiadomienia o nowych artykułach AI, cotygodniowe Top 5 oraz miesięczny raport.</li>
+          <li><strong>Kontakt w tematach automatyzacji AI</strong> — możemy skontaktować się bezpośrednio w sprawie usług automatyzacji i wdrożeń AI oferowanych przez Mediafy.</li>
+          <li><strong>Informacje o ofertach Mediafy</strong> — okazjonalne informacje o usługach Mediafy związanych z AI dla firm.</li>
+        </ul>
+        <p>Podstawą prawną przetwarzania jest <strong>Twoja dobrowolna zgoda</strong> (art. 6 ust. 1 lit. a RODO).</p>` },
+      { h: '4. Gdzie przechowujemy Twoje dane', body: `
+        <p>Adresy e-mail zapisywane są w <strong>Google Sheets</strong>, dostępnym wyłącznie dla administratora. Infrastruktura Google spełnia wymogi RODO. Dane nie są przekazywane poza Europejski Obszar Gospodarczy.</p>
+        <p>Do obsługi wysyłki e-maili korzystamy z własnej automatyzacji opartej na narzędziu n8n.</p>` },
+      { h: '5. Jak długo przechowujemy Twoje dane', body: `
+        <p>Przechowujemy Twój adres e-mail przez czas trwania subskrypcji. Po wypisaniu się <strong>przestajemy wysyłać Ci wiadomości</strong> — adres pozostaje oznaczony jako nieaktywny. Jeśli chcesz aby Twój adres został trwale usunięty, napisz do nas bezpośrednio.</p>` },
+      { h: '6. Twoje prawa', body: `
+        <p>Na podstawie RODO przysługują Ci następujące prawa:</p>
+        <ul>
+          <li><strong>Prawo dostępu</strong> — możesz zapytać jakie dane o Tobie przechowujemy.</li>
+          <li><strong>Prawo do sprostowania</strong> — możesz poprosić o poprawienie nieprawidłowych danych.</li>
+          <li><strong>Prawo do usunięcia</strong> — możesz poprosić o usunięcie swoich danych w każdej chwili.</li>
+          <li><strong>Prawo do wycofania zgody</strong> — możesz wycofać zgodę w dowolnym momencie bez podawania przyczyny.</li>
+        </ul>
+        <p>Aby skorzystać z tych praw, napisz na: <span class="eml">{{E}}</span></p>` },
+      { h: '7. Jak się wypisać z newslettera', body: `
+        <p>Każdy wysłany przez nas e-mail zawiera link <strong>„Wypisz się"</strong> na dole wiadomości. Możesz też napisać bezpośrednio na nasz adres e-mail.</p>` },
+      { h: '8. Pliki cookies i localStorage', body: `
+        <p>Serwis TVAI.online nie używa własnych plików cookies do śledzenia użytkowników. W localStorage przeglądarki przechowywane są jedynie informacje o wybranym języku i zamkniętych okienkach — nie są wysyłane na żaden serwer.</p>` },
+      { h: '9. Zmiany polityki prywatności', body: `
+        <p>Zastrzegamy sobie prawo do zmiany niniejszej polityki. Wszelkie zmiany będą publikowane na tej stronie z nową datą aktualizacji.</p>` },
+      { h: '10. Kontakt', body: `
+        <p>W razie pytań dotyczących prywatności napisz do nas:<br><span class="eml">{{E}}</span></p>` }
+    ]
+  },
+  en: {
+    label: 'EN', back: 'Back to site', docLabel: 'Legal documents',
+    title: 'Privacy Policy', updated: 'Last updated: March 1, 2026',
+    highlight: 'In short: we only collect your email address when you subscribe to the newsletter. We never sell it. You can unsubscribe at any time with one click.',
+    sections: [
+      { h: '1. Data Controller', body: `
+        <p>The controller of your personal data is:</p>
+        <p><strong>Jerzy Niewiadowski</strong><br>Contact email: <span class="eml">{{E}}</span></p>
+        <p>For matters related to personal data protection, contact us at the email address above.</p>` },
+      { h: '2. What data we collect', body: `
+        <p>We collect only your <strong>email address</strong>, which you provide voluntarily when subscribing to the TVAI newsletter. We do not collect names, phone numbers or any other personal data.</p>
+        <p>The site may automatically log standard technical data (e.g. IP address, browser type) collected by GitHub Pages servers — not processed in a way that identifies you personally.</p>` },
+      { h: '3. Why we process your email', body: `
+        <p>We use your email address for:</p>
+        <ul>
+          <li><strong>Newsletter delivery</strong> — automatic AI news notifications, weekly Top 5, and monthly reports.</li>
+          <li><strong>AI automation contact</strong> — we may contact you about Mediafy's AI automation services.</li>
+          <li><strong>Mediafy offers</strong> — occasional information about AI services for businesses.</li>
+        </ul>
+        <p>Legal basis: <strong>your voluntary consent</strong> (Art. 6(1)(a) GDPR).</p>` },
+      { h: '4. Where we store your data', body: `
+        <p>Email addresses are stored in <strong>Google Sheets</strong>, accessible only to the administrator. Google infrastructure complies with GDPR. Data is not transferred outside the EEA.</p>
+        <p>For email delivery we use our own n8n-based automation.</p>` },
+      { h: '5. How long we keep your data', body: `
+        <p>We store your email for the duration of your subscription. After unsubscribing, <strong>we stop sending you messages</strong> — your address stays marked as inactive. For permanent deletion, contact us directly.</p>` },
+      { h: '6. Your rights', body: `
+        <p>Under GDPR you have the following rights:</p>
+        <ul>
+          <li><strong>Right of access</strong></li>
+          <li><strong>Right to rectification</strong></li>
+          <li><strong>Right to erasure</strong></li>
+          <li><strong>Right to withdraw consent</strong></li>
+        </ul>
+        <p>To exercise these rights, write to: <span class="eml">{{E}}</span></p>` },
+      { h: '7. How to unsubscribe', body: `
+        <p>Every email contains an <strong>Unsubscribe</strong> link at the bottom. You can also write to us directly.</p>` },
+      { h: '8. Cookies and localStorage', body: `
+        <p>TVAI.online does not use tracking cookies. The browser localStorage stores only your language preference and dismissed popups — this data is never sent to any server.</p>` },
+      { h: '9. Policy changes', body: `
+        <p>We reserve the right to update this policy. Changes will be published on this page with a new date.</p>` },
+      { h: '10. Contact', body: `
+        <p>For any privacy questions:<br><span class="eml">{{E}}</span></p>` }
+    ]
+  },
+  de: {
+    label: 'DE', back: 'Zurück zur Website', docLabel: 'Rechtliche Dokumente',
+    title: 'Datenschutzerklärung', updated: 'Letzte Aktualisierung: 1. März 2026',
+    highlight: 'Kurz gesagt: Wir sammeln nur deine E-Mail-Adresse bei der Newsletter-Anmeldung. Wir verkaufen sie nicht. Du kannst dich jederzeit mit einem Klick abmelden.',
+    sections: [
+      { h: '1. Verantwortlicher', body: `<p>Verantwortlicher für deine personenbezogenen Daten:</p><p><strong>Jerzy Niewiadowski</strong><br>E-Mail: <span class="eml">{{E}}</span></p>` },
+      { h: '2. Erhobene Daten', body: `<p>Wir erheben ausschließlich deine <strong>E-Mail-Adresse</strong>, die du freiwillig bei der Newsletter-Anmeldung angibst.</p>` },
+      { h: '3. Verarbeitungszwecke', body: `<p>Wir nutzen deine E-Mail für:</p><ul><li><strong>Newsletter-Versand</strong> — KI-News, wöchentliches Top 5, Monatsbericht.</li><li><strong>KI-Automatisierungskontakt</strong> — Mediafy-Dienstleistungen.</li><li><strong>Mediafy-Angebote</strong> — gelegentliche Informationen.</li></ul><p>Rechtsgrundlage: <strong>deine freiwillige Einwilligung</strong> (Art. 6 Abs. 1 lit. a DSGVO).</p>` },
+      { h: '4. Datenspeicherung', body: `<p>E-Mail-Adressen werden in <strong>Google Sheets</strong> gespeichert, nur dem Administrator zugänglich. Google-Infrastruktur erfüllt die DSGVO. Keine Übermittlung außerhalb des EWR.</p>` },
+      { h: '5. Speicherdauer', body: `<p>Wir speichern deine E-Mail für die Dauer des Abonnements. Nach Abmeldung <strong>hören wir auf, dir zu schreiben</strong> — deine Adresse bleibt als inaktiv markiert. Für vollständige Löschung kontaktiere uns direkt.</p>` },
+      { h: '6. Deine Rechte', body: `<p>Du hast folgende Rechte:</p><ul><li><strong>Auskunftsrecht</strong></li><li><strong>Recht auf Berichtigung</strong></li><li><strong>Recht auf Löschung</strong></li><li><strong>Recht auf Widerruf der Einwilligung</strong></li></ul><p>Schreib uns: <span class="eml">{{E}}</span></p>` },
+      { h: '7. Abmeldung', body: `<p>Jede E-Mail enthält einen <strong>Abmelde-Link</strong> am Ende. Du kannst auch direkt an uns schreiben.</p>` },
+      { h: '8. Cookies und localStorage', body: `<p>TVAI.online verwendet keine eigenen Tracking-Cookies. Im Browser-localStorage werden nur Spracheinstellung und geschlossene Popups gespeichert.</p>` },
+      { h: '9. Änderungen', body: `<p>Wir behalten uns das Recht vor, diese Erklärung zu aktualisieren. Änderungen werden auf dieser Seite veröffentlicht.</p>` },
+      { h: '10. Kontakt', body: `<p>Bei Fragen zum Datenschutz:<br><span class="eml">{{E}}</span></p>` }
+    ]
+  },
+  fr: {
+    label: 'FR', back: 'Retour au site', docLabel: 'Documents légaux',
+    title: 'Politique de confidentialité', updated: 'Dernière mise à jour : 1er mars 2026',
+    highlight: 'En bref : nous collectons uniquement votre adresse e-mail lors de l\'inscription à la newsletter. Nous ne la vendons jamais. Vous pouvez vous désabonner à tout moment en un clic.',
+    sections: [
+      { h: '1. Responsable du traitement', body: `<p>Le responsable du traitement de vos données personnelles est :</p><p><strong>Jerzy Niewiadowski</strong><br>E-mail : <span class="eml">{{E}}</span></p>` },
+      { h: '2. Données collectées', body: `<p>Nous collectons uniquement votre <strong>adresse e-mail</strong> fournie volontairement lors de l'inscription à la newsletter TVAI.</p>` },
+      { h: '3. Finalités du traitement', body: `<p>Nous utilisons votre e-mail pour :</p><ul><li><strong>Envoi de la newsletter</strong> — actualités IA, Top 5 hebdomadaire, rapport mensuel.</li><li><strong>Contact sur l'automatisation IA</strong> — services Mediafy.</li><li><strong>Offres Mediafy</strong> — informations occasionnelles.</li></ul><p>Base légale : <strong>votre consentement volontaire</strong> (art. 6§1a RGPD).</p>` },
+      { h: '4. Stockage des données', body: `<p>Les adresses e-mail sont stockées dans <strong>Google Sheets</strong>, accessible uniquement à l'administrateur. Infrastructure Google conforme au RGPD.</p>` },
+      { h: '5. Durée de conservation', body: `<p>Nous conservons votre e-mail pendant la durée de l'abonnement. Après désinscription, <strong>nous cessons de vous envoyer des messages</strong>. Pour suppression définitive, contactez-nous directement.</p>` },
+      { h: '6. Vos droits', body: `<p>Conformément au RGPD :</p><ul><li><strong>Droit d'accès</strong></li><li><strong>Droit de rectification</strong></li><li><strong>Droit à l'effacement</strong></li><li><strong>Droit de retrait du consentement</strong></li></ul><p>Écrivez-nous : <span class="eml">{{E}}</span></p>` },
+      { h: '7. Désinscription', body: `<p>Chaque e-mail contient un lien de <strong>désinscription</strong>. Vous pouvez aussi nous écrire directement.</p>` },
+      { h: '8. Cookies et localStorage', body: `<p>TVAI.online n'utilise pas de cookies de suivi. Le localStorage stocke uniquement vos préférences de langue et popups fermés.</p>` },
+      { h: '9. Modifications', body: `<p>Nous nous réservons le droit de modifier cette politique. Les changements seront publiés sur cette page.</p>` },
+      { h: '10. Contact', body: `<p>Pour toute question :<br><span class="eml">{{E}}</span></p>` }
+    ]
+  },
+  es: {
+    label: 'ES', back: 'Volver al sitio', docLabel: 'Documentos legales',
+    title: 'Política de privacidad', updated: 'Última actualización: 1 de marzo de 2026',
+    highlight: 'En resumen: solo recopilamos tu dirección de correo electrónico al suscribirte al newsletter. Nunca la vendemos. Puedes darte de baja en cualquier momento con un clic.',
+    sections: [
+      { h: '1. Responsable del tratamiento', body: `<p>El responsable del tratamiento de tus datos personales es:</p><p><strong>Jerzy Niewiadowski</strong><br>Correo: <span class="eml">{{E}}</span></p>` },
+      { h: '2. Datos que recopilamos', body: `<p>Recopilamos únicamente tu <strong>dirección de correo</strong> que proporcionas voluntariamente al suscribirte al newsletter de TVAI.</p>` },
+      { h: '3. Finalidades del tratamiento', body: `<p>Usamos tu correo para:</p><ul><li><strong>Envío del newsletter</strong> — noticias de IA, Top 5 semanal, informe mensual.</li><li><strong>Contacto sobre automatización IA</strong> — servicios de Mediafy.</li><li><strong>Ofertas de Mediafy</strong> — información ocasional.</li></ul><p>Base legal: <strong>tu consentimiento voluntario</strong> (art. 6.1.a RGPD).</p>` },
+      { h: '4. Almacenamiento de datos', body: `<p>Las direcciones de correo se almacenan en <strong>Google Sheets</strong>, accesible solo al administrador. Infraestructura Google cumple con el RGPD.</p>` },
+      { h: '5. Retención de datos', body: `<p>Conservamos tu correo durante la suscripción. Tras darte de baja, <strong>dejamos de enviarte mensajes</strong>. Para eliminación definitiva, contáctanos directamente.</p>` },
+      { h: '6. Tus derechos', body: `<p>Conforme al RGPD tienes:</p><ul><li><strong>Derecho de acceso</strong></li><li><strong>Derecho de rectificación</strong></li><li><strong>Derecho de supresión</strong></li><li><strong>Derecho a retirar el consentimiento</strong></li></ul><p>Escríbenos: <span class="eml">{{E}}</span></p>` },
+      { h: '7. Cómo darse de baja', body: `<p>Cada correo contiene un enlace para <strong>darse de baja</strong>. También puedes escribirnos directamente.</p>` },
+      { h: '8. Cookies y localStorage', body: `<p>TVAI.online no usa cookies de seguimiento propias. El localStorage almacena solo tus preferencias de idioma y popups cerrados.</p>` },
+      { h: '9. Cambios en la política', body: `<p>Nos reservamos el derecho a actualizar esta política. Los cambios se publicarán en esta página.</p>` },
+      { h: '10. Contacto', body: `<p>Para cualquier pregunta:<br><span class="eml">{{E}}</span></p>` }
+    ]
+  }
+};
 
-  <h2>3. W jakim celu przetwarzamy Twój e-mail</h2>
-  <p>Twój adres e-mail wykorzystujemy w następujących celach:</p>
-  <ul>
-    <li><strong>Wysyłka newslettera</strong> — automatyczne powiadomienia o nowych artykułach AI z serwisu TVAI, cotygodniowe zestawienie Top 5 oraz miesięczny raport (jeśli wyraziłeś/aś na nie zgodę przy zapisie).</li>
-    <li><strong>Kontakt w tematach automatyzacji AI</strong> — możemy skontaktować się bezpośrednio na Twój adres e-mail w sprawie usług automatyzacji i wdrożeń AI oferowanych przez Mediafy, w oparciu o Twoją zgodę wyrażoną przy zapisie na newsletter.</li>
-    <li><strong>Informacje o ofertach Mediafy</strong> — okazjonalne informacje o usługach Mediafy związanych z automatyzacją i AI dla firm.</li>
-  </ul>
-  <p>Podstawą prawną przetwarzania jest <strong>Twoja dobrowolna zgoda</strong> (art. 6 ust. 1 lit. a RODO), wyrażona poprzez zapis na newsletter.</p>
+let lang = localStorage.getItem('tvai_lang') || 'pl';
 
-  <h2>4. Gdzie przechowujemy Twoje dane</h2>
-  <p>Adresy e-mail zapisywane są w <strong>Google Sheets</strong> (arkuszu kalkulacyjnym Google) zabezpieczonym hasłem, dostępnym wyłącznie dla administratora. Korzystamy z infrastruktury Google, która spełnia wymogi RODO. Dane nie są przekazywane do krajów spoza Europejskiego Obszaru Gospodarczego.</p>
-  <p>Do obsługi wysyłki e-maili korzystamy z własnej automatyzacji opartej na narzędziu n8n. Treść e-maili generowana jest automatycznie.</p>
+function toggleLangMenu() {
+  document.getElementById('lang-menu').classList.toggle('open');
+}
+document.addEventListener('click', e => {
+  if (!document.querySelector('.lang-wrap').contains(e.target))
+    document.getElementById('lang-menu').classList.remove('open');
+});
+function setLang(l) {
+  lang = l;
+  localStorage.setItem('tvai_lang', l);
+  document.getElementById('lang-menu').classList.remove('open');
+  render();
+}
 
-  <h2>5. Jak długo przechowujemy Twoje dane</h2>
-  <p>Przechowujemy Twój adres e-mail przez czas trwania subskrypcji. Po wypisaniu się <strong>przestajemy wysyłać Ci wiadomości</strong> — Twój adres pozostaje w naszej bazie oznaczony jako nieaktywny, aby zapobiec ponownemu zapisaniu przez pomyłkę. Jeśli chcesz aby Twój adres został trwale usunięty, napisz do nas bezpośrednio.</p>
+function render() {
+  const t = LANGS[lang];
+  document.getElementById('lang-label').textContent = t.label;
+  document.getElementById('back-text').textContent = t.back;
+  document.title = t.title + ' – TVAI';
 
-  <h2>6. Twoje prawa</h2>
-  <p>Na podstawie RODO przysługują Ci następujące prawa:</p>
-  <ul>
-    <li><strong>Prawo dostępu</strong> — możesz zapytać jakie dane o Tobie przechowujemy.</li>
-    <li><strong>Prawo do sprostowania</strong> — możesz poprosić o poprawienie nieprawidłowych danych.</li>
-    <li><strong>Prawo do usunięcia</strong> — możesz poprosić o usunięcie swoich danych w każdej chwili.</li>
-    <li><strong>Prawo do wycofania zgody</strong> — możesz wycofać zgodę w dowolnym momencie bez podawania przyczyny. Wypisanie się z newslettera jest równoznaczne z wycofaniem zgody.</li>
+  const sections = t.sections.map(s =>
+    `<h2>${s.h}</h2>${s.body.replace(/\{\{E\}\}/g, E)}`
+  ).join('');
 
-  </ul>
-  <p>Aby skorzystać z powyższych praw, napisz na adres: <a href="/cdn-cgi/l/email-protection#067270676f2869686a6f68632867737269286c637c46616b676f6a2865696b"><span class="__cf_email__" data-cfemail="50242631397e3f3e3c393e357e3125243f7e3a352a10373d31393c7e333f3d">[email&#160;protected]</span></a></p>
+  document.getElementById('content').innerHTML = `
+    <div class="page-label">${t.docLabel}</div>
+    <h1>${t.title}</h1>
+    <div class="updated">${t.updated}</div>
+    <div class="highlight-box"><p>${t.highlight}</p></div>
+    ${sections}
+  `;
+}
 
-  <h2>7. Jak się wypisać z newslettera</h2>
-  <p>Każdy wysłany przez nas e-mail zawiera link <strong>„Wypisz się"</strong> na dole wiadomości. Kliknięcie w link automatycznie usuwa Twój adres z listy mailingowej. Możesz też napisać bezpośrednio na nasz adres e-mail z prośbą o wypisanie.</p>
-
-  <h2>8. Pliki cookies</h2>
-  <p>Serwis TVAI.online działa na GitHub Pages i nie używa własnych plików cookies do śledzenia użytkowników. Serwis może przechowywać w pamięci lokalnej Twojej przeglądarki (localStorage) informacje o wybranym języku interfejsu oraz fakcie zamknięcia wyskakujących okienek — wyłącznie w celu poprawy komfortu korzystania ze strony. Dane te nie są wysyłane na żaden serwer.</p>
-
-  <h2>9. Zmiany polityki prywatności</h2>
-  <p>Zastrzegamy sobie prawo do zmiany niniejszej polityki prywatności. Wszelkie zmiany będą publikowane na tej stronie wraz z nową datą aktualizacji. W przypadku istotnych zmian poinformujemy o tym subskrybentów newslettera.</p>
-
-  <h2>10. Kontakt</h2>
-  <p>W razie pytań dotyczących prywatności lub przetwarzania danych napisz do nas:<br>
-  <a href="/cdn-cgi/l/email-protection#6d191b0c0
+render();
+</script>
+</body>
+</html>

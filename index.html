@@ -2341,6 +2341,8 @@ if (window.location.hash === '#wypisano') {
   document.getElementById('unsub-overlay').style.display = 'flex';
   history.replaceState({}, '', window.location.pathname);
 }
+}
+    
     // ── ARTICLE LANG SWITCH ──────────────────────
     function switchArticleLang() {
       const isEN = currentSlug.endsWith('-en');
@@ -2845,9 +2847,6 @@ function setLang(lang) {
   renderList();
   buildTicker(allPosts);
 }
-function applyLang() {
-  const t = T[currentLang];
-
 function applyUnsubLang() {
   const t = T[currentLang];
   document.getElementById('unsub-title').textContent = t.unsubTitle;
@@ -2861,6 +2860,9 @@ function applyUnsubLang() {
   document.getElementById('unsub-success-sub').textContent = t.unsubSuccessSub;
   document.getElementById('unsub-success-btn').textContent = t.unsubSuccessBtn;
 }
+
+function applyLang() {
+  const t = T[currentLang];
 
   // HERO
   const badges = document.querySelectorAll('.hero-badge');
@@ -3070,19 +3072,6 @@ function resubscribeFromUnsub() {
   <button id="unsub-success-btn" onclick="closeUnsubModal()" style="background:#2563eb;color:#fff;border:none;border-radius:100px;font-family:'Inter',sans-serif;font-size:0.85rem;font-weight:700;padding:12px 28px;cursor:pointer">Czytaj newsy →</button>
 </div>
 
-      <input type="email" id="unsub-email" placeholder="twoj@email.pl" style="width:100%;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.11);border-radius:100px;color:#fff;font-family:'Inter',sans-serif;font-size:0.85rem;padding:11px 20px;outline:none;margin-bottom:8px;box-sizing:border-box"/>
-
-      <button onclick="resubscribeFromUnsub()" style="width:100%;background:#2563eb;color:#fff;border:none;border-radius:100px;font-family:'Inter',sans-serif;font-size:0.88rem;font-weight:700;padding:13px;cursor:pointer;box-shadow:0 4px 20px rgba(37,99,235,0.35);margin-bottom:8px">Zapisz się ponownie →</button>
-      <button onclick="closeUnsubModal()" style="width:100%;background:transparent;border:1px solid rgba(255,255,255,0.08);border-radius:100px;font-family:'Inter',sans-serif;font-size:0.82rem;font-weight:500;color:#9090a8;padding:11px;cursor:pointer">Zamknij bez zapisywania</button>
-    </div>
-
-    <!-- STAN 2: sukces ponownego zapisu -->
-    <div id="unsub-step2" style="display:none;text-align:center;padding:20px 0">
-      <p style="font-size:2.5rem;margin-bottom:12px">✅</p>
-      <div style="font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:800;color:#fff;margin-bottom:8px">Zapisano ponownie!</div>
-      <div style="font-size:0.85rem;color:#9090a8;margin-bottom:24px;line-height:1.6">Sprawdź skrzynkę — już za chwilę dostaniesz maila powitalnego.</div>
-      <button onclick="closeUnsubModal()" style="background:#2563eb;color:#fff;border:none;border-radius:100px;font-family:'Inter',sans-serif;font-size:0.85rem;font-weight:700;padding:12px 28px;cursor:pointer">Czytaj newsy →</button>
-    </div>
   </div>
 </div>
   <!-- SOFT GATE MODAL -->

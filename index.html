@@ -1875,6 +1875,7 @@
           : diffMin < 60 ? `${diffMin} min temu`
           : diffH < 24 ? `${diffH}h temu`
           : `${diffD}d temu`;
+        document.getElementById('ticker-time').innerHTML = `Ostatni: <span>${timeStr}</span>`;
       }
     }
 
@@ -2207,7 +2208,8 @@
 
     function openRandomArticle() {
       if (!allPosts.length) return;
-      const random = allPosts[Math.floor(Math.random() * allPosts.length)];
+      const filtered = allPosts.filter(p => p.slug && !p.slug.endsWith('-en'));
+      const random = filtered[Math.floor(Math.random() * filtered.length)];
       openArticle(random.slug);
     }
 
@@ -2995,9 +2997,11 @@ function resubscribeFromUnsub() {
   document.getElementById('unsub-step1').style.display = 'none';
   document.getElementById('unsub-step2').style.display = 'block';
 }
-    init();
-    document.getElementById('lang-label').textContent = currentLang.toUpperCase();
-    applyLang();
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('lang-label').textContent = currentLang.toUpperCase();
+      applyLang();
+      init();
+    });
 
   </script>
 

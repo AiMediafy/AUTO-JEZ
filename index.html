@@ -1724,7 +1724,7 @@
   </div>
   
   <footer>
-  © 2026 <strong style="color:var(--text2)">TVAI</strong> · <span id="footer-text">Wiadomości AI · Automatycznie generowane przez Auto-Jeża</span> · <a href="https://www.mediafy.com.pl/" ...>Produkt Mediafy</a>
+  © 2026 <strong style="color:var(--text2)">TVAI</strong> · <span id="footer-text">Wiadomości AI · Automatycznie generowane przez Auto-Jeża</span> · <a href="https://www.mediafy.com.pl/" target="_blank">Produkt Mediafy</a>
   </footer>
 
   <button id="back-to-top" title="Wróć na górę">↑</button>
@@ -2027,7 +2027,7 @@
           : `<div class="article-hero-ph"></div>`;
 
      document.getElementById('article-meta').innerHTML = `
-        <span class="company-badge ${badgeClass}" ...>${meta.company||'AI'}</span>
+        <span class="company-badge ${badgeClass}">${meta.company||'AI'}</span>
         <span style="font-size:0.8rem;color:var(--text3)">${formatDate(meta.date)}</span>
         <span style="font-size:0.8rem;color:var(--text3)">${readTime(content)}</span>
         <span class="auto-badge">${T[currentLang].autoAI}</span>`;

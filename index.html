@@ -2329,17 +2329,18 @@
   const _urlParams = new URLSearchParams(window.location.search);
   const _unsubEmail = _urlParams.get('unsub');
   if (_unsubEmail) {
-    const emailEl = document.getElementById('unsub-email');
-    if (emailEl) emailEl.value = _unsubEmail;
-    document.getElementById('unsub-overlay').style.display = 'flex';
-    history.replaceState({}, '', window.location.pathname);
-    fetch('https://mediafy-sparta.app.n8n.cloud/webhook/newsletter-unsubscribe?email=' + encodeURIComponent(_unsubEmail)).catch(()=>{});
-  }
-  if (window.location.hash === '#wypisano') {
-    document.getElementById('unsub-overlay').style.display = 'flex';
-    history.replaceState({}, '', window.location.pathname);
-  }
-    }
+  applyUnsubLang();
+  const emailEl = document.getElementById('unsub-email');
+  if (emailEl) emailEl.value = _unsubEmail;
+  document.getElementById('unsub-overlay').style.display = 'flex';
+  history.replaceState({}, '', window.location.pathname);
+  fetch('https://mediafy-sparta.app.n8n.cloud/webhook/newsletter-unsubscribe?email=' + encodeURIComponent(_unsubEmail)).catch(()=>{});
+}
+if (window.location.hash === '#wypisano') {
+  applyUnsubLang();
+  document.getElementById('unsub-overlay').style.display = 'flex';
+  history.replaceState({}, '', window.location.pathname);
+}
     // ── ARTICLE LANG SWITCH ──────────────────────
     function switchArticleLang() {
       const isEN = currentSlug.endsWith('-en');
@@ -2435,6 +2436,16 @@
     const T = {
   pl: {
     allPosts: 'Posty na blogu',
+    unsubTitle: 'Wypisałeś się z newslettera',
+    unsubSub: 'Nie będziesz już dostawać wiadomości od TVAI. Jeśli to pomyłka — możesz zapisać się ponownie poniżej.',
+    unsubFirms: 'Chcę dostawać alerty o firmach',
+    unsubExtras: 'Dodatki',
+    unsubEmailPh: 'twoj@email.pl',
+    unsubResubBtn: 'Zapisz się ponownie →',
+    unsubCloseBtn: 'Zamknij bez zapisywania',
+    unsubSuccessTitle: 'Zapisano ponownie!',
+    unsubSuccessSub: 'Sprawdź skrzynkę — już za chwilę dostaniesz maila powitalnego.',
+    unsubSuccessBtn: 'Czytaj newsy →',
     prevPage: '← Poprzednia', nextPage: 'Następna →',
     autoBadge: '100% automat — żaden człowiek tego nie publikuje',
     sgTitle: 'Hej, widzę że tu bywasz 👀',
@@ -2505,6 +2516,16 @@
   en: {
     allPosts: 'Blog Posts',
     prevPage: '← Previous', nextPage: 'Next →',
+    unsubTitle: 'You have unsubscribed',
+    unsubSub: "You won't receive any more messages from TVAI. If this was a mistake — you can re-subscribe below.",
+    unsubFirms: 'I want alerts about companies',
+    unsubExtras: 'Extras',
+    unsubEmailPh: 'your@email.com',
+    unsubResubBtn: 'Subscribe again →',
+    unsubCloseBtn: 'Close without subscribing',
+    unsubSuccessTitle: 'Subscribed again!',
+    unsubSuccessSub: 'Check your inbox — you\'ll receive a welcome email shortly.',
+    unsubSuccessBtn: 'Read news →',
     autoBadge: '100% automated — no human publishes this',
     sgTitle: 'Hey, I see you around here 👀',
     sgSub: "You've read a few articles — if you enjoy TVAI, subscribe to the newsletter so you don't miss anything. It's 100% automated — no human sends this.",
@@ -2574,6 +2595,16 @@
   de: {
     allPosts: 'Blogbeiträge',
     prevPage: '← Vorherige', nextPage: 'Nächste →',
+    unsubTitle: 'Du hast dich abgemeldet',
+    unsubSub: 'Du wirst keine Nachrichten mehr von TVAI erhalten. Falls das ein Fehler war — du kannst dich unten wieder anmelden.',
+    unsubFirms: 'Ich möchte Alerts über Firmen erhalten',
+    unsubExtras: 'Extras',
+    unsubEmailPh: 'deine@email.de',
+    unsubResubBtn: 'Wieder anmelden →',
+    unsubCloseBtn: 'Schließen ohne Anmelden',
+    unsubSuccessTitle: 'Wieder angemeldet!',
+    unsubSuccessSub: 'Prüfe dein Postfach — du erhältst gleich eine Willkommens-E-Mail.',
+    unsubSuccessBtn: 'News lesen →',
     autoBadge: '100% automatisch — kein Mensch veröffentlicht das hier',
     sgTitle: 'Hey, ich sehe dich hier 👀',
     sgSub: 'Du hast bereits einige Artikel gelesen — wenn dir TVAI gefällt, abonniere den Newsletter damit du nichts verpasst. 100% automatisch.',
@@ -2641,6 +2672,16 @@
   fr: {
     allPosts: 'Articles de blog',
     prevPage: '← Précédent', nextPage: 'Suivant →',
+    unsubTitle: 'Vous vous êtes désabonné',
+    unsubSub: "Vous ne recevrez plus de messages de TVAI. Si c'était une erreur — vous pouvez vous réabonner ci-dessous.",
+    unsubFirms: 'Je veux des alertes sur les entreprises',
+    unsubExtras: 'Extras',
+    unsubEmailPh: 'ton@email.fr',
+    unsubResubBtn: 'Se réabonner →',
+    unsubCloseBtn: 'Fermer sans s\'abonner',
+    unsubSuccessTitle: 'Réabonné !',
+    unsubSuccessSub: 'Vérifiez votre boîte — vous recevrez bientôt un email de bienvenue.',
+    unsubSuccessBtn: 'Lire les news →',
     autoBadge: '100% automatique — aucun humain ne publie ceci',
     sgTitle: 'Hey, je te vois par ici 👀',
     sgSub: "Tu as déjà lu quelques articles — si TVAI te plaît, abonne-toi à la newsletter pour ne rien manquer. 100% automatique.",
@@ -2707,6 +2748,16 @@
 
   es: {
     allPosts: 'Entradas del blog',
+    unsubTitle: 'Te has dado de baja',
+    unsubSub: 'Ya no recibirás mensajes de TVAI. Si fue un error — puedes volver a suscribirte abajo.',
+    unsubFirms: 'Quiero alertas sobre empresas',
+    unsubExtras: 'Extras',
+    unsubEmailPh: 'tu@email.es',
+    unsubResubBtn: 'Suscribirse de nuevo →',
+    unsubCloseBtn: 'Cerrar sin suscribirse',
+    unsubSuccessTitle: '¡Suscrito de nuevo!',
+    unsubSuccessSub: 'Revisa tu bandeja — pronto recibirás un email de bienvenida.',
+    unsubSuccessBtn: 'Leer noticias →',
     prevPage: '← Anterior', nextPage: 'Siguiente →',
     autoBadge: '100% automático — ningún humano publica esto',
     sgTitle: 'Oye, te veo por aquí 👀',
@@ -2796,6 +2847,20 @@ function setLang(lang) {
 }
 function applyLang() {
   const t = T[currentLang];
+
+function applyUnsubLang() {
+  const t = T[currentLang];
+  document.getElementById('unsub-title').textContent = t.unsubTitle;
+  document.getElementById('unsub-sub').textContent = t.unsubSub;
+  document.getElementById('unsub-firms-label').textContent = t.unsubFirms;
+  document.getElementById('unsub-extras-label').textContent = t.unsubExtras;
+  document.getElementById('unsub-email').placeholder = t.unsubEmailPh;
+  document.getElementById('unsub-resub-btn').textContent = t.unsubResubBtn;
+  document.getElementById('unsub-close-btn').textContent = t.unsubCloseBtn;
+  document.getElementById('unsub-success-title').textContent = t.unsubSuccessTitle;
+  document.getElementById('unsub-success-sub').textContent = t.unsubSuccessSub;
+  document.getElementById('unsub-success-btn').textContent = t.unsubSuccessBtn;
+}
 
   // HERO
   const badges = document.querySelectorAll('.hero-badge');
@@ -2968,29 +3033,42 @@ function resubscribeFromUnsub() {
     
     <!-- STAN 1: potwierdzenie wypisania -->
     <div id="unsub-step1">
-      <p style="font-size:2rem;margin-bottom:8px">😢</p>
-      <div style="font-family:'Syne',sans-serif;font-size:1.35rem;font-weight:800;color:#fff;margin-bottom:6px">Wypisałeś się z newslettera</div>
-      <div style="font-size:0.82rem;color:#9090a8;margin-bottom:24px;line-height:1.6">Nie będziesz już dostawać wiadomości od TVAI.<br>Jeśli to pomyłka — możesz zapisać się ponownie poniżej.</div>
+  <p style="font-size:2rem;margin-bottom:8px">😢</p>
+  <div id="unsub-title" style="font-family:'Syne',sans-serif;font-size:1.35rem;font-weight:800;color:#fff;margin-bottom:6px">Wypisałeś się z newslettera</div>
+  <div id="unsub-sub" style="font-size:0.82rem;color:#9090a8;margin-bottom:24px;line-height:1.6">Nie będziesz już dostawać wiadomości od TVAI.<br>Jeśli to pomyłka — możesz zapisać się ponownie poniżej.</div>
 
-      <div style="font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#505060;margin-bottom:10px">Chcę dostawać alerty o firmach</div>
-      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px" id="unsub-firms">
-        <div class="nl-chip selected" data-value="OpenAI">OpenAI</div>
-        <div class="nl-chip selected" data-value="Google">Google</div>
-        <div class="nl-chip selected" data-value="Anthropic">Anthropic</div>
-        <div class="nl-chip" data-value="xAI">xAI</div>
-        <div class="nl-chip" data-value="Microsoft">Microsoft</div>
-        <div class="nl-chip" data-value="Meta">Meta</div>
-        <div class="nl-chip" data-value="Qwen">Qwen</div>
-        <div class="nl-chip" data-value="Bielik">🇵🇱 Bielik</div>
-      </div>
+  <div id="unsub-firms-label" style="font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#505060;margin-bottom:10px">Chcę dostawać alerty o firmach</div>
+  <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px" id="unsub-firms">
+    <div class="nl-chip selected" data-value="OpenAI">OpenAI</div>
+    <div class="nl-chip selected" data-value="Google">Google</div>
+    <div class="nl-chip selected" data-value="Anthropic">Anthropic</div>
+    <div class="nl-chip" data-value="xAI">xAI</div>
+    <div class="nl-chip" data-value="Microsoft">Microsoft</div>
+    <div class="nl-chip" data-value="Meta">Meta</div>
+    <div class="nl-chip" data-value="Qwen">Qwen</div>
+    <div class="nl-chip" data-value="Bielik">🇵🇱 Bielik</div>
+  </div>
 
-      <hr style="border:none;border-top:1px solid rgba(255,255,255,0.06);margin:16px 0">
+  <hr style="border:none;border-top:1px solid rgba(255,255,255,0.06);margin:16px 0">
 
-      <div style="font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#505060;margin-bottom:10px">Dodatki</div>
-      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px" id="unsub-extras">
-        <div class="nl-chip selected" data-value="top5">📊 Top 5 tygodnia</div>
-        <div class="nl-chip" data-value="raport">📋 Raport miesięczny</div>
-      </div>
+  <div id="unsub-extras-label" style="font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#505060;margin-bottom:10px">Dodatki</div>
+  <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px" id="unsub-extras">
+    <div class="nl-chip selected" data-value="top5">📊 Top 5 tygodnia</div>
+    <div class="nl-chip" data-value="raport">📋 Raport miesięczny</div>
+  </div>
+
+  <input type="email" id="unsub-email" placeholder="twoj@email.pl" style="width:100%;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.11);border-radius:100px;color:#fff;font-family:'Inter',sans-serif;font-size:0.85rem;padding:11px 20px;outline:none;margin-bottom:8px;box-sizing:border-box"/>
+
+  <button id="unsub-resub-btn" onclick="resubscribeFromUnsub()" style="width:100%;background:#2563eb;color:#fff;border:none;border-radius:100px;font-family:'Inter',sans-serif;font-size:0.88rem;font-weight:700;padding:13px;cursor:pointer;box-shadow:0 4px 20px rgba(37,99,235,0.35);margin-bottom:8px">Zapisz się ponownie →</button>
+  <button id="unsub-close-btn" onclick="closeUnsubModal()" style="width:100%;background:transparent;border:1px solid rgba(255,255,255,0.08);border-radius:100px;font-family:'Inter',sans-serif;font-size:0.82rem;font-weight:500;color:#9090a8;padding:11px;cursor:pointer">Zamknij bez zapisywania</button>
+</div>
+
+<div id="unsub-step2" style="display:none;text-align:center;padding:20px 0">
+  <p style="font-size:2.5rem;margin-bottom:12px">✅</p>
+  <div id="unsub-success-title" style="font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:800;color:#fff;margin-bottom:8px">Zapisano ponownie!</div>
+  <div id="unsub-success-sub" style="font-size:0.85rem;color:#9090a8;margin-bottom:24px;line-height:1.6">Sprawdź skrzynkę — już za chwilę dostaniesz maila powitalnego.</div>
+  <button id="unsub-success-btn" onclick="closeUnsubModal()" style="background:#2563eb;color:#fff;border:none;border-radius:100px;font-family:'Inter',sans-serif;font-size:0.85rem;font-weight:700;padding:12px 28px;cursor:pointer">Czytaj newsy →</button>
+</div>
 
       <input type="email" id="unsub-email" placeholder="twoj@email.pl" style="width:100%;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.11);border-radius:100px;color:#fff;font-family:'Inter',sans-serif;font-size:0.85rem;padding:11px 20px;outline:none;margin-bottom:8px;box-sizing:border-box"/>
 

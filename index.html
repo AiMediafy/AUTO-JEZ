@@ -2188,7 +2188,7 @@
 
     // ── RELATED ARTICLES ──────────────────────────
     function renderRelated(currentSlug, company) {
-      const related = allPosts.filter(p => p.company === company && p.slug !== currentSlug).slice(0, 3);
+      const related = allPosts.filter(p => p.company === company && p.slug !== currentSlug && !p.slug.endsWith('-en')).slice(0, 3);
       const section = document.getElementById('related-section');
       const grid = document.getElementById('related-grid');
       if (!related.length) { section.style.display = 'none'; return; }
@@ -2900,6 +2900,8 @@ function applyLang() {
   document.querySelectorAll('.nl-section-label')[1].textContent = t.nlSectionExtras;
   document.querySelector('[data-value="top5"]').textContent = t.nlTop5;
   document.querySelector('[data-value="raport"]').textContent = t.nlRaport;
+  document.querySelector('#unsub-extras [data-value="top5"]').textContent = t.nlTop5;
+  document.querySelector('#unsub-extras [data-value="raport"]').textContent = t.nlRaport;
   document.querySelector('.nl-confirm-btn').textContent = t.nlConfirm;
   document.querySelector('.nl-skip-btn').textContent = t.nlSkipAll;
 

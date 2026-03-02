@@ -1528,6 +1528,52 @@
   transition: color 0.2s;
 }
 .sg-skip:hover { color: var(--text2); }
+    /* ── AUDIO PLAYER ─────────────────────────── */
+.eng-play {
+  display: flex; align-items: center; gap: 6px;
+  background: transparent; border: 1px solid var(--border2);
+  border-radius: 100px; padding: 5px 14px;
+  color: var(--text2); font-size: 0.82rem; cursor: pointer; transition: all 0.2s;
+}
+.eng-play:hover { border-color: var(--blue-light); color: var(--blue-light); }
+.eng-play.playing { border-color: var(--blue-light); color: var(--blue-light); background: var(--blue-soft); }
+
+#audio-bar {
+  position: fixed; bottom: 0; left: 0; right: 0;
+  background: rgba(8,8,16,0.96); backdrop-filter: blur(20px);
+  border-top: 1px solid var(--border2);
+  padding: 12px 24px; display: none;
+  align-items: center; gap: 16px; z-index: 2000;
+}
+#audio-bar.visible { display: flex; }
+#audio-bar-title { font-size: 0.82rem; font-weight: 600; color: var(--text); flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+#audio-bar-company { font-size: 0.72rem; color: var(--text3); }
+#audio-play-btn {
+  width: 40px; height: 40px; border-radius: 50%; background: var(--blue);
+  border: none; color: #fff; font-size: 1rem; cursor: pointer;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  transition: opacity 0.2s; box-shadow: 0 4px 16px rgba(37,99,235,0.4);
+}
+#audio-play-btn:hover { opacity: 0.85; }
+#audio-progress-wrap { flex: 1; max-width: 300px; }
+#audio-progress {
+  width: 100%; height: 3px; background: var(--border2);
+  border-radius: 10px; cursor: pointer; appearance: none; outline: none;
+}
+#audio-progress::-webkit-slider-thumb { appearance: none; width: 12px; height: 12px; border-radius: 50%; background: var(--blue-light); cursor: pointer; }
+#audio-time { font-size: 0.72rem; color: var(--text3); white-space: nowrap; }
+#audio-close {
+  width: 28px; height: 28px; background: rgba(255,255,255,0.07);
+  border: none; border-radius: 50%; color: var(--text2);
+  font-size: 0.72rem; cursor: pointer; display: flex;
+  align-items: center; justify-content: center; transition: background 0.2s; flex-shrink: 0;
+}
+#audio-close:hover { background: rgba(255,255,255,0.14); }
+@media (max-width: 600px) {
+  #audio-bar { padding: 10px 14px; gap: 10px; }
+  #audio-progress-wrap { display: none; }
+  #audio-time { display: none; }
+}
   </style>
 </head>
 <body>
@@ -1659,6 +1705,11 @@
           <button class="eng-like" id="eng-like" onclick="toggleLike()">
             <span id="like-icon">🤍</span>
             <span id="like-count">0</span>
+          </button>
+          <span class="eng-sep" id="audio-sep" style="display:none">·</span>
+          <button class="eng-play" id="eng-play" style="display:none" onclick="toggleAudio()">
+            <span id="play-icon">▶</span>
+            <span id="play-label">Słuchaj</span>
           </button>
         </div>
       </div>
@@ -2043,6 +2094,8 @@
         document.getElementById('article-title').textContent = meta.title || slug;
         document.getElementById('article-content').innerHTML = marked.parse(content);
         trackView(slug);
+        const postMeta = allPosts.find(p => p.slug === slug);
+        initAudio(postMeta, meta.title || slug);
         trackArticleRead();
         updateLangSwitchBtn(slug);
         renderRelated(slug, meta.company);
@@ -2999,6 +3052,68 @@ function resubscribeFromUnsub() {
   document.getElementById('unsub-step1').style.display = 'none';
   document.getElementById('unsub-step2').style.display = 'block';
 }
+    // ── AUDIO ─────────────────────────────────────
+const audioEl = () => document.getElementById('audio-el');
+
+function initAudio(post, title) {
+  const hasAudio = post && post.audio;
+  document.getElementById('audio-sep').style.display = hasAudio ? '' : 'none';
+  document.getElementById('eng-play').style.display = hasAudio ? '' : 'none';
+  if (!hasAudio) return;
+  const el = audioEl();
+  el.src = post.audio;
+  document.getElementById('audio-bar-title').textContent = title;
+  document.getElementById('audio-bar-company').textContent = post.company || '';
+  el.ontimeupdate = () => {
+    if (!el.duration) return;
+    document.getElementById('audio-progress').value = (el.currentTime / el.duration) * 100;
+    const m = Math.floor(el.currentTime / 60);
+    const s = String(Math.floor(el.currentTime % 60)).padStart(2, '0');
+    document.getElementById('audio-time').textContent = `${m}:${s}`;
+  };
+  el.onended = () => {
+    document.getElementById('audio-play-btn').textContent = '▶';
+    document.getElementById('play-icon').textContent = '▶';
+    document.getElementById('play-label').textContent = 'Słuchaj';
+    document.getElementById('eng-play').classList.remove('playing');
+  };
+}
+
+function toggleAudio() {
+  const el = audioEl();
+  const bar = document.getElementById('audio-bar');
+  if (!el.src) return;
+  if (el.paused) {
+    el.play();
+    bar.classList.add('visible');
+    document.getElementById('audio-play-btn').textContent = '⏸';
+    document.getElementById('play-icon').textContent = '⏸';
+    document.getElementById('play-label').textContent = 'Pauza';
+    document.getElementById('eng-play').classList.add('playing');
+  } else {
+    el.pause();
+    document.getElementById('audio-play-btn').textContent = '▶';
+    document.getElementById('play-icon').textContent = '▶';
+    document.getElementById('play-label').textContent = 'Słuchaj';
+    document.getElementById('eng-play').classList.remove('playing');
+  }
+}
+
+function seekAudio(val) {
+  const el = audioEl();
+  if (el.duration) el.currentTime = (val / 100) * el.duration;
+}
+
+function closeAudio() {
+  const el = audioEl();
+  el.pause();
+  el.currentTime = 0;
+  document.getElementById('audio-bar').classList.remove('visible');
+  document.getElementById('audio-play-btn').textContent = '▶';
+  document.getElementById('play-icon').textContent = '▶';
+  document.getElementById('play-label').textContent = 'Słuchaj';
+  document.getElementById('eng-play').classList.remove('playing');
+}
     document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('lang-label').textContent = currentLang.toUpperCase();
       applyLang();
@@ -3007,6 +3122,21 @@ function resubscribeFromUnsub() {
 
   </script>
 
+  <!-- AUDIO BAR -->
+<div id="audio-bar">
+  <audio id="audio-el" preload="none"></audio>
+  <button id="audio-play-btn" onclick="toggleAudio()">▶</button>
+  <div style="min-width:0;flex:1">
+    <div id="audio-bar-title">—</div>
+    <div id="audio-bar-company"></div>
+  </div>
+  <div id="audio-progress-wrap">
+    <input type="range" id="audio-progress" min="0" max="100" value="0" oninput="seekAudio(this.value)">
+  </div>
+  <span id="audio-time">0:00</span>
+  <button id="audio-close" onclick="closeAudio()">✕</button>
+</div>
+  
   <!-- NEWSLETTER MODAL -->
   <div id="nl-modal-overlay">
     <div id="nl-modal">

@@ -1565,11 +1565,7 @@
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis; line-height: 1.3;
 }
 #audio-bar-company { font-size: 0.65rem; color: var(--text3); margin-top: 2px; }
-<div id="audio-controls">
-  <button class="audio-lang-btn active" id="audio-btn-pl" onclick="switchAudioLang('pl')">PL</button>
-  <button id="audio-play-btn" onclick="toggleAudio()">▶</button>
-  <button class="audio-lang-btn" id="audio-btn-en" onclick="switchAudioLang('en')">EN</button>
-</div>
+
 .audio-lang-btn {
   font-size: 0.65rem; font-weight: 700;
   padding: 3px 8px; border-radius: 100px;
@@ -3127,9 +3123,7 @@ function switchAudioLang(lang) {
 
   document.getElementById('audio-btn-pl').classList.toggle('active', lang === 'pl');
   document.getElementById('audio-btn-en').classList.toggle('active', lang === 'en');
-  document.getElementById('audio-btn-pl').classList.add('active');
-  document.getElementById('audio-btn-en').classList.remove('active');
-
+  
   const el = audioEl();
   const wasPlaying = !el.paused;
   
@@ -3199,7 +3193,9 @@ function closeAudio() {
     <div id="audio-bar-company"></div>
   </div>
   <div id="audio-controls">
-    <button id="audio-play-btn" onclick="toggleAudio()">▶</button>
+  <button class="audio-lang-btn active" id="audio-btn-pl" onclick="switchAudioLang('pl')">PL</button>
+  <button id="audio-play-btn" onclick="toggleAudio()">▶</button>
+  <button class="audio-lang-btn" id="audio-btn-en" onclick="switchAudioLang('en')">EN</button>
   </div>
   <div id="audio-progress-wrap">
     <input type="range" id="audio-progress" min="0" max="100" value="0" oninput="seekAudio(this.value)">

@@ -3112,7 +3112,6 @@ function initAudio(post, title) {
   const el = audioEl();
   el.src = post.audio;
   document.getElementById('audio-bar-title').textContent = 'Auto-Jeż czyta';
-  document.getElementById('audio-bar-company').textContent = '';
   el.ontimeupdate = () => {
     if (!el.duration) return;
     document.getElementById('audio-progress').value = (el.currentTime / el.duration) * 100;

@@ -3149,12 +3149,7 @@ function switchAudioLang(lang) {
   document.getElementById('audio-time').textContent = '0:00';
   if (wasPlaying) el.play();
 }
-  
-  el.currentTime = 0;
-  document.getElementById('audio-progress').value = 0;
-  document.getElementById('audio-time').textContent = '0:00';
-  if (wasPlaying) el.play();
-}
+
 function toggleAudio() {
   const el = audioEl();
   const bar = document.getElementById('audio-bar');

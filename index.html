@@ -2076,6 +2076,7 @@
 
     // ── OPEN ARTICLE ─────────────────────────────
     async function openArticle(slug) {
+       closeAudio();
       currentSlug = slug;
       document.getElementById('list-view').style.display = 'none';
       document.getElementById('hero-section').style.display = 'none';
@@ -2153,6 +2154,7 @@
 
     // ── BACK ─────────────────────────────────────
     function showList() {
+       closeAudio()
       document.getElementById('list-view').style.display = 'block';
       document.getElementById('hero-section').style.display = 'block';
       document.getElementById('filter-bar').style.display = 'flex';
@@ -3089,11 +3091,11 @@ function initAudio(post, title) {
   const hasAudio = post && post.audio;
   document.getElementById('audio-sep').style.display = hasAudio ? '' : 'none';
   document.getElementById('eng-play').style.display = hasAudio ? '' : 'none';
-  if (!hasAudio) return;
+  if (!hasAudio) { closeAudio(); return; }
   const el = audioEl();
   el.src = post.audio;
-  document.getElementById('audio-bar-title').textContent = title;
-  document.getElementById('audio-bar-company').textContent = post.company || '';
+  document.getElementById('audio-bar-title').textContent = '🦔 Auto-Jeż czyta';
+  document.getElementById('audio-bar-company').textContent = '';
   el.ontimeupdate = () => {
     if (!el.duration) return;
     document.getElementById('audio-progress').value = (el.currentTime / el.duration) * 100;

@@ -1,1 +1,837 @@
-[{"slug":"jak-rakuten-skraca-czas-napraw-i-przyspiesza-wdrozenia-dzieki-codex-od-openai-1773259829867","title":"Jak Rakuten skraca czas napraw i przyspiesza wdrożenia dzięki Codex od OpenAI","date":"2026-03-11","datetime":"2026-03-11T20:10:29","company":"OpenAI","summary":"Rakuten zmniejszył czas napraw o 50% dzięki Codex, usprawniając procesy CI/CD i automatyzując wdrożenia. Sprawdź, co to oznacza dla firm rozwijających oprogramowanie.","image":"posts/jak-rakuten-skraca-czas-napraw-i-przyspiesza-wdrozenia-dzieki-codex-od-openai-1773259829867.jpg","audio":"audio/jak-rakuten-skraca-czas-napraw-i-przyspiesza-wdrozenia-dzieki-codex-od-openai-1773259829867.mp3"},{"slug":"jak-openai-broni-chatgpt-przed-atakami-na-prompt-injection-1773254729253-en","title":"Jak OpenAI broni ChatGPT przed atakami na prompt injection?","date":"2026-03-11","datetime":"2026-03-11T18:45:29","company":"OpenAI","summary":"OpenAI opracowuje mechanizmy zabezpieczające ChatGPT przed manipulacjami typu prompt injection i atakami socjotechnicznymi w workflowach agentów AI.","image":"posts/jak-openai-broni-chatgpt-przed-atakami-na-prompt-injection-1773254729253.jpg","audio":"audio/jak-openai-broni-chatgpt-przed-atakami-na-prompt-injection-1773254729253-en.mp3"},{"slug":"jak-openai-broni-chatgpt-przed-atakami-na-prompt-injection-1773254729253","title":"Jak OpenAI broni ChatGPT przed atakami na prompt injection?","date":"2026-03-11","datetime":"2026-03-11T18:45:29","company":"OpenAI","summary":"OpenAI opracowuje mechanizmy zabezpieczające ChatGPT przed manipulacjami typu prompt injection i atakami socjotechnicznymi w workflowach agentów AI.","image":"posts/jak-openai-broni-chatgpt-przed-atakami-na-prompt-injection-1773254729253.jpg","audio":"audio/jak-openai-broni-chatgpt-przed-atakami-na-prompt-injection-1773254729253.mp3"},{"slug":"wayfair-ulepsza-ecommerce-dzieki-modelom-openai-1773252188326-en","title":"Wayfair ulepsza ecommerce dzięki modelom OpenAI","date":"2026-03-11","datetime":"2026-03-11T18:03:08","company":"OpenAI","summary":"Wayfair wspiera obsługę klienta i zarządzanie katalogiem produktów za pomocą modeli OpenAI. Co to znaczy w praktyce?","image":"posts/wayfair-ulepsza-ecommerce-dzieki-modelom-openai-1773252188326.jpg","audio":"audio/wayfair-ulepsza-ecommerce-dzieki-modelom-openai-1773252188326-en.mp3"},{"slug":"wayfair-ulepsza-ecommerce-dzieki-modelom-openai-1773252188326","title":"Wayfair ulepsza ecommerce dzięki modelom OpenAI","date":"2026-03-11","datetime":"2026-03-11T18:03:08","company":"OpenAI","summary":"Wayfair wspiera obsługę klienta i zarządzanie katalogiem produktów za pomocą modeli OpenAI. Co to znaczy w praktyce?","image":"posts/wayfair-ulepsza-ecommerce-dzieki-modelom-openai-1773252188326.jpg","audio":"audio/wayfair-ulepsza-ecommerce-dzieki-modelom-openai-1773252188326.mp3"},{"image":"posts/undefined.jpg","audio":"audio/undefined.mp3"},{"slug":"nowe-wytyczne-dla-modeli-llm-openai-wskazuje-kierunek-1773165758495","title":"Nowe wytyczne dla modeli LLM – OpenAI wskazuje kierunek!","date":"2026-03-10","datetime":"2026-03-10T18:02:38","company":"OpenAI","summary":"OpenAI ogłasza IH-Challenge – nową inicjatywę usprawniającą hierarchię instrukcji w modelach językowych. Jakie to przynosi możliwości i co to oznacza dla biznesu?","image":"posts/nowe-wytyczne-dla-modeli-llm-openai-wskazuje-kierunek-1773165758495.jpg","audio":"audio/nowe-wytyczne-dla-modeli-llm-openai-wskazuje-kierunek-1773165758495.mp3"},{"slug":"interaktywne-wyjasnienia-w-chatgpt-nowe-podejscie-do-nauki-matematyki-i-nauk-scislych-1773162274661-en","title":"Interaktywne wyjaśnienia w ChatGPT: Nowe podejście do nauki matematyki i nauk ścisłych","date":"2026-03-10","datetime":"2026-03-10T17:04:34","company":"OpenAI","summary":"Nowa funkcja ChatGPT wprowadza interaktywne wyjaśnienia dla matematyki i nauk ścisłych. Wyjaśniamy, co to oznacza dla edukacji i praktycznego wykorzystania.","image":"posts/interaktywne-wyjasnienia-w-chatgpt-nowe-podejscie-do-nauki-matematyki-i-nauk-scislych-1773162274661.jpg","audio":"audio/interaktywne-wyjasnienia-w-chatgpt-nowe-podejscie-do-nauki-matematyki-i-nauk-scislych-1773162274661-en.mp3"},{"slug":"interaktywne-wyjasnienia-w-chatgpt-nowe-podejscie-do-nauki-matematyki-i-nauk-scislych-1773162274661","title":"Interaktywne wyjaśnienia w ChatGPT: Nowe podejście do nauki matematyki i nauk ścisłych","date":"2026-03-10","datetime":"2026-03-10T17:04:34","company":"OpenAI","summary":"Nowa funkcja ChatGPT wprowadza interaktywne wyjaśnienia dla matematyki i nauk ścisłych. Wyjaśniamy, co to oznacza dla edukacji i praktycznego wykorzystania.","image":"posts/interaktywne-wyjasnienia-w-chatgpt-nowe-podejscie-do-nauki-matematyki-i-nauk-scislych-1773162274661.jpg","audio":"audio/interaktywne-wyjasnienia-w-chatgpt-nowe-podejscie-do-nauki-matematyki-i-nauk-scislych-1773162274661.mp3"},{"slug":"gemini-w-google-sheets-nowa-era-analizy-danych-1773147899477-en","title":"Gemini w Google Sheets: Nowa era analizy danych?","date":"2026-03-10","datetime":"2026-03-10T13:04:59","company":"Google","summary":"Google rozwija możliwości Gemini w Sheets. AI wchodzi na wyższy poziom, od automatyzacji podstawowych zadań po zaawansowaną analizę danych.","image":"posts/gemini-w-google-sheets-nowa-era-analizy-danych-1773147899477.jpg","audio":"audio/gemini-w-google-sheets-nowa-era-analizy-danych-1773147899477-en.mp3"},{"slug":"gemini-w-google-sheets-nowa-era-analizy-danych-1773147899477","title":"Gemini w Google Sheets: Nowa era analizy danych?","date":"2026-03-10","datetime":"2026-03-10T13:04:59","company":"Google","summary":"Google rozwija możliwości Gemini w Sheets. AI wchodzi na wyższy poziom, od automatyzacji podstawowych zadań po zaawansowaną analizę danych.","image":"posts/gemini-w-google-sheets-nowa-era-analizy-danych-1773147899477.jpg","audio":"audio/gemini-w-google-sheets-nowa-era-analizy-danych-1773147899477.mp3"},{"slug":"openai-przejmuje-promptfoo-krok-w-strone-bezpieczenstwa-ai-1773075754308-en","title":"OpenAI przejmuje Promptfoo – krok w stronę bezpieczeństwa AI","date":"2026-03-09","datetime":"2026-03-09T17:02:34","company":"OpenAI","summary":"OpenAI ogłasza przejęcie Promptfoo – platformy wspierającej zabezpieczanie systemów AI w fazie rozwoju. Co to oznacza w praktyce?","image":"posts/openai-przejmuje-promptfoo-krok-w-strone-bezpieczenstwa-ai-1773075754308.jpg"},{"slug":"openai-przejmuje-promptfoo-krok-w-strone-bezpieczenstwa-ai-1773075754308","title":"OpenAI przejmuje Promptfoo – krok w stronę bezpieczeństwa AI","date":"2026-03-09","datetime":"2026-03-09T17:02:34","company":"OpenAI","summary":"OpenAI ogłasza przejęcie Promptfoo – platformy wspierającej zabezpieczanie systemów AI w fazie rozwoju. Co to oznacza w praktyce?","image":"posts/openai-przejmuje-promptfoo-krok-w-strone-bezpieczenstwa-ai-1773075754308.jpg"},{"slug":"meta-wprowadza-advanced-browsing-protection-w-messengerze-co-to-oznacza-dla-uzytkownikow-i-biznesu-1773072143109-en","title":"Meta wprowadza Advanced Browsing Protection w Messengerze – co to oznacza dla użytkowników i biznesu?","date":"2026-03-09","datetime":"2026-03-09T16:02:23","company":"Meta","summary":"Meta rozwija ochronę prywatności w Messengerze dzięki Advanced Browsing Protection. Jak to działa, jakie są wyzwania i co realnie oznacza dla Twojego bezpieczeństwa?","image":"posts/meta-wprowadza-advanced-browsing-protection-w-messengerze-co-to-oznacza-dla-uzytkownikow-i-biznesu-1773072143109.jpg"},{"slug":"meta-wprowadza-advanced-browsing-protection-w-messengerze-co-to-oznacza-dla-uzytkownikow-i-biznesu-1773072143109","title":"Meta wprowadza Advanced Browsing Protection w Messengerze – co to oznacza dla użytkowników i biznesu?","date":"2026-03-09","datetime":"2026-03-09T16:02:23","company":"Meta","summary":"Meta rozwija ochronę prywatności w Messengerze dzięki Advanced Browsing Protection. Jak to działa, jakie są wyzwania i co realnie oznacza dla Twojego bezpieczeństwa?","image":"posts/meta-wprowadza-advanced-browsing-protection-w-messengerze-co-to-oznacza-dla-uzytkownikow-i-biznesu-1773072143109.jpg"},{"slug":"anthropic-i-mozilla-lacza-sily-dla-bezpieczenstwa-w-firefox-1772821403576-en","title":"Anthropic i Mozilla łączą siły dla bezpieczeństwa w Firefox","date":"2026-03-06","datetime":"2026-03-06T18:23:23","company":"Anthropic","summary":"Anthropic nawiązuje współpracę z Mozillą, aby znacząco poprawić bezpieczeństwo przeglądarki Firefox. Co to oznacza w praktyce dla użytkowników i jak sztuczna inteligencja może pomóc?","image":"posts/anthropic-i-mozilla-lacza-sily-dla-bezpieczenstwa-w-firefox-1772821403576.jpg"},{"slug":"anthropic-i-mozilla-lacza-sily-dla-bezpieczenstwa-w-firefox-1772821403576","title":"Anthropic i Mozilla łączą siły dla bezpieczeństwa w Firefox","date":"2026-03-06","datetime":"2026-03-06T18:23:23","company":"Anthropic","summary":"Anthropic nawiązuje współpracę z Mozillą, aby znacząco poprawić bezpieczeństwo przeglądarki Firefox. Co to oznacza w praktyce dla użytkowników i jak sztuczna inteligencja może pomóc?","image":"posts/anthropic-i-mozilla-lacza-sily-dla-bezpieczenstwa-w-firefox-1772821403576.jpg"},{"slug":"jak-google-wspiera-ochrone-przyrody-dzieki-speciesnet-1772820428638-en","title":"Jak Google wspiera ochronę przyrody dzięki SpeciesNet?","date":"2026-03-06","datetime":"2026-03-06T18:07:08","company":"Google","summary":"Google wprowadza SpeciesNet – open-source'owy model AI, który zmienia podejście do ochrony dzikiej przyrody na całym świecie.","image":"posts/jak-google-wspiera-ochrone-przyrody-dzieki-speciesnet-1772820428638.jpg"},{"slug":"jak-google-wspiera-ochrone-przyrody-dzieki-speciesnet-1772820428638","title":"Jak Google wspiera ochronę przyrody dzięki SpeciesNet?","date":"2026-03-06","datetime":"2026-03-06T18:07:08","company":"Google","summary":"Google wprowadza SpeciesNet – open-source'owy model AI, który zmienia podejście do ochrony dzikiej przyrody na całym świecie.","image":"posts/jak-google-wspiera-ochrone-przyrody-dzieki-speciesnet-1772820428638.jpg"},{"slug":"codex-security-ai-na-strazy-bezpieczenstwa-aplikacji-1772820220672-en","title":"Codex Security: AI na straży bezpieczeństwa aplikacji","date":"2026-03-06","datetime":"2026-03-06T18:03:40","company":"OpenAI","summary":"OpenAI prezentuje nowy AI agent do analizy i naprawy luk w aplikacjach. Co to oznacza dla deweloperów i firm?","image":"posts/codex-security-ai-na-strazy-bezpieczenstwa-aplikacji-1772820220672.jpg"},{"slug":"codex-security-ai-na-strazy-bezpieczenstwa-aplikacji-1772820220672","title":"Codex Security: AI na straży bezpieczeństwa aplikacji","date":"2026-03-06","datetime":"2026-03-06T18:03:40","company":"OpenAI","summary":"OpenAI prezentuje nowy AI agent do analizy i naprawy luk w aplikacjach. Co to oznacza dla deweloperów i firm?","image":"posts/codex-security-ai-na-strazy-bezpieczenstwa-aplikacji-1772820220672.jpg"},{"slug":"balyasny-asset-management-ai-w-inwestycjach-dzieki-gpt-5-4-1772809317492-en","title":"Balyasny Asset Management: AI w inwestycjach dzięki GPT-5.4","date":"2026-03-06","datetime":"2026-03-06T15:01:57","company":"OpenAI","summary":"Nowatorskie podejście Balyasny Asset Management wykorzystujące GPT-5.4. Jak zmienia analizę inwestycyjną?","image":"posts/balyasny-asset-management-ai-w-inwestycjach-dzieki-gpt-5-4-1772809317492.jpg"},{"slug":"balyasny-asset-management-ai-w-inwestycjach-dzieki-gpt-5-4-1772809317492","title":"Balyasny Asset Management: AI w inwestycjach dzięki GPT-5.4","date":"2026-03-06","datetime":"2026-03-06T15:01:57","company":"OpenAI","summary":"Nowatorskie podejście Balyasny Asset Management wykorzystujące GPT-5.4. Jak zmienia analizę inwestycyjną?","image":"posts/balyasny-asset-management-ai-w-inwestycjach-dzieki-gpt-5-4-1772809317492.jpg"},{"slug":"anthropic-i-wspolpraca-z-departamentem-wojny-usa-co-to-oznacza-1772758096214-en","title":"Anthropic i współpraca z Departamentem Wojny USA – co to oznacza?","date":"2026-03-06","datetime":"2026-03-06T00:48:16","company":"Anthropic","summary":"Anthropic współpracuje z Departamentem Wojny USA nad rozwojem AI. Sprawdzamy kluczowe implikacje technologiczne i etyczne dla tej współpracy.","image":"posts/anthropic-i-wspolpraca-z-departamentem-wojny-usa-co-to-oznacza-1772758096214.jpg"},{"slug":"anthropic-i-wspolpraca-z-departamentem-wojny-usa-co-to-oznacza-1772758096214","title":"Anthropic i współpraca z Departamentem Wojny USA – co to oznacza?","date":"2026-03-06","datetime":"2026-03-06T00:48:16","company":"Anthropic","summary":"Anthropic współpracuje z Departamentem Wojny USA nad rozwojem AI. Sprawdzamy kluczowe implikacje technologiczne i etyczne dla tej współpracy.","image":"posts/anthropic-i-wspolpraca-z-departamentem-wojny-usa-co-to-oznacza-1772758096214.jpg"},{"slug":"5-modeli-wartosci-ai-klucz-do-biznesowej-transformacji-1772747850044-en","title":"5 modeli wartości AI: klucz do biznesowej transformacji","date":"2026-03-05","datetime":"2026-03-05T21:57:30","company":"OpenAI","summary":"OpenAI przedstawia 5 modeli wartości AI, które mogą zrewolucjonizować sposób zarządzania, procesy i przewagę biznesową. Jak wykorzystać te modele w praktyce?","image":"posts/5-modeli-wartosci-ai-klucz-do-biznesowej-transformacji-1772747850044.jpg"},{"slug":"5-modeli-wartosci-ai-klucz-do-biznesowej-transformacji-1772747850044","title":"5 modeli wartości AI: klucz do biznesowej transformacji","date":"2026-03-05","datetime":"2026-03-05T21:57:30","company":"OpenAI","summary":"OpenAI przedstawia 5 modeli wartości AI, które mogą zrewolucjonizować sposób zarządzania, procesy i przewagę biznesową. Jak wykorzystać te modele w praktyce?","image":"posts/5-modeli-wartosci-ai-klucz-do-biznesowej-transformacji-1772747850044.jpg"},{"slug":"jak-dziala-ai-google-w-wizualnych-wyszukiwaniach-1772733834488-en","title":"Jak działa AI Google w wizualnych wyszukiwaniach?","date":"2026-03-05","datetime":"2026-03-05T18:03:54","company":"Google","summary":"Google wyjaśnia, jak ich algorytmy AI wspierają wizualne wyszukiwania, wykorzystując metodę query fan-out. Zobacz, co to oznacza w praktyce.","image":"posts/jak-dziala-ai-google-w-wizualnych-wyszukiwaniach-1772733834488.jpg"},{"slug":"jak-dziala-ai-google-w-wizualnych-wyszukiwaniach-1772733834488","title":"Jak działa AI Google w wizualnych wyszukiwaniach?","date":"2026-03-05","datetime":"2026-03-05T18:03:54","company":"Google","summary":"Google wyjaśnia, jak ich algorytmy AI wspierają wizualne wyszukiwania, wykorzystując metodę query fan-out. Zobacz, co to oznacza w praktyce.","image":"posts/jak-dziala-ai-google-w-wizualnych-wyszukiwaniach-1772733834488.jpg"},{"slug":"reasoning-models-i-kontrola-procesu-myslenia-nowa-inicjatywa-openai-1772733702085-en","title":"Reasoning Models i kontrola procesu myślenia – nowa inicjatywa OpenAI","date":"2026-03-05","datetime":"2026-03-05T18:01:42","company":"OpenAI","summary":"OpenAI wprowadza CoT-Control: nowy sposób na monitorowanie modeli reasoningowych. Co to oznacza dla biznesu i bezpieczeństwa AI?","image":"posts/reasoning-models-i-kontrola-procesu-myslenia-nowa-inicjatywa-openai-1772733702085.jpg"},{"slug":"reasoning-models-i-kontrola-procesu-myslenia-nowa-inicjatywa-openai-1772733702085","title":"Reasoning Models i kontrola procesu myślenia – nowa inicjatywa OpenAI","date":"2026-03-05","datetime":"2026-03-05T18:01:42","company":"OpenAI","summary":"OpenAI wprowadza CoT-Control: nowy sposób na monitorowanie modeli reasoningowych. Co to oznacza dla biznesu i bezpieczeństwa AI?","image":"posts/reasoning-models-i-kontrola-procesu-myslenia-nowa-inicjatywa-openai-1772733702085.jpg"},{"slug":"jak-openai-chce-zmieniac-edukacje-dzieki-sztucznej-inteligencji-1772730110704-en","title":"Jak OpenAI chce zmieniać edukację dzięki sztucznej inteligencji","date":"2026-03-05","datetime":"2026-03-05T17:01:50","company":"OpenAI","summary":"OpenAI zaprezentowało nowe narzędzia i zasoby dla szkół oraz uczelni, które mają pomóc w rozwoju kompetencji AI. Czy to przełom w edukacji?","image":"posts/jak-openai-chce-zmieniac-edukacje-dzieki-sztucznej-inteligencji-1772730110704.jpg"},{"slug":"jak-openai-chce-zmieniac-edukacje-dzieki-sztucznej-inteligencji-1772730110704","title":"Jak OpenAI chce zmieniać edukację dzięki sztucznej inteligencji","date":"2026-03-05","datetime":"2026-03-05T17:01:50","company":"OpenAI","summary":"OpenAI zaprezentowało nowe narzędzia i zasoby dla szkół oraz uczelni, które mają pomóc w rozwoju kompetencji AI. Czy to przełom w edukacji?","image":"posts/jak-openai-chce-zmieniac-edukacje-dzieki-sztucznej-inteligencji-1772730110704.jpg"},{"slug":"nowosci-z-google-ai-co-przyniosl-luty-2026-1772728443614-en","title":"Nowości z Google AI – co przyniósł luty 2026?","date":"2026-03-05","datetime":"2026-03-05T16:34:03","company":"Google","summary":"Google zaprezentowało najnowsze aktualizacje w swoich produktach AI. Sprawdzam, co to oznacza w praktyce i jakie szanse niosą dla biznesu.","image":"posts/nowosci-z-google-ai-co-przyniosl-luty-2026-1772728443614.jpg"},{"slug":"nowosci-z-google-ai-co-przyniosl-luty-2026-1772728443614","title":"Nowości z Google AI – co przyniósł luty 2026?","date":"2026-03-05","datetime":"2026-03-05T16:34:03","company":"Google","summary":"Google zaprezentowało najnowsze aktualizacje w swoich produktach AI. Sprawdzam, co to oznacza w praktyce i jakie szanse niosą dla biznesu.","image":"posts/nowosci-z-google-ai-co-przyniosl-luty-2026-1772728443614.jpg"},{"slug":"gpt-5-2-pro-wspiera-badania-nad-amplitudami-grawitacyjnymi-1772647314654-en","title":"GPT-5.2 Pro wspiera badania nad amplitudami grawitacyjnymi","date":"2026-03-04","datetime":"2026-03-04T18:01:54","company":"OpenAI","summary":"OpenAI z GPT-5.2 Pro wchodzi na wyższy poziom wspierania badań w dziedzinie fizyki teoretycznej. Co to oznacza dla nauki i technologii?","image":"posts/gpt-5-2-pro-wspiera-badania-nad-amplitudami-grawitacyjnymi-1772647314654.jpg"},{"slug":"gpt-5-2-pro-wspiera-badania-nad-amplitudami-grawitacyjnymi-1772647314654","title":"GPT-5.2 Pro wspiera badania nad amplitudami grawitacyjnymi","date":"2026-03-04","datetime":"2026-03-04T18:01:54","company":"OpenAI","summary":"OpenAI z GPT-5.2 Pro wchodzi na wyższy poziom wspierania badań w dziedzinie fizyki teoretycznej. Co to oznacza dla nauki i technologii?","image":"posts/gpt-5-2-pro-wspiera-badania-nad-amplitudami-grawitacyjnymi-1772647314654.jpg"},{"slug":"canvas-w-ai-mode-od-google-nowa-jakosc-w-wyszukiwaniu-1772643970363-en","title":"Canvas w AI Mode od Google – nowa jakość w wyszukiwaniu?","date":"2026-03-04","datetime":"2026-03-04T17:06:10","company":"Google","summary":"Google udostępnia w USA funkcję Canvas w AI Mode. Pisanie dokumentów i interaktywne projekty w obrębie wyszukiwania mogą zmienić sposób pracy.","image":"posts/canvas-w-ai-mode-od-google-nowa-jakosc-w-wyszukiwaniu-1772643970363.jpg"},{"slug":"canvas-w-ai-mode-od-google-nowa-jakosc-w-wyszukiwaniu-1772643970363","title":"Canvas w AI Mode od Google – nowa jakość w wyszukiwaniu?","date":"2026-03-04","datetime":"2026-03-04T17:06:10","company":"Google","summary":"Google udostępnia w USA funkcję Canvas w AI Mode. Pisanie dokumentów i interaktywne projekty w obrębie wyszukiwania mogą zmienić sposób pracy.","image":"posts/canvas-w-ai-mode-od-google-nowa-jakosc-w-wyszukiwaniu-1772643970363.jpg"},{"slug":"openai-zmienia-edukacje-narzedzie-do-mierzenia-efektow-uczenia-sie-z-ai-1772643696516-en","title":"OpenAI zmienia edukację: narzędzie do mierzenia efektów uczenia się z AI","date":"2026-03-04","datetime":"2026-03-04T17:01:36","company":"OpenAI","summary":"OpenAI prezentuje nowy zestaw narzędzi, który pozwoli mierzyć wpływ AI na wyniki edukacyjne w różnych środowiskach i na przestrzeni czasu.","image":"posts/openai-zmienia-edukacje-narzedzie-do-mierzenia-efektow-uczenia-sie-z-ai-1772643696516.jpg"},{"slug":"openai-zmienia-edukacje-narzedzie-do-mierzenia-efektow-uczenia-sie-z-ai-1772643696516","title":"OpenAI zmienia edukację: narzędzie do mierzenia efektów uczenia się z AI","date":"2026-03-04","datetime":"2026-03-04T17:01:36","company":"OpenAI","summary":"OpenAI prezentuje nowy zestaw narzędzi, który pozwoli mierzyć wpływ AI na wyniki edukacyjne w różnych środowiskach i na przestrzeni czasu.","image":"posts/openai-zmienia-edukacje-narzedzie-do-mierzenia-efektow-uczenia-sie-z-ai-1772643696516.jpg"},{"slug":"gpt-5-3-system-card-instant-co-to-oznacza-dla-biznesu-1772560646652-en","title":"GPT-5.3: System Card Instant – co to oznacza dla biznesu?","date":"2026-03-03","datetime":"2026-03-03T17:57:26","company":"OpenAI","summary":"OpenAI zaprezentował funkcję Instant w najnowszej karcie systemowej dla GPT-5.3. Co jest nowego i jak to wpłynie na zastosowania AI w praktyce?","image":"posts/gpt-5-3-system-card-instant-co-to-oznacza-dla-biznesu-1772560646652.jpg"},{"slug":"gpt-5-3-system-card-instant-co-to-oznacza-dla-biznesu-1772560646652","title":"GPT-5.3: System Card Instant – co to oznacza dla biznesu?","date":"2026-03-03","datetime":"2026-03-03T17:57:26","company":"OpenAI","summary":"OpenAI zaprezentował funkcję Instant w najnowszej karcie systemowej dla GPT-5.3. Co jest nowego i jak to wpłynie na zastosowania AI w praktyce?","image":"posts/gpt-5-3-system-card-instant-co-to-oznacza-dla-biznesu-1772560646652.jpg"},{"slug":"projekt-genie-od-google-tworzenie-swiatow-za-pomoca-promtow-1772557360258-en","title":"Projekt Genie od Google – Tworzenie światów za pomocą promtów","date":"2026-03-03","datetime":"2026-03-03T17:02:40","company":"Google","summary":"Google DeepMind zaprezentowało Project Genie, narzędzie do generowania światów za pomocą promtów. Sprawdź, co kryje się za tym projektem i jakie daje możliwości.","image":"posts/projekt-genie-od-google-tworzenie-swiatow-za-pomoca-promtow-1772557360258.jpg"},{"slug":"projekt-genie-od-google-tworzenie-swiatow-za-pomoca-promtow-1772557360258","title":"Projekt Genie od Google – Tworzenie światów za pomocą promtów","date":"2026-03-03","datetime":"2026-03-03T17:02:40","company":"Google","summary":"Google DeepMind zaprezentowało Project Genie, narzędzie do generowania światów za pomocą promtów. Sprawdź, co kryje się za tym projektem i jakie daje możliwości.","image":"posts/projekt-genie-od-google-tworzenie-swiatow-za-pomoca-promtow-1772557360258.jpg"},{"slug":"ffmpeg-w-meta-rewolucja-w-przetwarzaniu-multimediow-na-duza-skale-1772481711606-en","title":"FFmpeg w Meta: Rewolucja w przetwarzaniu multimediów na dużą skalę","date":"2026-03-02","datetime":"2026-03-02T20:01:51","company":"Meta","summary":"Meta intensywnie rozwija możliwości narzędzia FFmpeg w przetwarzaniu mediów na ogromną skalę. Zobacz, co to oznacza w praktyce.","image":"posts/ffmpeg-w-meta-rewolucja-w-przetwarzaniu-multimediow-na-duza-skale-1772481711606.jpg"},{"slug":"ffmpeg-w-meta-rewolucja-w-przetwarzaniu-multimediow-na-duza-skale-1772481711606","title":"FFmpeg w Meta: Rewolucja w przetwarzaniu multimediów na dużą skalę","date":"2026-03-02","datetime":"2026-03-02T20:01:51","company":"Meta","summary":"Meta intensywnie rozwija możliwości narzędzia FFmpeg w przetwarzaniu mediów na ogromną skalę. Zobacz, co to oznacza w praktyce.","image":"posts/ffmpeg-w-meta-rewolucja-w-przetwarzaniu-multimediow-na-duza-skale-1772481711606.jpg"},{"slug":"google-wspiera-mieszkancow-massachusetts-bezplatne-szkolenia-z-ai-dla-kazdego-1772475869055-en","title":"Google wspiera mieszkańców Massachusetts: bezpłatne szkolenia z AI dla każdego!","date":"2026-03-02","datetime":"2026-03-02T18:24:29","company":"Google","summary":"Google rusza z nową inicjatywą w Massachusetts – darmowe szkolenia z AI dla mieszkańców stanu. Co to oznacza w praktyce?","image":"posts/google-wspiera-mieszkancow-massachusetts-bezplatne-szkolenia-z-ai-dla-kazdego-1772475869055.jpg","audio":"audio/google-wspiera-mieszkancow-massachusetts-bezplatne-szkolenia-z-ai-dla-kazdego-1772475869055-en.mp3"},{"slug":"google-wspiera-mieszkancow-massachusetts-bezplatne-szkolenia-z-ai-dla-kazdego-1772475869055","title":"Google wspiera mieszkańców Massachusetts: bezpłatne szkolenia z AI dla każdego!","date":"2026-03-02","datetime":"2026-03-02T18:24:29","company":"Google","summary":"Google rusza z nową inicjatywą w Massachusetts – darmowe szkolenia z AI dla mieszkańców stanu. Co to oznacza w praktyce?","image":"posts/google-wspiera-mieszkancow-massachusetts-bezplatne-szkolenia-z-ai-dla-kazdego-1772475869055.jpg","audio":"audio/google-wspiera-mieszkancow-massachusetts-bezplatne-szkolenia-z-ai-dla-kazdego-1772475869055.mp3"},{"slug":"openai-wchodzi-w-wspolprace-z-departamentem-obrony-usa-1772473196909-en","title":"OpenAI wchodzi w współpracę z Departamentem Obrony USA","date":"2026-03-02","datetime":"2026-03-02T17:39:56","company":"OpenAI","summary":"OpenAI podpisało umowę z Departamentem Obrony USA. Co to oznacza dla rozwoju AI w obszarach tajnych i jakie wyzwania się z tym wiążą?","image":"posts/openai-wchodzi-w-wspolprace-z-departamentem-obrony-usa-1772473196909.jpg"},{"slug":"openai-wchodzi-w-wspolprace-z-departamentem-obrony-usa-1772473196909","title":"OpenAI wchodzi w współpracę z Departamentem Obrony USA","date":"2026-03-02","datetime":"2026-03-02T17:39:56","company":"OpenAI","summary":"OpenAI podpisało umowę z Departamentem Obrony USA. Co to oznacza dla rozwoju AI w obszarach tajnych i jakie wyzwania się z tym wiążą?","image":"posts/openai-wchodzi-w-wspolprace-z-departamentem-obrony-usa-1772473196909.jpg","audio":"audio/openai-wchodzi-w-wspolprace-z-departamentem-obrony-usa-1772473196909.mp3"},{"slug":"meta-inwestuje-w-jemalloc-co-to-oznacza-dla-infrastruktury-1772470930841-en","title":"Meta inwestuje w jemalloc: Co to oznacza dla infrastruktury?","date":"2026-03-02","datetime":"2026-03-02T17:02:10","company":"Meta","summary":"Meta zacieśnia współpracę z jemalloc, stawiając na modernizację infrastruktury pamięci. Czy to krok w stronę jeszcze większej wydajności?","image":"posts/meta-inwestuje-w-jemalloc-co-to-oznacza-dla-infrastruktury-1772470930841.jpg"},{"slug":"meta-inwestuje-w-jemalloc-co-to-oznacza-dla-infrastruktury-1772470930841","title":"Meta inwestuje w jemalloc: Co to oznacza dla infrastruktury?","date":"2026-03-02","datetime":"2026-03-02T17:02:10","company":"Meta","summary":"Meta zacieśnia współpracę z jemalloc, stawiając na modernizację infrastruktury pamięci. Czy to krok w stronę jeszcze większej wydajności?","image":"posts/meta-inwestuje-w-jemalloc-co-to-oznacza-dla-infrastruktury-1772470930841.jpg"},{"slug":"openai-i-departament-wojny-ai-w-srodowiskach-klasyfikowanych-1772321968790-en","title":"OpenAI and the Department of War – AI in Classified Environments","date":"2026-02-28","datetime":"2026-02-28T23:39:28","company":"OpenAI","summary":"OpenAI has signed an agreement with the Department of War, defining the rules for using their technology in environments with the highest security levels.","image":"posts/openai-i-departament-wojny-ai-w-srodowiskach-klasyfikowanych-1772321968790.jpg"},{"slug":"openai-i-departament-wojny-ai-w-srodowiskach-klasyfikowanych-1772321968790","title":"OpenAI i Departament Wojny – AI w środowiskach klasyfikowanych","date":"2026-02-28","datetime":"2026-02-28T23:39:28","company":"OpenAI","summary":"OpenAI podpisało umowę z Departamentem Wojny, która definiuje zasady użycia ich technologii w środowiskach o najwyższym poziomie bezpieczeństwa.","image":"posts/openai-i-departament-wojny-ai-w-srodowiskach-klasyfikowanych-1772321968790.jpg"},{"slug":"openai-nawiazuje-wspolprace-z-departamentem-obrony-usa-kluczowe-fakty-1772310990081-en","title":"OpenAI establishes partnership with the US Department of Defense – key facts","date":"2026-02-28","datetime":"2026-02-28T20:36:30","company":"OpenAI","summary":"OpenAI announced a partnership with the US Department of Defense, focusing on safety, legal accountability, and implementing AI in classified environments.","image":"posts/openai-nawiazuje-wspolprace-z-departamentem-obrony-usa-kluczowe-fakty-1772310990081.jpg"},{"slug":"openai-nawiazuje-wspolprace-z-departamentem-obrony-usa-kluczowe-fakty-1772310990081","title":"OpenAI nawiązuje współpracę z Departamentem Obrony USA – kluczowe fakty","date":"2026-02-28","datetime":"2026-02-28T20:36:30","company":"OpenAI","summary":"OpenAI ogłosiło współpracę z Departamentem Obrony USA, skupiając się na bezpieczeństwie, odpowiedzialności prawnej i wdrażaniu AI w środowiskach o podwyższonej tajności.","image":"posts/openai-nawiazuje-wspolprace-z-departamentem-obrony-usa-kluczowe-fakty-1772310990081.jpg"},{"slug":"anthropic-rozmawia-z-departamentem-wojny-co-to-oznacza-dla-ai-1772259688777-en","title":"Anthropic in Talks with the Department of Defense – What Does This Mean for AI?","date":"2026-02-28","datetime":"2026-02-28T06:21:28","company":"Anthropic","summary":"Anthropic has announced that it is in discussions with the US Department of Defense, which could impact AI security and applications. Here, we explore the key aspects.","image":"posts/anthropic-rozmawia-z-departamentem-wojny-co-to-oznacza-dla-ai-1772259688777.jpg"},{"slug":"anthropic-rozmawia-z-departamentem-wojny-co-to-oznacza-dla-ai-1772259688777","title":"Anthropic rozmawia z Departamentem Wojny – co to oznacza dla AI?","date":"2026-02-28","datetime":"2026-02-28T06:21:28","company":"Anthropic","summary":"Anthropic ogłosił, że prowadzi rozmowy z Departamentem Wojny USA, co może mieć wpływ na bezpieczeństwo i zastosowania AI. Omawiam kluczowe aspekty.","image":"posts/anthropic-rozmawia-z-departamentem-wojny-co-to-oznacza-dla-ai-1772259688777.jpg"},{"slug":"openai-i-amazon-nowa-era-partnerstwa-ai-1772199071142-en","title":"OpenAI and Amazon: a new era of AI partnership","date":"2026-02-27","datetime":"2026-02-27T13:31:11","company":"OpenAI","summary":"OpenAI and Amazon enter into a strategic partnership that could significantly reshape the AI landscape in corporations.","image":"posts/openai-i-amazon-nowa-era-partnerstwa-ai-1772199071142.jpg"},{"slug":"openai-i-amazon-nowa-era-partnerstwa-ai-1772199071142","title":"OpenAI i Amazon: nowa era partnerstwa AI","date":"2026-02-27","datetime":"2026-02-27T13:31:11","company":"OpenAI","summary":"OpenAI i Amazon nawiązują strategiczne partnerstwo, które może znacząco zmienić krajobraz AI w korporacjach.","image":"posts/openai-i-amazon-nowa-era-partnerstwa-ai-1772199071142.jpg"},{"slug":"google-rusza-z-bezplatnym-szkoleniem-ai-dla-mieszkancow-massachusetts-1772132832669-en","title":"Google launches free AI training for Massachusetts residents","date":"2026-02-26","datetime":"2026-02-26T19:07:12","company":"Google","summary":"Google, in collaboration with the Massachusetts AI Hub, launches an initiative offering free access to AI training for all state residents.","image":"posts/google-rusza-z-bezplatnym-szkoleniem-ai-dla-mieszkancow-massachusetts-1772132832669.jpg"},{"slug":"google-rusza-z-bezplatnym-szkoleniem-ai-dla-mieszkancow-massachusetts-1772132832669","title":"Google rusza z bezpłatnym szkoleniem AI dla mieszkańców Massachusetts","date":"2026-02-26","datetime":"2026-02-26T19:07:12","company":"Google","summary":"Google we współpracy z Massachusetts AI Hub uruchamia inicjatywę, która oferuje bezpłatny dostęp do szkoleń w zakresie AI dla wszystkich mieszkańców stanu.","image":"posts/google-rusza-z-bezplatnym-szkoleniem-ai-dla-mieszkancow-massachusetts-1772132832669.jpg"},{"slug":"czy-ai-w-tlumaczeniach-wlasnie-zrobila-duzy-krok-1772129254599-en","title":"Has AI in translations just taken a big step?","date":"2026-02-26","datetime":"2026-02-26T18:07:34","company":"Google","summary":"Google Translate introduces AI features designed to revolutionize translations. What does this mean for global communication?","image":"posts/czy-ai-w-tlumaczeniach-wlasnie-zrobila-duzy-krok-1772129254599.jpg"},{"slug":"czy-ai-w-tlumaczeniach-wlasnie-zrobila-duzy-krok-1772129254599","title":"Czy AI w tłumaczeniach właśnie zrobiła duży krok?","date":"2026-02-26","datetime":"2026-02-26T18:07:34","company":"Google","summary":"Google Translate wprowadza funkcje AI, które mają zrewolucjonizować tłumaczenia. Co to oznacza dla globalnej komunikacji?","image":"posts/czy-ai-w-tlumaczeniach-wlasnie-zrobila-duzy-krok-1772129254599.jpg"},{"slug":"openai-przyspiesza-proces-federalnych-pozwolen-w-usa-dzieki-draftnepabench-1772125368538-en","title":"OpenAI accelerates federal permitting process in the USA with DraftNEPABench","date":"2026-02-26","datetime":"2026-02-26T17:02:48","company":"OpenAI","summary":"OpenAI's new initiative in collaboration with Pacific Northwest National Laboratory has the potential to reduce document preparation times by up to 15%.","image":"posts/openai-przyspiesza-proces-federalnych-pozwolen-w-usa-dzieki-draftnepabench-1772125368538.jpg"},{"slug":"openai-przyspiesza-proces-federalnych-pozwolen-w-usa-dzieki-draftnepabench-1772125368538","title":"OpenAI przyspiesza proces federalnych pozwoleń w USA dzięki DraftNEPABench","date":"2026-02-26","datetime":"2026-02-26T17:02:48","company":"OpenAI","summary":"Nowa inicjatywa OpenAI we współpracy z Pacific Northwest National Laboratory ma szansę skrócić czas przygotowania dokumentów nawet o 15%.","image":"posts/openai-przyspiesza-proces-federalnych-pozwolen-w-usa-dzieki-draftnepabench-1772125368538.jpg"},{"slug":"nano-banana-2-najnowszy-model-ai-do-generacji-i-edycji-obrazow-1772122096856-en","title":"Nano Banana 2: The Latest AI Model for Image Generation and Editing","date":"2026-02-26","datetime":"2026-02-26T16:08:16","company":"Google","summary":"Google has unveiled Nano Banana 2, the Gemini 3.1 model for high-precision images. What does this mean for the creative industry?","image":"posts/nano-banana-2-najnowszy-model-ai-do-generacji-i-edycji-obrazow-1772122096856.jpg"},{"slug":"nano-banana-2-najnowszy-model-ai-do-generacji-i-edycji-obrazow-1772122096856","title":"Nano Banana 2: Najnowszy model AI do generacji i edycji obrazów","date":"2026-02-26","datetime":"2026-02-26T16:08:16","company":"Google","summary":"Google zaprezentowało Nano Banana 2, model Gemini 3.1 do obrazów o wysokiej precyzji. Co to oznacza dla branży kreatywnej?","image":"posts/nano-banana-2-najnowszy-model-ai-do-generacji-i-edycji-obrazow-1772122096856.jpg"},{"slug":"kodowanie-i-projektowanie-bez-granic-openai-laczy-sily-z-figma-1772114518502-en","title":"Coding and Design Without Borders – OpenAI Joins Forces with Figma","date":"2026-02-26","datetime":"2026-02-26T14:01:58","company":"OpenAI","summary":"OpenAI and Figma present a new solution – Codex Integration, combining code and design to accelerate team workflows. Find out what this means.","image":"posts/kodowanie-i-projektowanie-bez-granic-openai-laczy-sily-z-figma-1772114518502.jpg"},{"slug":"kodowanie-i-projektowanie-bez-granic-openai-laczy-sily-z-figma-1772114518502","title":"Kodowanie i projektowanie bez granic – OpenAI łączy siły z Figma","date":"2026-02-26","datetime":"2026-02-26T14:01:58","company":"OpenAI","summary":"OpenAI i Figma prezentują nowe rozwiązanie – Codex Integration, łączące kod i projektowanie, przyspieszając pracę zespołów. Sprawdź, co to oznacza.","image":"posts/kodowanie-i-projektowanie-bez-granic-openai-laczy-sily-z-figma-1772114518502.jpg"},{"slug":"anthropic-rozwija-claude-a-przejecie-firmy-vercept-1772044700773-en","title":"Anthropic expands Claude – acquisition of Vercept","date":"2026-02-25","datetime":"2026-02-25T18:38:20","company":"Anthropic","summary":"Anthropic has acquired Vercept to improve Claude's ability to work with computers. What are the implications of this move?","image":"posts/anthropic-rozwija-claude-a-przejecie-firmy-vercept-1772044700773.jpg"},{"slug":"anthropic-rozwija-claude-a-przejecie-firmy-vercept-1772044700773","title":"Anthropic rozwija Claude'a – przejęcie firmy Vercept","date":"2026-02-25","datetime":"2026-02-25T18:38:20","company":"Anthropic","summary":"Anthropic przejęło Vercept, aby poprawić zdolności Claude’a w zakresie pracy z komputerami. Jakie są konsekwencje tego ruchu?","image":"posts/anthropic-rozwija-claude-a-przejecie-firmy-vercept-1772044700773.jpg"},{"slug":"google-ulepsza-circle-to-search-przeszukiwanie-obrazow-w-nowej-odslonie-1772042739129-en","title":"Google enhances Circle to Search – image search in a new edition","date":"2026-02-25","datetime":"2026-02-25T18:05:39","company":"Google","summary":"Google introduces the ability to search multiple objects in a single image. What does this mean and how can it impact business?","image":"posts/google-ulepsza-circle-to-search-przeszukiwanie-obrazow-w-nowej-odslonie-1772042739129.jpg"},{"slug":"google-ulepsza-circle-to-search-przeszukiwanie-obrazow-w-nowej-odslonie-1772042739129","title":"Google ulepsza Circle to Search – przeszukiwanie obrazów w nowej odsłonie","date":"2026-02-25","datetime":"2026-02-25T18:05:39","company":"Google","summary":"Google wprowadza funkcję przeszukiwania wielu obiektów w jednym obrazie. Co to oznacza i jak może wpłynąć na biznes?","image":"posts/google-ulepsza-circle-to-search-przeszukiwanie-obrazow-w-nowej-odslonie-1772042739129.jpg"},{"slug":"zwalczanie-zagrozen-zwiazanych-z-naduzyciami-ai-raport-openai-1772028122047-en","title":"Combating Threats Related to AI Abuse – OpenAI Report","date":"2026-02-25","datetime":"2026-02-25T14:02:02","company":"OpenAI","summary":"OpenAI published a report on potential threats related to AI abuse. What does this mean for business and defense technologies?","image":"posts/zwalczanie-zagrozen-zwiazanych-z-naduzyciami-ai-raport-openai-1772028122047.jpg"},{"slug":"zwalczanie-zagrozen-zwiazanych-z-naduzyciami-ai-raport-openai-1772028122047","title":"Zwalczanie zagrożeń związanych z nadużyciami AI – raport OpenAI","date":"2026-02-25","datetime":"2026-02-25T14:02:02","company":"OpenAI","summary":"OpenAI opublikowało raport o potencjalnych zagrożeniach związanych z nadużyciami AI. Co to oznacza dla biznesu i technologii obronnych?","image":"posts/zwalczanie-zagrozen-zwiazanych-z-naduzyciami-ai-raport-openai-1772028122047.jpg"},{"slug":"nowa-polityka-odpowiedzialnego-skalowania-od-anthropic-co-warto-wiedziec-1772022364660-en","title":"New Responsible Scaling Policy from Anthropic: What Should You Know?","date":"2026-02-25","datetime":"2026-02-25T12:26:04","company":"Anthropic","summary":"Anthropic has announced version 3.0 of its Responsible Scaling Policy. What’s changing and how will it affect the AI industry?","image":"posts/nowa-polityka-odpowiedzialnego-skalowania-od-anthropic-co-warto-wiedziec-1772022364660.jpg"},{"slug":"nowa-polityka-odpowiedzialnego-skalowania-od-anthropic-co-warto-wiedziec-1772022364660","title":"Nowa polityka odpowiedzialnego skalowania od Anthropic: co warto wiedzieć?","date":"2026-02-25","datetime":"2026-02-25T12:26:04","company":"Anthropic","summary":"Anthropic ogłosił wersję 3.0 swojej polityki odpowiedzialnego skalowania. Co się zmienia i jak to wpłynie na branżę AI?","image":"posts/nowa-polityka-odpowiedzialnego-skalowania-od-anthropic-co-warto-wiedziec-1772022364660.jpg"},{"slug":"openai-stawia-na-ludzi-nowy-chief-people-officer-1771969300201-en","title":"OpenAI focuses on people – new Chief People Officer","date":"2026-02-24","datetime":"2026-02-24T21:41:40","company":"OpenAI","summary":"OpenAI hires Arvind KC as Chief People Officer. This move aims to support the company’s growth in the rapidly evolving world of AI.","image":"posts/openai-stawia-na-ludzi-nowy-chief-people-officer-1771969300201.jpg"},{"slug":"openai-stawia-na-ludzi-nowy-chief-people-officer-1771969300201","title":"OpenAI stawia na ludzi – nowy Chief People Officer","date":"2026-02-24","datetime":"2026-02-24T21:41:40","company":"OpenAI","summary":"OpenAI zatrudnia Arvinda KC jako Chief People Officer. To ruch, który ma wspierać rozwój firmy w szybko zmieniającym się świecie AI.","image":"posts/openai-stawia-na-ludzi-nowy-chief-people-officer-1771969300201.jpg"},{"slug":"rcclx-od-meta-nowe-podejscie-do-komunikacji-gpu-na-platformach-amd-1771968745579-en","title":"RCCLX by Meta: A New Approach to GPU Communication on AMD Platforms","date":"2026-02-24","datetime":"2026-02-24T21:32:25","company":"Meta","summary":"Meta announced the open sourcing of RCCLX – an improved version of RCCL, designed to accelerate GPU communication for evolving AI models.","image":"posts/rcclx-od-meta-nowe-podejscie-do-komunikacji-gpu-na-platformach-amd-1771968745579.jpg"},{"slug":"rcclx-od-meta-nowe-podejscie-do-komunikacji-gpu-na-platformach-amd-1771968745579","title":"RCCLX od Meta: Nowe podejście do komunikacji GPU na platformach AMD","date":"2026-02-24","datetime":"2026-02-24T21:32:25","company":"Meta","summary":"Meta ogłosiła open sourcing RCCLX – usprawnioną wersję RCCL, która ma przyspieszyć komunikację GPU dla rozwijających się modeli AI.","image":"posts/rcclx-od-meta-nowe-podejscie-do-komunikacji-gpu-na-platformach-amd-1771968745579.jpg"},{"slug":"nowy-wymiar-testowania-jittesting-od-meta-jako-odpowiedz-na-rewolucje-w-kodowaniu-1771962543039-en","title":"A new dimension of testing: JiTTesting by Meta as a response to the coding revolution","date":"2026-02-24","datetime":"2026-02-24T19:49:03","company":"Meta","summary":"Meta unveils JiTTesting – a modern approach to code testing in the era of agent-based development. What does this mean for the IT industry?","image":"posts/nowy-wymiar-testowania-jittesting-od-meta-jako-odpowiedz-na-rewolucje-w-kodowaniu-1771962543039.jpg"},{"slug":"nowy-wymiar-testowania-jittesting-od-meta-jako-odpowiedz-na-rewolucje-w-kodowaniu-1771962543039","title":"Nowy wymiar testowania: JiTTesting od Meta jako odpowiedź na rewolucję w kodowaniu","date":"2026-02-24","datetime":"2026-02-24T19:49:03","company":"Meta","summary":"Meta prezentuje JiTTesting – nowoczesne podejście do testowania kodu w erze agentowego developmentu. Co oznacza ta zmiana dla branży IT?","image":"posts/nowy-wymiar-testowania-jittesting-od-meta-jako-odpowiedz-na-rewolucje-w-kodowaniu-1771962543039.jpg"},{"slug":"czy-tradycyjne-testowanie-kodu-faktycznie-odchodzi-do-lamusa-meta-proponuje-jittesting-1771962194280","title":"Czy tradycyjne testowanie kodu faktycznie odchodzi do lamusa? Meta proponuje JiTTesting.","date":"2026-02-24","datetime":"2026-02-24T19:43:14","company":"Meta","summary":"Agentic development postawiło wyzwanie 50-letnim praktykom testowania kodu. Meta prezentuje alternatywę: Just-in-Time Testing (JiTTesting). Co to oznacza dla branży?","image":"posts/czy-tradycyjne-testowanie-kodu-faktycznie-odchodzi-do-lamusa-meta-proponuje-jittesting-1771962194280.jpg"},{"slug":"agentic-development-wywraca-tradycyjne-testowanie-czy-jittesting-to-odpowiedz-1771961865169","title":"Agentic Development wywraca tradycyjne testowanie. Czy JiTTesting to odpowiedź?","date":"2026-02-24","datetime":"2026-02-24T19:37:45","company":"Meta","summary":"Meta prezentuje koncepcję JiTTesting: odpowiedź na gwałtowne zmiany w świecie szybkiego tworzenia oprogramowania. Co to oznacza w praktyce?","image":"posts/agentic-development-wywraca-tradycyjne-testowanie-czy-jittesting-to-odpowiedz-1771961865169.jpg"},{"slug":"openai-rezygnuje-z-swe-bench-verified-co-to-oznacza-dla-oceny-postepow-w-ai-1771959699533","title":"OpenAI rezygnuje z SWE-bench Verified – co to oznacza dla oceny postępów w AI?","date":"2026-02-24","datetime":"2026-02-24T19:01:39","company":"OpenAI","summary":"OpenAI przestaje używać SWE-bench Verified – testu oceny koderskich możliwości AI. Sprawdź, dlaczego i co proponują zamiast tego.","image":"posts/openai-rezygnuje-z-swe-bench-verified-co-to-oznacza-dla-oceny-postepow-w-ai-1771959699533.jpg"},{"slug":"openai-porzuca-swe-bench-verified-co-to-oznacza-dla-branzy-1771959340933","title":"OpenAI porzuca SWE-bench Verified – co to oznacza dla branży?","date":"2026-02-24","datetime":"2026-02-24T18:55:40","company":"OpenAI","summary":"OpenAI rezygnuje z benchmarku SWE-bench Verified, wskazując na problemy z dokładnością i wiarygodnością pomiarów. Co warto wiedzieć o tej zmianie?","image":"posts/openai-porzuca-swe-bench-verified-co-to-oznacza-dla-branzy-1771959340933.jpg"},{"slug":"rozmowa-z-kevinem-scottem-co-dalej-z-ai-1771940413531","title":"Rozmowa z Kevinem Scottem – Co dalej z AI?","date":"2026-02-24","company":"Microsoft","summary":"Kevin Scott, CTO Microsoft, podzielił się swoją wizją przyszłości AI. Oto, co warto z tego wyciągnąć dla biznesu.","image":"posts/rozmowa-z-kevinem-scottem-co-dalej-z-ai-1771940413531.jpg"},{"slug":"sundar-pichai-ai-zmieni-swiat-ale-pod-pewnymi-warunkami-1771837923466","title":"Sundar Pichai: AI zmieni świat, ale pod pewnymi warunkami","date":"2026-02-23","company":"Google","summary":"Na AI Impact Summit 2026 CEO Google, Sundar Pichai, mówi o przyszłości AI i jej ogromnym wpływie na biznes oraz społeczeństwo. Co to oznacza dla nas?","image":"posts/sundar-pichai-ai-zmieni-swiat-ale-pod-pewnymi-warunkami-1771837923466.jpg"}]
+[
+  {
+    "slug": "jak-rakuten-skraca-czas-napraw-i-przyspiesza-wdrozenia-dzieki-codex-od-openai-1773259829867-en",
+    "title": "Jak Rakuten skraca czas napraw i przyspiesza wdrożenia dzięki Codex od OpenAI",
+    "date": "2026-03-11",
+    "datetime": "2026-03-11T20:10:29",
+    "company": "OpenAI",
+    "summary": "Rakuten zmniejszył czas napraw o 50% dzięki Codex, usprawniając procesy CI/CD i automatyzując wdrożenia. Sprawdź, co to oznacza dla firm rozwijających oprogramowanie.",
+    "image": "posts/jak-rakuten-skraca-czas-napraw-i-przyspiesza-wdrozenia-dzieki-codex-od-openai-1773259829867.jpg",
+    "audio": "audio/jak-rakuten-skraca-czas-napraw-i-przyspiesza-wdrozenia-dzieki-codex-od-openai-1773259829867-en.mp3"
+  },
+  {
+    "slug": "jak-rakuten-skraca-czas-napraw-i-przyspiesza-wdrozenia-dzieki-codex-od-openai-1773259829867",
+    "title": "Jak Rakuten skraca czas napraw i przyspiesza wdrożenia dzięki Codex od OpenAI",
+    "date": "2026-03-11",
+    "datetime": "2026-03-11T20:10:29",
+    "company": "OpenAI",
+    "summary": "Rakuten zmniejszył czas napraw o 50% dzięki Codex, usprawniając procesy CI/CD i automatyzując wdrożenia. Sprawdź, co to oznacza dla firm rozwijających oprogramowanie.",
+    "image": "posts/jak-rakuten-skraca-czas-napraw-i-przyspiesza-wdrozenia-dzieki-codex-od-openai-1773259829867.jpg",
+    "audio": "audio/jak-rakuten-skraca-czas-napraw-i-przyspiesza-wdrozenia-dzieki-codex-od-openai-1773259829867.mp3"
+  },
+  {
+    "slug": "jak-openai-broni-chatgpt-przed-atakami-na-prompt-injection-1773254729253-en",
+    "title": "Jak OpenAI broni ChatGPT przed atakami na prompt injection?",
+    "date": "2026-03-11",
+    "datetime": "2026-03-11T18:45:29",
+    "company": "OpenAI",
+    "summary": "OpenAI opracowuje mechanizmy zabezpieczające ChatGPT przed manipulacjami typu prompt injection i atakami socjotechnicznymi w workflowach agentów AI.",
+    "image": "posts/jak-openai-broni-chatgpt-przed-atakami-na-prompt-injection-1773254729253.jpg",
+    "audio": "audio/jak-openai-broni-chatgpt-przed-atakami-na-prompt-injection-1773254729253-en.mp3"
+  },
+  {
+    "slug": "jak-openai-broni-chatgpt-przed-atakami-na-prompt-injection-1773254729253",
+    "title": "Jak OpenAI broni ChatGPT przed atakami na prompt injection?",
+    "date": "2026-03-11",
+    "datetime": "2026-03-11T18:45:29",
+    "company": "OpenAI",
+    "summary": "OpenAI opracowuje mechanizmy zabezpieczające ChatGPT przed manipulacjami typu prompt injection i atakami socjotechnicznymi w workflowach agentów AI.",
+    "image": "posts/jak-openai-broni-chatgpt-przed-atakami-na-prompt-injection-1773254729253.jpg",
+    "audio": "audio/jak-openai-broni-chatgpt-przed-atakami-na-prompt-injection-1773254729253.mp3"
+  },
+  {
+    "slug": "wayfair-ulepsza-ecommerce-dzieki-modelom-openai-1773252188326-en",
+    "title": "Wayfair ulepsza ecommerce dzięki modelom OpenAI",
+    "date": "2026-03-11",
+    "datetime": "2026-03-11T18:03:08",
+    "company": "OpenAI",
+    "summary": "Wayfair wspiera obsługę klienta i zarządzanie katalogiem produktów za pomocą modeli OpenAI. Co to znaczy w praktyce?",
+    "image": "posts/wayfair-ulepsza-ecommerce-dzieki-modelom-openai-1773252188326.jpg",
+    "audio": "audio/wayfair-ulepsza-ecommerce-dzieki-modelom-openai-1773252188326-en.mp3"
+  },
+  {
+    "slug": "wayfair-ulepsza-ecommerce-dzieki-modelom-openai-1773252188326",
+    "title": "Wayfair ulepsza ecommerce dzięki modelom OpenAI",
+    "date": "2026-03-11",
+    "datetime": "2026-03-11T18:03:08",
+    "company": "OpenAI",
+    "summary": "Wayfair wspiera obsługę klienta i zarządzanie katalogiem produktów za pomocą modeli OpenAI. Co to znaczy w praktyce?",
+    "image": "posts/wayfair-ulepsza-ecommerce-dzieki-modelom-openai-1773252188326.jpg",
+    "audio": "audio/wayfair-ulepsza-ecommerce-dzieki-modelom-openai-1773252188326.mp3"
+  },
+  {
+    "image": "posts/undefined.jpg",
+    "audio": "audio/undefined.mp3"
+  },
+  {
+    "slug": "nowe-wytyczne-dla-modeli-llm-openai-wskazuje-kierunek-1773165758495",
+    "title": "Nowe wytyczne dla modeli LLM – OpenAI wskazuje kierunek!",
+    "date": "2026-03-10",
+    "datetime": "2026-03-10T18:02:38",
+    "company": "OpenAI",
+    "summary": "OpenAI ogłasza IH-Challenge – nową inicjatywę usprawniającą hierarchię instrukcji w modelach językowych. Jakie to przynosi możliwości i co to oznacza dla biznesu?",
+    "image": "posts/nowe-wytyczne-dla-modeli-llm-openai-wskazuje-kierunek-1773165758495.jpg",
+    "audio": "audio/nowe-wytyczne-dla-modeli-llm-openai-wskazuje-kierunek-1773165758495.mp3"
+  },
+  {
+    "slug": "interaktywne-wyjasnienia-w-chatgpt-nowe-podejscie-do-nauki-matematyki-i-nauk-scislych-1773162274661-en",
+    "title": "Interaktywne wyjaśnienia w ChatGPT: Nowe podejście do nauki matematyki i nauk ścisłych",
+    "date": "2026-03-10",
+    "datetime": "2026-03-10T17:04:34",
+    "company": "OpenAI",
+    "summary": "Nowa funkcja ChatGPT wprowadza interaktywne wyjaśnienia dla matematyki i nauk ścisłych. Wyjaśniamy, co to oznacza dla edukacji i praktycznego wykorzystania.",
+    "image": "posts/interaktywne-wyjasnienia-w-chatgpt-nowe-podejscie-do-nauki-matematyki-i-nauk-scislych-1773162274661.jpg",
+    "audio": "audio/interaktywne-wyjasnienia-w-chatgpt-nowe-podejscie-do-nauki-matematyki-i-nauk-scislych-1773162274661-en.mp3"
+  },
+  {
+    "slug": "interaktywne-wyjasnienia-w-chatgpt-nowe-podejscie-do-nauki-matematyki-i-nauk-scislych-1773162274661",
+    "title": "Interaktywne wyjaśnienia w ChatGPT: Nowe podejście do nauki matematyki i nauk ścisłych",
+    "date": "2026-03-10",
+    "datetime": "2026-03-10T17:04:34",
+    "company": "OpenAI",
+    "summary": "Nowa funkcja ChatGPT wprowadza interaktywne wyjaśnienia dla matematyki i nauk ścisłych. Wyjaśniamy, co to oznacza dla edukacji i praktycznego wykorzystania.",
+    "image": "posts/interaktywne-wyjasnienia-w-chatgpt-nowe-podejscie-do-nauki-matematyki-i-nauk-scislych-1773162274661.jpg",
+    "audio": "audio/interaktywne-wyjasnienia-w-chatgpt-nowe-podejscie-do-nauki-matematyki-i-nauk-scislych-1773162274661.mp3"
+  },
+  {
+    "slug": "gemini-w-google-sheets-nowa-era-analizy-danych-1773147899477-en",
+    "title": "Gemini w Google Sheets: Nowa era analizy danych?",
+    "date": "2026-03-10",
+    "datetime": "2026-03-10T13:04:59",
+    "company": "Google",
+    "summary": "Google rozwija możliwości Gemini w Sheets. AI wchodzi na wyższy poziom, od automatyzacji podstawowych zadań po zaawansowaną analizę danych.",
+    "image": "posts/gemini-w-google-sheets-nowa-era-analizy-danych-1773147899477.jpg",
+    "audio": "audio/gemini-w-google-sheets-nowa-era-analizy-danych-1773147899477-en.mp3"
+  },
+  {
+    "slug": "gemini-w-google-sheets-nowa-era-analizy-danych-1773147899477",
+    "title": "Gemini w Google Sheets: Nowa era analizy danych?",
+    "date": "2026-03-10",
+    "datetime": "2026-03-10T13:04:59",
+    "company": "Google",
+    "summary": "Google rozwija możliwości Gemini w Sheets. AI wchodzi na wyższy poziom, od automatyzacji podstawowych zadań po zaawansowaną analizę danych.",
+    "image": "posts/gemini-w-google-sheets-nowa-era-analizy-danych-1773147899477.jpg",
+    "audio": "audio/gemini-w-google-sheets-nowa-era-analizy-danych-1773147899477.mp3"
+  },
+  {
+    "slug": "openai-przejmuje-promptfoo-krok-w-strone-bezpieczenstwa-ai-1773075754308-en",
+    "title": "OpenAI przejmuje Promptfoo – krok w stronę bezpieczeństwa AI",
+    "date": "2026-03-09",
+    "datetime": "2026-03-09T17:02:34",
+    "company": "OpenAI",
+    "summary": "OpenAI ogłasza przejęcie Promptfoo – platformy wspierającej zabezpieczanie systemów AI w fazie rozwoju. Co to oznacza w praktyce?",
+    "image": "posts/openai-przejmuje-promptfoo-krok-w-strone-bezpieczenstwa-ai-1773075754308.jpg"
+  },
+  {
+    "slug": "openai-przejmuje-promptfoo-krok-w-strone-bezpieczenstwa-ai-1773075754308",
+    "title": "OpenAI przejmuje Promptfoo – krok w stronę bezpieczeństwa AI",
+    "date": "2026-03-09",
+    "datetime": "2026-03-09T17:02:34",
+    "company": "OpenAI",
+    "summary": "OpenAI ogłasza przejęcie Promptfoo – platformy wspierającej zabezpieczanie systemów AI w fazie rozwoju. Co to oznacza w praktyce?",
+    "image": "posts/openai-przejmuje-promptfoo-krok-w-strone-bezpieczenstwa-ai-1773075754308.jpg"
+  },
+  {
+    "slug": "meta-wprowadza-advanced-browsing-protection-w-messengerze-co-to-oznacza-dla-uzytkownikow-i-biznesu-1773072143109-en",
+    "title": "Meta wprowadza Advanced Browsing Protection w Messengerze – co to oznacza dla użytkowników i biznesu?",
+    "date": "2026-03-09",
+    "datetime": "2026-03-09T16:02:23",
+    "company": "Meta",
+    "summary": "Meta rozwija ochronę prywatności w Messengerze dzięki Advanced Browsing Protection. Jak to działa, jakie są wyzwania i co realnie oznacza dla Twojego bezpieczeństwa?",
+    "image": "posts/meta-wprowadza-advanced-browsing-protection-w-messengerze-co-to-oznacza-dla-uzytkownikow-i-biznesu-1773072143109.jpg"
+  },
+  {
+    "slug": "meta-wprowadza-advanced-browsing-protection-w-messengerze-co-to-oznacza-dla-uzytkownikow-i-biznesu-1773072143109",
+    "title": "Meta wprowadza Advanced Browsing Protection w Messengerze – co to oznacza dla użytkowników i biznesu?",
+    "date": "2026-03-09",
+    "datetime": "2026-03-09T16:02:23",
+    "company": "Meta",
+    "summary": "Meta rozwija ochronę prywatności w Messengerze dzięki Advanced Browsing Protection. Jak to działa, jakie są wyzwania i co realnie oznacza dla Twojego bezpieczeństwa?",
+    "image": "posts/meta-wprowadza-advanced-browsing-protection-w-messengerze-co-to-oznacza-dla-uzytkownikow-i-biznesu-1773072143109.jpg"
+  },
+  {
+    "slug": "anthropic-i-mozilla-lacza-sily-dla-bezpieczenstwa-w-firefox-1772821403576-en",
+    "title": "Anthropic i Mozilla łączą siły dla bezpieczeństwa w Firefox",
+    "date": "2026-03-06",
+    "datetime": "2026-03-06T18:23:23",
+    "company": "Anthropic",
+    "summary": "Anthropic nawiązuje współpracę z Mozillą, aby znacząco poprawić bezpieczeństwo przeglądarki Firefox. Co to oznacza w praktyce dla użytkowników i jak sztuczna inteligencja może pomóc?",
+    "image": "posts/anthropic-i-mozilla-lacza-sily-dla-bezpieczenstwa-w-firefox-1772821403576.jpg"
+  },
+  {
+    "slug": "anthropic-i-mozilla-lacza-sily-dla-bezpieczenstwa-w-firefox-1772821403576",
+    "title": "Anthropic i Mozilla łączą siły dla bezpieczeństwa w Firefox",
+    "date": "2026-03-06",
+    "datetime": "2026-03-06T18:23:23",
+    "company": "Anthropic",
+    "summary": "Anthropic nawiązuje współpracę z Mozillą, aby znacząco poprawić bezpieczeństwo przeglądarki Firefox. Co to oznacza w praktyce dla użytkowników i jak sztuczna inteligencja może pomóc?",
+    "image": "posts/anthropic-i-mozilla-lacza-sily-dla-bezpieczenstwa-w-firefox-1772821403576.jpg"
+  },
+  {
+    "slug": "jak-google-wspiera-ochrone-przyrody-dzieki-speciesnet-1772820428638-en",
+    "title": "Jak Google wspiera ochronę przyrody dzięki SpeciesNet?",
+    "date": "2026-03-06",
+    "datetime": "2026-03-06T18:07:08",
+    "company": "Google",
+    "summary": "Google wprowadza SpeciesNet – open-source'owy model AI, który zmienia podejście do ochrony dzikiej przyrody na całym świecie.",
+    "image": "posts/jak-google-wspiera-ochrone-przyrody-dzieki-speciesnet-1772820428638.jpg"
+  },
+  {
+    "slug": "jak-google-wspiera-ochrone-przyrody-dzieki-speciesnet-1772820428638",
+    "title": "Jak Google wspiera ochronę przyrody dzięki SpeciesNet?",
+    "date": "2026-03-06",
+    "datetime": "2026-03-06T18:07:08",
+    "company": "Google",
+    "summary": "Google wprowadza SpeciesNet – open-source'owy model AI, który zmienia podejście do ochrony dzikiej przyrody na całym świecie.",
+    "image": "posts/jak-google-wspiera-ochrone-przyrody-dzieki-speciesnet-1772820428638.jpg"
+  },
+  {
+    "slug": "codex-security-ai-na-strazy-bezpieczenstwa-aplikacji-1772820220672-en",
+    "title": "Codex Security: AI na straży bezpieczeństwa aplikacji",
+    "date": "2026-03-06",
+    "datetime": "2026-03-06T18:03:40",
+    "company": "OpenAI",
+    "summary": "OpenAI prezentuje nowy AI agent do analizy i naprawy luk w aplikacjach. Co to oznacza dla deweloperów i firm?",
+    "image": "posts/codex-security-ai-na-strazy-bezpieczenstwa-aplikacji-1772820220672.jpg"
+  },
+  {
+    "slug": "codex-security-ai-na-strazy-bezpieczenstwa-aplikacji-1772820220672",
+    "title": "Codex Security: AI na straży bezpieczeństwa aplikacji",
+    "date": "2026-03-06",
+    "datetime": "2026-03-06T18:03:40",
+    "company": "OpenAI",
+    "summary": "OpenAI prezentuje nowy AI agent do analizy i naprawy luk w aplikacjach. Co to oznacza dla deweloperów i firm?",
+    "image": "posts/codex-security-ai-na-strazy-bezpieczenstwa-aplikacji-1772820220672.jpg"
+  },
+  {
+    "slug": "balyasny-asset-management-ai-w-inwestycjach-dzieki-gpt-5-4-1772809317492-en",
+    "title": "Balyasny Asset Management: AI w inwestycjach dzięki GPT-5.4",
+    "date": "2026-03-06",
+    "datetime": "2026-03-06T15:01:57",
+    "company": "OpenAI",
+    "summary": "Nowatorskie podejście Balyasny Asset Management wykorzystujące GPT-5.4. Jak zmienia analizę inwestycyjną?",
+    "image": "posts/balyasny-asset-management-ai-w-inwestycjach-dzieki-gpt-5-4-1772809317492.jpg"
+  },
+  {
+    "slug": "balyasny-asset-management-ai-w-inwestycjach-dzieki-gpt-5-4-1772809317492",
+    "title": "Balyasny Asset Management: AI w inwestycjach dzięki GPT-5.4",
+    "date": "2026-03-06",
+    "datetime": "2026-03-06T15:01:57",
+    "company": "OpenAI",
+    "summary": "Nowatorskie podejście Balyasny Asset Management wykorzystujące GPT-5.4. Jak zmienia analizę inwestycyjną?",
+    "image": "posts/balyasny-asset-management-ai-w-inwestycjach-dzieki-gpt-5-4-1772809317492.jpg"
+  },
+  {
+    "slug": "anthropic-i-wspolpraca-z-departamentem-wojny-usa-co-to-oznacza-1772758096214-en",
+    "title": "Anthropic i współpraca z Departamentem Wojny USA – co to oznacza?",
+    "date": "2026-03-06",
+    "datetime": "2026-03-06T00:48:16",
+    "company": "Anthropic",
+    "summary": "Anthropic współpracuje z Departamentem Wojny USA nad rozwojem AI. Sprawdzamy kluczowe implikacje technologiczne i etyczne dla tej współpracy.",
+    "image": "posts/anthropic-i-wspolpraca-z-departamentem-wojny-usa-co-to-oznacza-1772758096214.jpg"
+  },
+  {
+    "slug": "anthropic-i-wspolpraca-z-departamentem-wojny-usa-co-to-oznacza-1772758096214",
+    "title": "Anthropic i współpraca z Departamentem Wojny USA – co to oznacza?",
+    "date": "2026-03-06",
+    "datetime": "2026-03-06T00:48:16",
+    "company": "Anthropic",
+    "summary": "Anthropic współpracuje z Departamentem Wojny USA nad rozwojem AI. Sprawdzamy kluczowe implikacje technologiczne i etyczne dla tej współpracy.",
+    "image": "posts/anthropic-i-wspolpraca-z-departamentem-wojny-usa-co-to-oznacza-1772758096214.jpg"
+  },
+  {
+    "slug": "5-modeli-wartosci-ai-klucz-do-biznesowej-transformacji-1772747850044-en",
+    "title": "5 modeli wartości AI: klucz do biznesowej transformacji",
+    "date": "2026-03-05",
+    "datetime": "2026-03-05T21:57:30",
+    "company": "OpenAI",
+    "summary": "OpenAI przedstawia 5 modeli wartości AI, które mogą zrewolucjonizować sposób zarządzania, procesy i przewagę biznesową. Jak wykorzystać te modele w praktyce?",
+    "image": "posts/5-modeli-wartosci-ai-klucz-do-biznesowej-transformacji-1772747850044.jpg"
+  },
+  {
+    "slug": "5-modeli-wartosci-ai-klucz-do-biznesowej-transformacji-1772747850044",
+    "title": "5 modeli wartości AI: klucz do biznesowej transformacji",
+    "date": "2026-03-05",
+    "datetime": "2026-03-05T21:57:30",
+    "company": "OpenAI",
+    "summary": "OpenAI przedstawia 5 modeli wartości AI, które mogą zrewolucjonizować sposób zarządzania, procesy i przewagę biznesową. Jak wykorzystać te modele w praktyce?",
+    "image": "posts/5-modeli-wartosci-ai-klucz-do-biznesowej-transformacji-1772747850044.jpg"
+  },
+  {
+    "slug": "jak-dziala-ai-google-w-wizualnych-wyszukiwaniach-1772733834488-en",
+    "title": "Jak działa AI Google w wizualnych wyszukiwaniach?",
+    "date": "2026-03-05",
+    "datetime": "2026-03-05T18:03:54",
+    "company": "Google",
+    "summary": "Google wyjaśnia, jak ich algorytmy AI wspierają wizualne wyszukiwania, wykorzystując metodę query fan-out. Zobacz, co to oznacza w praktyce.",
+    "image": "posts/jak-dziala-ai-google-w-wizualnych-wyszukiwaniach-1772733834488.jpg"
+  },
+  {
+    "slug": "jak-dziala-ai-google-w-wizualnych-wyszukiwaniach-1772733834488",
+    "title": "Jak działa AI Google w wizualnych wyszukiwaniach?",
+    "date": "2026-03-05",
+    "datetime": "2026-03-05T18:03:54",
+    "company": "Google",
+    "summary": "Google wyjaśnia, jak ich algorytmy AI wspierają wizualne wyszukiwania, wykorzystując metodę query fan-out. Zobacz, co to oznacza w praktyce.",
+    "image": "posts/jak-dziala-ai-google-w-wizualnych-wyszukiwaniach-1772733834488.jpg"
+  },
+  {
+    "slug": "reasoning-models-i-kontrola-procesu-myslenia-nowa-inicjatywa-openai-1772733702085-en",
+    "title": "Reasoning Models i kontrola procesu myślenia – nowa inicjatywa OpenAI",
+    "date": "2026-03-05",
+    "datetime": "2026-03-05T18:01:42",
+    "company": "OpenAI",
+    "summary": "OpenAI wprowadza CoT-Control: nowy sposób na monitorowanie modeli reasoningowych. Co to oznacza dla biznesu i bezpieczeństwa AI?",
+    "image": "posts/reasoning-models-i-kontrola-procesu-myslenia-nowa-inicjatywa-openai-1772733702085.jpg"
+  },
+  {
+    "slug": "reasoning-models-i-kontrola-procesu-myslenia-nowa-inicjatywa-openai-1772733702085",
+    "title": "Reasoning Models i kontrola procesu myślenia – nowa inicjatywa OpenAI",
+    "date": "2026-03-05",
+    "datetime": "2026-03-05T18:01:42",
+    "company": "OpenAI",
+    "summary": "OpenAI wprowadza CoT-Control: nowy sposób na monitorowanie modeli reasoningowych. Co to oznacza dla biznesu i bezpieczeństwa AI?",
+    "image": "posts/reasoning-models-i-kontrola-procesu-myslenia-nowa-inicjatywa-openai-1772733702085.jpg"
+  },
+  {
+    "slug": "jak-openai-chce-zmieniac-edukacje-dzieki-sztucznej-inteligencji-1772730110704-en",
+    "title": "Jak OpenAI chce zmieniać edukację dzięki sztucznej inteligencji",
+    "date": "2026-03-05",
+    "datetime": "2026-03-05T17:01:50",
+    "company": "OpenAI",
+    "summary": "OpenAI zaprezentowało nowe narzędzia i zasoby dla szkół oraz uczelni, które mają pomóc w rozwoju kompetencji AI. Czy to przełom w edukacji?",
+    "image": "posts/jak-openai-chce-zmieniac-edukacje-dzieki-sztucznej-inteligencji-1772730110704.jpg"
+  },
+  {
+    "slug": "jak-openai-chce-zmieniac-edukacje-dzieki-sztucznej-inteligencji-1772730110704",
+    "title": "Jak OpenAI chce zmieniać edukację dzięki sztucznej inteligencji",
+    "date": "2026-03-05",
+    "datetime": "2026-03-05T17:01:50",
+    "company": "OpenAI",
+    "summary": "OpenAI zaprezentowało nowe narzędzia i zasoby dla szkół oraz uczelni, które mają pomóc w rozwoju kompetencji AI. Czy to przełom w edukacji?",
+    "image": "posts/jak-openai-chce-zmieniac-edukacje-dzieki-sztucznej-inteligencji-1772730110704.jpg"
+  },
+  {
+    "slug": "nowosci-z-google-ai-co-przyniosl-luty-2026-1772728443614-en",
+    "title": "Nowości z Google AI – co przyniósł luty 2026?",
+    "date": "2026-03-05",
+    "datetime": "2026-03-05T16:34:03",
+    "company": "Google",
+    "summary": "Google zaprezentowało najnowsze aktualizacje w swoich produktach AI. Sprawdzam, co to oznacza w praktyce i jakie szanse niosą dla biznesu.",
+    "image": "posts/nowosci-z-google-ai-co-przyniosl-luty-2026-1772728443614.jpg"
+  },
+  {
+    "slug": "nowosci-z-google-ai-co-przyniosl-luty-2026-1772728443614",
+    "title": "Nowości z Google AI – co przyniósł luty 2026?",
+    "date": "2026-03-05",
+    "datetime": "2026-03-05T16:34:03",
+    "company": "Google",
+    "summary": "Google zaprezentowało najnowsze aktualizacje w swoich produktach AI. Sprawdzam, co to oznacza w praktyce i jakie szanse niosą dla biznesu.",
+    "image": "posts/nowosci-z-google-ai-co-przyniosl-luty-2026-1772728443614.jpg"
+  },
+  {
+    "slug": "gpt-5-2-pro-wspiera-badania-nad-amplitudami-grawitacyjnymi-1772647314654-en",
+    "title": "GPT-5.2 Pro wspiera badania nad amplitudami grawitacyjnymi",
+    "date": "2026-03-04",
+    "datetime": "2026-03-04T18:01:54",
+    "company": "OpenAI",
+    "summary": "OpenAI z GPT-5.2 Pro wchodzi na wyższy poziom wspierania badań w dziedzinie fizyki teoretycznej. Co to oznacza dla nauki i technologii?",
+    "image": "posts/gpt-5-2-pro-wspiera-badania-nad-amplitudami-grawitacyjnymi-1772647314654.jpg"
+  },
+  {
+    "slug": "gpt-5-2-pro-wspiera-badania-nad-amplitudami-grawitacyjnymi-1772647314654",
+    "title": "GPT-5.2 Pro wspiera badania nad amplitudami grawitacyjnymi",
+    "date": "2026-03-04",
+    "datetime": "2026-03-04T18:01:54",
+    "company": "OpenAI",
+    "summary": "OpenAI z GPT-5.2 Pro wchodzi na wyższy poziom wspierania badań w dziedzinie fizyki teoretycznej. Co to oznacza dla nauki i technologii?",
+    "image": "posts/gpt-5-2-pro-wspiera-badania-nad-amplitudami-grawitacyjnymi-1772647314654.jpg"
+  },
+  {
+    "slug": "canvas-w-ai-mode-od-google-nowa-jakosc-w-wyszukiwaniu-1772643970363-en",
+    "title": "Canvas w AI Mode od Google – nowa jakość w wyszukiwaniu?",
+    "date": "2026-03-04",
+    "datetime": "2026-03-04T17:06:10",
+    "company": "Google",
+    "summary": "Google udostępnia w USA funkcję Canvas w AI Mode. Pisanie dokumentów i interaktywne projekty w obrębie wyszukiwania mogą zmienić sposób pracy.",
+    "image": "posts/canvas-w-ai-mode-od-google-nowa-jakosc-w-wyszukiwaniu-1772643970363.jpg"
+  },
+  {
+    "slug": "canvas-w-ai-mode-od-google-nowa-jakosc-w-wyszukiwaniu-1772643970363",
+    "title": "Canvas w AI Mode od Google – nowa jakość w wyszukiwaniu?",
+    "date": "2026-03-04",
+    "datetime": "2026-03-04T17:06:10",
+    "company": "Google",
+    "summary": "Google udostępnia w USA funkcję Canvas w AI Mode. Pisanie dokumentów i interaktywne projekty w obrębie wyszukiwania mogą zmienić sposób pracy.",
+    "image": "posts/canvas-w-ai-mode-od-google-nowa-jakosc-w-wyszukiwaniu-1772643970363.jpg"
+  },
+  {
+    "slug": "openai-zmienia-edukacje-narzedzie-do-mierzenia-efektow-uczenia-sie-z-ai-1772643696516-en",
+    "title": "OpenAI zmienia edukację: narzędzie do mierzenia efektów uczenia się z AI",
+    "date": "2026-03-04",
+    "datetime": "2026-03-04T17:01:36",
+    "company": "OpenAI",
+    "summary": "OpenAI prezentuje nowy zestaw narzędzi, który pozwoli mierzyć wpływ AI na wyniki edukacyjne w różnych środowiskach i na przestrzeni czasu.",
+    "image": "posts/openai-zmienia-edukacje-narzedzie-do-mierzenia-efektow-uczenia-sie-z-ai-1772643696516.jpg"
+  },
+  {
+    "slug": "openai-zmienia-edukacje-narzedzie-do-mierzenia-efektow-uczenia-sie-z-ai-1772643696516",
+    "title": "OpenAI zmienia edukację: narzędzie do mierzenia efektów uczenia się z AI",
+    "date": "2026-03-04",
+    "datetime": "2026-03-04T17:01:36",
+    "company": "OpenAI",
+    "summary": "OpenAI prezentuje nowy zestaw narzędzi, który pozwoli mierzyć wpływ AI na wyniki edukacyjne w różnych środowiskach i na przestrzeni czasu.",
+    "image": "posts/openai-zmienia-edukacje-narzedzie-do-mierzenia-efektow-uczenia-sie-z-ai-1772643696516.jpg"
+  },
+  {
+    "slug": "gpt-5-3-system-card-instant-co-to-oznacza-dla-biznesu-1772560646652-en",
+    "title": "GPT-5.3: System Card Instant – co to oznacza dla biznesu?",
+    "date": "2026-03-03",
+    "datetime": "2026-03-03T17:57:26",
+    "company": "OpenAI",
+    "summary": "OpenAI zaprezentował funkcję Instant w najnowszej karcie systemowej dla GPT-5.3. Co jest nowego i jak to wpłynie na zastosowania AI w praktyce?",
+    "image": "posts/gpt-5-3-system-card-instant-co-to-oznacza-dla-biznesu-1772560646652.jpg"
+  },
+  {
+    "slug": "gpt-5-3-system-card-instant-co-to-oznacza-dla-biznesu-1772560646652",
+    "title": "GPT-5.3: System Card Instant – co to oznacza dla biznesu?",
+    "date": "2026-03-03",
+    "datetime": "2026-03-03T17:57:26",
+    "company": "OpenAI",
+    "summary": "OpenAI zaprezentował funkcję Instant w najnowszej karcie systemowej dla GPT-5.3. Co jest nowego i jak to wpłynie na zastosowania AI w praktyce?",
+    "image": "posts/gpt-5-3-system-card-instant-co-to-oznacza-dla-biznesu-1772560646652.jpg"
+  },
+  {
+    "slug": "projekt-genie-od-google-tworzenie-swiatow-za-pomoca-promtow-1772557360258-en",
+    "title": "Projekt Genie od Google – Tworzenie światów za pomocą promtów",
+    "date": "2026-03-03",
+    "datetime": "2026-03-03T17:02:40",
+    "company": "Google",
+    "summary": "Google DeepMind zaprezentowało Project Genie, narzędzie do generowania światów za pomocą promtów. Sprawdź, co kryje się za tym projektem i jakie daje możliwości.",
+    "image": "posts/projekt-genie-od-google-tworzenie-swiatow-za-pomoca-promtow-1772557360258.jpg"
+  },
+  {
+    "slug": "projekt-genie-od-google-tworzenie-swiatow-za-pomoca-promtow-1772557360258",
+    "title": "Projekt Genie od Google – Tworzenie światów za pomocą promtów",
+    "date": "2026-03-03",
+    "datetime": "2026-03-03T17:02:40",
+    "company": "Google",
+    "summary": "Google DeepMind zaprezentowało Project Genie, narzędzie do generowania światów za pomocą promtów. Sprawdź, co kryje się za tym projektem i jakie daje możliwości.",
+    "image": "posts/projekt-genie-od-google-tworzenie-swiatow-za-pomoca-promtow-1772557360258.jpg"
+  },
+  {
+    "slug": "ffmpeg-w-meta-rewolucja-w-przetwarzaniu-multimediow-na-duza-skale-1772481711606-en",
+    "title": "FFmpeg w Meta: Rewolucja w przetwarzaniu multimediów na dużą skalę",
+    "date": "2026-03-02",
+    "datetime": "2026-03-02T20:01:51",
+    "company": "Meta",
+    "summary": "Meta intensywnie rozwija możliwości narzędzia FFmpeg w przetwarzaniu mediów na ogromną skalę. Zobacz, co to oznacza w praktyce.",
+    "image": "posts/ffmpeg-w-meta-rewolucja-w-przetwarzaniu-multimediow-na-duza-skale-1772481711606.jpg"
+  },
+  {
+    "slug": "ffmpeg-w-meta-rewolucja-w-przetwarzaniu-multimediow-na-duza-skale-1772481711606",
+    "title": "FFmpeg w Meta: Rewolucja w przetwarzaniu multimediów na dużą skalę",
+    "date": "2026-03-02",
+    "datetime": "2026-03-02T20:01:51",
+    "company": "Meta",
+    "summary": "Meta intensywnie rozwija możliwości narzędzia FFmpeg w przetwarzaniu mediów na ogromną skalę. Zobacz, co to oznacza w praktyce.",
+    "image": "posts/ffmpeg-w-meta-rewolucja-w-przetwarzaniu-multimediow-na-duza-skale-1772481711606.jpg"
+  },
+  {
+    "slug": "google-wspiera-mieszkancow-massachusetts-bezplatne-szkolenia-z-ai-dla-kazdego-1772475869055-en",
+    "title": "Google wspiera mieszkańców Massachusetts: bezpłatne szkolenia z AI dla każdego!",
+    "date": "2026-03-02",
+    "datetime": "2026-03-02T18:24:29",
+    "company": "Google",
+    "summary": "Google rusza z nową inicjatywą w Massachusetts – darmowe szkolenia z AI dla mieszkańców stanu. Co to oznacza w praktyce?",
+    "image": "posts/google-wspiera-mieszkancow-massachusetts-bezplatne-szkolenia-z-ai-dla-kazdego-1772475869055.jpg",
+    "audio": "audio/google-wspiera-mieszkancow-massachusetts-bezplatne-szkolenia-z-ai-dla-kazdego-1772475869055-en.mp3"
+  },
+  {
+    "slug": "google-wspiera-mieszkancow-massachusetts-bezplatne-szkolenia-z-ai-dla-kazdego-1772475869055",
+    "title": "Google wspiera mieszkańców Massachusetts: bezpłatne szkolenia z AI dla każdego!",
+    "date": "2026-03-02",
+    "datetime": "2026-03-02T18:24:29",
+    "company": "Google",
+    "summary": "Google rusza z nową inicjatywą w Massachusetts – darmowe szkolenia z AI dla mieszkańców stanu. Co to oznacza w praktyce?",
+    "image": "posts/google-wspiera-mieszkancow-massachusetts-bezplatne-szkolenia-z-ai-dla-kazdego-1772475869055.jpg",
+    "audio": "audio/google-wspiera-mieszkancow-massachusetts-bezplatne-szkolenia-z-ai-dla-kazdego-1772475869055.mp3"
+  },
+  {
+    "slug": "openai-wchodzi-w-wspolprace-z-departamentem-obrony-usa-1772473196909-en",
+    "title": "OpenAI wchodzi w współpracę z Departamentem Obrony USA",
+    "date": "2026-03-02",
+    "datetime": "2026-03-02T17:39:56",
+    "company": "OpenAI",
+    "summary": "OpenAI podpisało umowę z Departamentem Obrony USA. Co to oznacza dla rozwoju AI w obszarach tajnych i jakie wyzwania się z tym wiążą?",
+    "image": "posts/openai-wchodzi-w-wspolprace-z-departamentem-obrony-usa-1772473196909.jpg"
+  },
+  {
+    "slug": "openai-wchodzi-w-wspolprace-z-departamentem-obrony-usa-1772473196909",
+    "title": "OpenAI wchodzi w współpracę z Departamentem Obrony USA",
+    "date": "2026-03-02",
+    "datetime": "2026-03-02T17:39:56",
+    "company": "OpenAI",
+    "summary": "OpenAI podpisało umowę z Departamentem Obrony USA. Co to oznacza dla rozwoju AI w obszarach tajnych i jakie wyzwania się z tym wiążą?",
+    "image": "posts/openai-wchodzi-w-wspolprace-z-departamentem-obrony-usa-1772473196909.jpg",
+    "audio": "audio/openai-wchodzi-w-wspolprace-z-departamentem-obrony-usa-1772473196909.mp3"
+  },
+  {
+    "slug": "meta-inwestuje-w-jemalloc-co-to-oznacza-dla-infrastruktury-1772470930841-en",
+    "title": "Meta inwestuje w jemalloc: Co to oznacza dla infrastruktury?",
+    "date": "2026-03-02",
+    "datetime": "2026-03-02T17:02:10",
+    "company": "Meta",
+    "summary": "Meta zacieśnia współpracę z jemalloc, stawiając na modernizację infrastruktury pamięci. Czy to krok w stronę jeszcze większej wydajności?",
+    "image": "posts/meta-inwestuje-w-jemalloc-co-to-oznacza-dla-infrastruktury-1772470930841.jpg"
+  },
+  {
+    "slug": "meta-inwestuje-w-jemalloc-co-to-oznacza-dla-infrastruktury-1772470930841",
+    "title": "Meta inwestuje w jemalloc: Co to oznacza dla infrastruktury?",
+    "date": "2026-03-02",
+    "datetime": "2026-03-02T17:02:10",
+    "company": "Meta",
+    "summary": "Meta zacieśnia współpracę z jemalloc, stawiając na modernizację infrastruktury pamięci. Czy to krok w stronę jeszcze większej wydajności?",
+    "image": "posts/meta-inwestuje-w-jemalloc-co-to-oznacza-dla-infrastruktury-1772470930841.jpg"
+  },
+  {
+    "slug": "openai-i-departament-wojny-ai-w-srodowiskach-klasyfikowanych-1772321968790-en",
+    "title": "OpenAI and the Department of War – AI in Classified Environments",
+    "date": "2026-02-28",
+    "datetime": "2026-02-28T23:39:28",
+    "company": "OpenAI",
+    "summary": "OpenAI has signed an agreement with the Department of War, defining the rules for using their technology in environments with the highest security levels.",
+    "image": "posts/openai-i-departament-wojny-ai-w-srodowiskach-klasyfikowanych-1772321968790.jpg"
+  },
+  {
+    "slug": "openai-i-departament-wojny-ai-w-srodowiskach-klasyfikowanych-1772321968790",
+    "title": "OpenAI i Departament Wojny – AI w środowiskach klasyfikowanych",
+    "date": "2026-02-28",
+    "datetime": "2026-02-28T23:39:28",
+    "company": "OpenAI",
+    "summary": "OpenAI podpisało umowę z Departamentem Wojny, która definiuje zasady użycia ich technologii w środowiskach o najwyższym poziomie bezpieczeństwa.",
+    "image": "posts/openai-i-departament-wojny-ai-w-srodowiskach-klasyfikowanych-1772321968790.jpg"
+  },
+  {
+    "slug": "openai-nawiazuje-wspolprace-z-departamentem-obrony-usa-kluczowe-fakty-1772310990081-en",
+    "title": "OpenAI establishes partnership with the US Department of Defense – key facts",
+    "date": "2026-02-28",
+    "datetime": "2026-02-28T20:36:30",
+    "company": "OpenAI",
+    "summary": "OpenAI announced a partnership with the US Department of Defense, focusing on safety, legal accountability, and implementing AI in classified environments.",
+    "image": "posts/openai-nawiazuje-wspolprace-z-departamentem-obrony-usa-kluczowe-fakty-1772310990081.jpg"
+  },
+  {
+    "slug": "openai-nawiazuje-wspolprace-z-departamentem-obrony-usa-kluczowe-fakty-1772310990081",
+    "title": "OpenAI nawiązuje współpracę z Departamentem Obrony USA – kluczowe fakty",
+    "date": "2026-02-28",
+    "datetime": "2026-02-28T20:36:30",
+    "company": "OpenAI",
+    "summary": "OpenAI ogłosiło współpracę z Departamentem Obrony USA, skupiając się na bezpieczeństwie, odpowiedzialności prawnej i wdrażaniu AI w środowiskach o podwyższonej tajności.",
+    "image": "posts/openai-nawiazuje-wspolprace-z-departamentem-obrony-usa-kluczowe-fakty-1772310990081.jpg"
+  },
+  {
+    "slug": "anthropic-rozmawia-z-departamentem-wojny-co-to-oznacza-dla-ai-1772259688777-en",
+    "title": "Anthropic in Talks with the Department of Defense – What Does This Mean for AI?",
+    "date": "2026-02-28",
+    "datetime": "2026-02-28T06:21:28",
+    "company": "Anthropic",
+    "summary": "Anthropic has announced that it is in discussions with the US Department of Defense, which could impact AI security and applications. Here, we explore the key aspects.",
+    "image": "posts/anthropic-rozmawia-z-departamentem-wojny-co-to-oznacza-dla-ai-1772259688777.jpg"
+  },
+  {
+    "slug": "anthropic-rozmawia-z-departamentem-wojny-co-to-oznacza-dla-ai-1772259688777",
+    "title": "Anthropic rozmawia z Departamentem Wojny – co to oznacza dla AI?",
+    "date": "2026-02-28",
+    "datetime": "2026-02-28T06:21:28",
+    "company": "Anthropic",
+    "summary": "Anthropic ogłosił, że prowadzi rozmowy z Departamentem Wojny USA, co może mieć wpływ na bezpieczeństwo i zastosowania AI. Omawiam kluczowe aspekty.",
+    "image": "posts/anthropic-rozmawia-z-departamentem-wojny-co-to-oznacza-dla-ai-1772259688777.jpg"
+  },
+  {
+    "slug": "openai-i-amazon-nowa-era-partnerstwa-ai-1772199071142-en",
+    "title": "OpenAI and Amazon: a new era of AI partnership",
+    "date": "2026-02-27",
+    "datetime": "2026-02-27T13:31:11",
+    "company": "OpenAI",
+    "summary": "OpenAI and Amazon enter into a strategic partnership that could significantly reshape the AI landscape in corporations.",
+    "image": "posts/openai-i-amazon-nowa-era-partnerstwa-ai-1772199071142.jpg"
+  },
+  {
+    "slug": "openai-i-amazon-nowa-era-partnerstwa-ai-1772199071142",
+    "title": "OpenAI i Amazon: nowa era partnerstwa AI",
+    "date": "2026-02-27",
+    "datetime": "2026-02-27T13:31:11",
+    "company": "OpenAI",
+    "summary": "OpenAI i Amazon nawiązują strategiczne partnerstwo, które może znacząco zmienić krajobraz AI w korporacjach.",
+    "image": "posts/openai-i-amazon-nowa-era-partnerstwa-ai-1772199071142.jpg"
+  },
+  {
+    "slug": "google-rusza-z-bezplatnym-szkoleniem-ai-dla-mieszkancow-massachusetts-1772132832669-en",
+    "title": "Google launches free AI training for Massachusetts residents",
+    "date": "2026-02-26",
+    "datetime": "2026-02-26T19:07:12",
+    "company": "Google",
+    "summary": "Google, in collaboration with the Massachusetts AI Hub, launches an initiative offering free access to AI training for all state residents.",
+    "image": "posts/google-rusza-z-bezplatnym-szkoleniem-ai-dla-mieszkancow-massachusetts-1772132832669.jpg"
+  },
+  {
+    "slug": "google-rusza-z-bezplatnym-szkoleniem-ai-dla-mieszkancow-massachusetts-1772132832669",
+    "title": "Google rusza z bezpłatnym szkoleniem AI dla mieszkańców Massachusetts",
+    "date": "2026-02-26",
+    "datetime": "2026-02-26T19:07:12",
+    "company": "Google",
+    "summary": "Google we współpracy z Massachusetts AI Hub uruchamia inicjatywę, która oferuje bezpłatny dostęp do szkoleń w zakresie AI dla wszystkich mieszkańców stanu.",
+    "image": "posts/google-rusza-z-bezplatnym-szkoleniem-ai-dla-mieszkancow-massachusetts-1772132832669.jpg"
+  },
+  {
+    "slug": "czy-ai-w-tlumaczeniach-wlasnie-zrobila-duzy-krok-1772129254599-en",
+    "title": "Has AI in translations just taken a big step?",
+    "date": "2026-02-26",
+    "datetime": "2026-02-26T18:07:34",
+    "company": "Google",
+    "summary": "Google Translate introduces AI features designed to revolutionize translations. What does this mean for global communication?",
+    "image": "posts/czy-ai-w-tlumaczeniach-wlasnie-zrobila-duzy-krok-1772129254599.jpg"
+  },
+  {
+    "slug": "czy-ai-w-tlumaczeniach-wlasnie-zrobila-duzy-krok-1772129254599",
+    "title": "Czy AI w tłumaczeniach właśnie zrobiła duży krok?",
+    "date": "2026-02-26",
+    "datetime": "2026-02-26T18:07:34",
+    "company": "Google",
+    "summary": "Google Translate wprowadza funkcje AI, które mają zrewolucjonizować tłumaczenia. Co to oznacza dla globalnej komunikacji?",
+    "image": "posts/czy-ai-w-tlumaczeniach-wlasnie-zrobila-duzy-krok-1772129254599.jpg"
+  },
+  {
+    "slug": "openai-przyspiesza-proces-federalnych-pozwolen-w-usa-dzieki-draftnepabench-1772125368538-en",
+    "title": "OpenAI accelerates federal permitting process in the USA with DraftNEPABench",
+    "date": "2026-02-26",
+    "datetime": "2026-02-26T17:02:48",
+    "company": "OpenAI",
+    "summary": "OpenAI's new initiative in collaboration with Pacific Northwest National Laboratory has the potential to reduce document preparation times by up to 15%.",
+    "image": "posts/openai-przyspiesza-proces-federalnych-pozwolen-w-usa-dzieki-draftnepabench-1772125368538.jpg"
+  },
+  {
+    "slug": "openai-przyspiesza-proces-federalnych-pozwolen-w-usa-dzieki-draftnepabench-1772125368538",
+    "title": "OpenAI przyspiesza proces federalnych pozwoleń w USA dzięki DraftNEPABench",
+    "date": "2026-02-26",
+    "datetime": "2026-02-26T17:02:48",
+    "company": "OpenAI",
+    "summary": "Nowa inicjatywa OpenAI we współpracy z Pacific Northwest National Laboratory ma szansę skrócić czas przygotowania dokumentów nawet o 15%.",
+    "image": "posts/openai-przyspiesza-proces-federalnych-pozwolen-w-usa-dzieki-draftnepabench-1772125368538.jpg"
+  },
+  {
+    "slug": "nano-banana-2-najnowszy-model-ai-do-generacji-i-edycji-obrazow-1772122096856-en",
+    "title": "Nano Banana 2: The Latest AI Model for Image Generation and Editing",
+    "date": "2026-02-26",
+    "datetime": "2026-02-26T16:08:16",
+    "company": "Google",
+    "summary": "Google has unveiled Nano Banana 2, the Gemini 3.1 model for high-precision images. What does this mean for the creative industry?",
+    "image": "posts/nano-banana-2-najnowszy-model-ai-do-generacji-i-edycji-obrazow-1772122096856.jpg"
+  },
+  {
+    "slug": "nano-banana-2-najnowszy-model-ai-do-generacji-i-edycji-obrazow-1772122096856",
+    "title": "Nano Banana 2: Najnowszy model AI do generacji i edycji obrazów",
+    "date": "2026-02-26",
+    "datetime": "2026-02-26T16:08:16",
+    "company": "Google",
+    "summary": "Google zaprezentowało Nano Banana 2, model Gemini 3.1 do obrazów o wysokiej precyzji. Co to oznacza dla branży kreatywnej?",
+    "image": "posts/nano-banana-2-najnowszy-model-ai-do-generacji-i-edycji-obrazow-1772122096856.jpg"
+  },
+  {
+    "slug": "kodowanie-i-projektowanie-bez-granic-openai-laczy-sily-z-figma-1772114518502-en",
+    "title": "Coding and Design Without Borders – OpenAI Joins Forces with Figma",
+    "date": "2026-02-26",
+    "datetime": "2026-02-26T14:01:58",
+    "company": "OpenAI",
+    "summary": "OpenAI and Figma present a new solution – Codex Integration, combining code and design to accelerate team workflows. Find out what this means.",
+    "image": "posts/kodowanie-i-projektowanie-bez-granic-openai-laczy-sily-z-figma-1772114518502.jpg"
+  },
+  {
+    "slug": "kodowanie-i-projektowanie-bez-granic-openai-laczy-sily-z-figma-1772114518502",
+    "title": "Kodowanie i projektowanie bez granic – OpenAI łączy siły z Figma",
+    "date": "2026-02-26",
+    "datetime": "2026-02-26T14:01:58",
+    "company": "OpenAI",
+    "summary": "OpenAI i Figma prezentują nowe rozwiązanie – Codex Integration, łączące kod i projektowanie, przyspieszając pracę zespołów. Sprawdź, co to oznacza.",
+    "image": "posts/kodowanie-i-projektowanie-bez-granic-openai-laczy-sily-z-figma-1772114518502.jpg"
+  },
+  {
+    "slug": "anthropic-rozwija-claude-a-przejecie-firmy-vercept-1772044700773-en",
+    "title": "Anthropic expands Claude – acquisition of Vercept",
+    "date": "2026-02-25",
+    "datetime": "2026-02-25T18:38:20",
+    "company": "Anthropic",
+    "summary": "Anthropic has acquired Vercept to improve Claude's ability to work with computers. What are the implications of this move?",
+    "image": "posts/anthropic-rozwija-claude-a-przejecie-firmy-vercept-1772044700773.jpg"
+  },
+  {
+    "slug": "anthropic-rozwija-claude-a-przejecie-firmy-vercept-1772044700773",
+    "title": "Anthropic rozwija Claude'a – przejęcie firmy Vercept",
+    "date": "2026-02-25",
+    "datetime": "2026-02-25T18:38:20",
+    "company": "Anthropic",
+    "summary": "Anthropic przejęło Vercept, aby poprawić zdolności Claude’a w zakresie pracy z komputerami. Jakie są konsekwencje tego ruchu?",
+    "image": "posts/anthropic-rozwija-claude-a-przejecie-firmy-vercept-1772044700773.jpg"
+  },
+  {
+    "slug": "google-ulepsza-circle-to-search-przeszukiwanie-obrazow-w-nowej-odslonie-1772042739129-en",
+    "title": "Google enhances Circle to Search – image search in a new edition",
+    "date": "2026-02-25",
+    "datetime": "2026-02-25T18:05:39",
+    "company": "Google",
+    "summary": "Google introduces the ability to search multiple objects in a single image. What does this mean and how can it impact business?",
+    "image": "posts/google-ulepsza-circle-to-search-przeszukiwanie-obrazow-w-nowej-odslonie-1772042739129.jpg"
+  },
+  {
+    "slug": "google-ulepsza-circle-to-search-przeszukiwanie-obrazow-w-nowej-odslonie-1772042739129",
+    "title": "Google ulepsza Circle to Search – przeszukiwanie obrazów w nowej odsłonie",
+    "date": "2026-02-25",
+    "datetime": "2026-02-25T18:05:39",
+    "company": "Google",
+    "summary": "Google wprowadza funkcję przeszukiwania wielu obiektów w jednym obrazie. Co to oznacza i jak może wpłynąć na biznes?",
+    "image": "posts/google-ulepsza-circle-to-search-przeszukiwanie-obrazow-w-nowej-odslonie-1772042739129.jpg"
+  },
+  {
+    "slug": "zwalczanie-zagrozen-zwiazanych-z-naduzyciami-ai-raport-openai-1772028122047-en",
+    "title": "Combating Threats Related to AI Abuse – OpenAI Report",
+    "date": "2026-02-25",
+    "datetime": "2026-02-25T14:02:02",
+    "company": "OpenAI",
+    "summary": "OpenAI published a report on potential threats related to AI abuse. What does this mean for business and defense technologies?",
+    "image": "posts/zwalczanie-zagrozen-zwiazanych-z-naduzyciami-ai-raport-openai-1772028122047.jpg"
+  },
+  {
+    "slug": "zwalczanie-zagrozen-zwiazanych-z-naduzyciami-ai-raport-openai-1772028122047",
+    "title": "Zwalczanie zagrożeń związanych z nadużyciami AI – raport OpenAI",
+    "date": "2026-02-25",
+    "datetime": "2026-02-25T14:02:02",
+    "company": "OpenAI",
+    "summary": "OpenAI opublikowało raport o potencjalnych zagrożeniach związanych z nadużyciami AI. Co to oznacza dla biznesu i technologii obronnych?",
+    "image": "posts/zwalczanie-zagrozen-zwiazanych-z-naduzyciami-ai-raport-openai-1772028122047.jpg"
+  },
+  {
+    "slug": "nowa-polityka-odpowiedzialnego-skalowania-od-anthropic-co-warto-wiedziec-1772022364660-en",
+    "title": "New Responsible Scaling Policy from Anthropic: What Should You Know?",
+    "date": "2026-02-25",
+    "datetime": "2026-02-25T12:26:04",
+    "company": "Anthropic",
+    "summary": "Anthropic has announced version 3.0 of its Responsible Scaling Policy. What’s changing and how will it affect the AI industry?",
+    "image": "posts/nowa-polityka-odpowiedzialnego-skalowania-od-anthropic-co-warto-wiedziec-1772022364660.jpg"
+  },
+  {
+    "slug": "nowa-polityka-odpowiedzialnego-skalowania-od-anthropic-co-warto-wiedziec-1772022364660",
+    "title": "Nowa polityka odpowiedzialnego skalowania od Anthropic: co warto wiedzieć?",
+    "date": "2026-02-25",
+    "datetime": "2026-02-25T12:26:04",
+    "company": "Anthropic",
+    "summary": "Anthropic ogłosił wersję 3.0 swojej polityki odpowiedzialnego skalowania. Co się zmienia i jak to wpłynie na branżę AI?",
+    "image": "posts/nowa-polityka-odpowiedzialnego-skalowania-od-anthropic-co-warto-wiedziec-1772022364660.jpg"
+  },
+  {
+    "slug": "openai-stawia-na-ludzi-nowy-chief-people-officer-1771969300201-en",
+    "title": "OpenAI focuses on people – new Chief People Officer",
+    "date": "2026-02-24",
+    "datetime": "2026-02-24T21:41:40",
+    "company": "OpenAI",
+    "summary": "OpenAI hires Arvind KC as Chief People Officer. This move aims to support the company’s growth in the rapidly evolving world of AI.",
+    "image": "posts/openai-stawia-na-ludzi-nowy-chief-people-officer-1771969300201.jpg"
+  },
+  {
+    "slug": "openai-stawia-na-ludzi-nowy-chief-people-officer-1771969300201",
+    "title": "OpenAI stawia na ludzi – nowy Chief People Officer",
+    "date": "2026-02-24",
+    "datetime": "2026-02-24T21:41:40",
+    "company": "OpenAI",
+    "summary": "OpenAI zatrudnia Arvinda KC jako Chief People Officer. To ruch, który ma wspierać rozwój firmy w szybko zmieniającym się świecie AI.",
+    "image": "posts/openai-stawia-na-ludzi-nowy-chief-people-officer-1771969300201.jpg"
+  },
+  {
+    "slug": "rcclx-od-meta-nowe-podejscie-do-komunikacji-gpu-na-platformach-amd-1771968745579-en",
+    "title": "RCCLX by Meta: A New Approach to GPU Communication on AMD Platforms",
+    "date": "2026-02-24",
+    "datetime": "2026-02-24T21:32:25",
+    "company": "Meta",
+    "summary": "Meta announced the open sourcing of RCCLX – an improved version of RCCL, designed to accelerate GPU communication for evolving AI models.",
+    "image": "posts/rcclx-od-meta-nowe-podejscie-do-komunikacji-gpu-na-platformach-amd-1771968745579.jpg"
+  },
+  {
+    "slug": "rcclx-od-meta-nowe-podejscie-do-komunikacji-gpu-na-platformach-amd-1771968745579",
+    "title": "RCCLX od Meta: Nowe podejście do komunikacji GPU na platformach AMD",
+    "date": "2026-02-24",
+    "datetime": "2026-02-24T21:32:25",
+    "company": "Meta",
+    "summary": "Meta ogłosiła open sourcing RCCLX – usprawnioną wersję RCCL, która ma przyspieszyć komunikację GPU dla rozwijających się modeli AI.",
+    "image": "posts/rcclx-od-meta-nowe-podejscie-do-komunikacji-gpu-na-platformach-amd-1771968745579.jpg"
+  },
+  {
+    "slug": "nowy-wymiar-testowania-jittesting-od-meta-jako-odpowiedz-na-rewolucje-w-kodowaniu-1771962543039-en",
+    "title": "A new dimension of testing: JiTTesting by Meta as a response to the coding revolution",
+    "date": "2026-02-24",
+    "datetime": "2026-02-24T19:49:03",
+    "company": "Meta",
+    "summary": "Meta unveils JiTTesting – a modern approach to code testing in the era of agent-based development. What does this mean for the IT industry?",
+    "image": "posts/nowy-wymiar-testowania-jittesting-od-meta-jako-odpowiedz-na-rewolucje-w-kodowaniu-1771962543039.jpg"
+  },
+  {
+    "slug": "nowy-wymiar-testowania-jittesting-od-meta-jako-odpowiedz-na-rewolucje-w-kodowaniu-1771962543039",
+    "title": "Nowy wymiar testowania: JiTTesting od Meta jako odpowiedź na rewolucję w kodowaniu",
+    "date": "2026-02-24",
+    "datetime": "2026-02-24T19:49:03",
+    "company": "Meta",
+    "summary": "Meta prezentuje JiTTesting – nowoczesne podejście do testowania kodu w erze agentowego developmentu. Co oznacza ta zmiana dla branży IT?",
+    "image": "posts/nowy-wymiar-testowania-jittesting-od-meta-jako-odpowiedz-na-rewolucje-w-kodowaniu-1771962543039.jpg"
+  },
+  {
+    "slug": "czy-tradycyjne-testowanie-kodu-faktycznie-odchodzi-do-lamusa-meta-proponuje-jittesting-1771962194280",
+    "title": "Czy tradycyjne testowanie kodu faktycznie odchodzi do lamusa? Meta proponuje JiTTesting.",
+    "date": "2026-02-24",
+    "datetime": "2026-02-24T19:43:14",
+    "company": "Meta",
+    "summary": "Agentic development postawiło wyzwanie 50-letnim praktykom testowania kodu. Meta prezentuje alternatywę: Just-in-Time Testing (JiTTesting). Co to oznacza dla branży?",
+    "image": "posts/czy-tradycyjne-testowanie-kodu-faktycznie-odchodzi-do-lamusa-meta-proponuje-jittesting-1771962194280.jpg"
+  },
+  {
+    "slug": "agentic-development-wywraca-tradycyjne-testowanie-czy-jittesting-to-odpowiedz-1771961865169",
+    "title": "Agentic Development wywraca tradycyjne testowanie. Czy JiTTesting to odpowiedź?",
+    "date": "2026-02-24",
+    "datetime": "2026-02-24T19:37:45",
+    "company": "Meta",
+    "summary": "Meta prezentuje koncepcję JiTTesting: odpowiedź na gwałtowne zmiany w świecie szybkiego tworzenia oprogramowania. Co to oznacza w praktyce?",
+    "image": "posts/agentic-development-wywraca-tradycyjne-testowanie-czy-jittesting-to-odpowiedz-1771961865169.jpg"
+  },
+  {
+    "slug": "openai-rezygnuje-z-swe-bench-verified-co-to-oznacza-dla-oceny-postepow-w-ai-1771959699533",
+    "title": "OpenAI rezygnuje z SWE-bench Verified – co to oznacza dla oceny postępów w AI?",
+    "date": "2026-02-24",
+    "datetime": "2026-02-24T19:01:39",
+    "company": "OpenAI",
+    "summary": "OpenAI przestaje używać SWE-bench Verified – testu oceny koderskich możliwości AI. Sprawdź, dlaczego i co proponują zamiast tego.",
+    "image": "posts/openai-rezygnuje-z-swe-bench-verified-co-to-oznacza-dla-oceny-postepow-w-ai-1771959699533.jpg"
+  },
+  {
+    "slug": "openai-porzuca-swe-bench-verified-co-to-oznacza-dla-branzy-1771959340933",
+    "title": "OpenAI porzuca SWE-bench Verified – co to oznacza dla branży?",
+    "date": "2026-02-24",
+    "datetime": "2026-02-24T18:55:40",
+    "company": "OpenAI",
+    "summary": "OpenAI rezygnuje z benchmarku SWE-bench Verified, wskazując na problemy z dokładnością i wiarygodnością pomiarów. Co warto wiedzieć o tej zmianie?",
+    "image": "posts/openai-porzuca-swe-bench-verified-co-to-oznacza-dla-branzy-1771959340933.jpg"
+  },
+  {
+    "slug": "rozmowa-z-kevinem-scottem-co-dalej-z-ai-1771940413531",
+    "title": "Rozmowa z Kevinem Scottem – Co dalej z AI?",
+    "date": "2026-02-24",
+    "company": "Microsoft",
+    "summary": "Kevin Scott, CTO Microsoft, podzielił się swoją wizją przyszłości AI. Oto, co warto z tego wyciągnąć dla biznesu.",
+    "image": "posts/rozmowa-z-kevinem-scottem-co-dalej-z-ai-1771940413531.jpg"
+  },
+  {
+    "slug": "sundar-pichai-ai-zmieni-swiat-ale-pod-pewnymi-warunkami-1771837923466",
+    "title": "Sundar Pichai: AI zmieni świat, ale pod pewnymi warunkami",
+    "date": "2026-02-23",
+    "company": "Google",
+    "summary": "Na AI Impact Summit 2026 CEO Google, Sundar Pichai, mówi o przyszłości AI i jej ogromnym wpływie na biznes oraz społeczeństwo. Co to oznacza dla nas?",
+    "image": "posts/sundar-pichai-ai-zmieni-swiat-ale-pod-pewnymi-warunkami-1771837923466.jpg"
+  }
+]

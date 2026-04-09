@@ -1976,6 +1976,9 @@
           ${p.title}
         </span>`);
       track.innerHTML = [...items,...items].join('');
+      const itemCount = posts.filter(p => p.slug && !p.slug.endsWith('-en')).length;
+      const duration = Math.max(40, itemCount * 2);
+      track.style.animationDuration = duration + 's';
 
       const latest = posts[0];
       if (latest && latest.date) {
